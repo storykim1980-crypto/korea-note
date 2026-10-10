@@ -1,0 +1,1572 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="韓国コスメの公式プラットフォームランキングから美容医療・グルメ・旅まで、出典と更新日を確かめながら日本語で調べられる編集ガイド。">
+  <title>SEOUL NOTE｜韓国コスメランキング・美容医療・グルメ・旅の日本語ガイド</title>
+  <link rel="canonical" href="https://seoul-note.com/">
+  <link rel="alternate" hreflang="ja-JP" href="https://seoul-note.com/">
+  <link rel="alternate" hreflang="en" href="https://seoul-note.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://seoul-note.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SEOUL NOTE">
+  <meta property="og:title" content="SEOUL NOTE｜韓国美容・グルメ・旅の編集ガイド">
+  <meta property="og:description" content="出典と更新日を確かめながら、韓国の美容・美容医療・グルメ・旅を日本語で調べられる編集ガイド。">
+  <meta property="og:url" content="https://seoul-note.com/">
+  <meta property="og:image" content="https://seoul-note.com/assets/hero-seoul.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --paper-2: #eeece4;
+      --paper-3: #e5e1d6;
+      --white: #fffefb;
+      --ink: #21342d;
+      --ink-soft: #435249;
+      --muted: #646c65;
+      --muted-light: #93988f;
+      --line: rgba(33, 52, 45, .16);
+      --olive: #818675;
+      --olive-dark: #34483d;
+      --terra: #925944;
+      --terra-light: #d9ad98;
+      --gold: #b49a6d;
+      --serif: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", "MS PMincho", Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      --container: 1200px;
+      --shadow: 0 24px 76px rgba(31, 43, 37, .15);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      line-height: 1.75;
+      letter-spacing: .025em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body, button, input { font-family: var(--sans); }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { color: inherit; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--terra);
+      outline-offset: 4px;
+    }
+    [hidden] { display: none !important; }
+    .container { width: min(var(--container), calc(100% - 56px)); margin-inline: auto; }
+    .serif { font-family: var(--serif); font-weight: 500; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .skip-link {
+      position: fixed; top: 8px; left: 8px; z-index: 1000; padding: 10px 16px;
+      color: white; background: var(--ink); transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    /* Header */
+    .topline { background: var(--ink); color: rgba(255,255,255,.75); font-size: 10px; letter-spacing: .13em; }
+    .topline-inner { min-height: 30px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .topline-right { color: rgba(255,255,255,.52); text-transform: uppercase; }
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(245, 243, 237, .94);
+      border-bottom: 1px solid rgba(38, 53, 47, .12);
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    }
+    .nav-shell { min-height: 75px; display: flex; align-items: center; justify-content: space-between; gap: 34px; }
+    .brand {
+      display: inline-flex; align-items: center; gap: 10px; flex: 0 0 auto;
+      color: var(--ink); line-height: 1;
+    }
+    .brand-symbol {
+      position: relative; width: 32px; height: 32px; display: grid; place-items: center;
+      border: 1px solid var(--terra); border-radius: 50%; color: var(--terra);
+      font-family: var(--serif); font-size: 17px; transform: rotate(-9deg);
+    }
+    .brand-symbol::after { content: ""; position: absolute; width: 4px; height: 4px; right: -2px; top: 3px; background: var(--terra); border-radius: 50%; }
+    .brand-name { display: flex; align-items: baseline; gap: 6px; font-size: 18px; letter-spacing: .12em; font-family: var(--serif); }
+    .brand-name small { color: var(--muted); font-family: var(--sans); font-size: 9px; letter-spacing: .08em; }
+    .main-nav { display: flex; align-items: center; justify-content: center; gap: clamp(16px, 2.3vw, 34px); margin-left: auto; }
+    .main-nav a {
+      position: relative; padding: 10px 0; color: var(--ink-soft); font-size: 12px; white-space: nowrap;
+    }
+    .main-nav a::after { content: ""; position: absolute; right: 0; bottom: 4px; left: 0; height: 1px; background: var(--terra); transform: scaleX(0); transform-origin: right; transition: transform .25s ease; }
+    .main-nav a:hover::after, .main-nav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+    .nav-actions { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+    .icon-button {
+      min-width: 40px; min-height: 40px; border: 1px solid transparent; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+      color: var(--ink); background: transparent; cursor: pointer; transition: .2s ease;
+    }
+    .icon-button:hover { border-color: var(--line); background: rgba(255,255,255,.55); }
+    .saved-button { width: auto; padding: 0 10px; border-radius: 24px; font-size: 11px; }
+    .saved-button .saved-count { min-width: 18px; height: 18px; padding-inline: 4px; display: grid; place-items: center; border-radius: 50%; background: var(--paper-2); font-size: 10px; }
+    .saved-button[aria-pressed="true"] { color: white; background: var(--olive-dark); border-color: var(--olive-dark); }
+    .saved-button[aria-pressed="true"] .saved-count { color: var(--ink); background: var(--paper); }
+    .menu-toggle { display: none; }
+    .icon-button svg, .button svg, .text-link svg, .search-box svg, .card-arrow svg, .category-arrow svg { width: 16px; height: 16px; flex: 0 0 auto; }
+
+    /* Hero */
+    .hero { padding: 40px 0 26px; }
+    .hero-grid { display: grid; grid-template-columns: .91fr 1.09fr; align-items: stretch; gap: clamp(28px, 5.5vw, 76px); }
+    .hero-copy { display: flex; flex-direction: column; justify-content: center; padding: 32px 0 26px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--terra); font-size: 10px; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; }
+    .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--terra); }
+    .hero h1 { margin: 27px 0 20px; font-family: var(--serif); font-size: clamp(48px, 5.1vw, 72px); line-height: 1.28; font-weight: 500; letter-spacing: .04em; }
+    .hero h1 em { color: var(--terra); font-style: normal; }
+    .hero-lede { max-width: 440px; margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 2.1; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 31px; }
+    .button {
+      min-height: 46px; padding: 0 19px; border: 1px solid var(--ink); border-radius: 2px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+      font-size: 12px; letter-spacing: .045em; cursor: pointer; transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: var(--white); background: var(--ink); }
+    .button-primary:hover { border-color: var(--olive-dark); background: var(--olive-dark); }
+    .button-light { color: var(--ink); background: transparent; border-color: var(--line); }
+    .button-light:hover { border-color: var(--ink); background: rgba(255,255,255,.4); }
+    .button-cream { border-color: rgba(255,255,255,.45); color: white; background: transparent; }
+    .button-cream:hover { color: var(--ink); background: white; }
+    .hero-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 455px; margin-top: 47px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; letter-spacing: .12em; }
+    .hero-meta span:last-child { letter-spacing: .03em; }
+    .hero-visual { position: relative; min-height: 505px; overflow: hidden; background: var(--paper-2); }
+    .hero-visual > img { width: 100%; height: 100%; min-height: 505px; object-fit: cover; object-position: 52% center; }
+    .hero-visual::after { content: ""; position: absolute; inset: 48% 0 0; background: linear-gradient(0deg, rgba(28,38,32,.4), transparent); pointer-events: none; }
+    .photo-caption { position: absolute; z-index: 1; right: 20px; bottom: 17px; left: 20px; display: flex; justify-content: space-between; color: rgba(255,255,255,.9); font-size: 9px; letter-spacing: .16em; }
+    .hero-sticker { position: absolute; top: 24px; left: -1px; z-index: 1; padding: 11px 16px 11px 20px; background: var(--paper); color: var(--ink); font-size: 10px; letter-spacing: .06em; }
+    .hero-sticker span { color: var(--terra); margin-right: 8px; font-family: var(--serif); font-size: 14px; }
+    .hero-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 19px; color: var(--muted); font-size: 11px; }
+    .hero-bottom p { margin: 0; }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 11px; white-space: nowrap; }
+    .text-link svg { transition: transform .2s ease; }
+    .text-link:hover svg { transform: translateX(4px); }
+
+    /* Medical note band */
+    .reader-note { margin-top: 23px; background: var(--paper-2); border-top: 1px solid rgba(38,53,47,.08); border-bottom: 1px solid rgba(38,53,47,.08); }
+    .reader-note-inner { min-height: 100px; display: grid; grid-template-columns: 190px 1fr auto; align-items: center; gap: 26px; }
+    .reader-note-label { color: var(--terra); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+    .reader-note-content { display: flex; align-items: baseline; flex-wrap: wrap; column-gap: 15px; row-gap: 3px; }
+    .reader-note-content strong { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+    .reader-note-content p { margin: 0; color: var(--muted); font-size: 11px; }
+    .note-arrow { width: 38px; height: 38px; border: 1px solid rgba(38,53,47,.28); border-radius: 50%; display: grid; place-items: center; background: transparent; cursor: pointer; transition: .2s ease; }
+    .note-arrow:hover { color: white; background: var(--ink); border-color: var(--ink); }
+    .note-arrow svg { width: 16px; height: 16px; }
+
+    /* Sections */
+    .section { padding: 103px 0; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 36px; }
+    .section-kicker { margin: 0 0 11px; color: var(--terra); font-size: 10px; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; }
+    .section-title { margin: 0; font-family: var(--serif); font-size: clamp(30px, 3.1vw, 43px); line-height: 1.45; font-weight: 500; letter-spacing: .035em; }
+    .section-intro { max-width: 390px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
+
+    /* Featured guide */
+    .feature-section { padding-top: 96px; }
+    .feature-card { display: grid; grid-template-columns: 1.04fr .96fr; min-height: 405px; background: #e9e6dc; }
+    .feature-image { position: relative; min-height: 405px; overflow: hidden; background: #d5d0c1; }
+    .feature-image img { width: 100%; height: 100%; min-height: 405px; object-fit: cover; object-position: center; }
+    .feature-image::after { content: ""; position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(0deg, rgba(25,37,31,.34), transparent); }
+    .feature-photo-caption { position: absolute; z-index: 1; left: 22px; bottom: 17px; color: white; font-size: 9px; letter-spacing: .15em; }
+    .feature-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(28px, 5vw, 62px); }
+    .feature-copy .tagline { margin: 0 0 17px; color: var(--terra); font-size: 10px; letter-spacing: .15em; }
+    .feature-copy h3 { margin: 0; font-family: var(--serif); font-size: clamp(27px, 3vw, 38px); line-height: 1.55; font-weight: 500; }
+    .feature-copy > p:not(.tagline) { max-width: 410px; margin: 17px 0 0; color: var(--ink-soft); font-size: 12px; line-height: 2; }
+    .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 18px; margin: 22px 0 23px; padding: 0; list-style: none; }
+    .feature-list li { display: flex; align-items: center; gap: 8px; color: var(--ink-soft); font-size: 10px; }
+    .feature-list li span { color: var(--terra); font-family: var(--serif); font-size: 13px; }
+    .feature-copy .button { align-self: flex-start; }
+    .feature-footnote { margin-top: 14px; color: var(--muted); font-size: 9px; line-height: 1.7; }
+
+    /* Category shortcut */
+    .category-section { padding: 23px 0 84px; }
+    .category-top { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 25px; }
+    .category-top h2 { margin: 0; font-family: var(--serif); font-size: clamp(23px, 2.4vw, 31px); font-weight: 500; }
+    .category-top p { margin: 0; color: var(--muted); font-size: 11px; }
+    .category-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .category-tile { position: relative; min-height: 120px; padding: 20px 18px 20px 0; border: 0; border-right: 1px solid var(--line); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; background: transparent; cursor: pointer; transition: background .2s ease, padding .2s ease; }
+    .category-tile:not(:first-child) { padding-left: 20px; }
+    .category-tile:last-child { border-right: 0; }
+    .category-tile:hover { padding-left: 24px; background: rgba(255,255,255,.38); }
+    .category-tile:not(:first-child):hover { padding-left: 26px; }
+    .category-index { margin-bottom: 8px; color: var(--terra); font-family: var(--serif); font-size: 12px; }
+    .category-name { font-family: var(--serif); font-size: 20px; line-height: 1.35; }
+    .category-desc { margin-top: 6px; color: var(--muted); font-size: 10px; }
+    .category-arrow { position: absolute; top: 22px; right: 17px; color: var(--muted); }
+    .category-arrow svg { width: 14px; height: 14px; }
+
+    /* Source-backed ranking */
+    .ranking-section { padding-top: 82px; padding-bottom: 82px; background: var(--paper-2); }
+    .ranking-topline { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 18px; margin: -11px 0 18px; color: var(--muted); font-size: 9px; }
+    .ranking-pill { padding: 4px 9px; border: 1px solid rgba(38,53,47,.2); color: var(--ink-soft); background: rgba(252,251,247,.52); letter-spacing: .04em; }
+    .ranking-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .ranking-row { min-height: 100px; padding: 14px 16px; border: 1px solid rgba(38,53,47,.13); display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; align-items: center; gap: 12px; background: rgba(252,251,247,.74); }
+    .ranking-position { color: var(--terra); font-family: var(--serif); font-size: 24px; line-height: 1; }
+    .ranking-product { min-width: 0; }
+    .ranking-brand { display: block; color: var(--muted); font-size: 8px; letter-spacing: .12em; }
+    .ranking-name { margin: 3px 0 0; font-family: var(--serif); font-size: 14px; line-height: 1.5; font-weight: 500; overflow-wrap: anywhere; }
+    .ranking-original { display: block; margin-top: 3px; color: var(--muted); font-size: 9px; line-height: 1.45; overflow-wrap: anywhere; }
+    .ranking-stats { min-width: 88px; display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+    .ranking-stats strong { color: var(--ink); font-family: var(--serif); font-size: 16px; line-height: 1.2; font-weight: 500; }
+    .ranking-stats span { color: var(--muted); font-size: 9px; line-height: 1.5; white-space: nowrap; }
+    .ranking-method { margin-top: 19px; padding: 16px 18px; border-left: 2px solid var(--terra); color: var(--ink-soft); background: rgba(252,251,247,.7); font-size: 10px; line-height: 1.9; }
+    .ranking-method p { margin: 0 0 7px; }
+    .ranking-method p:last-of-type { margin-bottom: 11px; }
+    .ranking-method strong { color: var(--ink); font-weight: 600; }
+    .ranking-source-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 10px; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 4px; }
+    .ranking-source-link svg { width: 13px; height: 13px; }
+
+    /* Source-backed travel data */
+    .travel-data-section { padding-top: 82px; padding-bottom: 82px; background: var(--white); }
+    .travel-data-panel { margin-bottom: 20px; padding: 23px; border: 1px solid rgba(38,53,47,.14); background: #f1efe7; }
+    .travel-data-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 17px; }
+    .travel-data-head h3 { margin: 4px 0 0; font-family: var(--serif); font-size: 22px; line-height: 1.45; font-weight: 500; }
+    .travel-data-head p { max-width: 410px; margin: 0; color: var(--muted); font-size: 9px; line-height: 1.8; }
+    .travel-period { display: inline-block; color: var(--terra); font-size: 9px; letter-spacing: .12em; }
+    .travel-metric-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+    .travel-metric-card { min-height: 139px; padding: 16px 17px 14px; border: 1px solid rgba(38,53,47,.1); background: rgba(252,251,247,.83); }
+    .travel-metric-value { display: block; color: var(--ink); font-family: var(--serif); font-size: clamp(23px, 2.2vw, 29px); line-height: 1.25; }
+    .travel-metric-label { display: block; margin-top: 5px; color: var(--ink-soft); font-size: 10px; line-height: 1.6; }
+    .travel-metric-delta { display: inline-block; margin-top: 8px; color: var(--terra); font-size: 9px; }
+    .travel-metric-note { display: block; margin-top: 4px; color: var(--muted); font-size: 8px; line-height: 1.55; }
+    .travel-data-footnote { margin: 13px 0 0; color: var(--muted); font-size: 9px; line-height: 1.8; }
+    .travel-destination-panel { padding: 23px; border: 1px solid rgba(38,53,47,.14); background: var(--paper-2); }
+    .travel-destination-list { margin: 0; padding: 0; list-style: none; }
+    .travel-destination-row { min-height: 65px; padding: 10px 3px; border-top: 1px solid rgba(38,53,47,.12); display: grid; grid-template-columns: 36px minmax(0, 1fr) 124px 76px; align-items: center; gap: 12px; }
+    .travel-place-rank { color: var(--terra); font-family: var(--serif); font-size: 18px; }
+    .travel-place-name { color: var(--ink); font-family: var(--serif); font-size: 14px; line-height: 1.5; }
+    .travel-place-stat { text-align: right; color: var(--ink); font-family: var(--serif); font-size: 16px; line-height: 1.25; }
+    .travel-place-stat small { display: block; color: var(--muted); font-family: var(--sans); font-size: 8px; }
+    .travel-place-yoy { justify-self: end; min-width: 67px; padding: 4px 6px; border: 1px solid rgba(38,53,47,.15); color: var(--ink-soft); text-align: center; font-size: 8px; white-space: nowrap; }
+    .travel-origin-note { margin: 14px 0 0; padding: 12px 15px; border-left: 2px solid var(--terra); color: var(--ink-soft); background: rgba(252,251,247,.68); font-size: 9px; line-height: 1.8; }
+    .travel-review-signal { margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(38,53,47,.14); display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); font-size: 9px; }
+    .travel-review-signal strong { color: var(--ink); font-family: var(--serif); font-size: 12px; font-weight: 500; }
+    .travel-method-note { margin: 17px 0 0; color: var(--muted); font-size: 9px; line-height: 1.8; }
+    .travel-source-links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 17px; }
+    .travel-source-links a { color: var(--ink); font-size: 9px; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 4px; }
+
+    /* Source-backed food data */
+    .food-data-section { padding-top: 82px; padding-bottom: 82px; background: #eeece4; }
+    .food-ranking-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .food-ranking-panel { min-width: 0; padding: 22px; border: 1px solid rgba(38,53,47,.14); background: rgba(252,251,247,.76); }
+    .food-ranking-panel h3 { margin: 4px 0 4px; font-family: var(--serif); font-size: 21px; font-weight: 500; line-height: 1.45; }
+    .food-panel-note { margin: 0 0 14px; color: var(--muted); font-size: 9px; line-height: 1.8; }
+    .food-ranking-list { margin: 0; padding: 0; list-style: none; }
+    .food-ranking-row { min-height: 52px; padding: 8px 0; border-top: 1px solid rgba(38,53,47,.11); display: grid; grid-template-columns: 32px minmax(0, 1fr); align-items: center; gap: 10px; }
+    .food-rank-number { color: var(--terra); font-family: var(--serif); font-size: 16px; }
+    .food-place-name { min-width: 0; color: var(--ink); font-size: 11px; line-height: 1.55; overflow-wrap: anywhere; }
+    .food-place-name small { display: block; margin-top: 1px; color: var(--muted); font-size: 8px; line-height: 1.5; }
+    .food-source-warning { margin: 17px 0 0; padding: 14px 16px; border-left: 2px solid var(--terra); color: var(--ink-soft); background: rgba(252,251,247,.7); font-size: 9px; line-height: 1.85; }
+    .food-source-links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 17px; }
+    .food-source-links a { color: var(--ink); font-size: 9px; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 4px; }
+    .michelin-panel { margin-top: 18px; padding: 22px; border: 1px solid rgba(38,53,47,.16); color: var(--white); background: var(--olive-dark); }
+    .michelin-panel .travel-period { color: #e1b39b; }
+    .michelin-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 15px; }
+    .michelin-heading h3 { margin: 4px 0 0; font-family: var(--serif); font-size: 22px; line-height: 1.45; font-weight: 500; }
+    .michelin-heading p { max-width: 430px; margin: 0; color: rgba(255,255,255,.72); font-size: 9px; line-height: 1.8; }
+    .michelin-stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+    .michelin-stat { min-height: 94px; padding: 13px 14px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.055); }
+    .michelin-stat strong { display: block; color: #f0d4c3; font-family: var(--serif); font-size: 24px; line-height: 1.2; font-weight: 500; }
+    .michelin-stat span { display: block; margin-top: 5px; color: rgba(255,255,255,.76); font-size: 9px; line-height: 1.55; }
+    .michelin-disclaimer { margin: 13px 0 0; color: rgba(255,255,255,.68); font-size: 9px; line-height: 1.8; }
+    .michelin-source { margin-top: 8px; display: inline-flex; color: #fff; font-size: 9px; text-decoration: underline; text-decoration-color: #e1b39b; text-underline-offset: 4px; }
+
+    /* Articles */
+    .stories-section { padding-top: 52px; background: var(--white); }
+    .stories-section .section-heading { margin-bottom: 28px; }
+    .story-tools { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+    .filter-list { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .filter-button { min-height: 34px; padding: 0 13px; border: 1px solid transparent; border-radius: 18px; color: var(--muted); background: transparent; font-size: 10px; cursor: pointer; transition: .2s ease; }
+    .filter-button:hover { border-color: var(--line); color: var(--ink); }
+    .filter-button[aria-pressed="true"] { border-color: var(--ink); color: white; background: var(--ink); }
+    .search-box { width: min(290px, 100%); min-height: 40px; padding: 0 12px; border: 1px solid var(--line); display: flex; align-items: center; gap: 9px; background: transparent; }
+    .search-box svg { width: 15px; height: 15px; color: var(--muted); }
+    .search-box input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: 11px; }
+    .search-box input::placeholder { color: #94998f; }
+    .results-line { min-height: 22px; margin: 0 0 17px; color: var(--muted); font-size: 10px; }
+    .story-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 19px; }
+    .story-card { min-width: 0; border: 1px solid rgba(38,53,47,.12); background: var(--white); transition: box-shadow .25s ease, transform .25s ease; }
+    .story-card:hover { transform: translateY(-4px); box-shadow: 0 14px 38px rgba(38,53,47,.09); }
+    .story-card-link { width: 100%; height: 100%; padding: 0; border: 0; display: flex; flex-direction: column; color: inherit; text-align: left; text-decoration: none; background: transparent; cursor: pointer; }
+    .card-image-wrap { position: relative; width: 100%; overflow: hidden; aspect-ratio: 1.43; background: var(--paper-2); }
+    .card-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+    .story-card:hover .card-image-wrap img { transform: scale(1.045); }
+    .card-number { position: absolute; top: 12px; left: 12px; min-width: 28px; height: 28px; padding: 0 4px; display: grid; place-items: center; color: var(--ink); background: rgba(251,250,246,.9); font-family: var(--serif); font-size: 11px; }
+    .card-content { flex: 1; padding: 17px 17px 15px; display: flex; flex-direction: column; align-items: stretch; }
+    .card-category { margin: 0 0 9px; color: var(--terra); font-size: 9px; letter-spacing: .13em; }
+    .card-arrow { align-self: flex-start; }
+    .card-content h3 { margin: 0; font-family: var(--serif); font-size: 17px; line-height: 1.65; font-weight: 500; }
+    .card-content p { margin: 10px 0 17px; color: var(--muted); font-size: 10px; line-height: 1.8; }
+    .card-arrow { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 10px; }
+    .card-arrow svg { width: 14px; height: 14px; transition: transform .2s ease; }
+    .story-card:hover .card-arrow svg { transform: translateX(4px); }
+    .empty-state { padding: 46px 20px; border: 1px dashed var(--line); text-align: center; color: var(--muted); font-size: 12px; }
+    .empty-state strong { display: block; margin-bottom: 7px; color: var(--ink); font-family: var(--serif); font-size: 21px; font-weight: 500; }
+    .empty-state button { margin-top: 13px; padding: 7px 0; border: 0; border-bottom: 1px solid var(--terra); color: var(--ink); background: transparent; font-size: 11px; cursor: pointer; }
+
+    /* Editorial promise */
+    .promise-section { position: relative; overflow: hidden; padding: 104px 0 98px; color: var(--white); background: var(--olive-dark); }
+    .promise-section::before, .promise-section::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; pointer-events: none; }
+    .promise-section::before { width: 520px; height: 520px; top: -310px; right: -60px; }
+    .promise-section::after { width: 320px; height: 320px; right: 160px; bottom: -240px; }
+    .promise-grid { position: relative; z-index: 1; display: grid; grid-template-columns: .72fr 1.28fr; gap: 65px; }
+    .promise-side { padding-top: 10px; }
+    .promise-side .section-kicker { color: #d9ad98; }
+    .promise-side p:last-child { max-width: 200px; color: rgba(255,255,255,.58); font-size: 10px; line-height: 2; }
+    .promise-main h2 { margin: 0; font-family: var(--serif); font-size: clamp(34px, 4.1vw, 55px); line-height: 1.48; font-weight: 500; letter-spacing: .04em; }
+    .promise-main > p { max-width: 590px; margin: 20px 0 0; color: rgba(255,255,255,.75); font-size: 12px; line-height: 2; }
+    .promise-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 36px; padding-top: 19px; border-top: 1px solid rgba(255,255,255,.22); }
+    .promise-point { display: flex; gap: 10px; align-items: flex-start; color: rgba(255,255,255,.82); font-size: 10px; }
+    .promise-point span { color: #ddb29e; font-family: var(--serif); font-size: 15px; }
+
+    /* Official resources */
+    .official-section { padding: 78px 0 76px; background: #eeece4; }
+    .official-heading { display: grid; grid-template-columns: .78fr 1.22fr; align-items: end; gap: 35px; margin-bottom: 27px; }
+    .official-heading .section-kicker { margin-bottom: 9px; }
+    .official-heading h2 { margin: 0; font-family: var(--serif); font-size: clamp(27px, 3vw, 38px); line-height: 1.5; font-weight: 500; }
+    .official-heading > p { max-width: 460px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.9; }
+    .official-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+    .official-card { min-height: 204px; padding: 21px 21px 18px; border: 1px solid rgba(38,53,47,.16); display: flex; flex-direction: column; align-items: flex-start; color: var(--ink); background: rgba(252,251,247,.72); transition: background .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .official-card:hover { transform: translateY(-3px); background: var(--white); box-shadow: 0 12px 30px rgba(38,53,47,.08); }
+    .official-source { color: var(--terra); font-size: 9px; letter-spacing: .14em; }
+    .official-card h3 { margin: 14px 0 7px; font-family: var(--serif); font-size: 17px; line-height: 1.55; font-weight: 500; }
+    .official-card p { margin: 0 0 13px; color: var(--muted); font-size: 10px; line-height: 1.8; }
+    .official-card-link { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 9px; }
+    .official-card-link svg { width: 13px; height: 13px; }
+    .official-disclaimer { margin: 15px 0 0; color: var(--muted); font-size: 9px; line-height: 1.8; }
+
+    /* Travel checklist */
+    .travel-section { padding: 98px 0; }
+    .travel-card { display: grid; grid-template-columns: .92fr 1.08fr; min-height: 365px; background: var(--paper-2); }
+    .travel-image { position: relative; overflow: hidden; min-height: 365px; }
+    .travel-image img { width: 100%; height: 100%; min-height: 365px; object-fit: cover; object-position: center; }
+    .travel-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(28px, 5.2vw, 65px); }
+    .travel-copy .section-kicker { margin-bottom: 13px; }
+    .travel-copy h2 { margin: 0; font-family: var(--serif); font-size: clamp(29px, 3vw, 40px); line-height: 1.5; font-weight: 500; }
+    .travel-copy p { max-width: 435px; margin: 15px 0 22px; color: var(--muted); font-size: 11px; line-height: 2; }
+
+    /* Footer */
+    .site-footer { padding: 57px 0 24px; color: rgba(255,255,255,.82); background: var(--ink); }
+    .footer-main { display: grid; grid-template-columns: 1fr auto; gap: 50px; padding-bottom: 41px; border-bottom: 1px solid rgba(255,255,255,.16); }
+    .footer-brand .brand { color: white; }
+    .footer-brand .brand-symbol { border-color: #d9ad98; color: #d9ad98; }
+    .footer-brand .brand-symbol::after { background: #d9ad98; }
+    .footer-brand .brand-name small { color: rgba(255,255,255,.55); }
+    .footer-brand p { max-width: 360px; margin: 18px 0 0; color: rgba(255,255,255,.63); font-size: 11px; line-height: 1.9; }
+    .footer-nav { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: flex-end; gap: 13px 25px; }
+    .footer-nav a, .footer-nav button { padding: 5px 0; border: 0; color: rgba(255,255,255,.78); background: transparent; font-size: 10px; cursor: pointer; }
+    .footer-nav a:hover, .footer-nav button:hover { color: white; text-decoration: underline; text-underline-offset: 4px; }
+    .footer-medical-note { padding: 20px 0 19px; color: rgba(255,255,255,.55); font-size: 9px; line-height: 1.9; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; color: rgba(255,255,255,.45); font-size: 9px; letter-spacing: .08em; }
+
+    /* Dialogs */
+    dialog { color: var(--ink); }
+    .modal {
+      width: min(760px, calc(100% - 28px)); max-width: 760px; max-height: min(88vh, 860px);
+      margin: auto; padding: 0; border: 1px solid rgba(38,53,47,.16); border-radius: 3px;
+      color: var(--ink); background: var(--white); box-shadow: var(--shadow); overflow: auto;
+    }
+    .modal::backdrop { background: rgba(20, 30, 25, .58); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+    .modal-top { position: sticky; top: 0; z-index: 2; min-height: 59px; padding: 10px 19px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(252,251,247,.96); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+    .modal-top-label { color: var(--terra); font-size: 10px; letter-spacing: .14em; }
+    .modal-close { border-color: var(--line); }
+    .modal-article { padding: clamp(24px, 6vw, 54px); }
+    .modal-article h2 { margin: 0; font-family: var(--serif); font-size: clamp(28px, 4vw, 40px); line-height: 1.55; font-weight: 500; letter-spacing: .025em; }
+    .modal-lead { margin: 17px 0 29px; padding-bottom: 22px; border-bottom: 1px solid var(--line); color: var(--ink-soft); font-size: 13px; line-height: 2; }
+    .article-body { color: var(--ink-soft); font-size: 12px; line-height: 2; }
+    .article-body h3 { margin: 28px 0 9px; color: var(--ink); font-family: var(--serif); font-size: 19px; font-weight: 500; }
+    .article-body p { margin: 10px 0; }
+    .article-body ul, .article-body ol { padding-left: 1.4em; }
+    .article-body li { margin: 6px 0; }
+    .article-body strong { color: var(--ink); font-weight: 600; }
+    .article-callout { margin: 22px 0; padding: 17px 19px; border-left: 2px solid var(--terra); background: var(--paper-2); color: var(--ink); }
+    .article-mini-label { color: var(--terra); font-size: 9px; letter-spacing: .14em; }
+    .article-endnote { margin-top: 30px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.9; }
+    .modal-actions { margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .modal-actions p { max-width: 410px; margin: 0; color: var(--muted); font-size: 9px; line-height: 1.7; }
+    .save-article { min-height: 40px; padding: 0 13px; border: 1px solid var(--line); display: inline-flex; align-items: center; gap: 8px; color: var(--ink); background: transparent; font-size: 10px; white-space: nowrap; cursor: pointer; }
+    .save-article[aria-pressed="true"] { border-color: var(--olive-dark); color: white; background: var(--olive-dark); }
+
+    /* Checklist dialog */
+    .checklist-content { padding: clamp(24px, 5vw, 43px); }
+    .checklist-content h2 { margin: 0; font-family: var(--serif); font-size: clamp(27px, 4vw, 37px); font-weight: 500; line-height: 1.5; }
+    .checklist-intro { margin: 12px 0 23px; color: var(--muted); font-size: 11px; line-height: 1.9; }
+    .check-progress { margin-bottom: 13px; display: flex; justify-content: space-between; color: var(--muted); font-size: 10px; }
+    .progress-track { height: 3px; margin-bottom: 17px; background: var(--paper-2); }
+    .progress-bar { width: 0; height: 100%; background: var(--terra); transition: width .25s ease; }
+    .checklist-items { display: grid; gap: 8px; }
+    .check-item { min-height: 53px; padding: 12px 14px; border: 1px solid var(--line); display: flex; align-items: flex-start; gap: 12px; background: var(--white); cursor: pointer; }
+    .check-item input { width: 16px; height: 16px; margin: 4px 0 0; accent-color: var(--olive-dark); flex: 0 0 auto; }
+    .check-item span { color: var(--ink-soft); font-size: 11px; line-height: 1.75; }
+    .checklist-bottom { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .checklist-bottom small { color: var(--muted); font-size: 9px; }
+    .reset-checks { padding: 7px 0; border: 0; border-bottom: 1px solid var(--line); color: var(--ink); background: transparent; font-size: 10px; cursor: pointer; }
+
+    @media (max-width: 1000px) {
+      .main-nav { gap: 16px; }
+      .main-nav a { font-size: 11px; }
+      .hero-grid { gap: 34px; }
+      .hero-visual, .hero-visual > img { min-height: 460px; }
+      .story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    }
+    @media (max-width: 760px) {
+      .container { width: min(var(--container), calc(100% - 38px)); }
+      .nav-shell { min-height: 68px; gap: 12px; }
+      .main-nav {
+        position: absolute; top: 100%; right: 0; left: 0; z-index: 2; padding: 10px 21px 18px;
+        border-bottom: 1px solid var(--line); display: none; align-items: stretch; flex-direction: column; gap: 0;
+        background: var(--paper); box-shadow: 0 18px 28px rgba(38,53,47,.08);
+      }
+      .main-nav.is-open { display: flex; }
+      .main-nav a { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+      .main-nav a:last-child { border-bottom: 0; }
+      .main-nav a::after { display: none; }
+      .menu-toggle { display: inline-flex; }
+      .saved-button { min-width: 40px; width: 40px; padding: 0; }
+      .saved-button .saved-label { display: none; }
+      .hero { padding-top: 28px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 22px; }
+      .hero-copy { padding: 27px 0 10px; }
+      .hero h1 { margin-top: 20px; font-size: clamp(47px, 9vw, 62px); }
+      .hero-meta { margin-top: 29px; }
+      .hero-visual, .hero-visual > img { min-height: 390px; }
+      .hero-visual { aspect-ratio: 1.5; }
+      .hero-bottom { align-items: flex-start; flex-direction: column; gap: 7px; padding-top: 15px; }
+      .reader-note-inner { grid-template-columns: 1fr auto; gap: 8px 18px; padding: 18px 0; }
+      .reader-note-label { grid-column: 1; }
+      .reader-note-content { grid-column: 1; display: block; }
+      .reader-note-content strong { display: block; margin-bottom: 3px; font-size: 17px; }
+      .reader-note-content p { max-width: 490px; }
+      .note-arrow { grid-column: 2; grid-row: 1 / span 2; }
+      .section { padding: 77px 0; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 13px; margin-bottom: 25px; }
+      .section-intro { max-width: 520px; }
+      .feature-section { padding-top: 77px; }
+      .feature-card { grid-template-columns: 1fr; }
+      .feature-image, .feature-image img { min-height: 290px; max-height: 380px; }
+      .feature-copy { padding: 29px 25px 31px; }
+      .category-section { padding: 0 0 67px; }
+      .ranking-grid { grid-template-columns: 1fr; }
+      .travel-data-section { padding: 66px 0; }
+      .travel-data-head { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .food-data-section { padding: 66px 0; }
+      .food-ranking-grid { grid-template-columns: 1fr; }
+      .michelin-heading { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .michelin-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .travel-metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .travel-destination-row { grid-template-columns: 31px minmax(0, 1fr) 100px 65px; gap: 8px; }
+      .ranking-section .section-heading { margin-bottom: 22px; }
+      .category-top { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .category-tile { min-height: 112px; padding-left: 0; border-bottom: 1px solid var(--line); }
+      .category-tile:not(:first-child) { padding-left: 15px; }
+      .category-tile:nth-child(2) { border-right: 0; }
+      .category-tile:nth-child(3), .category-tile:nth-child(4) { border-bottom: 0; }
+      .category-tile:nth-child(3) { padding-left: 0; }
+      .category-tile:hover, .category-tile:not(:first-child):hover { padding-left: 13px; }
+      .category-tile:nth-child(3):hover { padding-left: 13px; }
+      .stories-section { padding-top: 67px; }
+      .story-tools { align-items: stretch; flex-direction: column; }
+      .filter-list { flex-wrap: nowrap; padding-bottom: 3px; overflow-x: auto; scrollbar-width: thin; }
+      .filter-button { flex: 0 0 auto; }
+      .search-box { width: 100%; }
+      .promise-section { padding: 76px 0; }
+      .promise-grid { grid-template-columns: 1fr; gap: 19px; }
+      .promise-side p:last-child { max-width: 380px; }
+      .promise-points { gap: 12px; }
+      .official-section { padding: 65px 0; }
+      .official-heading { grid-template-columns: 1fr; gap: 11px; }
+      .travel-section { padding: 70px 0; }
+      .travel-card { grid-template-columns: 1fr; }
+      .travel-image, .travel-image img { min-height: 270px; max-height: 370px; }
+      .travel-copy { padding: 30px 25px 32px; }
+      .footer-main { grid-template-columns: 1fr; gap: 26px; }
+      .footer-nav { justify-content: flex-start; }
+      .footer-bottom { flex-direction: column; gap: 5px; }
+    }
+    @media (max-width: 480px) {
+      .container { width: calc(100% - 34px); }
+      .topline { font-size: 9px; }
+      .topline-right { display: none; }
+      .brand-name { font-size: 16px; }
+      .brand-name small { font-size: 8px; }
+      .nav-actions { gap: 1px; }
+      .hero { padding-top: 18px; }
+      .hero-copy { padding-top: 25px; }
+      .hero h1 { margin: 17px 0 15px; font-size: clamp(43px, 11.3vw, 54px); line-height: 1.31; }
+      .hero-lede { font-size: 12px; line-height: 1.95; }
+      .hero-actions { gap: 8px; margin-top: 23px; }
+      .hero-actions .button { min-height: 43px; padding-inline: 12px; gap: 7px; font-size: 10px; }
+      .hero-actions .button svg { width: 14px; height: 14px; }
+      .hero-meta { align-items: flex-start; flex-direction: column; gap: 4px; margin-top: 22px; font-size: 8px; }
+      .hero-visual, .hero-visual > img { min-height: 298px; }
+      .hero-sticker { top: 16px; padding: 9px 12px 9px 15px; font-size: 9px; }
+      .hero-bottom { font-size: 10px; }
+      .reader-note-inner { min-height: 94px; }
+      .reader-note-label { font-size: 9px; }
+      .reader-note-content strong { font-size: 15px; }
+      .reader-note-content p { max-width: 275px; font-size: 10px; line-height: 1.7; }
+      .section { padding: 66px 0; }
+      .section-title { font-size: 30px; }
+      .feature-section { padding-top: 64px; }
+      .feature-image, .feature-image img { min-height: 235px; }
+      .feature-copy { padding: 24px 19px 26px; }
+      .feature-copy h3 { font-size: 27px; }
+      .feature-copy > p:not(.tagline) { font-size: 11px; }
+      .feature-list { grid-template-columns: 1fr; gap: 7px; margin: 18px 0; }
+      .category-section { padding-bottom: 56px; }
+      .category-name { font-size: 17px; }
+      .category-desc { font-size: 9px; }
+      .category-tile { min-height: 105px; }
+      .ranking-section { padding: 61px 0; }
+      .ranking-topline { margin-top: -6px; font-size: 8px; }
+      .ranking-row { min-height: 88px; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 8px; padding: 11px 10px; }
+      .ranking-position { font-size: 20px; }
+      .ranking-brand { font-size: 7px; }
+      .ranking-name { font-size: 12px; }
+      .ranking-original { font-size: 8px; }
+      .ranking-stats { min-width: 72px; }
+      .ranking-stats strong { font-size: 14px; }
+      .ranking-stats span { font-size: 8px; }
+      .ranking-method { padding: 14px; font-size: 9px; }
+      .travel-data-panel, .travel-destination-panel { padding: 15px 12px; }
+      .travel-data-head h3 { font-size: 19px; }
+      .travel-metric-grid { grid-template-columns: 1fr; }
+      .travel-metric-card { min-height: 106px; padding: 13px; }
+      .travel-metric-value { font-size: 24px; }
+      .travel-destination-row { grid-template-columns: 26px minmax(0, 1fr) 86px 58px; gap: 6px; }
+      .travel-place-rank { font-size: 15px; }
+      .travel-place-name { font-size: 12px; }
+      .travel-place-stat { font-size: 13px; }
+      .travel-place-stat small { font-size: 7px; }
+      .travel-place-yoy { min-width: 56px; padding-inline: 3px; font-size: 7px; }
+      .travel-origin-note { padding: 10px; font-size: 8px; }
+      .travel-review-signal { font-size: 8px; }
+      .travel-method-note { font-size: 8px; }
+      .food-ranking-panel, .michelin-panel { padding: 15px 12px; }
+      .food-ranking-panel h3, .michelin-heading h3 { font-size: 19px; }
+      .food-ranking-row { grid-template-columns: 26px minmax(0, 1fr); gap: 7px; }
+      .food-place-name { font-size: 10px; }
+      .food-place-name small, .food-panel-note, .food-source-warning { font-size: 8px; }
+      .michelin-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .michelin-stat { min-height: 82px; padding: 11px; }
+      .michelin-stat strong { font-size: 21px; }
+      .michelin-stat span, .michelin-disclaimer { font-size: 8px; }
+      .stories-section { padding-top: 59px; }
+      .story-grid { grid-template-columns: 1fr; gap: 14px; }
+      .card-image-wrap { aspect-ratio: 1.62; }
+      .card-content { padding: 15px 16px 14px; }
+      .card-content h3 { font-size: 18px; }
+      .card-content p { font-size: 11px; margin-bottom: 13px; }
+      .promise-section { padding: 65px 0; }
+      .promise-main h2 { font-size: 34px; }
+      .promise-main > p { font-size: 11px; }
+      .promise-points { grid-template-columns: 1fr; gap: 10px; margin-top: 25px; }
+      .official-section { padding: 58px 0; }
+      .official-heading h2 { font-size: 29px; }
+      .official-grid { grid-template-columns: 1fr; gap: 10px; }
+      .official-card { min-height: 166px; padding: 18px; }
+      .travel-section { padding: 60px 0; }
+      .travel-image, .travel-image img { min-height: 230px; }
+      .travel-copy { padding: 24px 19px 26px; }
+      .travel-copy h2 { font-size: 29px; }
+      .footer-main { gap: 22px; }
+      .footer-nav { gap: 8px 17px; }
+      .modal { width: calc(100% - 16px); max-height: 92vh; }
+      .modal-top { min-height: 53px; padding-inline: 13px; }
+      .modal-article { padding: 23px 19px 24px; }
+      .modal-article h2 { font-size: 28px; }
+      .modal-lead { font-size: 12px; }
+      .article-body { font-size: 11px; }
+      .modal-actions { align-items: flex-start; flex-direction: column; }
+      .checklist-content { padding: 22px 17px; }
+      .check-item { padding-inline: 11px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+
+    /* Premium editorial refinement */
+    .topline { color: rgba(255,255,255,.86); }
+    .topline-inner { min-height: 32px; }
+    .site-header { background: rgba(247,245,239,.94); box-shadow: 0 8px 24px rgba(33,52,45,.035); }
+    .footer-bottom { color: rgba(255,255,255,.62); }
+    .nav-shell { min-height: 80px; }
+    .brand-symbol { width: 36px; height: 36px; font-size: 18px; }
+    .brand-name { font-size: 19px; letter-spacing: .15em; }
+    .main-nav { gap: clamp(17px, 2vw, 29px); }
+    .main-nav a { font-size: 11px; letter-spacing: .035em; }
+    .nav-actions { gap: 4px; }
+    .icon-button { transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease; }
+    .icon-button:hover { transform: translateY(-1px); }
+
+    .hero { padding: 50px 0 31px; background: linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,0) 70%); }
+    .hero-grid { grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr); gap: clamp(30px,5vw,72px); }
+    .hero-grid > * { min-width: 0; }
+    .hero-copy { padding: 34px 0 29px; }
+    .hero h1 { font-size: clamp(52px,5.25vw,76px); line-height: 1.3; letter-spacing: .055em; }
+    .hero-lede { max-width: 455px; font-size: 14px; line-height: 2.15; }
+    .hero-actions .button { min-height: 48px; }
+    .hero-meta { max-width: 480px; padding-top: 15px; font-size: 8px; }
+    .hero-visual { min-width: 0; min-height: 520px; border: 1px solid rgba(33,52,45,.12); box-shadow: 0 20px 46px rgba(33,52,45,.12); isolation: isolate; }
+    .hero-visual > img { position: relative; z-index: 0; min-height: 520px; object-position: 54% center; }
+    .hero-visual::before { content: ""; position: absolute; z-index: 2; inset: 13px; border: 1px solid rgba(255,255,255,.48); pointer-events: none; }
+    .hero-visual::after { z-index: 1; background: linear-gradient(0deg, rgba(28,38,32,.5), transparent 47%); }
+    .hero-sticker { z-index: 3; border-left: 2px solid var(--terra); box-shadow: 0 8px 22px rgba(25,37,31,.08); }
+    .photo-caption { z-index: 3; right: 22px; bottom: 19px; left: 22px; gap: 8px 14px; font-size: 8px; letter-spacing: .12em; }
+    .hero-bottom { color: var(--muted); font-size: 10px; }
+
+    .reader-note { margin-top: 27px; }
+    .reader-note-inner { min-height: 108px; }
+    .reader-note-label { color: var(--terra); letter-spacing: .16em; }
+    .reader-note-content strong { font-size: 19px; }
+    .section { padding-top: 108px; padding-bottom: 106px; }
+    .section-kicker::before { content: ""; display: inline-block; width: 19px; height: 1px; margin: 0 10px 3px 0; background: var(--gold); }
+    .section-title { letter-spacing: .055em; }
+    .section-intro { max-width: 440px; line-height: 2; }
+
+    .feature-card { border: 1px solid rgba(33,52,45,.08); box-shadow: 0 16px 42px rgba(33,52,45,.075); }
+    .feature-copy { background: linear-gradient(135deg, rgba(255,255,255,.46), rgba(255,255,255,.12)); }
+    .category-grid { border-color: rgba(33,52,45,.18); }
+    .category-tile { min-height: 128px; }
+    .category-arrow { color: var(--terra); }
+    .ranking-section { background: #eeece4; }
+    .ranking-row { border-color: rgba(33,52,45,.12); background: rgba(255,254,251,.82); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .ranking-row:hover { transform: translateY(-2px); border-color: rgba(146,89,68,.3); box-shadow: 0 10px 24px rgba(33,52,45,.06); }
+    .ranking-method, .food-source-warning { border-left-width: 3px; }
+    .travel-data-panel, .travel-destination-panel, .food-ranking-panel { border-color: rgba(33,52,45,.13); box-shadow: 0 10px 28px rgba(33,52,45,.045); }
+    .travel-metric-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .travel-metric-card:hover { transform: translateY(-2px); box-shadow: 0 9px 22px rgba(33,52,45,.065); }
+    .michelin-panel { position: relative; overflow: hidden; border-color: rgba(33,52,45,.18); background: radial-gradient(circle at 100% 0, rgba(255,255,255,.095), transparent 38%), var(--olive-dark); }
+    .michelin-stat { border-radius: 2px; background: rgba(255,255,255,.075); }
+    .story-card { overflow: hidden; border-radius: 2px; }
+    .story-card:hover { box-shadow: 0 16px 40px rgba(33,52,45,.12); }
+    .official-card, .travel-card { border-radius: 2px; }
+    .modal { border-radius: 4px; }
+    .check-item { border-radius: 2px; transition: border-color .2s ease, background .2s ease; }
+    .check-item:hover { border-color: rgba(146,89,68,.45); background: #fffdfa; }
+
+    @media (max-width: 1000px) and (min-width: 761px) {
+      .hero-grid { gap: 28px; }
+      .hero-visual, .hero-visual > img { min-height: 450px; }
+      .hero h1 { font-size: clamp(50px,5.4vw,64px); }
+      .brand-name { font-size: 17px; }
+    }
+    @media (max-width: 820px) and (min-width: 761px) {
+      .nav-shell { min-height: 70px; gap: 12px; }
+      .main-nav {
+        position: absolute; top: 100%; right: 0; left: 0; z-index: 2; padding: 10px 28px 18px;
+        border-bottom: 1px solid var(--line); display: none; align-items: stretch; flex-direction: column; gap: 0;
+        background: var(--paper); box-shadow: 0 18px 28px rgba(33,52,45,.08);
+      }
+      .main-nav.is-open { display: flex; }
+      .main-nav a { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+      .main-nav a:last-child { border-bottom: 0; }
+      .main-nav a::after { display: none; }
+      .menu-toggle { display: inline-flex; }
+      .saved-button { min-width: 40px; width: 40px; padding: 0; }
+      .saved-button .saved-label { display: none; }
+      .hero-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
+      .hero-copy { padding: 24px 0 0; }
+      .hero h1 { font-size: clamp(50px,7vw,66px); }
+      .hero-lede, .hero-meta { max-width: 640px; }
+      .hero-visual, .hero-visual > img { min-height: 460px; }
+      .hero-visual { aspect-ratio: 1.5; }
+      .hero-visual > img { height: 100%; }
+    }
+    @media (max-width: 760px) {
+      .site-header { box-shadow: 0 6px 18px rgba(33,52,45,.045); }
+      .nav-shell { min-height: 70px; }
+      .main-nav { background: var(--paper); }
+      .hero { padding: 31px 0 23px; }
+      .hero-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }
+      .hero-grid > * { width: 100%; min-width: 0; }
+      .hero-copy { padding: 19px 0 4px; }
+      .hero h1 { font-size: clamp(47px,9.8vw,62px); line-height: 1.3; }
+      .hero-visual, .hero-visual > img { min-height: 290px; }
+      .hero-visual { width: 100%; aspect-ratio: 1.35; }
+      .hero-visual > img { min-width: 0; height: 100%; }
+      .hero-visual::before { inset: 10px; }
+      .photo-caption { right: 13px; bottom: 13px; left: 13px; flex-wrap: wrap; gap: 3px 10px; font-size: 7px; letter-spacing: .09em; }
+      .photo-caption span { min-width: 0; overflow-wrap: anywhere; }
+      .hero-sticker { top: 14px; }
+      .section { padding-top: 76px; padding-bottom: 76px; }
+      .section-heading { padding-bottom: 17px; border-bottom: 1px solid var(--line); }
+      .category-tile { min-height: 116px; }
+      .feature-card, .travel-card { box-shadow: 0 10px 28px rgba(33,52,45,.07); }
+    }
+    @media (max-width: 480px) {
+      .brand-symbol { width: 32px; height: 32px; }
+      .brand-name { font-size: 16px; letter-spacing: .1em; }
+      .nav-shell { gap: 8px; }
+      .nav-actions { gap: 1px; }
+      .hero { padding-top: 18px; }
+      .hero-copy { padding-top: 18px; }
+      .hero h1 { font-size: clamp(43px,11.3vw,54px); }
+      .hero-visual, .hero-visual > img { min-height: 250px; }
+      .hero-visual { aspect-ratio: 1.3; }
+      .photo-caption { font-size: 7px; letter-spacing: .07em; }
+      .hero-sticker { max-width: calc(100% - 22px); }
+    }
+    @media (max-width: 360px) {
+      .nav-shell { gap: 7px; }
+      .brand-name { font-size: 14px; letter-spacing: .1em; }
+      .brand-name small { display: none; }
+      .nav-actions { gap: 0; }
+      .nav-actions .icon-button { min-width: 35px; min-height: 35px; }
+      .saved-button { min-width: 35px; width: 35px; }
+      .travel-destination-row { grid-template-columns: 24px minmax(0,1fr) 72px 52px; gap: 5px; }
+      .travel-place-yoy { min-width: 52px; }
+    }
+
+    .main-nav a.language-switch { margin-left: -8px; padding-left: 14px; border-left: 1px solid var(--line); color: var(--terra); font-size: 10px; letter-spacing: .1em; }
+    @media (max-width: 960px) and (min-width: 761px) {
+      .nav-shell { min-height: 70px; gap: 12px; }
+      .main-nav { position: absolute; top: 100%; right: 0; left: 0; z-index: 2; padding: 10px 28px 18px; border-bottom: 1px solid var(--line); display: none; align-items: stretch; flex-direction: column; gap: 0; background: var(--paper); box-shadow: 0 18px 28px rgba(33,52,45,.08); }
+      .main-nav.is-open { display: flex; }
+      .main-nav a { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+      .main-nav a:last-child { border-bottom: 0; }
+      .main-nav a::after { display: none; }
+      .main-nav a.language-switch { margin-left: 0; padding-left: 0; border-left: 0; }
+      .menu-toggle { display: inline-flex; }
+      .saved-button { min-width: 40px; width: 40px; padding: 0; }
+      .saved-button .saved-label { display: none; }
+    }
+    @media (max-width: 760px) {
+      .main-nav a.language-switch { margin-left: 0; padding-left: 0; border-left: 0; }
+    }
+    @media (min-width: 361px) and (max-width: 400px) {
+      .brand-name small { display: none; }
+      .nav-actions { gap: 0; }
+      .nav-actions .icon-button { min-width: 36px; min-height: 36px; }
+      .saved-button { min-width: 36px; width: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <div class="topline">
+    <div class="container topline-inner">
+      <span>日本語で楽しむ、韓国の美容・食・旅。</span>
+      <span class="topline-right">A thoughtful guide to Korea</span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#top">
+        <span class="brand-symbol" aria-hidden="true">S</span>
+        <span class="brand-name">SEOUL NOTE <small>ソウルノート</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="メインナビゲーション">
+        <a href="#beauty-ranking">韓国美容</a>
+        <a href="#travel-data">旅・エリア</a>
+        <a href="#food-data">韓国グルメ</a>
+        <a href="#stories" data-jump-filter="medical">美容医療</a>
+        <a href="#about">編集方針</a>
+        <a class="language-switch" href="/en/" lang="en" aria-label="Read the English edition">ENGLISH</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" id="searchToggle" type="button" aria-label="記事を検索">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg>
+        </button>
+        <button class="icon-button saved-button" id="savedToggle" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.5 4.5h11v16l-5.5-3.7-5.5 3.7z"></path></svg>
+          <span class="saved-label">保存</span><span class="saved-count" id="savedCount">0</span>
+        </button>
+        <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="メニューを開く">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span>韓国を、好きな気持ちのまま。</span></div>
+          <h1 id="heroTitle">あこがれを、<br><em>自分らしい</em><br>選び方へ。</h1>
+          <p class="hero-lede">美容のこと、韓国で食べたい一皿、街の歩き方。気になる情報を日本語で、落ち着いて調べられる女性のための韓国ガイドです。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#stories">記事を読む
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+            </a>
+            <button class="button button-light" type="button" data-open-checklist>旅の準備をする</button>
+          </div>
+          <div class="hero-meta"><span>BEAUTY · MEDICAL · FOOD · TRAVEL</span><span>日本語の韓国情報ノート</span></div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/hero-seoul.jpg" alt="カジュアルな服装でソウルの街を散策する、30代の日本人旅行者のAI生成画像" fetchpriority="high">
+          <div class="hero-sticker"><span>01</span> 気になるを、ひとつずつ。</div>
+          <div class="photo-caption"><span>SEOUL, AT YOUR OWN PACE</span><span>イメージ写真（生成画像）</span></div>
+        </div>
+      </div>
+      <div class="container hero-bottom">
+        <p>「好き」を、知ることから自分のペースで楽しむために。</p>
+        <a class="text-link" href="#feature">美容医療の基礎ガイドへ
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="reader-note" aria-label="美容医療についてのご案内">
+      <div class="container reader-note-inner">
+        <div class="reader-note-label">A NOTE ON MEDICAL BEAUTY</div>
+        <div class="reader-note-content">
+          <strong>施術を決める前に、確認することを決めよう。</strong>
+          <p>担当医・リスク・費用・帰国後の相談先。納得できるまで情報を確かめるためのガイドを用意しました。</p>
+        </div>
+        <button class="note-arrow" type="button" data-open-article="medical-checklist" aria-label="美容医療の確認ガイドを読む">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section feature-section" id="feature" aria-labelledby="featureTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">FEATURE / MEDICAL BEAUTY</p>
+            <h2 class="section-title" id="featureTitle">韓国で美容整形を考えるなら、<br>最初に「聞くこと」から。</h2>
+          </div>
+          <p class="section-intro">憧れや口コミだけで決めず、自分の希望と不安を整理するために。相談前に確認したい視点を、ひとつずつまとめました。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-image">
+            <img src="assets/beauty-editorial.jpg" alt="自然光のなかに並ぶ、ブランド表示のないスキンケア容器" loading="lazy">
+            <span class="feature-photo-caption">BEAUTY, WITH CARE</span>
+          </div>
+          <div class="feature-copy">
+            <p class="tagline">BEFORE YOU DECIDE · 基礎ガイド</p>
+            <h3>施術名より先に、<br>不安と条件を言葉に。</h3>
+            <p>誰が診察・施術を担当するのか。期待できることとリスク、費用の内訳、帰国後に困ったときの連絡先。相談の場で確かめたい7つの質問を紹介します。</p>
+            <ul class="feature-list" aria-label="ガイドで確認する項目">
+              <li><span>01</span>担当する医師・体制</li>
+              <li><span>02</span>リスクと代替案</li>
+              <li><span>03</span>費用・キャンセル条件</li>
+              <li><span>04</span>帰国後の相談先</li>
+            </ul>
+            <button class="button button-primary" type="button" data-open-article="medical-checklist">相談前の7つの質問を読む
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+            </button>
+            <small class="feature-footnote">※一般的な情報です。診断・治療の判断は医師にご相談ください。</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-section" aria-labelledby="categoryTitle">
+      <div class="container">
+        <div class="category-top">
+          <h2 id="categoryTitle">興味のあるところから。</h2>
+          <p>気になるテーマを選ぶと、関連記事を絞り込めます。</p>
+        </div>
+        <div class="category-grid">
+          <button class="category-tile" type="button" data-jump-filter="beauty">
+            <span class="category-index">01 / BEAUTY</span><span class="category-name">韓国美容</span><span class="category-desc">スキンケア・コスメ・日々のケア</span>
+            <span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
+          </button>
+          <button class="category-tile" type="button" data-jump-filter="medical">
+            <span class="category-index">02 / MEDICAL</span><span class="category-name">美容医療</span><span class="category-desc">相談前の基礎知識・選び方</span>
+            <span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
+          </button>
+          <button class="category-tile" type="button" data-jump-filter="food">
+            <span class="category-index">03 / FOOD</span><span class="category-name">韓国グルメ</span><span class="category-desc">料理のことば・食べ方・選び方</span>
+            <span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
+          </button>
+          <button class="category-tile" type="button" data-jump-filter="travel">
+            <span class="category-index">04 / TRAVEL</span><span class="category-name">韓国の旅</span><span class="category-desc">行程づくり・出発前の準備</span>
+            <span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ranking-section" id="beauty-ranking" aria-labelledby="beautyRankingTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">2026 SOURCE RANKING / BEAUTY</p>
+            <h2 class="section-title" id="beautyRankingTitle">韓国のコスメレビューアプリ<br>Hwahaeのスキンケア TOP10。</h2>
+          </div>
+          <p class="section-intro">韓国の化粧品レビュー・ショッピングプラットフォーム「Hwahae」のスキンケアランキングを、確認できた掲載順で紹介します。評価点とレビュー件数も、同じページの表示値を記録しました。</p>
+        </div>
+        <div class="ranking-topline">
+          <span class="ranking-pill">Hwahae公式ページの掲載順</span>
+          <span>ページ更新日：2026.10.08</span>
+          <span>出典確認日：2026.10.10</span>
+        </div>
+        <ol class="ranking-grid" aria-label="Hwahae公式スキンケアランキングの掲載順 TOP10">
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="1位">01</span>
+            <div class="ranking-product"><span class="ranking-brand">AESTURA · 에스트라</span><h3 class="ranking-name">アトバリア365 クリーム</h3><span class="ranking-original">아토베리어365 크림</span></div>
+            <div class="ranking-stats"><strong>4.68</strong><span>評価点</span><span>18,797件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="2位">02</span>
+            <div class="ranking-product"><span class="ranking-brand">TONYMOLY · 토니모리</span><h3 class="ranking-name">セラミド モチ トナー</h3><span class="ranking-original">세라마이드 모찌 토너</span></div>
+            <div class="ranking-stats"><strong>4.73</strong><span>評価点</span><span>19,221件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="3位">03</span>
+            <div class="ranking-product"><span class="ranking-brand">Abib · 아비브</span><h3 class="ranking-name">ヒアルロニック ブーム セラム ウォーター ドロップ</h3><span class="ranking-original">히알루로닉 붐 세럼 워터 드롭</span></div>
+            <div class="ranking-stats"><strong>4.64</strong><span>評価点</span><span>2,928件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="4位">04</span>
+            <div class="ranking-product"><span class="ranking-brand">S.NATURE · 에스네이처</span><h3 class="ranking-name">アクア オアシス トナー</h3><span class="ranking-original">아쿠아 오아시스 토너</span></div>
+            <div class="ranking-stats"><strong>4.75</strong><span>評価点</span><span>29,197件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="5位">05</span>
+            <div class="ranking-product"><span class="ranking-brand">WELLAGE · 웰라쥬</span><h3 class="ranking-name">リアル ヒアルロニック ブルー100 アンプル</h3><span class="ranking-original">리얼 히알루로닉 블루 100 앰플</span></div>
+            <div class="ranking-stats"><strong>4.65</strong><span>評価点</span><span>34,274件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="6位">06</span>
+            <div class="ranking-product"><span class="ranking-brand">S.NATURE · 에스네이처</span><h3 class="ranking-name">アクア スクワラン 水分クリーム</h3><span class="ranking-original">아쿠아 스쿠알란 수분크림</span></div>
+            <div class="ranking-stats"><strong>4.58</strong><span>評価点</span><span>43,606件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="7位">07</span>
+            <div class="ranking-product"><span class="ranking-brand">Anua · 아누아</span><h3 class="ranking-name">PDRN ヒアルロン酸 カプセル100 セラム</h3><span class="ranking-original">PDRN 히알루론산 캡슐 100 세럼</span></div>
+            <div class="ranking-stats"><strong>4.61</strong><span>評価点</span><span>12,753件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="8位">08</span>
+            <div class="ranking-product"><span class="ranking-brand">WELLAGE · 웰라쥬</span><h3 class="ranking-name">リアル ヒアルロニック スージングクリーム</h3><span class="ranking-original">리얼 히알루로닉 수딩 크림</span></div>
+            <div class="ranking-stats"><strong>4.64</strong><span>評価点</span><span>3,924件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="9位">09</span>
+            <div class="ranking-product"><span class="ranking-brand">Torriden · 토리든</span><h3 class="ranking-name">ダイブイン 低分子ヒアルロン酸 スージングクリーム</h3><span class="ranking-original">다이브인 저분자 히알루론산 수딩 크림</span></div>
+            <div class="ranking-stats"><strong>4.68</strong><span>評価点</span><span>27,341件</span></div>
+          </li>
+          <li class="ranking-row">
+            <span class="ranking-position" aria-label="10位">10</span>
+            <div class="ranking-product"><span class="ranking-brand">ILLIYOON · 일리윤</span><h3 class="ranking-name">セラミド アト ローション</h3><span class="ranking-original">세라마이드 아토 로션</span></div>
+            <div class="ranking-stats"><strong>4.79</strong><span>評価点</span><span>2,730件</span></div>
+          </li>
+        </ol>
+        <div class="ranking-method">
+          <p><strong>データの読み方</strong></p>
+          <p>順位はHwahae公式ページの掲載順（ページ内の構造化リスト順）。レビュー件数・評価点は同ページに表示された商品別の値です。販売数や購入人数を示す数字ではありません。</p>
+          <p>同ページの説明は「1,000万利用者・103万レビュー基盤」としていますが、確認した範囲では順位の詳細な算出式・重み付けは明示されていません。販売ランキングや韓国市場全体の「ベスト」とは言い換えず、当サイト独自の順位付け・効能評価も加えていません。</p>
+          <p>掲載商品には企画セットが含まれる場合があります。ページの更新・在庫・掲載内容は変わるため、購入前に公式ページでご確認ください。</p>
+          <a class="ranking-source-link" href="https://www.hwahae.co.kr/rankings?english_name=category&amp;theme_id=4" target="_blank" rel="noopener noreferrer">Hwahae公式ランキングを確認する <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section travel-data-section" id="travel-data" aria-labelledby="travelDataTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">2026 SOURCE DATA / TRAVEL</p>
+            <h2 class="section-title" id="travelDataTitle">数字から見る、<br>ソウルの定番と地方への旅。</h2>
+          </div>
+          <p class="section-intro">2026年第1四半期の地域観光データと、2025年のソウル主要16エリアの外国人推定日平均人流を掲載。測定期間・指標を分け、「訪問者数」と「人気」を一つの順位に混ぜません。</p>
+        </div>
+
+        <div class="travel-data-panel">
+          <div class="travel-data-head">
+            <div><span class="travel-period">2026 Q1 / 韓国の地域観光</span><h3>地方への移動・滞在を示す指標</h3></div>
+            <p>2026年1〜3月と2025年1〜3月の比較。文化体育観光部の2026-04-14発表値（暫定値を含む）を掲載。</p>
+          </div>
+          <div class="travel-metric-grid">
+            <div class="travel-metric-card"><strong class="travel-metric-value">34.5%</strong><span class="travel-metric-label">訪韓外国人の地域訪問率</span><span class="travel-metric-delta">前年比 +3.2ポイント</span><small class="travel-metric-note">2025年第1四半期：31.3%</small></div>
+            <div class="travel-metric-card"><strong class="travel-metric-value">853,905人</strong><span class="travel-metric-label">地方空港経由の訪韓外国人</span><span class="travel-metric-delta">前年比 +49.7%</span><small class="travel-metric-note">2025年第1四半期：570,389人</small></div>
+            <div class="travel-metric-card"><strong class="travel-metric-value">1,692,988人</strong><span class="travel-metric-label">外国人の鉄道利用者</span><span class="travel-metric-delta">前年比 +46.4%</span><small class="travel-metric-note">2025年第1四半期：1,156,265人</small></div>
+            <div class="travel-metric-card"><strong class="travel-metric-value">335,161人</strong><span class="travel-metric-label">地方港経由の訪韓外国人</span><span class="travel-metric-delta">前年比 +6.1%</span><small class="travel-metric-note">2025年第1四半期：315,836人</small></div>
+            <div class="travel-metric-card"><strong class="travel-metric-value">528万日</strong><span class="travel-metric-label">外国人の地方滞在日数</span><span class="travel-metric-delta">前年比 +36.2%</span><small class="travel-metric-note">2025年第1四半期：388万日</small></div>
+            <div class="travel-metric-card"><strong class="travel-metric-value">8.8億米ドル</strong><span class="travel-metric-label">地方の外国人観光支出</span><span class="travel-metric-delta">前年比 +17.2%</span><small class="travel-metric-note">2025年第1四半期：7.5億米ドル</small></div>
+          </div>
+          <p class="travel-data-footnote">※空港・鉄道・港の利用者数、地域訪問率、滞在日数、支出額は異なる指標です。同一人物の重複を除いた「旅行者の実人数」とは限らず、合算していません。</p>
+        </div>
+
+        <div class="travel-destination-panel">
+          <div class="travel-data-head">
+            <div><span class="travel-period">2025 RESULTS / 2026-07-29 RELEASE</span><h3>ソウル主要16エリア｜外国人の日平均人流 上位5</h3></div>
+            <p>ソウルAI財団がSK Telecomの外国人フットトラフィック推計を用いて分析。2025年の数値で、2026年のリアルタイム人数ではありません。</p>
+          </div>
+          <ol class="travel-destination-list" aria-label="ソウル16主要エリアの外国人推定日平均人流 上位5">
+            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="1位">01</span><span class="travel-place-name">明洞エリア</span><span class="travel-place-stat">100,910<small>推定人／日</small></span><span class="travel-place-yoy">前年比 +9.8%</span></li>
+            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="2位">02</span><span class="travel-place-name">Nソウルタワー</span><span class="travel-place-stat">57,370<small>推定人／日</small></span><span class="travel-place-yoy">前年比 +9.8%</span></li>
+            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="3位">03</span><span class="travel-place-name">三成駅・COEX</span><span class="travel-place-stat">46,813<small>推定人／日</small></span><span class="travel-place-yoy">前年比 +9.7%</span></li>
+            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="4位">04</span><span class="travel-place-name">江南駅エリア</span><span class="travel-place-stat">41,210<small>推定人／日</small></span><span class="travel-place-yoy">前年比 +9.3%</span></li>
+            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="5位">05</span><span class="travel-place-name">弘大エリア</span><span class="travel-place-stat">40,213<small>推定人／日</small></span><span class="travel-place-yoy">前年比 +10.5%</span></li>
+          </ol>
+          <p class="travel-origin-note"><strong>日本からの旅行者に関する分析：</strong>明洞・南大門市場・広蔵市場では、日本・中国からの訪問者の割合が高い傾向が報告されています。訪問数の順位とは別の、出身市場の構成に関する分析です。</p>
+          <div class="travel-review-signal"><span>別指標｜外国人によるGoogle Mapsレビュー（2024〜2025年）</span><strong>景福宮 平均4.7 / 5</strong><strong>ソウルの森 ポジティブ評価割合79.9%</strong></div>
+          <p class="travel-method-note">※人流は短期滞在の外国人について、ローミングデータと出入国記録を基に特定エリアに一定時間滞在した人数を推計したものです。年間のユニーク訪問者数・観光地の質・満足度順位ではありません。Google Mapsレビュー指標は対象期間も単位も異なるため、人流順位とは比較していません。</p>
+        </div>
+        <div class="travel-source-links" aria-label="旅行データの出典">
+          <a href="https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=22342" target="_blank" rel="noopener noreferrer">文化体育観光部｜2026年第1四半期 地域観光データ</a>
+          <a href="https://english.seoul.go.kr/foreign-tourists-enjoying-k-culture-and-k-hiking-in-seoul-tourists-in-every-nook-and-cranny-of-the-city/" target="_blank" rel="noopener noreferrer">ソウル市｜2025年の外国人観光人流（2026年発表）</a>
+          <a href="https://english.seoul.go.kr/from-k-culture-to-k-hiking-foreign-tourists-venture-beyond-seouls-top-attractions/" target="_blank" rel="noopener noreferrer">ソウル市｜調査方法・エリア別内訳</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section food-data-section" id="food-data" aria-labelledby="foodDataTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">2026 SOURCE DATA / FOOD</p>
+            <h2 class="section-title" id="foodDataTitle">韓国グルメは、<br>検索順位とガイド選定を分けて。</h2>
+          </div>
+          <p class="section-intro">韓国観光公社のTMAPナビゲーション検索ランキングを、地域内・地域外利用者の区分ごとに掲載。MICHELIN Guide 2026は別枠のインスペクター選定として紹介します。</p>
+        </div>
+        <div class="food-ranking-grid">
+          <div class="food-ranking-panel">
+            <span class="travel-period">SEOUL / TMAP NAVIGATION SEARCH</span>
+            <h3>地域内の利用者（韓国語表示：현지인） TOP 10</h3>
+            <p class="food-panel-note">確認日：2026.10.10｜公式チャートの「맛집랭킹10」掲載順</p>
+            <ol class="food-ranking-list" aria-label="地域内の利用者（韓国語表示：현지인）のTMAP検索順位 TOP10">
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="1位">01</span><span class="food-place-name">サムウォンガーデン本店<small lang="ko">삼원가든 본점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="2位">02</span><span class="food-place-name">カンガンスルレ サンゲ店<small lang="ko">강강술래 상계점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="3位">03</span><span class="food-place-name">マクドナルド 三成DT店<small lang="ko">맥도날드 삼성DT점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="4位">04</span><span class="food-place-name">スターバックス ザ・プッカンサン店<small lang="ko">스타벅스 더북한산점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="5位">05</span><span class="food-place-name">マクドナルド 松坡蚕室DT店<small lang="ko">맥도날드 송파잠실DT점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="6位">06</span><span class="food-place-name">アシュリークイーンズ 麻谷店<small lang="ko">애슐리퀸즈 마곡점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="7位">07</span><span class="food-place-name">マクドナルド ソウル屯村DT店<small lang="ko">맥도날드 서울둔촌DT점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="8位">08</span><span class="food-place-name">マクドナルド 登村DT店<small lang="ko">맥도날드 등촌DT점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="9位">09</span><span class="food-place-name">ゴメスクエア 鉢山直営店<small lang="ko">고메스퀘어 발산직영점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="10位">10</span><span class="food-place-name">セビョクチプ 清潭洞店<small lang="ko">새벽집 청담동점</small></span></li>
+            </ol>
+          </div>
+          <div class="food-ranking-panel">
+            <span class="travel-period">SEOUL / TMAP NAVIGATION SEARCH</span>
+            <h3>地域外からの利用者（韓国語表示：외지인） TOP 10</h3>
+            <p class="food-panel-note">確認日：2026.10.10｜公式チャートの「맛집랭킹10」掲載順</p>
+            <ol class="food-ranking-list" aria-label="地域外からの利用者（韓国語表示：외지인）のTMAP検索順位 TOP10">
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="1位">01</span><span class="food-place-name">スターバックス ザ・プッカンサン店<small lang="ko">스타벅스 더북한산점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="2位">02</span><span class="food-place-name">ウレオク本店<small lang="ko">우래옥 본점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="3位">03</span><span class="food-place-name">トスニネチプ 楊坪洞店<small lang="ko">또순이네집 양평동점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="4位">04</span><span class="food-place-name">サムウォンガーデン本店<small lang="ko">삼원가든 본점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="5位">05</span><span class="food-place-name">カンガンスルレ サンゲ店<small lang="ko">강강술래 상계점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="6位">06</span><span class="food-place-name">RSG ソンス<small lang="ko">RSG 성수</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="7位">07</span><span class="food-place-name">永東ソルロンタン<small lang="ko">영동설렁탕</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="8位">08</span><span class="food-place-name">マクドナルド 三成DT店<small lang="ko">맥도날드 삼성DT점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="9位">09</span><span class="food-place-name">マクドナルド 松坡蚕室DT店<small lang="ko">맥도날드 송파잠실DT점</small></span></li>
+            <li class="food-ranking-row"><span class="food-rank-number" aria-label="10位">10</span><span class="food-place-name">狎鴎亭 公州餅<small lang="ko">압구정공주떡</small></span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="food-source-warning"><strong>この一覧が示すもの：</strong>韓国観光公社のチャート説明では、前月のTMAPナビゲーション検索をもとに、地域・食品カテゴリー別の上位10件をおおむね毎月8日ごろ更新（変動あり）としています。車で目的地を検索する行動の順位であり、実際に食事をした人数・味・満足度・飲食店の品質順位ではありません。初期カテゴリーにはカフェやベーカリーなども含まれ、ドライブスルー店舗が上位に入る場合もあります。「외지인」は地域外利用者の区分で、外国人旅行者を意味するとは限りません。確認できた一覧では対象月の表示を確認できなかったため、2026.10.10を確認日として記録し、特定の月とは断定していません。店名の日本語表記は読みの目安で、韓国語原文を併記しています。</div>
+        <div class="food-source-links">
+          <a href="https://korean.visitkorea.or.kr/localfood/main.do" target="_blank" rel="noopener noreferrer">韓国観光公社｜現地人・地域外利用者のチャート</a>
+          <a href="https://korean.visitkorea.or.kr/main/area_chart.do" target="_blank" rel="noopener noreferrer">韓国観光公社｜TMAP検索順位の方法・カテゴリー</a>
+        </div>
+        <div class="michelin-panel">
+          <div class="michelin-heading">
+            <div><span class="travel-period">MICHELIN GUIDE / 2026 EDITION</span><h3>ソウル・釜山の選出店</h3></div>
+            <p>2026年3月5日発表のガイド選定。消費者の訪問数・ナビ検索数による人気ランキングとは異なる、インスペクターによる選定です。</p>
+          </div>
+          <div class="michelin-stat-grid" aria-label="MICHELIN Guide Seoul and Busan 2026 selection counts">
+            <div class="michelin-stat"><strong>233</strong><span>選出店 合計<br>ソウル178・釜山55</span></div>
+            <div class="michelin-stat"><strong>46</strong><span>MICHELIN Star 選出店</span></div>
+            <div class="michelin-stat"><strong>71</strong><span>Bib Gourmand 選出店</span></div>
+            <div class="michelin-stat"><strong>116</strong><span>MICHELIN Selected</span></div>
+          </div>
+          <p class="michelin-disclaimer">※MICHELIN Guideの選定は専門ガイドの評価カテゴリーです。TMAP検索順位や一般利用者全体の人気・来店数と同じ意味ではありません。</p>
+          <a class="michelin-source" href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/michelin-guide-seoul-busan-2026-highlights" target="_blank" rel="noopener noreferrer">MICHELIN Guide公式発表を確認する</a>
+        </div>
+      </div>
+    </section>
+    <section class="section stories-section" id="stories" aria-labelledby="storiesTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">THE JOURNAL / 読みもの</p>
+            <h2 class="section-title" id="storiesTitle">知っておきたい、韓国のこと。</h2>
+          </div>
+          <p class="section-intro">流行だけではなく、選ぶときに役立つ視点も。気になるテーマや言葉で記事を探せます。</p>
+        </div>
+        <div class="story-tools">
+          <div class="filter-list" role="group" aria-label="記事のカテゴリー">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">すべて</button>
+            <button class="filter-button" type="button" data-filter="beauty" aria-pressed="false">韓国美容</button>
+            <button class="filter-button" type="button" data-filter="medical" aria-pressed="false">美容医療</button>
+            <button class="filter-button" type="button" data-filter="food" aria-pressed="false">韓国グルメ</button>
+            <button class="filter-button" type="button" data-filter="travel" aria-pressed="false">旅の準備</button>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">記事をキーワードで検索</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg>
+            <input id="articleSearch" type="search" placeholder="キーワードで記事を探す" autocomplete="off">
+          </label>
+        </div>
+        <p class="results-line" id="resultsMessage" aria-live="polite">4件の記事を表示中</p>
+        <div class="story-grid" id="storyGrid">
+          <article class="story-card" data-category="medical" data-article-id="medical-checklist" data-keywords="美容医療 整形 相談 医師 手術 施術 リスク 費用 帰国 アフターケア">
+            <a class="story-card-link" href="#stories" data-open-article="medical-checklist">
+              <span class="card-image-wrap"><img src="assets/hero-seoul.jpg" alt="ソウルの街を散策する日本人旅行者のAI生成画像" loading="lazy"><span class="card-number">01</span></span>
+              <div class="card-content"><span class="card-category">MEDICAL BEAUTY · 基礎</span><h3>美容整形の相談前に。確認したい7つの質問。</h3><p>担当医から費用、帰国後の連絡先まで。相談前に確認したい視点をまとめました。</p><span class="card-arrow">記事を読む <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div>
+            </a>
+          </article>
+          <article class="story-card" data-category="beauty" data-article-id="beauty-labels" data-keywords="韓国コスメ スキンケア 成分 表示 化粧品 美容 買い物 肌">
+            <a class="story-card-link" href="#stories" data-open-article="beauty-labels">
+              <span class="card-image-wrap"><img src="assets/beauty-editorial.jpg" alt="自然光に照らされたスキンケア用品" loading="lazy"><span class="card-number">02</span></span>
+              <div class="card-content"><span class="card-category">BEAUTY · SHOPPING</span><h3>韓国コスメを選ぶとき、見ておきたいこと。</h3><p>話題の商品を買う前に、自分の肌や使い方に合うかを確認するヒント。</p><span class="card-arrow">記事を読む <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div>
+            </a>
+          </article>
+          <article class="story-card" data-category="food" data-article-id="food-guide" data-keywords="韓国料理 グルメ 食事 ビビンバ サムゲタン トッポッキ パンチャン アレルギー 辛い">
+            <a class="story-card-link" href="#stories" data-open-article="food-guide">
+              <span class="card-image-wrap"><img src="assets/food-editorial.jpg" alt="韓国の小皿料理と鍋料理が並ぶ食卓" loading="lazy"><span class="card-number">03</span></span>
+              <div class="card-content"><span class="card-category">FOOD · TABLE</span><h3>韓国ごはんを、もっと楽しく味わう小さなガイド。</h3><p>料理の名前や味のイメージを知って、食事の時間を楽しむための入門編。</p><span class="card-arrow">記事を読む <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div>
+            </a>
+          </article>
+          <article class="story-card" data-category="travel" data-article-id="travel-plan" data-keywords="韓国旅行 ソウル 旅 観光 行程 旅行計画 旅行準備 予約">
+            <a class="story-card-link" href="#stories" data-open-article="travel-plan">
+              <span class="card-image-wrap"><img src="assets/travel-editorial.jpg" alt="朝のソウル、韓屋の屋根が続く路地" loading="lazy"><span class="card-number">04</span></span>
+              <div class="card-content"><span class="card-category">TRAVEL · SEOUL</span><h3>初めてのソウル、予定を詰めすぎない旅のつくり方。</h3><p>エリア、移動、休憩のバランスを整える、無理のない旅程づくり。</p><span class="card-arrow">記事を読む <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div>
+            </a>
+          </article>
+        </div>
+        <div class="empty-state" id="emptyState" hidden>
+          <strong id="emptyTitle">見つかりませんでした。</strong>
+          <span id="emptyDescription">検索語を変えるか、カテゴリーを選び直してください。</span><br>
+          <button type="button" id="resetFilters">検索と絞り込みをリセット</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise-section" id="about" aria-labelledby="promiseTitle">
+      <div class="container promise-grid">
+        <div class="promise-side">
+          <p class="section-kicker">OUR EDITORIAL PROMISE</p>
+          <p>SEOUL NOTE が大切にする、情報との付き合い方。</p>
+        </div>
+        <div class="promise-main">
+          <h2 id="promiseTitle">「好き」の気持ちを、<br>焦らず選べる情報に。</h2>
+          <p>韓国を楽しむ気持ちを大切にしながら、知っておきたいこともきちんと伝える。SEOUL NOTE は、流行を追うだけでなく、読者が自分に合う選択を考えるための編集ガイドを目指します。</p>
+          <div class="promise-points">
+            <div class="promise-point"><span>01</span><span>医療の効果や結果を断定しません。</span></div>
+            <div class="promise-point"><span>02</span><span>広告・提供がある場合は、記事内で明記します。</span></div>
+            <div class="promise-point"><span>03</span><span>施設・制度など変わる情報は、公式案内での再確認を促します。</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="official-section" id="official" aria-labelledby="officialTitle">
+      <div class="container">
+        <div class="official-heading">
+          <div>
+            <p class="section-kicker">CHECK THE ORIGINAL SOURCE</p>
+            <h2 id="officialTitle">変わる情報は、<br>公式案内で確かめる。</h2>
+          </div>
+          <p>制度、渡航情報、施設案内は更新されます。読みものだけで判断せず、必要なときは公的機関や各施設の最新情報も確認してください。</p>
+        </div>
+        <div class="official-grid">
+          <a class="official-card" href="https://www.medicalkorea.or.kr/jp/index" target="_blank" rel="noopener noreferrer">
+            <span class="official-source">MEDICAL KOREA / KHIDI</span>
+            <h3>韓国の医療サービスに関する案内</h3>
+            <p>韓国保健産業振興院の日本語ポータルで、医療関連の公式案内を確認できます。</p>
+            <span class="official-card-link">公式ポータルを見る <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></span>
+          </a>
+          <a class="official-card" href="https://japanese.visitkorea.or.kr/svc/main/index.do" target="_blank" rel="noopener noreferrer">
+            <span class="official-source">VISITKOREA · KTO</span>
+            <h3>韓国観光公社の日本語旅行情報</h3>
+            <p>韓国の観光、食、旅行基本情報などを公式サイトで確認できます。</p>
+            <span class="official-card-link">公式サイトを見る <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></span>
+          </a>
+          <a class="official-card" href="https://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_003.html" target="_blank" rel="noopener noreferrer">
+            <span class="official-source">JAPAN MOFA · SAFETY</span>
+            <h3>外務省の韓国・海外安全情報</h3>
+            <p>渡航前に、危険情報や安全対策の最新案内を確認するための窓口です。</p>
+            <span class="official-card-link">安全情報を見る <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></span>
+          </a>
+        </div>
+        <p class="official-disclaimer">※公式サイトへのリンクは情報確認のためのものです。掲載機関・医療提供者への推薦、保証、治療結果の評価を意味するものではありません。</p>
+      </div>
+    </section>
+
+    <section class="travel-section" id="travel" aria-labelledby="travelTitle">
+      <div class="container">
+        <div class="travel-card">
+          <div class="travel-image"><img src="assets/travel-editorial.jpg" alt="朝の光が差し込むソウルの韓屋路地" loading="lazy"></div>
+          <div class="travel-copy">
+            <p class="section-kicker">BEFORE YOU GO · TRAVEL NOTE</p>
+            <h2 id="travelTitle">旅の余白まで、<br>自分らしく準備する。</h2>
+            <p>渡航条件や予約先の公式案内、通信、保険、食事の希望。出発前に見返せるチェックリストを用意しました。チェック内容はこのブラウザーに保存できます。</p>
+            <button class="button button-primary" type="button" data-open-checklist>旅の準備チェックを開く
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#top">
+            <span class="brand-symbol" aria-hidden="true">S</span><span class="brand-name">SEOUL NOTE <small>ソウルノート</small></span>
+          </a>
+          <p>美容から食、旅まで。韓国を好きな気持ちに寄り添う、日本語の編集ガイド。</p>
+        </div>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <a href="#stories" data-jump-filter="beauty">韓国美容</a>
+          <a href="#stories" data-jump-filter="medical">美容医療</a>
+          <a href="#stories" data-jump-filter="food">韓国グルメ</a>
+          <a href="#travel">旅の準備</a>
+          <a href="#about">編集方針</a>
+          <button type="button" data-open-article="medical-notice">医療情報について</button>
+        </nav>
+      </div>
+      <div class="footer-medical-note">SEOUL NOTE は一般的な情報を紹介する編集メディアです。医療上の助言・診断・治療、特定の医療機関の推奨、予約の仲介を行うものではありません。美容医療を検討する際は、担当する医師から個別の説明を受けてください。費用・制度・施設情報・渡航条件などは変わることがあります。渡航・受診の前に、必ず公的機関および各施設の最新の公式案内をご確認ください。</div>
+      <div class="footer-bottom"><span>© SEOUL NOTE</span><span>憧れを、自分らしい選び方へ。</span></div>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="articleDialog" aria-labelledby="dialogTitle" aria-describedby="dialogLead">
+    <div class="modal-top">
+      <span class="modal-top-label" id="dialogLabel">SEOUL NOTE · JOURNAL</span>
+      <button class="icon-button modal-close" id="closeArticle" type="button" aria-label="記事を閉じる">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+      </button>
+    </div>
+    <article class="modal-article">
+      <h2 id="dialogTitle"></h2>
+      <p class="modal-lead" id="dialogLead"></p>
+      <div class="article-body" id="dialogBody"></div>
+      <div class="modal-actions">
+        <p>この記事は一般情報です。医療に関する判断は、個別の状態を把握する医師・医療専門家にご相談ください。</p>
+        <button class="save-article" id="saveArticle" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.5 4.5h11v16l-5.5-3.7-5.5 3.7z"></path></svg>
+          <span id="saveArticleLabel">この記事を保存</span>
+        </button>
+      </div>
+    </article>
+  </dialog>
+
+  <dialog class="modal" id="checklistDialog" aria-labelledby="checklistTitle">
+    <div class="modal-top">
+      <span class="modal-top-label">SEOUL NOTE · TRAVEL CHECK</span>
+      <button class="icon-button modal-close" id="closeChecklist" type="button" aria-label="チェックリストを閉じる">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+      </button>
+    </div>
+    <div class="checklist-content">
+      <p class="section-kicker">A LITTLE PREPARATION, MORE ROOM TO ENJOY</p>
+      <h2 id="checklistTitle">出発前の、旅じたく。</h2>
+      <p class="checklist-intro">渡航条件・予約・体調に関わる事項は、出発前に最新の公式案内で確認してください。チェック内容はこのブラウザー内に保存されます。</p>
+      <div class="check-progress"><span>準備の進み具合</span><span id="checkProgressText">0 / 7</span></div>
+      <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+      <div class="checklist-items" id="checklistItems">
+        <label class="check-item"><input type="checkbox" data-check="passport"><span>パスポートと渡航条件を、公的機関の最新情報で確認した。</span></label>
+        <label class="check-item"><input type="checkbox" data-check="booking"><span>宿泊先・交通・訪問先の公式案内と予約条件を確認した。</span></label>
+        <label class="check-item"><input type="checkbox" data-check="connectivity"><span>通信手段、充電まわり、緊急連絡先を準備した。</span></label>
+        <label class="check-item"><input type="checkbox" data-check="food"><span>食物アレルギーや食事の希望を、伝えられる形でメモした。</span></label>
+        <label class="check-item"><input type="checkbox" data-check="insurance"><span>旅行保険の補償範囲と、対象外になるケースを確認した。</span></label>
+        <label class="check-item"><input type="checkbox" data-check="medical"><span>美容医療の予定がある場合、担当医・帰国後の連絡先・相談先を確認した。</span></label>
+        <label class="check-item"><input type="checkbox" data-check="time"><span>移動や休憩の時間を含め、無理のない予定に整えた。</span></label>
+      </div>
+      <div class="checklist-bottom"><small>チェック内容は端末内に保存されます。予約・提出機能ではありません。</small><button class="reset-checks" type="button" id="resetChecks">チェックをリセット</button></div>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      const articles = {
+        "medical-checklist": {
+          category: "MEDICAL BEAUTY · 基礎ガイド",
+          title: "美容整形の相談前に。確認したい7つの質問。",
+          lead: "韓国で美容整形を含む美容医療を検討するときも、行き先や価格より先に「何を確認するか」を決めておくと、相談の場で自分の希望を伝えやすくなります。急いで決めず、納得できるまで質問するためのメモです。",
+          body: `
+            <p class="article-mini-label">BEFORE YOU DECIDE</p>
+            <h3>01　診察・施術を担当するのは誰？</h3>
+            <p>相談を受ける人と、診察・施術を行う人が異なる場合があります。担当医の氏名、資格や専門領域、実際に誰がどの工程を担うのかを確認し、説明を受けた内容を記録しましょう。</p>
+            <h3>02　自分に合う選択肢は、ほかにもある？</h3>
+            <p>希望する結果だけでなく、適応にならない場合、経過に個人差があること、施術をしない選択や別の方法についても尋ねてください。広告の写真や他の人の体験だけで、自分の結果を予測することはできません。</p>
+            <h3>03　考えられるリスクと、対応方法は？</h3>
+            <p>起こりうる合併症・副作用、症状が出た場合の連絡方法、受診できる場所を具体的に確認します。メリットだけでなく、回復の見通しや不確実な点も説明してもらいましょう。</p>
+            <h3>04　表示価格に何が含まれている？</h3>
+            <p>診察、検査、麻酔、薬、通訳、再診など、費用の内訳を書面で確認します。追加料金が発生する条件、予約変更・キャンセル時の扱いも、支払いの前に読み合わせてください。</p>
+            <h3>05　言葉の行き違いを防ぐ方法は？</h3>
+            <p>通訳の有無だけでなく、医療上の説明を正確に伝えられる体制かを確かめます。既往歴、アレルギー、服用中の薬、希望しないことは、誤解のない形で共有できるよう準備しておくと安心です。</p>
+            <h3>06　帰国後の相談先はどうなる？</h3>
+            <p>帰国後に気になる症状があった場合の連絡窓口、対応できる時間、再診の方法、診療情報の受け取り方を聞いてください。渡航を伴う場合は、移動時期についても医師と相談しましょう。</p>
+            <h3>07　いま決めずに持ち帰っても大丈夫？</h3>
+            <p>その場で契約するよう急かされる、質問に十分答えてもらえない、リスクや費用の説明が曖昧な場合は、一度持ち帰って比較・相談する選択肢があります。納得できるまで決めないことも、自分を守る大切な判断です。</p>
+            <div class="article-callout"><strong>相談メモに書いておくこと</strong><br>希望すること／避けたいこと／既往歴・アレルギー・服用中の薬／確認したい費用とアフターケア。必要に応じて医師に正確に伝えてください。</div>
+            <p class="article-endnote">※この記事は一般的な確認項目をまとめたもので、特定の医療機関・施術を推奨するものではありません。資格・制度・診療内容は最新の公式情報で確認し、個別の判断は担当医にご相談ください。</p>`
+        },
+        "beauty-labels": {
+          category: "BEAUTY · SKINCARE",
+          title: "韓国コスメを選ぶとき、見ておきたいこと。",
+          lead: "話題の商品を見つけたら、パッケージの雰囲気だけでなく、自分の肌や使い方に合うかを確認。韓国で買うときにも役立つ、基本のチェックポイントをまとめました。",
+          body: `
+            <p class="article-mini-label">A THOUGHTFUL BEAUTY ROUTINE</p>
+            <h3>まずは「何のために使いたいか」をひとつ決める。</h3>
+            <p>保湿、洗浄、紫外線対策など、期待する役割を先に整理すると、似た商品をいくつも買わずに選びやすくなります。口コミの評価や流行の成分は参考のひとつ。自分の肌に合うことを保証するものではありません。</p>
+            <h3>表示と使用方法を確認する。</h3>
+            <p>使用方法、使用上の注意、販売元や製造元、内容量、使用期限・開封後の目安などを確認しましょう。韓国語の表示が分からないときは、販売元の案内や信頼できる翻訳を照らし合わせ、分からないまま使わないことが大切です。</p>
+            <h3>新しいアイテムは、少しずつ。</h3>
+            <p>複数の新製品を一度に使い始めると、肌に合わなかったときに原因を見分けにくくなります。製品の注意書きに従って使い、赤みやかゆみなど気になる変化が出た場合は使用を中止し、必要に応じて医療機関に相談してください。</p>
+            <h3>持ち帰る量と、保管方法も考える。</h3>
+            <p>旅先で気に入っても、使用期限や保管条件、帰国後に継続して購入できるかを確認。購入場所や価格だけでなく、使い切れる量かどうかも選ぶ目安です。</p>
+            <div class="article-callout"><strong>選ぶ前の3つのメモ</strong><br>肌悩みと目的／気になる成分・避けたい成分／いつ、どのように使うか。肌の疾患や治療中の症状がある場合は、皮膚科などの専門家にご相談ください。</div>
+            <p class="article-endnote">※化粧品の表示や販売ルールは国・商品によって異なります。個別商品の成分・効能を断定する記事ではありません。</p>`
+        },
+        "food-guide": {
+          category: "FOOD · KOREAN TABLE",
+          title: "韓国ごはんを、もっと楽しく味わう小さなガイド。",
+          lead: "料理の名前や味のイメージを知っておくと、旅先のメニュー選びが少し楽しくなります。定番料理の入口と、注文前に確かめたいことをまとめました。",
+          body: `
+            <p class="article-mini-label">A TABLE IN KOREA</p>
+            <h3>ビビンバ — 具材を混ぜて楽しむごはん。</h3>
+            <p>ごはんに野菜や具材を合わせ、薬味やたれと混ぜて味わう料理です。たれの辛さや具材はお店ごとに異なるので、気になる場合は注文時に確認してみましょう。</p>
+            <h3>サムゲタン — 鶏を使った温かいスープ料理。</h3>
+            <p>鶏肉とスープを楽しむ一品。お店によって味つけや提供量は異なります。熱い器で提供されることがあるため、食べ始めはゆっくりと。</p>
+            <h3>トッポッキ — もちもちした餅の甘辛料理。</h3>
+            <p>コチュジャンを使った赤いソースのものがよく知られていますが、味や辛さには幅があります。辛さが心配な方は、注文前にお店へ確認を。</p>
+            <h3>パンチャン — 食卓に添えられる小皿のおかず。</h3>
+            <p>野菜やキムチなど、いろいろな小皿が食事と一緒に並ぶことがあります。内容は店や日によって異なり、アレルギーのある方は見た目だけで判断せず、材料を確認してください。</p>
+            <div class="article-callout"><strong>アレルギーを伝える韓国語の例</strong><br>「○○ 알레르기가 있어요.」（○○アレルギーがあります。）<br>翻訳だけに頼らず、具体的な食材名をメモにして見せる方法もあります。調理環境や混入の可能性について、店側に確認してください。</div>
+            <p>行ってみたい飲食店を探すときは、営業時間や休業日、予約方法、メニューを訪問前に公式案内で確認。旅の予定には、食事の時間もゆったり確保しておきましょう。</p>
+            <p class="article-endnote">※料理の内容・材料・辛さは提供する店舗により異なります。アレルギー対応の可否は各店舗に直接ご確認ください。</p>`
+        },
+        "travel-plan": {
+          category: "TRAVEL · SEOUL",
+          title: "初めてのソウル、予定を詰めすぎない旅のつくり方。",
+          lead: "見たい場所がたくさんあるときこそ、移動と休憩の余白が旅の満足度を左右します。行きたい場所を並べるだけでなく、心地よく回るための組み立て方を紹介します。",
+          body: `
+            <p class="article-mini-label">A SLOWER CITY BREAK</p>
+            <h3>1日ごとに、テーマをひとつ。</h3>
+            <p>「街歩きの日」「市場や食を楽しむ日」「美容や買い物の予定がある日」のように、旅の目的を分けてみましょう。訪問エリアを近い場所同士でまとめると、移動に追われにくくなります。</p>
+            <h3>地図では、移動時間と足休めも見る。</h3>
+            <p>地図上で近く見えても、坂道や乗り換えで時間がかかることがあります。出発前に最新の交通案内を確認し、カフェや休憩時間を含めた無理のない予定に。</p>
+            <h3>営業時間・予約条件は、訪問直前にも確認。</h3>
+            <p>店舗や施設の営業日、入場方法、予約・キャンセル条件は変更される場合があります。旅行記事やSNSだけで決めず、公式案内を訪問前に見直してください。</p>
+            <h3>「何もしない時間」も予定に入れる。</h3>
+            <p>予定外の出会いや、気に入った場所でもう少し過ごす時間も旅の一部。行きたい候補を全部回るのではなく、優先順位をつけて、体調や天候に合わせて入れ替えられる計画にしておくと安心です。</p>
+            <div class="article-callout"><strong>旅程の組み立てメモ</strong><br>絶対に行きたい場所を2〜3個選ぶ → エリアごとに並べる → 移動時間を調べる → 休憩・予備時間を加える → 公式情報を再確認。</div>
+            <p class="article-endnote">※交通、入場方法、営業時間、渡航条件は変わることがあります。出発前に各施設・交通機関・公的機関の最新情報をご確認ください。</p>`
+        },
+        "medical-notice": {
+          category: "SEOUL NOTE · MEDICAL INFORMATION",
+          title: "医療に関する記事をお読みになる方へ。",
+          lead: "美容医療は一人ひとりの状態や希望によって、適した選択やリスクが異なります。SEOUL NOTE は、読者が相談前に確認したい視点を整理するための一般情報を掲載します。",
+          body: `
+            <h3>診断・治療の代わりにはなりません。</h3>
+            <p>記事やチェックリストは、医師による診察・診断・治療の代替ではありません。症状や施術の適応、予想される結果、副作用や合併症については、担当する医師から個別に説明を受けてください。</p>
+            <h3>特定の施設や結果を保証・推奨するものではありません。</h3>
+            <p>掲載内容だけで医療機関、医師、施術の質や安全性を判断しないでください。資格、診療体制、費用、通訳、術後の連絡先などを、施設の最新の公式案内と担当医への質問で確認しましょう。</p>
+            <h3>渡航を伴う場合は、帰国後のケアも含めて検討。</h3>
+            <p>治療後の移動時期やフォローアップの方法は、医師に相談してください。旅行保険の補償範囲や対象外となる事項、帰国後に相談できる医療機関についても事前に確かめることをおすすめします。</p>
+            <div class="article-callout"><strong>公開前の編集方針</strong><br>医療・広告に関する制度は国や掲載方法によって異なります。特定の医療機関の紹介・送客、料金広告、体験談などを扱う場合は、適用される法令・ガイドラインについて専門家の確認を受けてください。</div>
+            <p class="article-endnote">SEOUL NOTE の記事は一般的な情報提供を目的とし、個別の医療助言を行うものではありません。</p>`
+        }
+      };
+
+      const articleDialog = document.getElementById("articleDialog");
+      const checklistDialog = document.getElementById("checklistDialog");
+      const dialogLabel = document.getElementById("dialogLabel");
+      const dialogTitle = document.getElementById("dialogTitle");
+      const dialogLead = document.getElementById("dialogLead");
+      const dialogBody = document.getElementById("dialogBody");
+      const saveArticle = document.getElementById("saveArticle");
+      const saveArticleLabel = document.getElementById("saveArticleLabel");
+      const searchInput = document.getElementById("articleSearch");
+      const resultMessage = document.getElementById("resultsMessage");
+      const emptyState = document.getElementById("emptyState");
+      const emptyTitle = document.getElementById("emptyTitle");
+      const emptyDescription = document.getElementById("emptyDescription");
+      const cards = Array.from(document.querySelectorAll(".story-card"));
+      const filters = Array.from(document.querySelectorAll(".filter-button"));
+      const savedToggle = document.getElementById("savedToggle");
+      const savedCount = document.getElementById("savedCount");
+      const savedKey = "seoul-note-saved-articles";
+      const checklistKey = "seoul-note-trip-checklist";
+      let activeArticleId = null;
+      let lastTrigger = null;
+      let activeFilter = "all";
+      let onlySaved = false;
+      let savedIds = new Set();
+
+      try { savedIds = new Set(JSON.parse(localStorage.getItem(savedKey) || "[]")); } catch (_) { savedIds = new Set(); }
+      function persistSaved() {
+        try { localStorage.setItem(savedKey, JSON.stringify(Array.from(savedIds))); } catch (_) { /* Storage may be disabled. */ }
+        savedCount.textContent = String(savedIds.size);
+      }
+      persistSaved();
+
+      function setFilter(category) {
+        activeFilter = category;
+        filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === category)));
+        applyFilters();
+      }
+      function applyFilters() {
+        const query = (searchInput.value || "").trim().toLocaleLowerCase("ja");
+        let visible = 0;
+        cards.forEach((card) => {
+          const categoryMatch = activeFilter === "all" || card.dataset.category === activeFilter;
+          const savedMatch = !onlySaved || savedIds.has(card.dataset.articleId);
+          const searchable = (card.textContent + " " + (card.dataset.keywords || "")).toLocaleLowerCase("ja");
+          const queryMatch = !query || searchable.includes(query);
+          const show = categoryMatch && savedMatch && queryMatch;
+          card.hidden = !show;
+          if (show) visible += 1;
+        });
+        emptyState.hidden = visible > 0;
+        if (visible > 0) {
+          resultMessage.textContent = onlySaved ? `保存した記事 ${visible}件を表示中` : `${visible}件の記事を表示中`;
+        } else {
+          resultMessage.textContent = "該当する記事はありません";
+          if (onlySaved && savedIds.size === 0) {
+            emptyTitle.textContent = "保存した記事はまだありません。";
+            emptyDescription.textContent = "記事を開いて「この記事を保存」を押すと、ここに表示されます。";
+          } else {
+            emptyTitle.textContent = "見つかりませんでした。";
+            emptyDescription.textContent = "検索語を変えるか、カテゴリーを選び直してください。";
+          }
+        }
+        savedToggle.setAttribute("aria-pressed", String(onlySaved));
+      }
+      filters.forEach((button) => button.addEventListener("click", () => {
+        onlySaved = false;
+        setFilter(button.dataset.filter);
+      }));
+      document.querySelectorAll("[data-jump-filter]").forEach((link) => link.addEventListener("click", () => {
+        const category = link.dataset.jumpFilter;
+        onlySaved = false;
+        setFilter(category);
+        document.getElementById("stories").scrollIntoView({ behavior: "smooth", block: "start" });
+        const nav = document.getElementById("mainNav");
+        nav.classList.remove("is-open");
+        document.getElementById("menuToggle").setAttribute("aria-expanded", "false");
+      }));
+      searchInput.addEventListener("input", applyFilters);
+      document.getElementById("resetFilters").addEventListener("click", () => {
+        searchInput.value = "";
+        onlySaved = false;
+        setFilter("all");
+        searchInput.focus();
+      });
+      savedToggle.addEventListener("click", () => {
+        onlySaved = !onlySaved;
+        activeFilter = "all";
+        filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === "all")));
+        searchInput.value = "";
+        applyFilters();
+        document.getElementById("stories").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      document.getElementById("searchToggle").addEventListener("click", () => {
+        document.getElementById("stories").scrollIntoView({ behavior: "smooth", block: "start" });
+        window.setTimeout(() => searchInput.focus(), 350);
+      });
+
+      function openArticle(id, trigger) {
+        const article = articles[id];
+        if (!article) return;
+        activeArticleId = id;
+        lastTrigger = trigger || document.activeElement;
+        dialogLabel.textContent = article.category;
+        dialogTitle.textContent = article.title;
+        dialogLead.textContent = article.lead;
+        dialogBody.innerHTML = article.body;
+        const savable = cards.some((card) => card.dataset.articleId === id);
+        saveArticle.hidden = !savable;
+        updateSaveButton();
+        articleDialog.showModal();
+        articleDialog.scrollTop = 0;
+        document.getElementById("closeArticle").focus();
+      }
+      function updateSaveButton() {
+        const isSaved = savedIds.has(activeArticleId);
+        saveArticle.setAttribute("aria-pressed", String(isSaved));
+        saveArticleLabel.textContent = isSaved ? "保存を解除" : "この記事を保存";
+      }
+      document.querySelectorAll("[data-open-article]").forEach((button) => button.addEventListener("click", (event) => {
+        event.preventDefault();
+        openArticle(button.dataset.openArticle, button);
+      }));
+      document.getElementById("closeArticle").addEventListener("click", () => articleDialog.close());
+      articleDialog.addEventListener("click", (event) => { if (event.target === articleDialog) articleDialog.close(); });
+      articleDialog.addEventListener("close", () => {
+        if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+      });
+      saveArticle.addEventListener("click", () => {
+        if (!activeArticleId) return;
+        if (savedIds.has(activeArticleId)) savedIds.delete(activeArticleId); else savedIds.add(activeArticleId);
+        persistSaved();
+        updateSaveButton();
+        if (onlySaved) applyFilters();
+      });
+
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
+      mainNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+        mainNav.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "メニューを開く");
+      }));
+      menuToggle.addEventListener("click", () => {
+        const isOpen = mainNav.classList.toggle("is-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+      });
+      document.addEventListener("click", (event) => {
+        if (!mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
+          mainNav.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "メニューを開く");
+        }
+      });
+
+      function openChecklist(trigger) {
+        lastTrigger = trigger || document.activeElement;
+        checklistDialog.showModal();
+        document.getElementById("closeChecklist").focus();
+        updateChecklist();
+      }
+      document.querySelectorAll("[data-open-checklist]").forEach((button) => button.addEventListener("click", () => openChecklist(button)));
+      document.getElementById("closeChecklist").addEventListener("click", () => checklistDialog.close());
+      checklistDialog.addEventListener("click", (event) => { if (event.target === checklistDialog) checklistDialog.close(); });
+      checklistDialog.addEventListener("close", () => {
+        if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+      });
+      function getChecks() {
+        try { return JSON.parse(localStorage.getItem(checklistKey) || "{}"); } catch (_) { return {}; }
+      }
+      function updateChecklist() {
+        const saved = getChecks();
+        const inputs = Array.from(document.querySelectorAll("[data-check]"));
+        let count = 0;
+        inputs.forEach((input) => {
+          input.checked = Boolean(saved[input.dataset.check]);
+          if (input.checked) count += 1;
+        });
+        document.getElementById("checkProgressText").textContent = `${count} / ${inputs.length}`;
+        document.getElementById("progressBar").style.width = `${inputs.length ? (count / inputs.length) * 100 : 0}%`;
+      }
+      document.querySelectorAll("[data-check]").forEach((input) => input.addEventListener("change", () => {
+        const saved = getChecks();
+        saved[input.dataset.check] = input.checked;
+        try { localStorage.setItem(checklistKey, JSON.stringify(saved)); } catch (_) { /* Storage may be disabled. */ }
+        updateChecklist();
+      }));
+      document.getElementById("resetChecks").addEventListener("click", () => {
+        try { localStorage.removeItem(checklistKey); } catch (_) { /* Storage may be disabled. */ }
+        updateChecklist();
+      });
+      updateChecklist();
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>

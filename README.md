@@ -1,85 +1,103 @@
-# SEOUL NOTE — 사이트 설계·운영 메모
+# SEOUL NOTE — Korean culture & useful information guide
 
-> **브랜드명:** SEOUL NOTE / ソウルノート (상표권 확인은 아직 미완료)  
-> **도메인:** `seoul-note.com` 구매 완료(사용자 확인). DNS·호스팅 연결 및 실제 공개는 아직 확인되지 않았습니다.
+## CURRENT: balanced native typography — 12 October 2026
 
-## 1. 사이트 목적
+This entry supersedes all earlier font/size/bundle notes in this document. HIS reference content was fetched, but direct Chromium/CSS inspection returned 403; its exact font is NOT verified. Japanese now uses Arial for Latin with Meiryo/Hiragino native Japanese fallbacks (device-dependent), not self-hosted Noto Sans JP. The 4.2MB WOFF2 and license assets were removed; the public bundle is 38 files again. Home/guide body is 18px desktop and 17.5px mobile, card copy 17px and card titles 22/21px. Balanced headings and strict Japanese line-breaking replace unnecessary forced heading breaks.
 
-일본 여성 20~50대와 영어권 독자가 한국의 **뷰티·美容整形/美容医療·음식·여행** 정보를 읽고, 유행만 따라가기보다 자신에게 맞는 선택을 할 수 있도록 돕는 편집형 정보 사이트입니다.
+Final actual-character DOM Range measurements: 23 routes including 404 × six widths = 138 combinations, zero overflow and zero short-last-line warnings under the documented heuristic (190 initial candidates resolved). This does not certify semantic line breaks or all OS font fallbacks. Existing layout regression passed 132 combinations; Axe passed 28 states; both-locale interaction smoke and static QA passed. Japanese hero wording received a limited AI edit, NOT native-speaker approval. Full native copyediting and real Japanese reader feedback remain outstanding. See research/typography-review-2026-10-12.md and research/qa_line_widths.cjs. No deployment.
 
-- 일본어판: `/` (`index.html`)
-- 영어판: `/en/` (`en/index.html`); 직역이 아니라 영어권 독자에게 맞춘 자연스러운 영문 편집본
-- 영어 문안은 국제 독자용 영어로 작성했으며, 공개 전에는 원어민 편집자와 의료·법률 검토자의 교정을 권장
-- 두 언어 페이지에 언어 전환 링크와 상호 연결된 `hreflang` 메타데이터 적용
-- 브랜드 메시지: 「憧れを、自分らしい選び方へ。」 / “Explore Korea, your own way.”
-- 포지셔닝: 병원 예약·시술 중개 사이트가 아니라, 한국을 이해하고 질문을 준비하는 일본어·영어 가이드
-- 톤앤매너: 차분하고 세련된 에디토리얼 매거진. 불안을 자극하거나 의료 효과를 과장하지 않음
-- 타깃 니즈: 20~30대의 뷰티/트렌드 탐색, 30~50대의 안전성·비용·시간·사후관리 확인을 함께 고려
 
-## 2. 디자인 시스템
+## Current font delivery — 12 October 2026 (supersedes native-font-only notes below)
 
-- 기본 색상: 웜 아이보리 `#F7F5EF`, 딥 포레스트 `#21342D`, 세이지 `#818675`, 접근성 대비를 고려한 클레이 `#925944`, 앤틱 골드 `#B49A6D`
-- 타이포그래피: 시스템 일본어 고딕 + 명조 폴백. 외부 폰트/CDN 없이 동작
-- 이미지: 사이트용 에디토리얼 이미지 4장. 히어로는 한국 여행 중인 30대 일본인 관광객을 사실적인 여행 사진 스타일로 표현한 AI 생성 이미지이며, 캡션·대체 텍스트에 생성 이미지임을 표시합니다. 특정 실제 거리·인물·병원·매장·이용자 후기의 증거 사진이 아닙니다.
-- 반응형: 일본어·영어 단일 페이지. 언어별 내비게이션 길이에 맞춰 태블릿 폭부터 햄버거 메뉴로 전환하고, 검색·카드 레이아웃을 화면 폭에 맞춰 조정
+Japanese typography now uses self-hosted Noto Sans JP variable WOFF2 (weights 100–900), including headings, body and controls. Japanese-labelled text in the English edition and 404 also uses this face; English retains its existing typography. Font choice is grounded in the Digital Agency typography guidance: https://design.digital.go.jp/dads/foundations/typography/ . This is an adoption example, not a claim of universal Japanese preference or an industry-wide 2026 standard.
 
-## 3. 현재 구현된 기능
+Font source: https://github.com/google/fonts/tree/main/ofl/notosansjp . The full font is bundled at assets/fonts/NotoSansJP-VF.woff2 with its SIL OFL license, avoiding third-party font requests. font-display:swap retains fallback text while loading. Full WOFF2 is approximately 4.2 MB; cache font assets on the eventual host. Current public bundle is 40 files (previous 38 plus font and license). Body sizes remain unchanged. Browser checks confirmed the font face actually loaded at 390/1440px. Latest regression: 132 route/width combinations, 28 Axe states with zero violations, and bilingual interaction smoke passed. Static QA passed. Not deployed.
 
-- 카테고리 필터: 한국 뷰티, 미용의료, 음식, 여행
-- 2026-10-08 갱신된 Hwahae 공식 스킨케어 TOP10(페이지掲載順)과 같은 페이지의 평가점·리뷰 건수를 분리 표기
-- 기사 키워드 검색(일본어판·영어판)
-- 기사 상세 모달 및 브라우저 로컬 저장(즐겨찾기)
-- 영어권 독자를 위한 현지화 콘텐츠: 한국어 상호·상품명, 한국어 알레르기 표현, 출처·측정 한계 설명
-- 여행 준비 체크리스트 및 진행률 표시
-- 체크/즐겨찾기 데이터는 해당 브라우저의 `localStorage`에만 저장되며 서버로 전송되지 않음
-- 키보드 포커스, 대화상자 닫기, 모바일 메뉴, 모션 줄이기 설정 고려
-- 별도 라이브러리·외부 이미지·외부 폰트·백엔드 없이 정적 HTML로 동작
 
-## 4. 안전·신뢰 원칙
 
-이 초기 버전에는 **자체 선정 병원·의사·가격·영업시간·예약 링크·후기 데이터를 넣지 않았습니다.** 사용자에게 제공되지 않은 정보를 임의로 만들지 않기 위함입니다. 성형/미용의료 콘텐츠는 일반적인 상담 준비 항목만 설명하고, 진단·치료·기관 추천·예약 중개를 하지 않습니다. 공식 확인처로 일본어판은 `Medical Korea (KHIDI)`·`VisitKorea`·일본 외무성 안전정보를, 영어판은 Medical Korea·VisitKorea 영어 포털과 영국 FCDO의 한국 여행안내(영국 여행자용 예시)를 연결합니다. 독자는 본인 국적의 정부와 관련 기관에서 최신 입국·안전 정보를 별도로 확인해야 합니다. 외부 링크는 2026-10-10에 점검했으며, 실제 운영 중에도 링크와 게재 내용을 정기적으로 재확인하세요.
+## Latest readability revision — 12 October 2026 (supersedes earlier size measurements)
 
-실제 공개·수익화 전에 다음을 준비하세요.
+Following the owner's further correction that text remained too small, fixed text below 30px was increased by approximately 12%. Home body sizes are now 20.7px desktop / 20.2px mobile; card copy 19px / 19.6px; guide article copy 20.7px / 19.6px. Japanese headings and body now prioritize Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, Yu Gothic and installed Noto Sans JP, with no external font request. Actual available faces vary by device. Japanese headings use Gothic rather than Mincho. English retains its system stack.
 
-1. 일본·한국의 의료광고, 환자 유인/중개, 개인정보 관련 규정에 대해 해당 분야 전문가 검토를 받기
-2. 병원·의료진 정보를 싣는다면 자격, 공식 정보, 비용 범위, 통역, 사후 대응을 문서화하고 갱신 담당자 지정
-3. 가격·치료 효과·비포/애프터·체험담·광고/제휴 표시를 법률 및 플랫폼 정책에 맞춰 관리
-4. 음식점·관광지의 주소/영업일/예약 정보를 게재할 경우 각 사업자의 최신 공식 안내와 대조
-5. 개인정보처리방침, 이용약관, 정정·문의 창구, 광고·제휴 정책 마련
-6. 기사별 공신력 있는 출처·확인일·수정 이력을 실제 편집 과정에서 기록
+Section padding, paragraph rhythm and card gaps were reduced; mobile guide/contact headers no longer squeeze language links. Larger navigation uses the collapsible menu through 1500px to avoid collisions. The final public build passed 132 route/viewport checks, 28 Axe states with zero violations, and both-locale interaction smoke at 390/1024px. Static QA passed. Automated testing does not replace manual assistive-technology or native-device font checks. Site remains undeployed.
 
-## 5. 조사·랭킹 콘텐츠 기준
+**Editorial review date:** 12 October 2026  
+**Site status:** bilingual static draft and release candidate; **not deployed**. The owner handles hosting and publication.
 
-K-뷰티 섹션은 2026-10-08 갱신된 Hwahae 공식 페이지의 목록 순서와 평가점·리뷰 건수를 표기하되, 산식이 공개되지 않은 점과 판매량 순위가 아니라는 점을 함께 알립니다. 여행·관광 섹션에는 2026년 1분기 지역관광 지표와 2026년에 발표된 2025년 서울 주요 16개 에리어의 외국인 추정 일평균 유동량을 구분해 담았습니다. 음식·카페 섹션은 한국관광공사/TMAP의 지역 내·지역 외 내비게이션 검색 순위와 MICHELIN Guide 선정 통계를 별도로 소개하며, 기준월 미표시·검색량은 실제 식사 수가 아니라는 한계도 공개합니다. Olive Young 판매 순위, 방문량, 내비게이션 검색, MICHELIN 선정, 의료기관 등록/이용 통계는 하나의 “베스트” 점수로 합치지 않습니다. 영어판도 같은 데이터 스냅샷·출처·확인일·측정 한계를 유지하며, 영어 상품명과 장소명은 공식 표기가 확인되지 않은 경우 편집상 번역/음역임을 밝히고 한국어 원문을 함께 제공합니다. TMAP의 `현지인`·`외지인` 구분은 직역만 제시하고 운영 정의는 독립 검증되지 않았음을 알립니다.
+## Purpose and scope
 
-- 메뉴 조사 순서: 공통 출처·방법론 → K-뷰티 완료 → 여행·관광지 완료 → 음식점·카페 완료 → 의료기관/미용의료(법률·방법론 확인 후) 다음 → 실용 가이드
-- 의료기관의 “등록”, “방문이 많음”, “인증”, “최고”는 다른 주장으로 취급하며, 확인되지 않은 기관 순위·가격·후기·효과를 게시하지 않음
-- 자세한 메뉴 로드맵·출처·산식 한계: `research/2026-menu-roadmap.md`
-- 구조화한 첫 순위 스냅샷: `research/hwahae-skincare-top10-2026-10-08.csv`
-- 두 번째 분야의 2026 Q1·2025 Seoul 공식 통계 스냅샷: `research/travel-data-q1-2026-and-seoul-2025.csv`
-- 세 번째 분야의 TMAP 순위·MICHELIN 2026 선택 집계: `research/food-tmap-seoul-and-michelin-2026.csv`
-- 메뉴별 조사 근거·측정 한계: `research/2026-menu-roadmap.md`
+SEOUL NOTE introduces Korean culture and practical context to readers outside Korea. It keeps Japanese and English editions; the English copy is edited for international readers and retains useful Korean lookup terms. Current topics include culture and holidays, Hangeul, food culture, Korean cosmetics labels, Seoul neighbourhoods, entry checks, local transport, tax refunds, arrival from Incheon Airport, and on-trip contact information.
 
-## 6. 파일과 실행
+The current direction is **an information site, not an affiliate or referral business**. There are no affiliate links, paid placements, clinic referrals, patient leads, or medical-service monetization. Medical-provider content is not a core menu. Future non-medical sponsorships or Google AdSense may be considered only after the site has substantial original, useful content and completed privacy, advertising-disclosure, and legal requirements. No approval or revenue is guaranteed, and advertising must not shape editorial claims.
 
-- `index.html` — 일본어 사이트 본문, CSS, 동작 스크립트
-- `en/index.html` — 자연스러운 영어 편집본, 출처가 포함된 지표·로컬 검색용 한국어 표기·체크리스트
-- `assets/` — 사이트용 이미지 4장
-- `research/` — 조사 로드맵과 데이터 스냅샷
-- `seoul-note-site.zip`은 이 폴더 밖의 `/home/user/` 경로에 빌드
+The brand is **SEOUL NOTE** (never “The Seoul Note”). Illustrative AI images are explicitly labelled; they are not documentary evidence of actual people, places, venues, dishes, or products.
 
-### 2026-10-10 프리미엄 디자인·QA 업데이트
+## Current menu and coverage
 
-- 히어로 이미지를 캐주얼 복장으로 서울을 여행하는 30대 일본인 관광객의 사실적인 여행 사진 스타일로 수정. 실제 장소·인물을 찍은 사진이 아닌 AI 생성 이미지임을 캡션·대체 텍스트에 표시
-- 웜 아이보리·딥 포레스트·클레이·앤틱 골드 팔레트, 섬세한 이미지 프레임과 카드 표면, 타이포그래피 대비를 적용
-- Playwright 실제 렌더링·동작 검사: 일본어판과 영어판을 320–1920px 25개 화면 폭에서 검사해 가로 넘침이 없음을 확인. 영어판 검색·카테고리 필터·저장·상세 모달·체크리스트·언어 전환 및 이미지 로딩도 확인
-- Axe WCAG 2.1 AA 자동 검사: 양 언어의 데스크톱·모바일 페이지와 테스트한 대화상자에서 위반 0건
-- 언어 전환·내부 앵커·외부 링크 경로를 점검. 공식 외부 링크 10개는 기존 QA에서 HTTP 200 또는 202 응답 확인
+| Menu | What readers find | Current bilingual coverage |
+|---|---|---|
+| Korean culture | Regional, family and seasonal context without treating Korea as one uniform custom | Kimjang; Seollal, Chuseok and the year-specific 2026 holiday calendar |
+| Korean language | Hangeul and practical words readers can recognize in public places | Hangeul basics and station/building signs |
+| Food culture | Common terms, table formats, ordering language and limits | Banchan, namul, ssam, food questions and Kimjang |
+| Beauty | Consumer literacy rather than rankings or efficacy claims | Korean cosmetics terms, ingredient labels, directions and cautions |
+| Practical travel | Source-linked, date-sensitive information for planning and on-trip use | Seoul area orientation, Tax Refund vs duty-free, Japan-passport entry example, Climate Card, airport transit, emergency and tourism help, editable day planner |
+| Editorial standards | Scope, sources, update dates, corrections and future-advertising separation | Bilingual standards on the home pages; an email-only contact page is linked from both editions; final host-specific policies and any legally required operator disclosure remain pending review |
 
-로컬에서 확인하려면 터미널에서 이 폴더로 이동한 뒤 다음 명령을 실행하세요.
+There are **nine bilingual standalone guides (18 HTML pages)**, linked from both home pages, plus Japanese and English contact pages. With the two home pages, the public site currently contains 22 HTML pages. The home pages also contain source-led reference sections, a fare estimator, emergency/help contacts, checklist, map handoff and day-planner.
+
+## Typography and responsive layout
+
+The final 12 October 2026 readability pass keeps platform-native, Japanese-reader-friendly sans-serif fallbacks (Hiragino, Yu Gothic/Yu Gothic UI, Meiryo and Noto Sans JP when installed) without a remote font request. English keeps familiar system UI/Segoe UI with Korean and Japanese fallbacks. Chromium measurements at 1440px desktop and 390px mobile show home-page body text at 18.5px/18px, home-card copy at 17px/17.5px, and standalone guide article text at 18.5px/17.5px. At those widths, the Japanese home hero heading is 75.6px/39px and the English heading 72px/41.73px; the Japanese heading is tuned to about 33px at 320px to preserve the intended phrase breaks. Contact and 404 pages received the larger type treatment too. Line spacing is opened for long-form reading, surplus section gaps are trimmed, narrow-screen labels and email links wrap cleanly, and story cards become single-column on narrow screens; navigation and planner controls retain comfortable touch targets.
+
+## Editorial and fact-checking rules
+
+- Prefer official and primary sources. Show the source language, date checked, relevant year/place/metric and limitations.
+- Treat changing rules, fares, service areas, holiday calendars, operating information and contact details as time-sensitive; prompt readers to recheck official pages when needed.
+- Do not invent venues, prices, addresses, opening hours, phone numbers, endorsements, rankings or outcomes.
+- Do not merge review counts, platform order, sales rank, searches, visitor flows and expert-guide selections into a single “best/popular” claim. Historical research CSVs are kept internally and are not current public menus.
+- Translate carefully; retain Korean terms when they help readers verify a sign, menu, product or map query.
+- A planner suggestion is an editable starting point, not a live route, recommendation, booking service or verification of current operations.
+
+## Build and static QA
+
+From `/home/user/seoul-note`:
 
 ```bash
-python3 -m http.server 4173
+python3 research/build_culture_articles.py
+python3 research/qa_static_site.py
+python3 build_public_site.py
 ```
 
-브라우저에서 `http://localhost:4173`을 엽니다. 실제 운영에는 정적 호스팅 또는 CMS를 연결하고, 브랜드명·문의처·검증된 기사·공식 링크를 확정해야 합니다.
+The guide generator writes both language editions from `research/culture_articles_ja.py` and `research/culture_articles_en.py`. The static QA checks HTML structure, one H1 per page, IDs and ARIA references, local files/images, safe `_blank` links, and inline JavaScript syntax. It does not replace browser testing, human copyediting, source rechecks, assistive-technology testing, or legal review.
+
+Latest static check after regenerating the guides and rebuilding with the corrected source-language, locale-path, K-ETA/KTO page-date and fare-date labels: 22 HTML pages, 24 local image references across 12 unique editorial image assets, no repeated image slot within either homepage, six inline scripts syntax-checked, 258 internal links resolved, 119 external-link instances checked for safe new-tab attributes, and 22 sitemap URLs validated with bilingual alternates. No static errors were found. On 11 October 2026, all 34 unique external destinations were opened for a manual destination, language and date-label review, as well as a reachability snapshot. The current rebuilt HTML has 119 link instances after two locale-specific K-ETA notice links were added to the homepages; those targets were already reviewed in the guides. Page labels and locale-specific links were corrected where needed; the Seoul City airport guide’s older rail fare range is explicitly caveated. The K-ETA page includes a static disaster/special-entry banner, but its live official status endpoint returned `N` (“has lifted”) on 11 October 2026 and the rendered English page kept the banner hidden; recheck the live status on the actual publication date. Its separate form route’s HTTP 500 to the checker is not proof of an applicant-facing outage. These checks are a point-in-time review, not a future-availability guarantee, full source-fact re-verification, live-site test or accessibility certification.
+
+`build_public_site.py` makes an explicit 38-file allow-list bundle (22 HTML pages, 12 unique editorial images and four utility files) at `/home/user/seoul-note-public/` and `/home/user/seoul-note-site.zip`. It also creates `/home/user/seoul-note-project.zip`, which contains source and research and **must not be deployed**. Rebuild the public bundle after any source or page change.
+
+## Before the owner publishes
+
+- The owner selected `storykim1980@gmail.com` as SEOUL NOTE's public contact and asked to omit the operator's name from public pages. A different-than-Cloudflare host was selected but not named; keep host-specific claims and deployment instructions neutral until the provider/project is identified. Legal review must determine whether an operator name/address is required.
+- Confirm the applicable jurisdiction and any required address disclosure. `research/privacy-notice-draft.md` and `research/terms-disclaimer-draft-ja-en.md` are internal working drafts, not final policies; obtain jurisdiction-specific review before publishing.
+- A targeted point-in-time refresh of the key official entry, Climate Card, AREX, holiday, tax-refund and emergency claims was completed on 11 October 2026; see `research/prepublication-audit-2026-10-11.md`. Recheck these facts and all outbound official links on the actual publication date. Entry requirements are nationality-specific; the current detailed example is for a Japanese ordinary passport.
+- After the final 12 October typography/layout pass, the latest public bundle passed Playwright on all 22 routes at 320, 390, 768, 1024, 1280 and 1440px (132 route/viewport combinations): no horizontal overflow, bad response, broken image, failed request, console error or page error; homepage images were explicitly loaded. Visual review covered both homepages at 320px, the Japanese mobile guide at 390px, the English guide and contact page at 1440px, and the Japanese contact page and English 404 at 320px. Axe WCAG 2.1 A/AA found zero violations across 28 states (22 pages at 390px, both homepages at 1440px, both checklist dialogs open and both mobile menus expanded). In both languages, the 390px mobile and 1024px tablet smoke verified search, food filtering, save count, menu focus/Escape restoration and checklist-dialog Escape. Earlier broader smoke covered the planner, map-query links, TXT export/print, fare estimate, language switching, phone links and reduced-motion behavior. Keyboard smoke checked skip-link focus on all 22 routes and menu Enter/Tab/Escape behavior in both editions; a mobile focus-order gap was fixed. Complete manual NVDA/VoiceOver and real-browser keyboard review if available; automation is not accessibility certification.
+- If advertising is introduced later, implement the required privacy/consent and disclosure infrastructure first. Label ads/sponsorships distinctly; do not accept medical leads or paid placement in the current direction.
+
+## Important files
+
+- `index.html`, `en/index.html` — Japanese and English home pages.
+- `contact.html`, `en/contact.html` — bilingual email-only contact pages.
+- `guides/`, `en/guides/` — nine standalone guides per language.
+- `research/culture_articles_ja.py`, `research/culture_articles_en.py` — editable guide copy and source records.
+- `research/build_culture_articles.py` — bilingual guide generator.
+- `research/qa_static_site.py` — repeatable static integrity, sitemap and homepage-image uniqueness checks.
+- `research/homepage-image-map-2026-10-11.md` — internal map of the 12 distinct editorial assets and their content context.
+- `build_public_site.py` — explicit public-build allow-list and archive builder.
+- `research/2026-menu-roadmap.md` — current culture-site menu and editorial roadmap.
+- `research/prepublication-audit-2026-10-11.md`, `LAUNCH-CHECKLIST.md`, `DEPLOYMENT-HANDOFF.md` — current QA, publication gates, and owner handoff.
+- `research/owner-site-reference-gpt-navi-2026-10-11.md` — owner choices and public facts from the reference site; do not transfer its operator, host or legal terms to SEOUL NOTE.
+- `research/privacy-notice-draft.md`, `research/terms-disclaimer-draft-ja-en.md` — internal bilingual legal-policy working drafts; do not publish as final.
+- `research/` — internal research and dated source notes. Do not upload the research directory or full project archive as the public site.
+
+## Guide-first design update — 12 October 2026
+
+Both homepages now place the searchable guide grid before the long feature/practical sections. Cards use three columns on desktop, two on intermediate screens and one through 600px; card headings are 24px desktop/23px narrow-screen. Food vocabulary uses two columns and area summaries at most three. Filters wrap rather than relying on horizontal scrolling. Larger body typography is preserved. Final static QA, 132 route/viewport checks, 28 Axe states (zero violations) and bilingual interaction smoke passed after this update. No deployment performed.

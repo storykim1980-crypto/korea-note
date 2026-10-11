@@ -1,0 +1,298 @@
+#!/usr/bin/env python3
+"""Render source-led bilingual culture/travel guides for SEOUL NOTE.
+Run from this project with: python3 research/build_culture_articles.py
+Generated pages are public candidates; review dated and jurisdiction-specific details before publishing.
+"""
+from __future__ import annotations
+
+import html
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from culture_articles_ja import ARTICLES_JA  # noqa: E402
+from culture_articles_en import ARTICLES_EN  # noqa: E402
+
+REVIEW_DATE = "2026-10-11"
+BASE_URL = "https://seoul-note.com"
+
+STYLE = r"""
+:root{--paper:#f7f5ef;--paper2:#eeece4;--white:#fffefb;--ink:#21342d;--soft:#435249;--muted:#646c65;--terra:#925944;--line:rgba(33,52,45,.16);--serif:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.85;letter-spacing:.015em;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration-color:var(--terra);text-underline-offset:4px}a:focus-visible{outline:2px solid var(--terra);outline-offset:4px}.wrap{width:min(860px,calc(100% - 36px));margin:0 auto}.site-header{border-bottom:1px solid var(--line);background:rgba(247,245,239,.96)}.header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:var(--serif);font-size:17.6px;letter-spacing:.13em;text-decoration:none}.brand small{display:block;margin-top:2px;color:var(--muted);font:17.9px var(--sans);letter-spacing:.1em}.header-links{display:flex;align-items:center;gap:18px;font-size:17.1px}.header-links a{text-decoration:none}.header-links a:hover{text-decoration:underline;text-decoration-color:var(--terra);text-underline-offset:4px}.main{padding:48px 0 80px}.breadcrumb{margin:0 0 22px;color:var(--muted);font-size:17.1px}.breadcrumb a{text-decoration:none}.kicker{margin:0 0 10px;color:var(--terra);font-size:16.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.title{max-width:790px;margin:0;font-family:var(--serif);font-size:clamp(34px,6vw,54px);line-height:1.35;font-weight:500;letter-spacing:.025em}.lead{margin:19px 0 13px;color:var(--soft);font-size:17.6px;line-height:2}.meta{padding:13px 0 19px;border-bottom:1px solid var(--line);color:var(--muted);font-size:17.1px}.article{padding-top:25px}.article p,.article li{font-size:18.0px;line-height:2}.article p{margin:0 0 19px}.article h2{margin:38px 0 12px;font-family:var(--serif);font-size:28.0px;line-height:1.5;font-weight:500}.article h3{margin:25px 0 8px;font-size:18.0px}.article ul,.article ol{padding-left:1.5em;margin:5px 0 22px}.article li{padding-left:.25em;margin:6px 0}.article strong{color:var(--ink)}.article .term-list{display:grid;grid-template-columns:minmax(115px,.32fr) 1fr;margin:13px 0 22px;border-top:1px solid var(--line)}.term-list dt,.term-list dd{margin:0;padding:12px 8px;border-bottom:1px solid var(--line)}.term-list dt{font-weight:700}.term-list dt span{display:block;color:var(--muted);font-size:17.1px;font-weight:400}.term-list dd{color:var(--soft);font-size:17.6px}.korean-phrase{display:inline-block;padding:8px 13px;background:var(--paper2);font-size:18.5px}.article-note,.article-callout{margin:22px 0;padding:15px 17px;border-left:3px solid var(--terra);background:var(--paper2);color:var(--soft);font-size:17.6px;line-height:1.9}.article-callout{border-left-color:var(--ink);background:var(--white)}.info-table{width:100%;border-collapse:collapse;margin:16px 0 24px;background:var(--white);font-size:17.6px}.info-table th,.info-table td{padding:10px 13px;border:1px solid var(--line);text-align:left}.info-table th{background:var(--paper2)}.sources{margin-top:38px;padding:22px;border:1px solid var(--line);background:var(--white)}.sources h2{margin:0 0 8px;font-family:var(--serif);font-size:24.6px;font-weight:500}.sources-intro{margin:0 0 14px;color:var(--muted);font-size:17.1px;line-height:1.8}.source-list{margin:0;padding:0;list-style:none}.source-list li{padding:10px 0;border-top:1px solid var(--line);font-size:17.6px;line-height:1.7}.source-list small{display:block;color:var(--muted);font-size:16.5px}.site-note{margin:25px 0 0;color:var(--muted);font-size:17.1px;line-height:1.8}.end-nav{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:17.1px}.site-footer{padding:22px 0;background:var(--ink);color:rgba(255,255,255,.8);font-size:16.5px;line-height:1.8}.site-footer a{color:white}.skip{position:absolute;left:8px;top:-60px;padding:8px 12px;background:var(--ink);color:white;z-index:5}.skip:focus{top:8px}
+@media(max-width:560px){.header-inner{min-height:66px}.header-links{gap:10px;font-size:16.5px}.brand{font-size:18.0px}.main{padding:31px 0 56px}.title{font-size:35.0px}.lead{font-size:17.6px}.article p,.article li{font-size:17.6px}.article h2{font-size:24.6px}.term-list{grid-template-columns:105px 1fr!important}.sources{padding:17px 14px}.info-table th,.info-table td{padding:8px 9px;font-size:17.1px}}
+:root{--sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic",YuGothic,Meiryo,"Noto Sans JP",sans-serif}
+html[lang="en"]{--serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic",YuGothic,Meiryo,"Noto Sans KR","Noto Sans JP",Arial,sans-serif}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-size:18.0px;line-height:1.88;letter-spacing:.01em;-webkit-font-smoothing:auto}
+.brand small{font-size:15.6px;line-height:1.5}
+.wrap{width:min(820px,calc(100% - 44px))}
+.main{padding:54px 0 74px}
+.title{font-size:clamp(36px,5.8vw,56px);line-height:1.32}
+.lead{font-size:17.6px;line-height:1.9}
+.breadcrumb,.kicker,.meta,.header-links{font-size:16.1px}
+.article p,.article li{font-size:18.0px;line-height:1.92}
+.article h2{margin-top:40px;font-size:30.2px;line-height:1.45}
+.article h3{font-size:22.4px}
+.term-list{grid-template-columns:minmax(130px,.32fr) 1fr}
+.term-list dt,.term-list dd{font-size:17.6px;line-height:1.8}
+.term-list dt span{font-size:16.1px}
+.article-note,.article-callout{padding:17px 19px;font-size:17.1px;line-height:1.9}
+.info-table{font-size:17.1px}
+.info-table th,.info-table td{padding:12px 14px;line-height:1.7}
+.sources{padding:24px}
+.sources h2{font-size:26.9px}
+.sources-intro{font-size:16.5px;line-height:1.8}
+.source-list li{font-size:17.1px;line-height:1.75}
+.source-list small{font-size:16.1px}
+.site-note{font-size:16.1px;line-height:1.9}
+.end-nav{font-size:16.5px;line-height:1.7}
+.site-footer{font-size:16.1px;line-height:1.8}
+@media(max-width:560px){
+ .wrap{width:calc(100% - 34px)}
+ .header-inner{min-height:68px;gap:12px}
+ .header-links{gap:11px;font-size:15.6px}
+ .brand{font-size:17.6px}
+ .brand small{font-size:15.1px}
+ .main{padding:36px 0 54px}
+ .breadcrumb{line-height:1.7;margin-bottom:18px}
+ .title{font-size:clamp(32px,8.8vw,40px);line-height:1.38}
+ .lead{margin:17px 0 12px;font-size:17.6px;line-height:1.9}
+ .article{padding-top:21px}
+ .article p,.article li{font-size:17.6px;line-height:1.9}
+ .article h2{margin:32px 0 11px;font-size:25.8px}
+ .article h3{font-size:17.6px}
+ .term-list{grid-template-columns:minmax(112px,.38fr) 1fr!important}
+ .term-list dt,.term-list dd{padding:11px 7px;font-size:17.1px}
+ .term-list dt span{font-size:15.6px}
+ .korean-phrase{font-size:22.4px}
+ .article-note,.article-callout{margin:19px 0;padding:14px;font-size:16.5px}
+ .sources{margin-top:31px;padding:17px 14px}
+ .sources h2{font-size:23.5px}
+ .sources-intro{font-size:16.1px}
+ .source-list li{font-size:16.5px;overflow-wrap:anywhere}
+ .source-list small{font-size:15.6px}
+ .info-table{font-size:16.5px}
+ .info-table th,.info-table td{padding:9px 8px;overflow-wrap:anywhere}
+ .end-nav{gap:11px;font-size:16.1px}
+ .site-note{font-size:15.6px}
+}
+
+/* Readability pass 2: larger article text, tighter vertical rhythm */
+body{font-size:18.0px;line-height:1.86;letter-spacing:.008em}
+.brand small{font-size:15px;line-height:1.5}
+.article p,.article li{font-size:18.0px;line-height:1.9}
+.article h2{margin-top:36px;font-size:31.4px}
+.lead{font-size:18.5px;line-height:1.88}
+.breadcrumb,.kicker,.meta,.header-links{font-size:15px}
+.sources-intro{font-size:15.6px}
+.source-list li{font-size:16.5px;line-height:1.75}
+.source-list small{font-size:15px}
+.site-note{font-size:15px;line-height:1.85}
+.end-nav{font-size:15.6px}
+.site-footer{font-size:15px}
+@media(max-width:560px){
+ body{font-size:17.6px}
+ .header-inner{min-height:66px;gap:10px}
+ .header-links{font-size:15px;gap:9px}
+ .brand{font-size:15.6px}
+ .brand small{font-size:15px}
+ .main{padding:31px 0 46px}
+ .title{font-size:clamp(32px,8.6vw,40px);line-height:1.36}
+ .lead{margin:15px 0 10px;font-size:17.1px;line-height:1.86}
+ .article{padding-top:18px}
+ .article p,.article li{font-size:17.1px;line-height:1.88}
+ .article h2{margin:28px 0 10px;font-size:26.9px}
+ .article h3{font-size:18.5px}
+ .term-list{grid-template-columns:minmax(112px,.38fr) 1fr!important}
+ .term-list dt,.term-list dd{padding:10px 7px;font-size:16.1px;line-height:1.75}
+ .term-list dt span{font-size:15px}
+ .article-note,.article-callout{margin:17px 0;padding:13px;font-size:15.1px;line-height:1.85}
+ .sources{margin-top:26px;padding:15px 13px}
+ .sources h2{font-size:24.6px}
+ .sources-intro{font-size:15px}
+ .source-list li{font-size:15.1px;overflow-wrap:anywhere}
+ .source-list small{font-size:15px}
+ .info-table,.info-table th,.info-table td{font-size:15px}
+ .info-table th,.info-table td{padding:8px 7px;overflow-wrap:anywhere}
+ .end-nav{gap:9px;font-size:15px}
+ .site-note{font-size:15px}
+}
+
+
+/* Readability pass 3: larger article copy, less excess vertical padding */
+body { line-height: 1.76; }
+.article p, .article li { line-height: 1.8; }
+.article p { margin-bottom: 15px; }
+.article h2 { margin-top: 30px; line-height: 1.38; }
+.article ul, .article ol { margin-bottom: 17px; }
+.main { padding: 40px 0 60px; }
+.sources { margin-top: 28px; }
+@media(max-width:560px){
+ .main { padding: 27px 0 42px; }
+ .article { padding-top: 15px; }
+ .article p, .article li { line-height: 1.74; }
+ .article p { margin-bottom: 12px; }
+ .article h2 { margin: 24px 0 9px; line-height: 1.38; }
+ .article ul, .article ol { margin-bottom: 14px; }
+ .sources { margin-top: 22px; padding: 14px 12px; }
+}
+/* Keep the bilingual article header on one clean row at mobile widths. */
+@media(max-width:560px){
+ .header-inner { min-height: 60px; gap: 10px; }
+ .brand { min-width: 0; font-size: 15.7px; letter-spacing: .1em; }
+ .brand small { display: none; }
+ .header-links { flex: 0 0 auto; gap: 9px; font-size: 15px; white-space: nowrap; }
+ .header-links a { white-space: nowrap; }
+ .breadcrumb { margin-bottom: 15px; font-size: 15px; line-height: 1.55; }
+}
+@media(max-width:360px){
+ .header-links { gap: 7px; font-size: 15px; }
+ .breadcrumb { font-size: 15px; }
+}
+
+/* Japanese reading typography: familiar platform Gothic faces, including headings. */
+html[lang="ja"] { --sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "Yu Gothic", "Noto Sans JP", sans-serif; --serif: var(--sans); }
+html[lang="ja"] body { font-family: var(--sans); }
+html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3, html[lang="ja"] h4 { font-family: var(--sans); font-weight: 600; }
+
+
+/* Balanced reading scale, HIS-inspired native Gothic; exact HIS CSS unverified. */
+html[lang="ja"] { --sans: Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; --serif: var(--sans); }
+html[lang="en"] [lang="ja"] { font-family: Arial, Meiryo, "Hiragino Kaku Gothic ProN", sans-serif; }
+body { font-size:18px; line-height:1.8; letter-spacing:0; }
+html[lang="ja"] body, html[lang="ja"] button, html[lang="ja"] input, html[lang="ja"] select, html[lang="ja"] textarea { font-family:var(--sans); }
+html[lang="ja"] { line-break:strict; word-break:normal; }
+p, li, dd { overflow-wrap:break-word; }
+h1,h2,h3,h4 { word-break:normal; overflow-wrap:break-word; }
+@media(max-width:760px){body {font-size:17.5px;line-height:1.8;}}
+
+.wrap{width:min(800px,calc(100% - 40px));}
+.article p,.article li,.lead {font-size:18px;line-height:1.85;}
+.title {font-size:clamp(32px,4vw,46px);line-height:1.45;letter-spacing:0;}
+.article h2 {font-size:27px;line-height:1.5;}
+.article h3 {font-size:21px;line-height:1.55;}
+.term-list dt,.term-list dd {font-size:17px;line-height:1.8;}
+.meta,.breadcrumb,.source-list small,.site-note {font-size:15px;}
+@media(max-width:760px){
+ .wrap{width:calc(100% - 32px);}
+ .article p,.article li,.lead{font-size:17.5px;line-height:1.85;}
+ .title{font-size:30px;line-height:1.5;}
+ .article h2{font-size:24px;}
+ .article h3{font-size:20px;}
+}
+
+/* Balance actual heading lines; preserve natural paragraph rhythm. */
+h1,h2,h3,h4 {text-wrap:balance;}
+p {text-wrap:pretty;}
+html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3 {line-break:strict;}
+
+.tagline,.breadcrumb,.term-list dd,.article li {text-wrap:balance;}
+"""
+
+
+def page_html(slug: str, lang: str, item: dict) -> str:
+    is_ja = lang == "ja"
+    page_path = f"/guides/{slug}.html" if is_ja else f"/en/guides/{slug}.html"
+    canonical = BASE_URL + page_path
+    ja_alt = BASE_URL + f"/guides/{slug}.html"
+    en_alt = BASE_URL + f"/en/guides/{slug}.html"
+    home_href = "../index.html" if is_ja else "../../index.html"
+    contact_href = "../contact.html" if is_ja else "../../en/contact.html"
+    contact_label = "お問い合わせ" if is_ja else "Contact"
+    stories_href = "../index.html#stories" if is_ja else "../../index.html#stories"
+    other_href = f"../en/guides/{slug}.html" if is_ja else f"../../guides/{slug}.html"
+    other_label = "English" if is_ja else "日本語"
+    home_label = "ホーム" if is_ja else "Home"
+    section_label = "ガイド一覧" if is_ja else "All guides"
+    source_title = "参考にした一次・公式情報" if is_ja else "Official and primary sources"
+    source_intro = (
+        "各リンクはその機関の案内を確認するためのものです。SEOUL NOTEの推薦・保証を意味しません。"
+        if is_ja else
+        "Links are provided so readers can verify the original guidance. They do not imply endorsement or a guarantee by SEOUL NOTE."
+    )
+    review_text = "確認日" if is_ja else "Reviewed"
+    review_date = "2026年10月11日" if is_ja else "11 October 2026"
+    lang_label = "言語" if is_ja else "Source language"
+    nav_home = "SEOUL NOTE トップへ" if is_ja else "Back to SEOUL NOTE"
+    nav_stories = "ガイド一覧へ" if is_ja else "Browse all guides"
+    note = (
+        "このページは一般情報です。制度・日付・料金・運営情報は変わることがあるため、利用日・渡航日に公式情報で再確認してください。"
+        if is_ja else
+        "This page provides general information. Rules, dates, fares and operating details can change; recheck them with official sources when you need them."
+    )
+    lang_attr = "ja" if is_ja else "en"
+    page_title = f"{item['title']}｜SEOUL NOTE"
+    sources_html = "\n".join(
+        f'<li><a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{html.escape(label)}</a><small>{lang_label}: {html.escape(source_lang)}</small></li>'
+        for label, url, source_lang in item["sources"]
+    )
+    return f'''<!doctype html>
+<html lang="{lang_attr}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="{html.escape(item['description'], quote=True)}">
+  <title>{html.escape(page_title)}</title>
+  <link rel="canonical" href="{html.escape(canonical, quote=True)}">
+  <link rel="alternate" hreflang="ja-JP" href="{html.escape(ja_alt, quote=True)}">
+  <link rel="alternate" hreflang="en" href="{html.escape(en_alt, quote=True)}">
+  <link rel="alternate" hreflang="x-default" href="{html.escape(ja_alt, quote=True)}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SEOUL NOTE">
+  <meta property="og:title" content="{html.escape(page_title, quote=True)}">
+  <meta property="og:description" content="{html.escape(item['description'], quote=True)}">
+  <meta property="og:url" content="{html.escape(canonical, quote=True)}">
+  <style>{STYLE}</style>
+</head>
+<body>
+  <a class="skip" href="#main">{'本文へ' if is_ja else 'Skip to content'}</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{home_href}" aria-label="SEOUL NOTE {home_label}">SEOUL NOTE<small>{'ソウルノート' if is_ja else 'A guide to Korean culture and everyday context'}</small></a>
+      <nav class="header-links" aria-label="{'ページメニュー' if is_ja else 'Page navigation'}">
+        <a href="{stories_href}">{section_label}</a>
+        <a href="{other_href}" lang="{'en' if is_ja else 'ja'}">{other_label}</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap main" id="main">
+    <p class="breadcrumb"><a href="{home_href}">{home_label}</a> / <a href="{stories_href}">{section_label}</a> / {html.escape(item['category'])}</p>
+    <p class="kicker">{html.escape(item['category'])}</p>
+    <h1 class="title">{html.escape(item['title'])}</h1>
+    <p class="lead">{html.escape(item['lead'])}</p>
+    <div class="meta"><time datetime="{REVIEW_DATE}">{review_text}: {review_date}</time> · SEOUL NOTE</div>
+    <article class="article">{item['body']}</article>
+    <section class="sources" id="sources" aria-labelledby="sourceTitle">
+      <h2 id="sourceTitle">{source_title}</h2>
+      <p class="sources-intro">{source_intro}</p>
+      <ul class="source-list">{sources_html}</ul>
+    </section>
+    <p class="site-note">{note}</p>
+    <nav class="end-nav" aria-label="{'次のページ' if is_ja else 'Further reading'}">
+      <a href="{home_href}">← {nav_home}</a>
+      <a href="{stories_href}">{nav_stories} →</a>
+    </nav>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© SEOUL NOTE · {'文化・ことば・食・旅の情報ガイド' if is_ja else 'A source-led guide to Korean culture and practical information'}</span><a href="{contact_href}">{contact_label}</a></div></footer>
+</body>
+</html>
+'''
+
+
+def main() -> None:
+    if ARTICLES_JA.keys() != ARTICLES_EN.keys():
+        raise SystemExit("Japanese and English guide slugs do not match.")
+    for slug in ARTICLES_JA:
+        for lang, item in (("ja", ARTICLES_JA[slug]), ("en", ARTICLES_EN[slug])):
+            relative = Path("guides" if lang == "ja" else "en/guides") / f"{slug}.html"
+            destination = ROOT / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(page_html(slug, lang, item), encoding="utf-8")
+            print(f"Wrote {relative}")
+    print(f"Generated {len(ARTICLES_JA) * 2} bilingual guide pages; editorial review date {REVIEW_DATE}.")
+
+
+if __name__ == "__main__":
+    main()

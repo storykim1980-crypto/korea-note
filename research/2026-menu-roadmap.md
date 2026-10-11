@@ -1,99 +1,94 @@
-# SEOUL NOTE — 2026 실제 이용·랭킹 데이터 기반 메뉴 로드맵
+# SEOUL NOTE — Korean culture information-site menu roadmap
 
-**조사 기준일:** 2026-10-10 (KST)  
-**대상:** 일본 여성 20–50대  
-**원칙:** 한국에서 실제 운영되는 플랫폼·공공 통계의 현재 자료를 사용하되, 판매량·리뷰·검색·방문량·전문가 선정은 서로 다른 지표로 표기한다. 출처가 밝히지 않은 계산식을 추측하거나, 자체 점수로 합쳐 “한국 1위/최고”라고 만들지 않는다.
+**Current editorial direction:** 11 October 2026  
+**Audience:** international readers, with Japanese and English editions  
+**Status:** current plan supersedes the earlier ranking- and medical-services-led roadmap. No deployment has occurred.
 
-## 결론: 첫 카테고리는 K-뷰티 제품 랭킹
+## Editorial direction
 
-첫 공개 콘텐츠로 **화장품 카테고리 순위**를 선정했다. 2026-10-08 갱신된 한국 화장품 플랫폼 Hwahae(화해)의 공식 스킨케어 랭킹을 확인할 수 있고, 페이지 순서·제품별 평가점·리뷰 건수가 함께 표시된다. 이 자료는 업데이트 날짜와 출처가 명확하며, 각 숫자를 그대로 분리해 제시할 수 있다.
+SEOUL NOTE is being repositioned as a **source-led guide to Korean culture and useful context** for people outside Korea. The user has explicitly paused affiliate and referral monetization because of risk. The current site must not contain clinic referrals, patient leads, medical-service sales, or medical-provider rankings.
 
-단, 이 순위를 한국 전체의 판매량이나 “최고의 제품”으로 해석하지 않는다. Hwahae가 제시한 랭킹이며 세부 산식·가중치는 확인한 페이지에 공개되어 있지 않다. 평가점과 리뷰 건수는 랭킹 산식과 별개의 표시 정보로 취급한다. Olive Young의 판매 랭킹도 별도 카드·표에서만 다룬다.
+Future, non-medical sponsorships or Google AdSense may be considered after the site offers substantial original content and has suitable privacy, terms, advertising-disclosure and operator information. This is a future option, not a promise of eligibility, approval or revenue. Paid placements must be clearly separated from editorial claims.
 
-**이번 작업까지 완료:** 기존 사이트에 K-뷰티, 여행·관광, 음식점·카페의 실데이터 섹션을 반영했다. 음식 분야는 KTO/TMAP의 지역 내·지역 외 내비게이션 검색 순위와 MICHELIN Guide 선정 수치를 별도 표시했다. 다음 제작 분야는 미용의료·의료기관 정보이며, 순위보다 등록·이용·인증의 근거와 법률 검토를 먼저 진행한다.
+## Menu audit and current coverage
 
-## 사이트 메뉴 제안
+| Menu | Reader need | Current editorial treatment | What still needs work |
+|---|---|---|---|
+| Korean culture | Understand customs and seasonal practices without stereotypes | Cultural context note; Kimjang; Seollal, Chuseok and 2026 public-holiday context | Add more original, well-sourced everyday-life and regional-context stories; refresh annual holiday dates rather than reusing 2026 dates |
+| Korean language | Recognize useful words and cultural context | Hangeul primer and signs such as 역, 입구, 출구 and 화장실; useful Korean terms retained in English | Expand with concise, source-checked everyday-language/cultural-context lessons; clearly label romanization as a guide |
+| Food culture | Understand common table/menu terms and ask useful questions | Banchan, namul, ssam, meal formats, ordering phrases, allergy/cross-contact limitations; Kimjang is separate | Add seasonal/regional food context from official and scholarly sources; avoid “best restaurant” lists unless a future, distinct metric is carefully sourced |
+| Beauty | Shop with more understanding of Korean packaging | Product-category vocabulary and label-reading checklist; no product rank, efficacy promise, skin assessment or personal recommendation | Keep as consumer literacy; any later comparison requires current evidence, rights review, clear scope and no unsupported benefit claims |
+| Seoul and travel | Choose a starting area and prepare for changing travel requirements | Non-ranking area guide; Tax Refund vs duty-free; Japanese-passport entry example; Climate Card post-transition guide; airport arrival rail details; emergency contacts; editable planner | Add other cities only after official-source research. Refresh volatile rules, fares, service coverage and contact details before use/publication |
+| Editorial policy | Know how the site is researched and financed | Source/update scope, no-current-affiliate statement and future separation principle on both home pages | Owner must complete legal identity, public contact, privacy/terms and any advertising disclosures before publication |
 
-| 메뉴(일본어 표기안) | 독자가 찾는 내용 | 표시할 데이터 유형 |
-|---|---|---|
-| 韓国コスメ・ランキング | 한국에서 노출·판매되는 화장품, 사용자가 남긴 평가·리뷰 | 플랫폼 공식 랭킹, 소매점 판매 순위 — 반드시 서로 분리 |
-| 美容医療・施設情報 | 의료기관 확인, 상담 전 질문, 언어·비용·사후관리 확인법 | 등록 여부, 외국인 환자 이용 통계 등 검증 가능한 사실. “최고 병원” 순위는 별도 검증 전 보류 |
-| 韓国旅行・エリア | 서울·부산 등 지역과 관광지 탐색 | 공공기관 방문·유동 데이터, 검색량, 리뷰를 각각 다른 라벨로 표시 |
-| 韓国グルメ・カフェ | 음식점·지역 음식·방문 후보 찾기 | TMAP 내비게이션 검색 지표와 MICHELIN 선정은 별도 컬렉션 |
-| 旅の準備・実用情報 | 교통·안전·예약·여행 체크리스트 | 정부·관광기관·사업자의 최신 공식 안내 |
-| 出典・編集方針 | 랭킹을 읽는 법, 광고·제휴 공개, 정정·갱신 내역 | 방법론·출처·확인일·변경 기록 |
+### Bilingual standalone guides (nine topics / 18 pages)
 
-## 콘텐츠 제작 순서
+1. `hangul-signs` — Hangeul and signs
+2. `korean-meal-culture` — banchan, namul, ssam and ordering context
+3. `kimjang` — seasonal kimchi-making and sharing practice
+4. `kbeauty-labels` — Korean cosmetics label reading
+5. `seoul-neighborhoods` — area orientation without popularity ranking
+6. `korean-holidays` — Seollal, Chuseok, Hangeul Day and 2026-specific dates
+7. `tax-refund` — duty-free versus Tax Refund, with dated thresholds and limitations
+8. `korea-arrival` — separate K-ETA/e-Arrival checks, narrowly scoped to a Japanese ordinary passport example
+9. `climate-card` — current visitor short-term pass, coverage, transition and caveats
 
-| 순서 | 분야 | 착수 이유·공식 자료 | 공개 형태 및 주의점 |
-|---:|---|---|---|
-| 0 | 공통: 출처·지표 라벨 | 순위 자료를 다루기 전 모든 페이지에 공통 기준을 적용 | `판매 순위`, `플랫폼 랭킹`, `리뷰 점수`, `내비게이션 검색`, `방문/유동 인구`, `전문가 가이드 선정` 배지를 구분. 업데이트 날짜와 출처 링크를 함께 표시 |
-| 1 | K-뷰티 스킨케어 | Hwahae의 2026-10-08 스킨케어 TOP100 페이지와 Olive Young의 판매 랭킹을 확인할 수 있음 | Hwahae는 공식 페이지 순서와 표시 리뷰 수·평점을 소개. Olive Young은 판매 랭킹으로 별도 표기. 서로 점수화·혼합하지 않음 |
-| 2 | 여행·관광지 — 완료 | 문화체육관광부 2026년 1분기 지역관광 데이터 및 서울시의 2025년 방문·유동 분석 | 사이트에 2026 Q1 지역관광 지표와 2025 Seoul 16개 에리어 외국인 일평균 추정 유동량을 별도 게시. 2025년 결과는 “2025 실적, 2026 발표”로 표시 |
-| 3 | 음식점·카페 — 완료 | 한국관광공사 지역 음식 차트의 TMAP 내비게이션 검색 및 2026 MICHELIN Guide | 사이트에 서울 지역 내·지역 외 상위 목록(각 10개)을 게시. 검색 기간이 현장 표시에 나오지 않아 확인일을 표시하고 특정 월을 추정하지 않음. MICHELIN 수치는 전문 가이드 선정으로 별도 분리 |
-| 4 | 미용의료·성형외과 정보 | Medical Korea 등록·기관 안내, 외국인 환자 통계 등 | “등록”, “외국인 환자 이용”, “인증”을 “최고/가장 안전한 병원”과 동일시하지 않음. Medical Korea ‘Most Visited’ 목록은 기간·산식 확인 전 품질순위로 재가공하지 않으며, 의료광고·환자 유인 관련 법률 검토 후 게시 |
-| 5 | 실용 가이드·지역별 큐레이션 | 각 관광지·사업자·공공기관의 현재 공식 정보 | 영업시간·주소·가격·예약 조건은 발행일과 재확인일 기록. 바뀌기 쉬운 정보는 방문 직전 공식 재확인 안내 |
+These pages are generated from the Japanese and English source modules in `research/`. English is edited for an international audience rather than translated word for word. The home pages also include an airport-arrival overview, transit estimator, map-search handoff, checklist, emergency/1330 contacts and a non-live itinerary planner.
 
-### 첫 공개 데이터: Hwahae 스킨케어 TOP10
+## Research and accuracy requirements
 
-- **출처:** [Hwahae 공식 스킨케어 랭킹](https://www.hwahae.co.kr/rankings?english_name=category&theme_id=4)
-- **페이지 갱신 표기:** 2026-10-08
-- **확인일:** 2026-10-10
-- **범위:** Hwahae의 스킨케어 카테고리 페이지 내 TOP100. 아래 순서는 공식 페이지의 목록 순서(구조화 목록의 `position`)를 옮긴 것.
-- **수치:** 평가점과 리뷰 건수는 같은 페이지에서 제품별로 표시된 값. 리뷰 수는 구매자 수나 해당 기간의 신규 리뷰 수로 해석하지 않음.
-- **산식 한계:** 페이지 제목은 “1,000만 이용자·103만 리뷰 기반”이라고 안내하지만, 이번에 확인한 페이지에는 세부 순위 산식·가중치·대상 기간이 명시되어 있지 않음. 아래를 순수 리뷰 순위·매출 순위라고 부르지 않음.
-- **표기 정책:** 일본어명은 읽기 편하도록 옮긴 편집 표기이며, 한국어 상품명을 함께 둔다. 가격·효능·피부 타입 추천은 이번 랭킹에 포함하지 않았다. 원문에는 기획 세트/묶음 상품이 노출될 수 있다.
+1. **Primary sources first.** Prefer ministries, official tourist/transport operators, national research bodies, UNESCO records and the original product/service owner. A third-party summary is not a substitute when an official page exists.
+2. **Expose scope.** Name the geography, passport/nationality, measurement period, source language, update date and units where relevant.
+3. **Separate facts, interpretation and planning prompts.** Area descriptions are not current business directories. A trip-plan prompt is not an endorsement, route calculation or live availability check.
+4. **Keep metrics distinct.** Sales rank, platform order, review count, search behavior, estimated visitor flow, expert guide selection and public-holiday lists are different data. Do not combine them into one “best” or “popular” score.
+5. **Date-sensitive claims must age visibly.** The 2026 holiday dates, Japanese K-ETA exemption window, Climate Card transition, Tax Refund thresholds and transport fares should be reviewed when the date changes or official conditions update.
+6. **No invented data.** Do not invent a venue, price, opening hour, address, telephone number, service guarantee, endorsement, efficacy, ranking or outcome.
+7. **Images are illustration only.** AI-generated assets and alt text must not imply they document a real person, place, venue, product or event.
+8. **Links are not endorsements.** Label official versus primary sources, note the source language, and use `rel="noopener noreferrer"` for links opened in a new tab.
 
-| 순서 | 브랜드 | 상품명(한국어 원문) | 페이지 표시 평가점 | 페이지 표시 리뷰 수 |
-|---:|---|---|---:|---:|
-| 1 | AESTURA (에스트라) | 아토베리어365 크림 | 4.68 | 18,797 |
-| 2 | TONYMOLY (토니모리) | 세라마이드 모찌 토너 | 4.73 | 19,221 |
-| 3 | Abib (아비브) | 히알루로닉 붐 세럼 워터 드롭 | 4.64 | 2,928 |
-| 4 | S.NATURE (에스네이처) | 아쿠아 오아시스 토너 | 4.75 | 29,197 |
-| 5 | WELLAGE (웰라쥬) | 리얼 히알루로닉 블루 100 앰플 | 4.65 | 34,274 |
-| 6 | S.NATURE (에스네이처) | 아쿠아 스쿠알란 수분크림 | 4.58 | 43,606 |
-| 7 | Anua (아누아) | PDRN 히알루론산 캡슐 100 세럼 | 4.61 | 12,753 |
-| 8 | WELLAGE (웰라쥬) | 리얼 히알루로닉 수딩 크림 | 4.64 | 3,924 |
-| 9 | Torriden (토리든) | 다이브인 저분자 히알루론산 수딩 크림 | 4.68 | 27,341 |
-| 10 | ILLIYOON (일리윤) | 세라마이드 아토 로션 | 4.79 | 2,730 |
+## Recently verified, time-sensitive practical information
 
-### 두 번째 공개 데이터: 여행·관광지
+- **Climate Card (checked 11 Oct 2026):** Seoul’s Korean short-term-pass pages updated 1 October list 1/2/3/5/7-day prices of KRW 5,000/8,000/10,000/15,000/20,000; physical card cost is separate. The former 30-day card ended; Seoul’s resident-focused Climate Pass and visitor short-term pass are distinct. Current area excludes Sinbundang, GTX, out-of-area subway lines, intercity/airport buses and buses licensed outside Seoul. Boarding at Incheon T1/T2 is not allowed; alighting there after boarding within the covered area is allowed. Validate the scope map, purchase method and validity at date of use. Sources: [Seoul City short-term guide](https://news.seoul.go.kr/traffic/archives/510651), [coverage FAQ updated 1 Oct 2026](https://news.seoul.go.kr/traffic/archives/519012).
+- **Fare estimate:** Seoul’s adult stored-value subway base fare is KRW 1,550 (effective 28 June 2025). The homepage comparison multiplies independent eligible subway journeys by that fare; it omits transfer integration, distance surcharges, buses, card acquisition costs (except an optional Climate Card fee) and route eligibility. It is an estimate, not a savings promise.
+- **Airport rail:** AREX’s station-pair table lists all-stop T1→Seoul Station KRW 4,750 and T2→Seoul Station KRW 5,350 (adult transit-card fare); a single-use card adds KRW 100 and includes a refundable KRW 500 deposit. The official express page lists KRW 13,000 and 43/51 minutes to Seoul Station for T1/T2. Time is to Seoul Station, not the hotel; verify timetable and purchase details with AREX.
+- **Entry example:** Japan’s K-ETA temporary exemption was listed through 31 December 2026. K-ETA, e-Arrival Card, visa status and permitted stay are separate checks. The detailed article is explicitly limited to a Japanese ordinary-passport short-stay example; readers with other passports must use current official nationality-specific information.
+- **Tax Refund:** VISITKOREA’s English guide dated 20 October 2025 lists a KRW 15,000 minimum purchase, export within three months and immediate-refund limits. These are dated source facts, not a guarantee of eligibility; check participating shops, item rules and departure steps at purchase/travel.
+- **Emergency contacts:** 112 police and 119 fire/ambulance are distinct from 1330 tourism information/interpretation. 1330 is labeled non-emergency; the Japanese pages now use MOFA Japan and VISITKOREA’s dedicated 1330 guide, and both language editions link to dated official safety guidance. No particular-language emergency connection or response time is guaranteed.
 
-- **2026년 지역관광:** [문화체육관광부 2026-04-14 발표](https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=22342)은 2026년 1분기와 2025년 같은 분기를 비교했다. 지역 방문율 34.5%(+3.2%p), 지방공항 경유 외래객 853,905명(+49.7%), 외국인 철도 이용객 1,692,988명(+46.4%), 지방항만 경유 외래객 335,161명(+6.1%), 외국인 지역 체류일 528만 일(+36.2%), 지역 관광 지출 8.8억 달러(+17.2%)를 공개했다. 공항·철도·항만·방문율·체류일·지출은 서로 다른 집계 단위이며 합산하지 않는다. 이동·이용 지표를 특정 관광지의 고유 방문자 수나 인기 순위라고 부르지 않는다.
-- **서울 에리어별 외국인 유동:** [서울시 2026-07-29 발표](https://english.seoul.go.kr/foreign-tourists-enjoying-k-culture-and-k-hiking-in-seoul-tourists-in-every-nook-and-cranny-of-the-city/)는 2025년 16개 주요 장소의 SK Telecom 기반 외국인 일평균 추정 유동량과 Google Maps 리뷰 분석을 공개했다. 상위 5개는 명동 100,910명/일, N서울타워 57,370명/일, 삼성역·COEX 46,813명/일, 강남역 41,210명/일, 홍대 40,213명/일이다. 2025년 실적이며 2026년 실시간 인원이 아니다.
-- **측정 방법·리뷰 지표:** [서울시의 세부 설명과 표](https://english.seoul.go.kr/from-k-culture-to-k-hiking-foreign-tourists-venture-beyond-seouls-top-attractions/)에 따르면 외국인 유동량은 단기 체류 외국인의 로밍 데이터와 출입국 기록을 바탕으로 일정 시간 특정 지역에 체류한 인원을 추정한다. 연간 고유 방문자 수와 같지 않다. Google Maps 리뷰는 2024–2025년 자료로, 경복궁 평균 4.7/5와 서울숲 긍정 감성 비율 79.9%를 별도 지표로 보고했다.
-- **일본인 방문 패턴:** 같은 서울시 분석은 쇼핑 장소인 명동·남대문시장·광장시장에서 일본·중국 방문자의 비중이 높았다고 기술한다. 이는 출신 시장 구성에 관한 설명이며 별도의 일본인 관광지 순위가 아니다.
+Detailed source notes: `airport-arrival-2026-10-11.md`, `entry-and-transit-tools-2026-10-10.md`, `on-trip-help-2026-10-11.md`, `map-search-handoff-2026-10-11.md`, and each guide’s own source list.
 
-### 세 번째 공개 데이터: 음식점·카페
+## Expansion sequence
 
-- **한국관광공사/TMAP:** [현지인·지역 외 이용자 맛집 차트](https://korean.visitkorea.or.kr/localfood/main.do) 및 [운전자 음식점 검색 순위 안내](https://korean.visitkorea.or.kr/main/area_chart.do). 서울 지역의 두 세그먼트에서 각 10개 목록을 2026-10-10에 확인했다. 이름과 게재 순서는 `food-tmap-seoul-and-michelin-2026.csv`에 구조화했고 사이트에도 표시했다.
-- **측정:** 공식 설명은 전월 TMAP 내비게이션 데이터로 지역별 식음료 분야 상위 10개를 제공하며 대체로 매월 8일 전후 갱신(변동 가능)된다고 안내한다. 차량 목적지 검색 행동이지 실제 식사 인원·맛·만족도·품질 점수가 아니다. 기본 범위에는 음식점 외 카페·제과점도 포함되어 드라이브스루·커피숍이 순위에 나타날 수 있다.
-- **기간 한계:** 확인 가능한 현재 목록에는 정확한 기준월이 보이지 않았다. 따라서 2026-10-10을 확인일로 적되 “2026년 9월 순위” 등으로 추정하지 않았다. `외지인`은 선택 지역 바깥의 이용자 구분이며 외국인 여행자라는 뜻으로 바꾸지 않는다.
-- **MICHELIN Guide:** [2026 Seoul & Busan 공식 발표](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/michelin-guide-seoul-busan-2026-highlights)(2026-03-05)는 233개 식당(서울 178, 부산 55)을 선정했다. 분류는 별 46, Bib Gourmand 71, MICHELIN Selected 116이다. 이는 인스펙터의 가이드 선정이며 TMAP 검색량·방문객·대중적 인기 순위와 별도 표기한다.
+### Phase 1 — complete and stabilize the present menu
 
-### 별도로 다룰 판매·이용 자료
+- Publish the nine bilingual guides only after copy review and final link/rendering/accessibility QA.
+- Keep current menu language consistent: Korean culture, language, food, beauty literacy, practical travel and editorial standards.
+- Verify the same source/date/metric appears consistently across home cards, article bodies, source lists, sitemap and release bundle.
+- Add correction/contact/privacy/terms infrastructure once the owner supplies operator and hosting details.
 
-- **Olive Young:** [공식 판매 랭킹](https://www.oliveyoung.co.kr/store/main/getBestList.do)은 2026-10-10 확인 시점의 `판매 랭킹`이다. 전체 H&B 랭킹에는 해외 브랜드와 비화장품 품목도 포함되어 있었다. K-뷰티 제품만 소개하려면 필터 기준을 밝히고, 전체 랭킹을 한국 화장품 전체의 품질 순위로 바꾸지 않는다. 가격·행사·재고는 변동하므로 첫 섹션에는 가격을 복사하지 않았다.
-- **한국관광공사 Data Lab:** [관광 데이터랩](https://datalab.visitkorea.or.kr/datalab/portal/nat/getForTourForm.do), [지역 방문자 수 API 안내](https://www.data.go.kr/data/15101972/openapi.do). 지역 방문 분석은 통신 데이터 기반 집계다. 공개 설명상 국내 KT 및 외국인 SKT 이동통신 데이터가 사용되며, 일별 방문자 수는 여러 날 체류한 동일인이 날짜별 집계에 반복 포함될 수 있다. “여행 기간의 고유 인원”으로 부르지 않는다.
-- **서울시 관광 유동:** 위 ‘두 번째 공개 데이터’의 서울시 발표를 참조. 유동량은 로밍·출입국 자료에 기반한 추정치이며 2025년 실적이다. Google Maps 리뷰 지표는 리뷰 기간·산출 단위가 다르므로 방문량과 결합하지 않는다.
-- **음식점 검색 및 전문 가이드:** 위 ‘세 번째 공개 데이터’의 한국관광공사/TMAP 차트와 MICHELIN Guide 2026 발표를 참조. 내비게이션 검색은 이동 행동의 지표이며, 가이드 선정은 인스펙터 평가다. 두 지표를 하나의 맛집 순위로 합치지 않는다.
-- **의료기관 정보:** [Medical Korea 일본어 ‘가장 많이 방문한 의료기관’ 목록](https://www.medicalkorea.or.kr/jp/mostvisitedmedicalinstitutions)은 144개 레코드/24페이지를 표시하지만, 확인한 페이지에서는 집계 기간과 정렬 방법을 확인하지 못했다. 다운로드 파일과 방법론을 확인하기 전에는 순서나 목록을 병원 품질 순위로 재작성하지 않는다. [등록 병원 안내](https://www.medicalkorea.or.kr/en/registeredhospitals)는 등록 여부 확인용이지 품질 보증·추천이 아니다.
-- **외국인 환자 전체 통계:** [한국 보건복지부·Korea.net 2025 통계 발표](https://www.korea.net/Government/Briefing-Room/Press-Releases/view?articleId=2016788&insttCode=A260111&type=N)에 따르면 2025년 외국인 환자 201만 명, 방문 272만 건이며, 이용 기관의 87.7%가 의원급이었다. 집계된 전체 규모이지 2026년 연간 실적이나 기관별 순위가 아니다.
+### Phase 2 — add original, useful cultural coverage
 
-## 랭킹 콘텐츠 공통 공개 규칙
+Prioritize carefully sourced, timeless explainers over short-lived trend lists. Candidate topics include everyday greetings and honorific context; how customs vary by setting and generation; public cultural institutions and heritage; seasonal food practices; and regional differences. Each article needs a clear reader question, primary sources, specific scope and an editorial explanation not already found in source snippets. Avoid broad claims such as “Koreans always…” and unsupported claims about what foreign visitors “love.”
 
-1. **지표명과 기간을 제목 가까이에 쓴다.** “판매 랭킹”, “플랫폼 목록 순서”, “전월 내비게이션 검색”, “2025년 외국인 유동”처럼 구체적으로 적는다.
-2. **서로 다른 데이터는 합산하지 않는다.** 리뷰 점수, 리뷰 수, 매출·판매 순위, 길찾기 검색, 방문량, 전문가 가이드는 개별 표시한다.
-3. **출처의 원문을 링크하고 확인일을 기록한다.** 업데이트 전후의 수치를 비교할 때는 각각의 스냅샷 날짜와 출처 정의를 남긴다.
-4. **순위 산식이 비공개면 비공개라고 쓴다.** 데이터가 말해주지 않는 품질·효능·안전성·선호를 주장하지 않는다.
-5. **권리와 이용조건을 확인한다.** 공개 웹페이지의 자료도 재배포 권리가 자동으로 생기는 것은 아니다. 이미지·상세 카피를 복사하지 않고, 데이터베이스·플랫폼 이용조건을 점검한 뒤 필요한 최소 사실만 출처 표시와 링크로 사용한다.
-6. **가격·주소·영업시간 등 변동 정보는 별도 확인한다.** 랭킹 확인 시점의 가격을 영구적인 가격처럼 노출하지 않는다.
-7. **의료 분야는 별도 사전 검토를 한다.** 제휴·광고·환자 유치·체험담·기관 비교는 게시 방식에 따라 한국·일본의 법률과 규정이 적용될 수 있으므로 법률·의료광고 전문가 검토 없이는 공개하지 않는다.
+Potential K-pop, film, fashion or beauty-trend pieces may be considered as culture coverage, but must use official dates/credit/source pages and distinguish editorial context from current charts or commercial links. Do not scrape or reproduce platform rankings without checking terms and permissions.
 
-## 작업 파일
+### Phase 3 — maintenance and optional non-medical monetization
 
-- `../index.html` — 일본어 사이트. `韓国美容` 메뉴는 Hwahae 섹션, `旅・エリア` 메뉴는 여행 데이터 섹션으로 이동한다.
-- `hwahae-skincare-top10-2026-10-08.csv` — 첫 카테고리의 순위·상품명·평가점·리뷰 수·출처 스냅샷.
-- `travel-data-q1-2026-and-seoul-2025.csv` — 2026 Q1 지역관광 지표와 2025 Seoul 유동·리뷰 스냅샷.
-- `food-tmap-seoul-and-michelin-2026.csv` — 서울 TMAP 지역 내/외 검색 순위 스냅샷과 MICHELIN 2026 선택 집계.
-- 이 문서 — 메뉴 순서, 조사 방법, 한계, 출처 및 미용의료 분야의 다음 작업 기준.
+- Set a recurring review schedule for volatile pages and an annual calendar update for holidays.
+- Maintain visible review dates and correction history.
+- Before any AdSense or sponsorship test, complete privacy/consent review, ad labelling, affiliate/sponsorship disclosures where applicable, owner contact/policy pages, and a check that ads do not interrupt or misrepresent cultural information. Ad approval is controlled by the platform and is not promised.
+- Do not accept patient leads, clinic referrals or healthcare advertising under the current direction.
+
+## Superseded internal research
+
+The workspace retains earlier snapshots on Hwahae product order, TMAP searches, tourism-flow statistics, Michelin selections and medical-provider regulatory context. They are **not current public menu priorities** and must not be revived by accident. In particular, the files `hwahae-skincare-top10-2026-10-08.csv`, `travel-data-q1-2026-and-seoul-2025.csv` and `food-tmap-seoul-and-michelin-2026.csv` remain internal archival research; platform ranking, searches, traffic and guide selections are not equivalent measures of quality or popularity. Medical law/provider research matters only if the user explicitly reopens that direction.
+
+## Release commands and boundaries
+
+```bash
+python3 research/build_culture_articles.py
+python3 research/qa_static_site.py
+python3 build_public_site.py
+```
+
+The public build is allow-listed in `build_public_site.py`. Do not include research, source modules, audit files or the full project ZIP in the public deployment. The owner handles host/DNS/credentials and deployment; none have been requested or used.

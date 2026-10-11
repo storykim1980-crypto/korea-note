@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="28" fill="#f7f5ef" stroke="#925944" stroke-width="2"/>
+  <text x="31" y="43" fill="#925944" font-family="Georgia,serif" font-size="36" text-anchor="middle" transform="rotate(-9 32 32)">S</text>
+  <circle cx="53" cy="12" r="3" fill="#925944"/>
+</svg>

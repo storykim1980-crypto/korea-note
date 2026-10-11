@@ -4,20 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ed">
-  <meta name="description" content="A considered English-language guide to Korean beauty, aesthetic care, food and travel—with source-linked data, practical context and room to choose for yourself.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="description" content="SEOUL NOTE is a source-linked guide to Korean culture, language, food, beauty and practical travel information in Japanese and English.">
   <link rel="canonical" href="https://seoul-note.com/en/">
   <link rel="alternate" hreflang="en" href="https://seoul-note.com/en/">
   <link rel="alternate" hreflang="ja-JP" href="https://seoul-note.com/">
   <link rel="alternate" hreflang="x-default" href="https://seoul-note.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SEOUL NOTE">
-  <meta property="og:title" content="SEOUL NOTE | A thoughtful guide to Korea">
-  <meta property="og:description" content="Beauty, aesthetic care, food and travel in Korea—thoughtfully researched and clearly sourced.">
+  <meta property="og:title" content="SEOUL NOTE | A source-led guide to Korean culture and travel">
+  <meta property="og:description" content="SEOUL NOTE is a source-linked guide to Korean culture, language, food, beauty and practical travel information in Japanese and English.">
   <meta property="og:url" content="https://seoul-note.com/en/">
   <meta property="og:image" content="https://seoul-note.com/assets/hero-seoul.jpg">
+  <meta property="og:image:alt" content="AI-generated illustrative artwork inspired by travel in Korea; not a documentary photograph of a real place.">
+  <meta property="og:image:width" content="1376">
+  <meta property="og:image:height" content="768">
   <meta property="og:locale" content="en_US">
+  <meta name="twitter:title" content="SEOUL NOTE | A source-led guide to Korean culture and travel">
+  <meta name="twitter:description" content="SEOUL NOTE is a source-linked guide to Korean culture, language, food, beauty and practical travel information in Japanese and English.">
+  <meta name="twitter:image" content="https://seoul-note.com/assets/hero-seoul.jpg">
+  <meta name="twitter:image:alt" content="AI-generated illustrative artwork inspired by travel in Korea; not a documentary photograph of a real place.">
   <meta name="twitter:card" content="summary_large_image">
-  <title>SEOUL NOTE | A thoughtful guide to Korea</title>
+  <title>SEOUL NOTE | A source-led guide to Korean culture and travel</title>
   <style>
     :root {
       --paper: #f7f5ef;
@@ -149,11 +157,18 @@
     .hero-sticker span { color: var(--terra); margin-right: 8px; font-family: var(--serif); font-size: 14px; }
     .hero-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 19px; color: var(--muted); font-size: 11px; }
     .hero-bottom p { margin: 0; }
+    .edition-scope { margin-top: 17px; }
+    .edition-scope-inner {
+      display: grid; grid-template-columns: minmax(170px, .28fr) 1fr; align-items: start; gap: 18px;
+      padding: 15px 18px; border: 1px solid rgba(33,52,45,.14); background: rgba(255,254,251,.68);
+    }
+    .edition-scope-label { margin: 0; color: var(--terra); font-size: 9px; font-weight: 600; letter-spacing: .12em; }
+    .edition-scope-copy { margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.85; }
     .text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 11px; white-space: nowrap; }
     .text-link svg { transition: transform .2s ease; }
     .text-link:hover svg { transform: translateX(4px); }
 
-    /* Medical note band */
+    /* Editorial note band */
     .reader-note { margin-top: 23px; background: var(--paper-2); border-top: 1px solid rgba(38,53,47,.08); border-bottom: 1px solid rgba(38,53,47,.08); }
     .reader-note-inner { min-height: 100px; display: grid; grid-template-columns: 190px 1fr auto; align-items: center; gap: 26px; }
     .reader-note-label { color: var(--terra); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
@@ -366,7 +381,7 @@
     .footer-nav { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: flex-end; gap: 13px 25px; }
     .footer-nav a, .footer-nav button { padding: 5px 0; border: 0; color: rgba(255,255,255,.78); background: transparent; font-size: 10px; cursor: pointer; }
     .footer-nav a:hover, .footer-nav button:hover { color: white; text-decoration: underline; text-underline-offset: 4px; }
-    .footer-medical-note { padding: 20px 0 19px; color: rgba(255,255,255,.55); font-size: 9px; line-height: 1.9; }
+    .footer-editorial-note { padding: 20px 0 19px; color: rgba(255,255,255,.55); font-size: 9px; line-height: 1.9; }
     .footer-bottom { display: flex; justify-content: space-between; gap: 20px; color: rgba(255,255,255,.45); font-size: 9px; letter-spacing: .08em; }
 
     /* Dialogs */
@@ -442,6 +457,7 @@
       .hero-visual, .hero-visual > img { min-height: 390px; }
       .hero-visual { aspect-ratio: 1.5; }
       .hero-bottom { align-items: flex-start; flex-direction: column; gap: 7px; padding-top: 15px; }
+      .edition-scope-inner { grid-template-columns: 1fr; gap: 4px; padding: 13px 14px; }
       .reader-note-inner { grid-template-columns: 1fr auto; gap: 8px 18px; padding: 18px 0; }
       .reader-note-label { grid-column: 1; }
       .reader-note-content { grid-column: 1; display: block; }
@@ -785,14 +801,242 @@
       html[lang="en"] .hero h1 { font-size: 39px; }
       html[lang="en"] .ranking-row { grid-template-columns: 27px minmax(0,1fr) 68px; gap: 6px; padding-inline: 8px; }
     }
-</style>
+
+    .food-dish-panel { margin-top: 18px; padding: 22px; border: 1px solid rgba(38,53,47,.14); background: rgba(252,251,247,.78); }
+    .food-dish-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 15px; }
+    .food-dish-head h3 { margin: 4px 0 0; font-family: var(--serif); font-size: 22px; line-height: 1.45; font-weight: 500; }
+    .food-dish-head p { max-width: 430px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+    .food-dish-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
+    .food-dish-card { min-width: 0; min-height: 148px; padding: 14px 15px; border: 1px solid rgba(38,53,47,.11); background: var(--white); }
+    .food-dish-korean { display: block; color: var(--terra); font-size: 9px; letter-spacing: .08em; }
+    .food-dish-card h4 { margin: 4px 0 7px; color: var(--ink); font-family: var(--serif); font-size: 16px; font-weight: 500; }
+    .food-dish-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+    .food-dish-footnote { margin: 13px 0 0; color: var(--muted); font-size: 9px; line-height: 1.8; }
+    .food-phrase-panel { margin-top: 14px; padding: 16px 17px; border-left: 3px solid var(--terra); background: #f2f0e9; }
+    .food-phrase-panel > p { margin: 0 0 10px; color: var(--ink-soft); font-size: 10px; line-height: 1.8; }
+    .food-phrase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+    .food-phrase { min-width: 0; padding: 10px 11px; border: 1px solid rgba(38,53,47,.1); background: rgba(255,254,251,.8); }
+    .food-phrase strong { display: block; color: var(--ink); font-size: 10px; line-height: 1.6; overflow-wrap: anywhere; }
+    .food-phrase span { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+    .area-guide-panel { margin-top: 20px; padding: 23px; border: 1px solid rgba(38,53,47,.14); background: #f1efe7; }
+    .area-guide-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 9px; }
+    .area-guide-card { min-width: 0; min-height: 178px; padding: 14px 13px; border: 1px solid rgba(38,53,47,.11); background: rgba(255,254,251,.82); }
+    .area-guide-tag { display: block; color: var(--terra); font-size: 9px; letter-spacing: .1em; }
+    .area-guide-card h4 { margin: 5px 0 7px; color: var(--ink); font-family: var(--serif); font-size: 16px; font-weight: 500; }
+    .area-guide-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+    .area-guide-note { margin: 14px 0 0; padding: 12px 14px; border-left: 3px solid var(--terra); color: var(--ink-soft); background: rgba(255,254,251,.8); font-size: 10px; line-height: 1.85; }
+    .area-guide-links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+    .area-guide-links a { color: var(--ink); font-size: 9px; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 4px; }
+    .article-source-box { margin: 20px 0; padding: 15px 17px; border: 1px solid rgba(38,53,47,.13); background: var(--paper-2); }
+    .article-source-box strong { display: block; margin-bottom: 7px; color: var(--ink); }
+    .article-source-box a { display: block; margin-top: 5px; font-size: 10px; }
+    .japan-market-panel { margin-top: 20px; }
+    @media (max-width: 980px) {
+      .food-dish-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .area-guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .food-dish-panel, .area-guide-panel { padding: 15px 12px; }
+      .food-dish-grid, .area-guide-grid, .food-phrase-grid { grid-template-columns: 1fr; }
+      .food-dish-head { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .food-dish-head h3 { font-size: 19px; }
+      .food-dish-card, .area-guide-card { min-height: auto; }
+    }
+  
+    /* Personal Seoul trip planner */
+    .planner-section { padding: 82px 0 90px; background: var(--paper); }
+    .travel-practical-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
+    .travel-practical-card { min-width: 0; padding: clamp(16px, 2.3vw, 22px); border: 1px solid rgba(38,53,47,.14); background: #f1efe7; }
+    .travel-practical-kicker { display: block; color: var(--terra); font-size: 9px; line-height: 1.6; letter-spacing: .1em; }
+    .travel-practical-card h3 { margin: 5px 0 9px; color: var(--ink); font-family: var(--serif); font-size: 21px; line-height: 1.45; font-weight: 500; }
+    .travel-practical-card > p { margin: 0 0 10px; color: var(--ink-soft); font-size: 12px; line-height: 1.8; }
+    .entry-steps { display: grid; gap: 8px; margin: 12px 0; padding: 0; list-style: none; }
+    .entry-steps li { padding: 10px 11px; border: 1px solid rgba(38,53,47,.1); background: rgba(255,254,251,.82); color: var(--ink-soft); font-size: 12px; line-height: 1.8; }
+    .entry-steps strong { color: var(--ink); }
+    .travel-practical-note { margin: 11px 0 0 !important; padding: 10px 12px; border-left: 3px solid var(--terra); background: rgba(255,254,251,.85); color: var(--muted) !important; font-size: 12px !important; line-height: 1.8 !important; }
+    .travel-practical-links { display: flex; flex-wrap: wrap; gap: 7px 13px; margin-top: 11px; }
+    .travel-practical-links a { color: var(--ink); font-size: 12px; line-height: 1.6; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 3px; overflow-wrap: anywhere; }
+
+    /* On-trip emergency and tourism help */
+    .travel-help-panel { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(0, .94fr) minmax(0, 1.08fr); gap: 17px; margin-top: 16px; padding: clamp(16px, 2.4vw, 23px); border: 1px solid rgba(38,53,47,.16); background: #e8ebe4; }
+    .travel-help-panel > * { min-width: 0; }
+    .travel-help-kicker, .travel-help-label { display: block; color: var(--terra); font-size: 10px; font-weight: 600; letter-spacing: .06em; line-height: 1.65; }
+    .travel-help-panel h3 { margin: 6px 0 10px; color: var(--ink); font-family: var(--serif); font-size: 21px; line-height: 1.45; font-weight: 500; }
+    .travel-help-panel h4 { margin: 7px 0 8px; color: var(--ink); font-family: var(--serif); font-size: 18px; line-height: 1.5; font-weight: 500; }
+    .travel-help-panel p { margin: 9px 0; color: var(--ink-soft); font-size: 12px; line-height: 1.8; }
+    .travel-help-numbers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+    .travel-help-number { min-height: 66px; padding: 9px 10px; border: 1px solid rgba(38,53,47,.17); display: grid; align-content: center; gap: 3px; color: var(--ink); background: var(--white); transition: border-color .2s ease, background .2s ease; }
+    .travel-help-number:hover { border-color: var(--terra); background: #fff; }
+    .travel-help-number strong { font-size: 24px; line-height: 1.15; letter-spacing: .015em; }
+    .travel-help-number span { color: var(--ink-soft); font-size: 11px; line-height: 1.45; }
+    .travel-help-tourism { padding: 13px 14px; border: 1px solid rgba(38,53,47,.1); background: rgba(255,254,251,.82); }
+    .travel-help-phone-link { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    .travel-help-route { padding: 9px 10px; border-left: 3px solid var(--olive); background: #fff; }
+    .travel-help-callout { margin: 11px 0 0 !important; padding: 10px 12px; border-left: 3px solid var(--terra); background: rgba(255,254,251,.86); }
+    .travel-help-korean { margin: 11px 0 !important; padding: 9px 11px; border-left: 3px solid var(--olive); background: #fff; color: var(--ink) !important; overflow-wrap: anywhere; }
+    .travel-help-korean [lang="ko"] { display: block; margin-bottom: 2px; font-size: 15px; font-weight: 700; }
+    .travel-help-footnote { color: var(--ink-soft) !important; font-size: 11px !important; }
+    .travel-help-sources { grid-column: 1 / -1; padding-top: 12px; border-top: 1px solid rgba(38,53,47,.16); }
+    .travel-help-sources p { margin: 0 0 8px; color: var(--ink-soft); font-size: 11px; }
+    .travel-help-source-links { display: flex; flex-wrap: wrap; gap: 7px 16px; }
+    .travel-help-source-links a { color: var(--ink); font-size: 11px; line-height: 1.6; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    @media (max-width: 900px) {
+      .travel-help-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .travel-help-sources { grid-column: 1 / -1; }
+    }
+    @media (max-width: 560px) {
+      .travel-help-panel { grid-template-columns: 1fr; gap: 13px; }
+      .travel-help-sources { grid-column: auto; }
+      .travel-help-tourism { padding: 12px; }
+    }
+    .pass-estimator-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 13px; }
+    .pass-estimator-field { display: grid; align-content: start; gap: 6px; color: var(--ink); font-size: 12px; font-weight: 600; line-height: 1.6; }
+    .pass-estimator-field select, .pass-estimator-field input[type="number"] { width: 100%; min-height: 44px; padding: 9px 10px; border: 1px solid rgba(38,53,47,.2); border-radius: 0; color: var(--ink); background: #fff; font: inherit; font-size: 12px; }
+    .pass-card-fee { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 8px; color: var(--ink-soft); font-size: 12px; line-height: 1.7; cursor: pointer; }
+    .pass-card-fee input { flex: 0 0 auto; margin: 3px 0 0; accent-color: var(--terra); }
+    .pass-estimate { min-height: 3.2em; margin: 12px 0 0 !important; padding: 11px 13px; border-left: 3px solid var(--olive); color: var(--ink) !important; background: #fff; font-size: 12px !important; line-height: 1.8 !important; font-weight: 600; }
+    .pass-estimator-note { margin: 10px 0 0 !important; color: var(--muted) !important; font-size: 12px !important; line-height: 1.8 !important; }
+    @media (max-width: 700px) {
+      .travel-practical-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 430px) {
+      .travel-practical-card { padding: 15px 12px; }
+      .pass-estimator-fields { grid-template-columns: 1fr; }
+      .pass-card-fee { grid-column: 1; }
+    }
+
+    .arrival-guide { margin: 0 0 22px; padding: clamp(15px, 2.5vw, 24px); border: 1px solid rgba(38,53,47,.14); background: var(--paper-2); }
+    .arrival-guide-head { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr); gap: 18px; align-items: end; margin-bottom: 15px; }
+    .arrival-kicker { color: var(--terra); font-size: 9px; letter-spacing: .12em; line-height: 1.6; }
+    .arrival-guide-head h3 { margin: 5px 0 0; color: var(--ink); font-family: var(--serif); font-size: clamp(18px, 2vw, 24px); line-height: 1.45; font-weight: 500; }
+    .arrival-guide-head p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .arrival-option-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .arrival-option { min-width: 0; padding: 14px; border: 1px solid rgba(38,53,47,.14); background: var(--white); }
+    .arrival-option-label { display: block; color: var(--terra); font-size: 9px; font-weight: 700; letter-spacing: .1em; line-height: 1.6; }
+    .arrival-option h4 { margin: 5px 0 6px; color: var(--ink); font-family: var(--serif); font-size: 16px; line-height: 1.5; font-weight: 500; }
+    .arrival-option h4 [lang="ko"] { font-family: inherit; font-size: 10px; font-weight: 500; }
+    .arrival-option p { margin: 0 0 6px; color: var(--ink-soft); font-size: 10px; line-height: 1.8; }
+    .arrival-option small { display: block; color: var(--muted); font-size: 10px; line-height: 1.75; }
+    .arrival-note { margin: 12px 0 0; padding: 10px 12px; border-left: 3px solid var(--olive); color: var(--muted); background: var(--white); font-size: 9px; line-height: 1.8; }
+    .arrival-note strong { color: var(--ink); }
+    .arrival-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 12px; }
+    .arrival-links a { color: var(--ink); font-size: 10px; line-height: 1.6; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    .arrival-lookup { margin: 10px 0 0; padding-top: 9px; border-top: 1px solid rgba(38,53,47,.12); color: var(--muted); font-size: 9px; line-height: 1.8; }
+    .arrival-lookup strong, .arrival-lookup span { color: var(--ink); }
+    .arrival-lookup span { white-space: nowrap; }
+    @media (max-width: 700px) {
+      .arrival-guide-head { grid-template-columns: 1fr; gap: 7px; }
+      .arrival-option-grid { grid-template-columns: 1fr; }
+    }
+
+    .planner-shell { padding: clamp(18px, 3vw, 30px); border: 1px solid rgba(38,53,47,.15); background: var(--white); box-shadow: 0 18px 48px rgba(31,43,37,.055); }
+    .planner-form { display: grid; gap: 20px; }
+    .planner-input-grid { display: grid; grid-template-columns: minmax(180px,.45fr) minmax(0,1.55fr); gap: 25px; align-items: start; }
+    .planner-days-field { display: grid; gap: 8px; color: var(--ink); font-size: 11px; font-weight: 600; }
+    .planner-days-field select, .planner-day-card select, .planner-day-card input[type="text"] { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid rgba(38,53,47,.2); border-radius: 0; color: var(--ink); background: #fff; font: inherit; font-size: 11px; }
+    .planner-interest-set { min-width: 0; margin: 0; padding: 0; border: 0; }
+    .planner-interest-set legend { margin-bottom: 9px; color: var(--ink); font-size: 11px; font-weight: 600; }
+    .planner-interest-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+    .planner-interest-option { min-height: 42px; padding: 9px 10px; border: 1px solid rgba(38,53,47,.14); display: flex; align-items: flex-start; gap: 8px; color: var(--ink-soft); background: var(--paper); font-size: 10px; line-height: 1.55; cursor: pointer; }
+    .planner-interest-option:has(input:checked) { border-color: var(--terra); background: #f3ebe5; color: var(--ink); }
+    .planner-interest-option input { flex: 0 0 auto; margin: 2px 0 0; accent-color: var(--terra); }
+    .planner-actions, .planner-output-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+    .planner-actions .button { min-height: 43px; }
+    .planner-privacy { margin: 0; padding: 11px 13px; border-left: 3px solid var(--olive); color: var(--muted); background: var(--paper-2); font-size: 10px; line-height: 1.8; }
+    .planner-status { min-height: 1.5em; margin: 12px 0 0; color: var(--ink-soft); font-size: 10px; }
+    .planner-result { margin-top: 22px; padding-top: 21px; border-top: 1px solid var(--line); }
+    .planner-result-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+    .planner-result-kicker { display: block; color: var(--terra); font-size: 9px; letter-spacing: .14em; }
+    .planner-result-head h3 { margin: 4px 0 5px; color: var(--ink); font-family: var(--serif); font-size: 24px; line-height: 1.4; font-weight: 500; }
+    .planner-result-head p { max-width: 540px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+    .planner-output-actions { justify-content: flex-end; }
+    .planner-tool-button { min-height: 36px; padding: 8px 11px; border: 1px solid rgba(38,53,47,.22); color: var(--ink); background: transparent; font: inherit; font-size: 10px; cursor: pointer; }
+    .planner-tool-button:hover { border-color: var(--terra); background: #f7f2ed; }
+    .planner-idea-panel { margin: 14px 0 17px; padding: 14px 16px; border-left: 3px solid var(--terra); background: #f3f1eb; }
+    .planner-idea-panel h4, .planner-check-panel h4, .planner-source-panel h4 { margin: 0 0 6px; color: var(--ink); font-family: var(--serif); font-size: 16px; font-weight: 500; }
+    .planner-idea-panel p { margin: 0 0 10px; color: var(--muted); font-size: 10px; line-height: 1.8; }
+    .planner-suggestions { display: flex; flex-wrap: wrap; gap: 7px; }
+    .planner-area-chip { display: inline-flex; align-items: center; gap: 6px; padding: 7px 9px; border: 1px solid rgba(38,53,47,.16); color: var(--ink); background: var(--white); font-size: 9px; }
+    .planner-area-chip small { color: var(--terra); font-size: 8px; }
+    .planner-empty-ideas { color: var(--muted); font-size: 10px; }
+    .planner-day-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+    .planner-day-card { min-width: 0; padding: 17px; border: 1px solid rgba(38,53,47,.15); background: #fff; break-inside: avoid; }
+    .planner-day-card h4 { margin: 0 0 13px; color: var(--ink); font-family: var(--serif); font-size: 19px; font-weight: 500; }
+    .planner-day-top { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 10px; margin-bottom: 8px; }
+    .planner-day-field { display: grid; align-content: start; gap: 5px; color: var(--ink-soft); font-size: 9px; font-weight: 600; }
+    .planner-day-note { min-height: 2.8em; margin: 0 0 12px; color: var(--muted); font-size: 9px; line-height: 1.7; }
+    .planner-map-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 8px; margin: 0 0 12px; min-width: 0; }
+    .planner-map-actions[hidden] { display: none; }
+    .planner-map-actions-label { flex: 0 0 100%; color: var(--muted); font-size: 11px; line-height: 1.65; }
+    .planner-map-actions a { display: inline-flex; align-items: center; max-width: 100%; min-height: 42px; padding: 8px 11px; border: 1px solid rgba(38,53,47,.18); color: var(--ink); background: var(--paper-2); font-size: 11px; line-height: 1.55; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    .planner-map-actions a:hover { border-color: var(--terra); background: #fff; }
+    .planner-custom-area { margin: 0 0 12px; }
+    .planner-custom-area[hidden] { display: none; }
+    .planner-time-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+    .planner-time-field { display: grid; align-content: start; gap: 5px; color: var(--ink-soft); font-size: 9px; font-weight: 600; }
+    .planner-time-field textarea { width: 100%; min-height: 76px; padding: 9px 10px; border: 1px solid rgba(38,53,47,.16); border-radius: 0; color: var(--ink); background: #fdfcf9; font: inherit; font-size: 10px; line-height: 1.65; resize: vertical; }
+    .planner-time-field textarea::placeholder { color: #737a73; opacity: 1; }
+    .planner-lower-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+    .planner-check-panel, .planner-source-panel { min-width: 0; padding: 16px; border: 1px solid rgba(38,53,47,.14); background: #f8f7f2; }
+    .planner-check-list { display: grid; gap: 8px; }
+    .planner-check-option { display: flex; align-items: flex-start; gap: 9px; color: var(--ink-soft); font-size: 10px; line-height: 1.7; cursor: pointer; }
+    .planner-check-option input { flex: 0 0 auto; margin: 3px 0 0; accent-color: var(--terra); }
+    .planner-source-list { display: grid; gap: 7px; }
+    .planner-source-list a { color: var(--ink); font-size: 9px; line-height: 1.6; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    .planner-disclaimer { margin: 13px 0 0; color: var(--muted); font-size: 9px; line-height: 1.8; }
+    .travel-copy .button + .button { margin-top: 9px; }
+    @media (max-width: 900px) {
+      .planner-day-grid { grid-template-columns: 1fr; }
+      .planner-result-head { align-items: flex-start; flex-direction: column; }
+      .planner-output-actions { justify-content: flex-start; }
+    }
+    @media (max-width: 700px) {
+      .planner-section { padding: 64px 0; }
+      .planner-input-grid, .planner-lower-grid { grid-template-columns: 1fr; }
+      .planner-interest-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .planner-day-top { grid-template-columns: 1fr; }
+      .planner-time-grid { grid-template-columns: 1fr; }
+      .planner-result-head h3 { font-size: 21px; }
+    }
+    @media (max-width: 430px) {
+      .planner-shell { padding: 14px 11px; }
+      .planner-interest-grid { grid-template-columns: 1fr; }
+      .planner-day-card { padding: 13px 11px; }
+      .planner-check-panel, .planner-source-panel { padding: 13px 11px; }
+    }
+    @media print {
+      body.plan-print-mode * { visibility: hidden !important; }
+      body.plan-print-mode #planner, body.plan-print-mode #planner * { visibility: visible !important; }
+      body.plan-print-mode #planner { position: absolute; inset: 0; width: 100%; margin: 0; padding: 10mm; background: #fff; }
+      body.plan-print-mode #planner .planner-form, body.plan-print-mode #planner .planner-output-actions { display: none !important; }
+      body.plan-print-mode #planner .arrival-guide { display: none !important; }
+      body.plan-print-mode #planner .planner-result { display: block !important; border: 0; margin: 0; padding: 0; }
+      body.plan-print-mode #planner .planner-day-grid { grid-template-columns: 1fr; }
+      body.plan-print-mode #planner .planner-day-card, body.plan-print-mode #planner .planner-check-panel, body.plan-print-mode #planner .planner-source-panel { break-inside: avoid; box-shadow: none; }
+      body.plan-print-mode #planner textarea { min-height: 48px; border: 0; background: transparent; color: #111; }
+      body.plan-print-mode #planner .planner-area-chip { color: #111; }
+    }
+  
+    .story-card { display: flex; flex-direction: column; }
+    .story-card-link { height: auto; flex: 1 1 auto; cursor: pointer; }
+    .story-card-link:focus-visible { outline: 2px solid var(--terra); outline-offset: -3px; }
+    .story-card-actions { display: flex; justify-content: flex-end; padding: 0 16px 14px; }
+    .story-save-button { min-height: 32px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 18px; color: var(--ink-soft); background: transparent; font-size: 10px; cursor: pointer; }
+    .story-save-button:hover { border-color: var(--terra); color: var(--ink); background: var(--paper); }
+    .story-save-button[aria-pressed="true"] { border-color: var(--olive-dark); color: white; background: var(--olive-dark); }
+    .footer-editorial-note { padding: 20px 0 19px; color: rgba(255,255,255,.62); font-size: 10px; line-height: 1.9; }
+    .note-arrow { width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; color: var(--ink); background: transparent; }
+    .note-arrow:hover { border-color: var(--terra); background: var(--white); }
+    .feature-list li span[lang="ko"] { color: var(--ink); font-size: 13px; letter-spacing: .02em; }
+
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="topline">
     <div class="container topline-inner">
-      <span>Beauty, food and travel in Korea—at your own pace.</span>
-      <span class="topline-right">A thoughtful guide to Korea</span>
+      <span>Korean culture and useful travel context, with sources to check.</span>
+      <span class="topline-right">Culture · language · food · beauty · travel</span>
     </div>
   </div>
   <header class="site-header">
@@ -802,13 +1046,13 @@
         <span class="brand-name">SEOUL NOTE</span>
       </a>
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-        <a href="#beauty-ranking">Beauty</a>
-        <a href="#feature">Aesthetic care</a>
-        <a href="#travel-data">Travel</a>
+        <a href="#stories" data-jump-filter="culture">Culture</a>
+        <a href="#stories" data-jump-filter="language">Korean</a>
         <a href="#food-data">Food</a>
-        <a href="#stories">Stories</a>
-        <a href="#about">About</a>
-        <a class="language-switch" href="/" lang="ja" aria-label="日本語版を表示">日本語</a>
+        <a href="#beauty-ranking">Beauty</a>
+        <a href="#planner">Travel</a>
+        <a href="#about">Editorial</a>
+        <a class="language-switch" href="/" lang="ja" aria-label="日本語版を読む">日本語</a>
       </nav>
       <div class="nav-actions">
         <button class="icon-button" id="searchToggle" type="button" aria-label="Search stories">
@@ -830,20 +1074,20 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span>KOREA, AT YOUR OWN PACE</span></div>
-          <h1 id="heroTitle">Explore Korea,<br><em>your own way.</em></h1>
-          <p class="hero-lede">Thoughtful notes on Korean beauty, aesthetic care, food and travel—so you can explore with curiosity and make choices that feel right for you.</p>
+          <h1 id="heroTitle">Understand Korea.<br><em>Enjoy it your way.</em></h1>
+          <p class="hero-lede">Explore Korean culture, language, food, beauty and practical travel information through clear, source-linked guides for an international audience.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#stories">Read the stories
+            <a class="button button-primary" href="#stories">Browse the guides
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
             </a>
-            <button class="button button-light" type="button" data-open-checklist>Plan your trip</button>
+            <a class="button button-light" href="#planner">Build a day-by-day plan</a>
           </div>
-          <div class="hero-meta"><span>BEAUTY · AESTHETIC CARE · FOOD · TRAVEL</span><span>An editorial guide to Korea</span></div>
+          <div class="hero-meta"><span>CULTURE · LANGUAGE · FOOD · BEAUTY · TRAVEL</span><span>An editorial guide to Korea</span></div>
         </div>
         <div class="hero-visual">
-          <img src="../assets/hero-seoul.jpg" alt="AI-generated editorial travel photograph of an adult Japanese visitor exploring a Seoul-inspired neighborhood with a phone and tote" fetchpriority="high">
+          <img src="../assets/hero-seoul.jpg" alt="AI-generated editorial illustration of a visitor exploring a Seoul-inspired Korean neighbourhood; not a documentary image of a real person or place." fetchpriority="high">
           <div class="hero-sticker"><span>01</span> A little context goes a long way.</div>
-          <div class="photo-caption"><span>SEOUL, AT YOUR OWN PACE</span><span>AI-GENERATED EDITORIAL IMAGE</span></div>
+          <div class="photo-caption"><span>SEOUL, AT YOUR OWN PACE</span><span>AI-GENERATED ILLUSTRATION · NOT DOCUMENTARY PHOTOGRAPHY</span></div>
         </div>
       </div>
       <div class="container hero-bottom">
@@ -854,16 +1098,18 @@
       </div>
     </section>
 
-    <section class="reader-note" aria-label="A note about aesthetic medicine">
+    <aside class="edition-scope" aria-label="Site scope"><div class="container edition-scope-inner"><p class="edition-scope-label">EDITORIAL GUIDE · OCTOBER 2026</p><p class="edition-scope-copy">SEOUL NOTE is a source-linked guide to Korean culture, language, food, beauty and practical travel information, written in Japanese and English. It is not a live venue, event, fare or rules checker, and it does not arrange bookings. Recheck changing details with official sources on the date you visit or travel.</p></div></aside>
+
+    <section class="reader-note" aria-label="A note on culture">
       <div class="container reader-note-inner">
-        <div class="reader-note-label">A NOTE ON AESTHETIC CARE</div>
+        <div class="reader-note-label">A NOTE ON CULTURE</div>
         <div class="reader-note-content">
-          <strong>Before you choose a procedure, know what to ask.</strong>
-          <p>Your clinician, the risks, the full cost and your aftercare plan all matter—especially when you are traveling.</p>
+          <strong>Korean culture is not one fixed template.</strong>
+          <p>Customs vary by region, generation, family and situation. We explain context and link to sources.</p>
         </div>
-        <button class="note-arrow" type="button" data-open-article="medical-checklist" aria-label="Read the consultation checklist">
+        <a class="note-arrow" href="guides/korean-meal-culture.html" aria-label="Read the Korean meal-culture guide">
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
-        </button>
+        </a>
       </div>
     </section>
 
@@ -871,30 +1117,30 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">FEATURE / AESTHETIC MEDICINE</p>
-            <h2 class="section-title" id="featureTitle">Considering cosmetic treatment in Korea?<br>Start with the questions—not a clinic list.</h2>
+            <p class="section-kicker">FEATURE / KOREAN LANGUAGE</p>
+            <h2 class="section-title" id="featureTitle">Start with the signs<br>you see every day.</h2>
           </div>
-          <p class="section-intro">Use this practical guide to prepare for a consultation. SEOUL NOTE does not rank clinics or recommend providers.</p>
+          <p class="section-intro">A beginner-friendly look at Hangeul and useful words on stations and buildings—one small “I can read that” moment at a time.</p>
         </div>
         <div class="feature-card">
           <div class="feature-image">
-            <img src="../assets/beauty-editorial.jpg" alt="Unbranded skincare bottles arranged in soft natural light" loading="lazy">
-            <span class="feature-photo-caption">BEAUTY, WITH CARE</span>
+            <img src="../assets/travel-editorial.jpg" alt="AI-generated editorial illustration of a Korean street; not a documentary image of a real place." loading="lazy">
+            <span class="feature-photo-caption">LANGUAGE THROUGH EVERYDAY SIGNS · AI ILLUSTRATION</span>
           </div>
           <div class="feature-copy">
-            <p class="tagline">BEFORE YOU DECIDE · A PRACTICAL GUIDE</p>
-            <h3>Put your goals, concerns and conditions into words.</h3>
-            <p>Who will examine and treat you? What does the quoted fee include? What are the risks in your particular case, and who can help after you return home? Here are seven questions to bring to a consultation.</p>
-            <ul class="feature-list" aria-label="Topics covered in the guide">
-              <li><span>01</span>The clinician and treatment team</li>
-              <li><span>02</span>Risks and alternatives</li>
-              <li><span>03</span>Itemized costs and cancellation terms</li>
-              <li><span>04</span>Aftercare and follow-up</li>
+            <p class="tagline">HANGEUL · KOREAN BASICS</p>
+            <h3>Station. Entrance.<br>Exit. Restroom.</h3>
+            <p>Learn a little about the Korean writing system and recognize a few useful words in public places. Romanized spellings are only a rough reading aid; this is a starting point, not a promise of fluency.</p>
+            <ul class="feature-list" aria-label="Korean words in the guide">
+              <li><span>01</span><span lang="ko">역</span> · station</li>
+              <li><span>02</span><span lang="ko">입구</span> · entrance</li>
+              <li><span>03</span><span lang="ko">출구</span> · exit</li>
+              <li><span>04</span><span lang="ko">화장실</span> · restroom</li>
             </ul>
-            <button class="button button-primary" type="button" data-open-article="medical-checklist">Read the seven questions
+            <a class="button button-primary" href="guides/hangul-signs.html">Read the Hangeul and signs guide
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
-            </button>
-            <small class="feature-footnote">General information only. This guide does not provide medical advice or endorse clinics.</small>
+            </a>
+            <small class="feature-footnote">The guide links to the National Institute of the Korean Language and other official learning resources.</small>
           </div>
         </div>
       </div>
@@ -903,26 +1149,14 @@
     <section class="category-section" aria-labelledby="categoryTitle">
       <div class="container">
         <div class="category-top">
-          <h2 id="categoryTitle">Start wherever you are curious.</h2>
-          <p>Choose a topic to filter the stories below.</p>
+          <h2 id="categoryTitle">Start with what you want to know.</h2>
+          <p>Explore Korean culture, food, beauty and practical travel information with source links.</p>
         </div>
         <div class="category-grid">
-          <button class="category-tile" type="button" data-jump-filter="beauty">
-            <span class="category-index">01 / BEAUTY</span><span class="category-name">Korean beauty</span><span class="category-desc">Skincare, products and everyday care</span>
-            <span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
-          </button>
-          <button class="category-tile" type="button" data-jump-filter="medical">
-            <span class="category-index">02 / AESTHETIC CARE</span><span class="category-name">Aesthetic medicine</span><span class="category-desc">Questions to ask before a consultation</span>
-            <span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
-          </button>
-          <button class="category-tile" type="button" data-jump-filter="food">
-            <span class="category-index">03 / FOOD</span><span class="category-name">Korean food</span><span class="category-desc">Dish names, ordering and dining notes</span>
-            <span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
-          </button>
-          <button class="category-tile" type="button" data-jump-filter="travel">
-            <span class="category-index">04 / TRAVEL</span><span class="category-name">Travel in Korea</span><span class="category-desc">Planning notes and official sources</span>
-            <span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
-          </button>
+          <button class="category-tile" type="button" data-jump-filter="culture"><span class="category-index">01 / CULTURE</span><span class="category-name">Culture &amp; holidays</span><span class="category-desc">Seasonal customs and context</span><span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></button>
+          <button class="category-tile" type="button" data-jump-filter="food"><span class="category-index">02 / FOOD</span><span class="category-name">Food culture</span><span class="category-desc">Menu terms and the Korean table</span><span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></button>
+          <button class="category-tile" type="button" data-jump-filter="beauty"><span class="category-index">03 / BEAUTY</span><span class="category-name">K-Beauty</span><span class="category-desc">How to read product labels</span><span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></button>
+          <button class="category-tile" type="button" data-jump-filter="travel"><span class="category-index">04 / TRAVEL</span><span class="category-name">Practical travel</span><span class="category-desc">Entry, transport and getting around</span><span class="category-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></button>
         </div>
       </div>
     </section>
@@ -931,74 +1165,22 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">SOURCE SNAPSHOT / BEAUTY</p>
-            <h2 class="section-title" id="beautyRankingTitle">Hwahae’s skincare ranking,<br>at a glance.</h2>
+            <p class="section-kicker">K-BEAUTY / LABEL READING</p>
+            <h2 class="section-title" id="beautyRankingTitle">Before the ranking,<br>read the product label.</h2>
           </div>
-          <p class="section-intro">This is the order shown on Hwahae’s official skincare ranking, captured on 10 October 2026. We recorded each product’s separately displayed rating and review count.</p>
+          <p class="section-intro">Korean cosmetics terms are used differently across brands and products. Rather than claiming a universal “best” or effect, start with the package, directions and precautions.</p>
         </div>
-        <div class="ranking-topline">
-          <span class="ranking-pill">Hwahae’s displayed order</span>
-          <span>Page update shown: 8 Oct 2026</span>
-          <span>Checked: 10 Oct 2026</span>
-        </div>
-        <ol class="ranking-grid" aria-label="Ten products in the order shown on Hwahae’s skincare ranking">
-          <li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 01">01</span>
-          <div class="ranking-product"><span class="ranking-brand">AESTURA · <span lang="ko">에스트라</span></span><h3 class="ranking-name">Atobarrier365 Cream</h3><span class="ranking-original" lang="ko">아토베리어365 크림</span></div>
-          <div class="ranking-stats"><strong>4.68</strong><span>Hwahae rating</span><span>18,797 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 02">02</span>
-          <div class="ranking-product"><span class="ranking-brand">TONYMOLY · <span lang="ko">토니모리</span></span><h3 class="ranking-name">Ceramide Mochi Toner</h3><span class="ranking-original" lang="ko">세라마이드 모찌 토너</span></div>
-          <div class="ranking-stats"><strong>4.73</strong><span>Hwahae rating</span><span>19,221 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 03">03</span>
-          <div class="ranking-product"><span class="ranking-brand">Abib · <span lang="ko">아비브</span></span><h3 class="ranking-name">Hyaluronic Boom Serum Water Drop</h3><span class="ranking-original" lang="ko">히알루로닉 붐 세럼 워터 드롭</span></div>
-          <div class="ranking-stats"><strong>4.64</strong><span>Hwahae rating</span><span>2,928 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 04">04</span>
-          <div class="ranking-product"><span class="ranking-brand">S.NATURE · <span lang="ko">에스네이처</span></span><h3 class="ranking-name">Aqua Oasis Toner</h3><span class="ranking-original" lang="ko">아쿠아 오아시스 토너</span></div>
-          <div class="ranking-stats"><strong>4.75</strong><span>Hwahae rating</span><span>29,197 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 05">05</span>
-          <div class="ranking-product"><span class="ranking-brand">WELLAGE · <span lang="ko">웰라쥬</span></span><h3 class="ranking-name">Real Hyaluronic Blue 100 Ampoule</h3><span class="ranking-original" lang="ko">리얼 히알루로닉 블루 100 앰플</span></div>
-          <div class="ranking-stats"><strong>4.65</strong><span>Hwahae rating</span><span>34,274 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 06">06</span>
-          <div class="ranking-product"><span class="ranking-brand">S.NATURE · <span lang="ko">에스네이처</span></span><h3 class="ranking-name">Aqua Squalane Moisturizing Cream</h3><span class="ranking-original" lang="ko">아쿠아 스쿠알란 수분크림</span></div>
-          <div class="ranking-stats"><strong>4.58</strong><span>Hwahae rating</span><span>43,606 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 07">07</span>
-          <div class="ranking-product"><span class="ranking-brand">Anua · <span lang="ko">아누아</span></span><h3 class="ranking-name">PDRN Hyaluronic Acid Capsule 100 Serum</h3><span class="ranking-original" lang="ko">PDRN 히알루론산 캡슐 100 세럼</span></div>
-          <div class="ranking-stats"><strong>4.61</strong><span>Hwahae rating</span><span>12,753 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 08">08</span>
-          <div class="ranking-product"><span class="ranking-brand">WELLAGE · <span lang="ko">웰라쥬</span></span><h3 class="ranking-name">Real Hyaluronic Soothing Cream</h3><span class="ranking-original" lang="ko">리얼 히알루로닉 수딩 크림</span></div>
-          <div class="ranking-stats"><strong>4.64</strong><span>Hwahae rating</span><span>3,924 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 09">09</span>
-          <div class="ranking-product"><span class="ranking-brand">Torriden · <span lang="ko">토리든</span></span><h3 class="ranking-name">Dive-In Low Molecular Hyaluronic Acid Soothing Cream</h3><span class="ranking-original" lang="ko">다이브인 저분자 히알루론산 수딩 크림</span></div>
-          <div class="ranking-stats"><strong>4.68</strong><span>Hwahae rating</span><span>27,341 reviews</span></div>
-        </li>
-<li class="ranking-row">
-          <span class="ranking-position" aria-label="Rank 10">10</span>
-          <div class="ranking-product"><span class="ranking-brand">ILLIYOON · <span lang="ko">일리윤</span></span><h3 class="ranking-name">Ceramide Ato Lotion</h3><span class="ranking-original" lang="ko">세라마이드 아토 로션</span></div>
-          <div class="ranking-stats"><strong>4.79</strong><span>Hwahae rating</span><span>2,730 reviews</span></div>
-        </li>
-        </ol>
-        <div class="ranking-method">
-          <p><strong>How to read this snapshot</strong></p>
-          <p><strong>Source, scope and method:</strong> Hwahae, a Korea-based beauty review and shopping platform; products are shown in the order on its official skincare ranking page. This is the platform’s listing, not a nationally representative consumer survey, and the page does not establish where every reviewer lives. The displayed order, rating and review count are separate fields, not sales or purchase totals. Hwahae cites 10 million users and 1.03 million reviews, but does not fully disclose the ranking formula or its weighting.</p>
-          <p><strong>What it does not mean:</strong> This is not a bestseller chart, a measure of the entire Korean market, or an assessment of product performance. SEOUL NOTE has not reordered the list or added efficacy claims. Some listings may be promotional bundles; check the official page for current products, availability and offers.</p>
-          <p><strong>Names:</strong> English product names are editorial renderings of the Korean display names, not verified official English labels. Use the Korean text above when you need to find the exact product.</p>
-          <a class="ranking-source-link" href="https://www.hwahae.co.kr/rankings?english_name=category&amp;theme_id=4" target="_blank" rel="noopener noreferrer">View Hwahae’s official ranking <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></a>
+        <div class="food-dish-panel">
+          <div class="food-dish-head"><div><span class="travel-period">KOREAN COSMETICS / COMMON PRODUCT TERMS</span><h3>These shelf labels are not a standard routine order.</h3></div><p>The words below are a vocabulary aid. Products with the same category name do not necessarily share a formula or instructions.</p></div>
+          <div class="food-dish-grid">
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">토너</span><h4>Toner</h4><p>Used as a product-category name, but ingredients and directions vary. Check the specific item.</p></article>
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">에센스</span><h4>Essence</h4><p>Its positioning varies by brand; the word alone does not establish a standard strength or purpose.</p></article>
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">앰플</span><h4>Ampoule</h4><p>A product name or category term. Check the package for amount, frequency and instructions.</p></article>
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">세럼</span><h4>Serum</h4><p>Often used for serum-type products. Read the item’s ingredient list and precautions.</p></article>
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">크림</span><h4>Cream</h4><p>The category name alone cannot tell you how it will feel or whether it suits you.</p></article>
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">선크림</span><h4>Sunscreen</h4><p>Check directions, the stated SPF/PA, size and precautions on the individual product.</p></article>
+          </div>
+          <div class="ranking-method"><p><strong>Before you buy:</strong> confirm the exact product, size or shade, full ingredient list, directions, precautions and printed date information. Marketing claims and reviews reflect different evidence and circumstances; they are not a guarantee of effect or suitability.</p><p>Korea’s Ministry of Food and Drug Safety (MFDS) publishes Korean-language guidance on cosmetic labels and claims. This shopper’s note is not a complete current legal labelling checklist or import, sales or advertising advice.</p><a class="ranking-source-link" href="guides/kbeauty-labels.html">Read the Korean cosmetics label guide →</a><div class="travel-source-links"><a href="https://www.mfds.go.kr/wpge/m_645/de050601l0024.do" target="_blank" rel="noopener noreferrer">MFDS · Cosmetics label information (Korean)</a><a href="https://www.mfds.go.kr/wpge/m_646/de050601l0025.do" target="_blank" rel="noopener noreferrer">MFDS · Misleading claims and advertising (Korean)</a></div></div>
         </div>
       </div>
     </section>
@@ -1006,50 +1188,105 @@
     <section class="section travel-data-section" id="travel-data" aria-labelledby="travelDataTitle">
       <div class="container">
         <div class="section-heading">
+          <div><p class="section-kicker">SEOUL / NEIGHBOURHOOD NOTES</p><h2 class="section-title" id="travelDataTitle">Choose an area by interest,<br>not by a number.</h2></div>
+          <p class="section-intro">Use these Seoul neighbourhoods as starting points for shopping, culture, parks or markets. This is not a live business directory or a crowd ranking.</p>
+        </div>
+        <div class="area-guide-panel">
+          <div class="travel-data-head"><div><span class="travel-period">SEOUL AREA NOTES / NOT A RANKING</span><h3>Where to go depends on what you want from the day.</h3></div><p>Use the Seoul Tourism Organization’s live guide for current area information. Confirm hours and bookings with each venue.</p></div>
+          <div class="area-guide-grid">
+            <article class="area-guide-card"><span class="area-guide-tag">SHOPPING · BEAUTY</span><h4>Myeong-dong · 명동</h4><p>The official Seoul tourism guide includes an area page. Check the exact shop branch, current stock and opening hours separately.</p></article>
+            <article class="area-guide-card"><span class="area-guide-tag">CAFÉ STREET · PARK</span><h4>Seongsu · Seoul Forest</h4><p>The live guide lists the café street and park as separate areas. Check dates for events and pop-ups, which can change.</p></article>
+            <article class="area-guide-card"><span class="area-guide-tag">CITY LIFE · EVENTS</span><h4>Hongdae · 홍대</h4><p>Events and business hours vary by day. If you plan an evening out, check how you will get back to your accommodation.</p></article>
+            <article class="area-guide-card"><span class="area-guide-tag">CULTURE · WALK</span><h4>Insadong · 인사동</h4><p>Nearby venues are not interchangeable. Pick a specific exhibition or craft stop, then check its latest visitor information.</p></article>
+            <article class="area-guide-card"><span class="area-guide-tag">MARKET · FOOD</span><h4>Gwangjang Market · 광장시장</h4><p>Individual businesses may keep different hours. Check the market and stall information for the day you plan to visit.</p></article>
+          </div>
+          <p class="area-guide-note"><strong>Scope:</strong> These notes help you choose an area; they do not show popularity, recommendations or live crowd levels. We do not publish fixed opening hours, event schedules, prices or addresses here.</p>
+          <div class="area-guide-links" aria-label="Official Seoul guides"><a href="https://english.visitseoul.net/realtime-seoul" target="_blank" rel="noopener noreferrer">Visit Seoul · Seoul Live Tourism Guide</a><a href="https://english.visitseoul.net/tours/Seouls-Traditional-Markets/ENN010417" target="_blank" rel="noopener noreferrer">Visit Seoul · Traditional market overview</a><a href="guides/seoul-neighborhoods.html">Read the neighbourhood guide →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section planner-section" id="planner" aria-labelledby="plannerTitle">
+      <div class="container">
+        <div class="section-heading planner-heading">
           <div>
-            <p class="section-kicker">SOURCE DATA / TRAVEL</p>
-            <h2 class="section-title" id="travelDataTitle">A few numbers for<br>seeing more of Korea.</h2>
+            <p class="section-kicker">TRIP BUILDER / MY SEOUL PLAN</p>
+            <h2 class="section-title" id="plannerTitle">Build a flexible outline<br>for a day in Seoul.</h2>
           </div>
-          <p class="section-intro">These indicators measure different things: a regional visit rate, transport use, stay days, spending and estimated daily foot traffic. They are not interchangeable counts of people.</p>
+          <p class="section-intro">Choose the trip length and themes that matter to you. Get an editable outline with broad area ideas, practical checks and official links—not a popularity ranking or live route planner. Each day’s area can be handed off to NAVER Map or KakaoMap search; check current routes in the map service.</p>
         </div>
-
-        <div class="travel-data-panel">
-          <div class="travel-data-head">
-            <div><span class="travel-period">Q1 2026 / SOUTH KOREA</span><h3>Signals of travel beyond the capital region</h3></div>
-            <p>Ministry release dated 14 April 2026; compared with Q1 2025. Some figures were marked preliminary in the release.</p>
+        <aside class="arrival-guide" aria-labelledby="arrivalGuideTitle">
+          <div class="arrival-guide-head">
+            <div><span class="arrival-kicker">PRACTICAL ARRIVAL GUIDE · INCHEON AIRPORT → SEOUL</span><h3 id="arrivalGuideTitle">Choose by your hotel area, arrival time and luggage.</h3></div>
+            <p>Rail times below are to Seoul Station—not to your hotel. We checked official AREX and Seoul City pages on 11 Oct 2026. Fares and schedules can change; confirm your flight terminal and travel date.</p>
           </div>
-          <div class="travel-metric-grid">
-            <div class="travel-metric-card"><strong class="travel-metric-value">34.5%</strong><span class="travel-metric-label">Inbound visitors who went beyond the capital region</span><span class="travel-metric-delta">+3.2 percentage points year over year</span><small class="travel-metric-note">Q1 2025: 31.3%</small></div>
-            <div class="travel-metric-card"><strong class="travel-metric-value">853,905</strong><span class="travel-metric-label">Reported foreign arrivals via regional airports</span><span class="travel-metric-delta">+49.7% year over year</span><small class="travel-metric-note">Q1 2025: 570,389</small></div>
-            <div class="travel-metric-card"><strong class="travel-metric-value">1,692,988</strong><span class="travel-metric-label">Foreign travelers using rail</span><span class="travel-metric-delta">+46.4% year over year</span><small class="travel-metric-note">Q1 2025: 1,156,265</small></div>
-            <div class="travel-metric-card"><strong class="travel-metric-value">335,161</strong><span class="travel-metric-label">Reported foreign arrivals via regional ports</span><span class="travel-metric-delta">+6.1% year over year</span><small class="travel-metric-note">Q1 2025: 315,836</small></div>
-            <div class="travel-metric-card"><strong class="travel-metric-value">5.28 million</strong><span class="travel-metric-label">Foreign visitor stay-days outside the capital region</span><span class="travel-metric-delta">+36.2% year over year</span><small class="travel-metric-note">Q1 2025: 3.88 million days</small></div>
-            <div class="travel-metric-card"><strong class="travel-metric-value">US$880m</strong><span class="travel-metric-label">Tourism spending outside the capital region</span><span class="travel-metric-delta">+17.2% year over year</span><small class="travel-metric-note">Q1 2025: US$750 million</small></div>
+          <div class="arrival-option-grid">
+            <article class="arrival-option"><span class="arrival-option-label">LOWER-FARE RAIL · ALL-STOP</span><h4>AREX local train <span lang="ko">공항철도 일반열차</span></h4><p>To Seoul Station: about 59 min from Terminal 1 (T1) / 66 min from Terminal 2 (T2). AREX adult stored-value transit-card fare: KRW 4,750 / KRW 5,350, respectively.</p><small>Some trains may take an extra 2–6 min. A single-use transport card costs KRW 100 more; the KRW 500 deposit is refundable at your destination. Check the exact station-pair fare.</small></article>
+            <article class="arrival-option"><span class="arrival-option-label">NON-STOP RAIL · RESERVED SEAT</span><h4>AREX Express <span lang="ko">공항철도 직통열차</span></h4><p>To Seoul Station: 43 min from T1 / 51 min from T2. AREX currently lists an adult one-way fare of KRW 13,000; its page also shows normal fares of KRW 18,500 (T1) / KRW 19,100 (T2).</p><small>Buy a separate, seat-reserved ticket. Confirm the fare shown at checkout and the weekday/holiday timetable.</small></article>
+            <article class="arrival-option"><span class="arrival-option-label">DIRECT TO A DESIGNATED STOP</span><h4>Airport limousine bus <span lang="ko">공항리무진</span></h4><p>Consider it when an operator’s stop is convenient for your lodging. Seoul City estimates roughly 60–80 min, varying by route, area and traffic.</p><small>Check the operator’s current stop, departure time, fare and luggage conditions before boarding.</small></article>
+            <article class="arrival-option"><span class="arrival-option-label">DOOR-TO-DOOR</span><h4>Official airport taxi stand <span lang="ko">택시 승강장</span></h4><p>Can reduce transfers with heavy bags or several travelers. Use the signed taxi stand outside Arrivals; Seoul City describes International Taxi as offering English-, Japanese- and Chinese-speaking drivers.</p><small>Fares, tolls and journey time vary. Confirm the destination and current fare conditions before departure.</small></article>
           </div>
-          <p class="travel-data-footnote">Airport and port arrivals, rail use, regional visit rates, aggregate stay-days and spending measure different things. They may overlap and are not unique-visitor counts; do not add them together.</p>
-        </div>
-
-        <div class="travel-destination-panel">
-          <div class="travel-data-head">
-            <div><span class="travel-period">2025 ESTIMATES / RELEASED 29 JUL 2026</span><h3>Seoul: five areas with the highest estimated daily foreign foot traffic</h3></div>
-            <p>The Seoul AI Foundation analyzed 16 major areas using SK Telecom’s foreign foot-traffic estimates. Year-on-year changes compare 2025 with 2024. These are 2025 estimates, not live counts for 2026.</p>
+          <p class="arrival-note"><strong>Fare-source note:</strong> Seoul City’s airport guide lists KRW 4,150–4,750 for the all-stop train, while AREX’s station-pair table shows KRW 4,750 (T1 → Seoul Station) and KRW 5,350 (T2 → Seoul Station). The figures conflict. The amounts above use AREX’s adult transit-card table; recheck the operator’s fare page and purchase screen.</p>
+          <div class="arrival-links" aria-label="Official airport transport sources">
+            <a href="https://www.airportrailroad.com/train/normal/fare" target="_blank" rel="noopener noreferrer">AREX · all-stop fare table</a>
+            <a href="https://www.airportrailroad.com/train/express/introduce" target="_blank" rel="noopener noreferrer">AREX · Express travel time and fare</a>
+            <a href="https://www.airportrailroad.com/train/express/info" target="_blank" rel="noopener noreferrer">AREX · Express weekday/holiday timetable</a>
+            <a href="https://english.seoul.go.kr/service/entry/getting-to-seoul-from-incheon-airport/" target="_blank" rel="noopener noreferrer">Seoul Metropolitan Government · Incheon airport transport guide</a>
           </div>
-          <ol class="travel-destination-list" aria-label="Five Seoul areas with the highest estimated average daily foreign foot traffic in 2025">
-            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="Rank 1">01</span><span class="travel-place-name">Myeong-dong Area</span><span class="travel-place-stat">100,910<small>est. people / day</small></span><span class="travel-place-yoy">+9.8% YoY</span></li>
-            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="Rank 2">02</span><span class="travel-place-name">N Seoul Tower</span><span class="travel-place-stat">57,370<small>est. people / day</small></span><span class="travel-place-yoy">+9.8% YoY</span></li>
-            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="Rank 3">03</span><span class="travel-place-name">Samseong Station &amp; COEX</span><span class="travel-place-stat">46,813<small>est. people / day</small></span><span class="travel-place-yoy">+9.7% YoY</span></li>
-            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="Rank 4">04</span><span class="travel-place-name">Gangnam Station Area</span><span class="travel-place-stat">41,210<small>est. people / day</small></span><span class="travel-place-yoy">+9.3% YoY</span></li>
-            <li class="travel-destination-row"><span class="travel-place-rank" aria-label="Rank 5">05</span><span class="travel-place-name">Hongdae Area</span><span class="travel-place-stat">40,213<small>est. people / day</small></span><span class="travel-place-yoy">+10.5% YoY</span></li>
-          </ol>
-          <p class="travel-origin-note"><strong>Where visitors came from:</strong> The Seoul analysis reports a higher share of visitors from Japan and China in Myeong-dong, Namdaemun Market and Gwangjang Market. This describes the mix of origin markets; it is not a ranking by total visits.</p>
-          <div class="travel-review-signal"><span>SEPARATE SIGNALS · FOREIGN VISITORS’ GOOGLE MAPS REVIEWS, 2024–2025</span><strong>Gyeongbokgung Palace · 4.7 / 5 average rating</strong><strong>Seoul Forest · 79.9% positive sentiment</strong></div>
-          <p class="travel-method-note">Foot traffic is an estimate based on roaming data and immigration records for short-term visitors who spent time in a defined area. It is not a count of unique visitors over the year, or a measure of destination quality or satisfaction. The Google Maps review figures cover a different period and use different measures, so they should not be compared with the foot-traffic estimates.</p>
-          <p class="travel-method-note"><strong>Useful on the ground:</strong> If an English search does not find the place you want, copy its Korean name from an official listing and check the exact branch before setting off.</p>
-        </div>
-        <div class="travel-source-links" aria-label="Travel data sources">
-          <a href="https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=22342" target="_blank" rel="noopener noreferrer">Ministry of Culture, Sports and Tourism · Q1 2026 regional tourism data (Korean)</a>
-          <a href="https://english.seoul.go.kr/foreign-tourists-enjoying-k-culture-and-k-hiking-in-seoul-tourists-in-every-nook-and-cranny-of-the-city/" target="_blank" rel="noopener noreferrer">Seoul Metropolitan Government · 2025 foreign foot-traffic estimates</a>
-          <a href="https://english.seoul.go.kr/from-k-culture-to-k-hiking-foreign-tourists-venture-beyond-seouls-top-attractions/" target="_blank" rel="noopener noreferrer">Seoul Metropolitan Government · Method and area breakdown</a>
+          <p class="arrival-lookup"><strong>Useful Korean search terms:</strong> <span lang="ko">인천공항1터미널</span> (T1) · <span lang="ko">인천공항2터미널</span> (T2) · <span lang="ko">서울역</span> (Seoul Station) · <span lang="ko">공항철도 일반열차</span> (all-stop train) · <span lang="ko">공항철도 직통열차</span> (Express).</p>
+        </aside>
+        <div class="planner-shell">
+          <form class="planner-form" id="plannerForm">
+            <div class="planner-input-grid">
+              <label class="planner-days-field" for="plannerDays">
+                <span>How many days in Seoul?</span>
+                <select id="plannerDays" name="days">
+                  <option value="1">1 day</option><option value="2">2 days</option><option value="3" selected>3 days</option><option value="4">4 days</option><option value="5">5 days</option><option value="6">6 days</option><option value="7">7 days</option>
+                </select>
+              </label>
+              <fieldset class="planner-interest-set">
+                <legend>What would you like to make room for? Choose any.</legend>
+                <div class="planner-interest-grid">
+                  <label class="planner-interest-option"><input type="checkbox" data-planner-interest="shopping"><span>Beauty shopping &amp; fashion</span></label>
+                  <label class="planner-interest-option"><input type="checkbox" data-planner-interest="food"><span>Food &amp; markets</span></label>
+                  <label class="planner-interest-option"><input type="checkbox" data-planner-interest="culture"><span>Crafts &amp; traditional culture</span></label>
+                  <label class="planner-interest-option"><input type="checkbox" data-planner-interest="creative"><span>Cafés &amp; creative districts</span></label>
+                  <label class="planner-interest-option"><input type="checkbox" data-planner-interest="walks"><span>Parks &amp; slower walks</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="planner-actions">
+              <button class="button button-primary" type="submit" id="buildPlan">Build my outline</button>
+              <a class="button button-light" href="#travel">Open the trip checklist</a>
+            </div>
+          </form>
+          <p class="planner-privacy">Your draft stays on this page, is not sent to SEOUL NOTE and disappears when you leave. A map link sends the selected area or place name to the external map service only when you click it. Avoid entering private addresses, contact details, passport numbers or payment information. Download or print the draft if you want to keep it.</p>
+          <p class="planner-status" id="plannerStatus" role="status" aria-live="polite">Pick a trip length and any themes—or build a blank outline to start from scratch.</p>
+          <section class="planner-result" id="plannerResult" aria-labelledby="plannerResultTitle" hidden>
+            <div class="planner-result-head">
+              <div>
+                <span class="planner-result-kicker">YOUR EDITABLE TRIP SHEET</span>
+                <h3 id="plannerResultTitle">Your Seoul outline</h3>
+                <p>Area ideas reflect broad descriptions in official guides. They are prompts, not rankings, endorsements or routes between venues. You can change every field and open the selected area in NAVER Map or KakaoMap search.</p>
+              </div>
+              <div class="planner-output-actions" aria-label="Trip sheet actions">
+                <button class="planner-tool-button" id="downloadPlan" type="button">Download .txt</button>
+                <button class="planner-tool-button" id="printPlan" type="button">Print / Save as PDF</button>
+                <button class="planner-tool-button" id="clearPlan" type="button">Start over</button>
+              </div>
+            </div>
+            <div class="planner-idea-panel">
+              <h4>Broad area ideas from your themes</h4>
+              <p id="plannerIdeaText">Choose themes above to see relevant area context. The order is not a ranking.</p>
+              <div class="planner-suggestions" id="plannerSuggestions"></div>
+            </div>
+            <div class="planner-day-grid" id="plannerDaysOutput"></div>
+            <div class="planner-lower-grid">
+              <div class="planner-check-panel"><h4>Before you lock in the plan</h4><div class="planner-check-list" id="plannerChecks"></div></div>
+              <div class="planner-source-panel"><h4>Official links for your choices</h4><div class="planner-source-list" id="plannerSources"></div></div>
+            </div>
+            <p class="planner-disclaimer">The planner does not verify opening hours, prices, events, reservations, routes or transit disruptions. Map links open an external search in a new tab and share the search term with that provider; this site does not calculate routes or verify current venue details. Confirm changing information with the venue, transport operator or relevant official body.</p>
+          </section>
         </div>
       </div>
     </section>
@@ -1057,241 +1294,165 @@
     <section class="section food-data-section" id="food-data" aria-labelledby="foodDataTitle">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="section-kicker">SOURCE DATA / FOOD</p>
-            <h2 class="section-title" id="foodDataTitle">Food lists answer<br>different questions.</h2>
-          </div>
-          <p class="section-intro">A navigation-search chart and an inspector-selected guide are not the same thing. We keep them separate—and explain what each can and cannot tell you.</p>
+          <div><p class="section-kicker">FOOD CULTURE / EVERYDAY CONTEXT</p><h2 class="section-title" id="foodDataTitle">Understand the Korean table<br>through words and context.</h2></div>
+          <p class="section-intro">Instead of restaurant rankings, start with common meal terms and questions to ask before ordering. Food and customs differ across regions, households and venues.</p>
         </div>
-        <div class="food-ranking-grid">
-          <div class="food-ranking-panel">
-            <span class="travel-period">SEOUL / TMAP NAVIGATION SEARCH</span>
-            <h3>Chart segment: <span lang="ko">현지인</span> <small>(literal gloss: “local”)</small></h3>
-            <p class="food-panel-note">Order shown on the official chart · Checked 10 Oct 2026</p>
-            <ol class="food-ranking-list" aria-label="First ten places in the Seoul TMAP chart segment labelled 현지인">
-              <li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 01">01</span><span class="food-place-name">Samwon Garden (main branch)<small lang="ko">삼원가든 본점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 02">02</span><span class="food-place-name">Kangkang Sullae, Sanggye<small lang="ko">강강술래 상계점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 03">03</span><span class="food-place-name">McDonald’s Samseong DT<small lang="ko">맥도날드 삼성DT점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 04">04</span><span class="food-place-name">Starbucks The Bukhansan<small lang="ko">스타벅스 더북한산점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 05">05</span><span class="food-place-name">McDonald’s Songpa Jamsil DT<small lang="ko">맥도날드 송파잠실DT점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 06">06</span><span class="food-place-name">Ashley Queens, Magok<small lang="ko">애슐리퀸즈 마곡점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 07">07</span><span class="food-place-name">McDonald’s Seoul Dunchon DT<small lang="ko">맥도날드 서울둔촌DT점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 08">08</span><span class="food-place-name">McDonald’s Deungchon DT<small lang="ko">맥도날드 등촌DT점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 09">09</span><span class="food-place-name">Gourmet Square, Balsan (company-operated branch)<small lang="ko">고메스퀘어 발산직영점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 10">10</span><span class="food-place-name">Saebyeokjip, Cheongdam-dong<small lang="ko">새벽집 청담동점</small></span></li>
-            </ol>
+        <div class="food-dish-panel">
+          <div class="food-dish-head"><div><span class="travel-period">KOREAN TABLE / A SHORT GLOSSARY</span><h3>Four words that help make sense of a meal.</h3></div><p>Informed by the Korea Tourism Organization’s food-culture guide, published 25 July 2025. What is served depends on the setting.</p></div>
+          <div class="food-dish-grid">
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">한상차림</span><h4>Han-sang-charim</h4><p>A table arranged with several dishes alongside a meal. It is not a template for every Korean meal.</p></article>
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">반찬</span><h4>Banchan</h4><p>Side dishes served with a meal. Selection and refill or extra-charge policies vary by venue.</p></article>
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">나물</span><h4>Namul</h4><p>A term for dishes made with vegetables or edible plants. Ingredients and preparation vary.</p></article>
+            <article class="food-dish-card"><span class="food-dish-korean" lang="ko">쌈</span><h4>Ssam</h4><p>A way of wrapping a bite, often in a leaf. The leaf, filling and sauce depend on the menu.</p></article>
           </div>
-          <div class="food-ranking-panel">
-            <span class="travel-period">SEOUL / TMAP NAVIGATION SEARCH</span>
-            <h3>Chart segment: <span lang="ko">외지인</span> <small>(literal gloss: “from outside the area”)</small></h3>
-            <p class="food-panel-note">Order shown on the official chart · Checked 10 Oct 2026</p>
-            <ol class="food-ranking-list" aria-label="First ten places in the Seoul TMAP chart segment labelled 외지인">
-              <li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 01">01</span><span class="food-place-name">Starbucks The Bukhansan<small lang="ko">스타벅스 더북한산점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 02">02</span><span class="food-place-name">Wooraeok (main branch)<small lang="ko">우래옥 본점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 03">03</span><span class="food-place-name">Ttosuninejip, Yangpyeong-dong<small lang="ko">또순이네집 양평동점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 04">04</span><span class="food-place-name">Samwon Garden (main branch)<small lang="ko">삼원가든 본점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 05">05</span><span class="food-place-name">Kangkang Sullae, Sanggye<small lang="ko">강강술래 상계점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 06">06</span><span class="food-place-name">RSG, Seongsu<small lang="ko">RSG 성수</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 07">07</span><span class="food-place-name">Yeongdong Seolleongtang<small lang="ko">영동설렁탕</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 08">08</span><span class="food-place-name">McDonald’s Samseong DT<small lang="ko">맥도날드 삼성DT점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 09">09</span><span class="food-place-name">McDonald’s Songpa Jamsil DT<small lang="ko">맥도날드 송파잠실DT점</small></span></li>
-<li class="food-ranking-row"><span class="food-rank-number" aria-label="Rank 10">10</span><span class="food-place-name">Apgujeong Gongju Tteok<small lang="ko">압구정공주떡</small></span></li>
-            </ol>
-          </div>
-        </div>
-        <div class="food-source-warning"><strong>How to read this chart:</strong> The Korea Tourism Organization’s chart describes its “Top 10 restaurant” lists as based on the previous month’s TMAP vehicle-navigation searches, generally refreshed around the eighth of the month (timing may vary). Search activity is not a diner count, a restaurant-quality score or a measure of satisfaction. The chart’s default food-and-drink category can include cafés and bakeries as well as restaurants; drive-through branches may also appear. The captured chart did not show its reference month, so we record the check date (10 Oct 2026) without assigning a month. The Korean labels <span lang="ko">현지인</span> and <span lang="ko">외지인</span> are glossed literally here; we have not independently verified the operational definitions behind the segments. “From outside the area” does not necessarily mean an international visitor. English place names are transliterations or brief glosses; use the Korean names above when searching for a branch.</div>
-        <div class="food-source-links">
-          <a href="https://korean.visitkorea.or.kr/localfood/main.do" target="_blank" rel="noopener noreferrer">Korea Tourism Organization · TMAP food chart (Korean)</a>
-          <a href="https://korean.visitkorea.or.kr/main/area_chart.do" target="_blank" rel="noopener noreferrer">Korea Tourism Organization · Chart method and categories (Korean)</a>
-        </div>
-        <div class="michelin-panel">
-          <div class="michelin-heading">
-            <div><span class="travel-period">MICHELIN GUIDE / 2026 EDITION</span><h3>Seoul and Busan selections</h3></div>
-            <p>Announced on 5 March 2026. These are selections made by MICHELIN Guide inspectors—not a consumer popularity list or a navigation-search ranking.</p>
-          </div>
-          <div class="michelin-stat-grid" aria-label="MICHELIN Guide Seoul and Busan 2026 selection counts">
-            <div class="michelin-stat"><strong>233</strong><span>Total selections<br>Seoul 178 · Busan 55</span></div>
-            <div class="michelin-stat"><strong>46</strong><span>MICHELIN-starred selections</span></div>
-            <div class="michelin-stat"><strong>71</strong><span>Bib Gourmand selections</span></div>
-            <div class="michelin-stat"><strong>116</strong><span>MICHELIN Selected</span></div>
-          </div>
-          <p class="michelin-disclaimer">The MICHELIN Guide is an inspector-led selection. Its categories are not equivalent to TMAP search activity, public ratings, overall popularity or diner counts.</p>
-          <a class="michelin-source" href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/michelin-guide-seoul-busan-2026-highlights" target="_blank" rel="noopener noreferrer">Read the MICHELIN Guide’s 2026 announcement</a>
+          <div class="food-phrase-panel"><p><strong>Korean questions to use before ordering:</strong> These phrases can help you ask, but they cannot guarantee that a venue can accommodate an allergy or restriction.</p><div class="food-phrase-grid"><div class="food-phrase"><strong lang="ko">이 메뉴에 뭐가 들어가요?</strong><span>What is in this dish?</span></div><div class="food-phrase"><strong lang="ko">덜 맵게 해 주세요.</strong><span>Please make it less spicy.</span></div><div class="food-phrase"><strong lang="ko">○○ 알레르기가 있어요.</strong><span>I have a ○○ allergy.</span></div><div class="food-phrase"><strong lang="ko">육수에 멸치가 들어가나요?</strong><span>Does the broth contain dried anchovy?</span></div></div><p class="food-dish-footnote">If you have an allergy, ask the venue directly about ingredients, broth, sauces and shared equipment. Do not rely on a translated phrase alone to assess safety.</p></div>
+          <p class="food-dish-footnote">Kimjang (김장), making and sharing kimchi, was inscribed on UNESCO’s Intangible Cultural Heritage list in 2013. Practices vary among families and regions.</p>
+          <div class="food-source-links"><a href="guides/korean-meal-culture.html">Read the Korean meal-culture guide →</a><a href="guides/kimjang.html">Read the Kimjang guide →</a><a href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=229195" target="_blank" rel="noopener noreferrer">KTO · About Korean Food</a><a href="https://ich.unesco.org/en/RL/kimjang-making-and-sharing-kimchi-in-the-republic-of-korea-00881" target="_blank" rel="noopener noreferrer">UNESCO · Kimjang</a></div>
         </div>
       </div>
     </section>
 
     <section class="section stories-section" id="stories" aria-labelledby="storiesTitle">
       <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">THE JOURNAL / PRACTICAL NOTES</p>
-            <h2 class="section-title" id="storiesTitle">Useful context for your time in Korea.</h2>
-          </div>
-          <p class="section-intro">We look beyond what is trending and focus on details that can help you make your own plans.</p>
-        </div>
-        <div class="story-tools">
-          <div class="filter-list" role="group" aria-label="Filter stories by topic">
-            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
-            <button class="filter-button" type="button" data-filter="beauty" aria-pressed="false">Beauty</button>
-            <button class="filter-button" type="button" data-filter="medical" aria-pressed="false">Aesthetic care</button>
-            <button class="filter-button" type="button" data-filter="food" aria-pressed="false">Food</button>
-            <button class="filter-button" type="button" data-filter="travel" aria-pressed="false">Travel</button>
-          </div>
-          <label class="search-box">
-            <span class="sr-only">Search stories by keyword</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg>
-            <input id="articleSearch" type="search" placeholder="Search by keyword" autocomplete="off">
-          </label>
-        </div>
-        <p class="results-line" id="resultsMessage" aria-live="polite">4 stories shown</p>
+        <div class="section-heading"><div><p class="section-kicker">THE JOURNAL / SOURCE-LINKED GUIDES</p><h2 class="section-title" id="storiesTitle">Nine guides to understanding Korea.</h2></div><p class="section-intro">Food culture, Hangeul, cosmetics labels, holidays, neighbourhoods and travel basics—with sources and clear limits on what each guide can tell you.</p></div>
+        <div class="story-tools"><div class="filter-list" role="group" aria-label="Guide categories"><button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-button" type="button" data-filter="culture" aria-pressed="false">Culture</button><button class="filter-button" type="button" data-filter="language" aria-pressed="false">Korean</button><button class="filter-button" type="button" data-filter="food" aria-pressed="false">Food</button><button class="filter-button" type="button" data-filter="beauty" aria-pressed="false">Beauty</button><button class="filter-button" type="button" data-filter="travel" aria-pressed="false">Travel</button></div><label class="search-box"><span class="sr-only">Search guides by keyword</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="articleSearch" type="search" placeholder="Search by keyword" autocomplete="off"></label></div>
+        <p class="results-line" id="resultsMessage" aria-live="polite">Showing 9 guides</p>
         <div class="story-grid" id="storyGrid">
-          <article class="story-card" data-category="medical" data-article-id="medical-checklist" data-keywords="cosmetic surgery aesthetics clinician doctor consultation risks cost aftercare travel Korea">
-            <a class="story-card-link" href="#stories" data-open-article="medical-checklist">
-              <span class="card-image-wrap"><img src="../assets/hero-seoul.jpg" alt="AI-generated travel photograph of an adult Japanese visitor exploring a Seoul-inspired neighborhood" loading="lazy"><span class="card-number">01</span></span>
-              <div class="card-content"><span class="card-category">AESTHETIC MEDICINE · PREPARATION</span><h3>Before a cosmetic procedure in Korea: seven questions to ask.</h3><p>Find out who will perform the procedure and how follow-up will work after you return home.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div>
-            </a>
+          <article class="story-card" data-category="language" data-article-id="hangul-signs" data-keywords="Hangeul Hangul Korean alphabet station sign entrance exit restroom language 역 입구 출구 화장실">
+            <a class="story-card-link" href="guides/hangul-signs.html"><span class="card-image-wrap"><img src="../assets/travel-editorial.jpg" alt="AI-generated illustration of a Korean street; not a documentary image of a real place." loading="lazy"><span class="card-number">01</span></span><div class="card-content"><span class="card-category">LANGUAGE · HANGEUL</span><h3>Hangeul basics and useful Korean signs.</h3><p>Start with words such as 역, 입구 and 출구 that appear around town.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="hangul-signs" aria-pressed="false">Save guide</button></div>
           </article>
-          <article class="story-card" data-category="beauty" data-article-id="beauty-labels" data-keywords="Korean skincare cosmetics ingredients labels shopping Hwahae product review rating review count skin">
-            <a class="story-card-link" href="#stories" data-open-article="beauty-labels">
-              <span class="card-image-wrap"><img src="../assets/beauty-editorial.jpg" alt="Unbranded skincare bottles in natural light" loading="lazy"><span class="card-number">02</span></span>
-              <div class="card-content"><span class="card-category">BEAUTY · SHOPPING</span><h3>Choosing Korean skincare: what to check beyond the buzz.</h3><p>Check the ingredients, directions and exact product name before you buy into the buzz.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div>
-            </a>
+          <article class="story-card" data-category="food" data-article-id="korean-meal-culture" data-keywords="Korean food culture table banchan 반찬 namul 나물 ssam 쌈 allergy">
+            <a class="story-card-link" href="guides/korean-meal-culture.html"><span class="card-image-wrap"><img src="../assets/food-editorial.jpg" alt="AI-generated illustration inspired by a Korean meal; not a documentary photo of a restaurant or dish." loading="lazy"><span class="card-number">02</span></span><div class="card-content"><span class="card-category">FOOD · TABLE CULTURE</span><h3>A guide to banchan, namul and ssam.</h3><p>Common food terms, explained without treating one meal format as universal.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="korean-meal-culture" aria-pressed="false">Save guide</button></div>
           </article>
-          <article class="story-card" data-category="food" data-article-id="food-guide" data-keywords="Korean food dining dishes bibimbap samgyetang tteokbokki banchan allergy spicy Korean phrases">
-            <a class="story-card-link" href="#stories" data-open-article="food-guide">
-              <span class="card-image-wrap"><img src="../assets/food-editorial.jpg" alt="A table set with Korean side dishes and a shared hot pot" loading="lazy"><span class="card-number">03</span></span>
-              <div class="card-content"><span class="card-category">FOOD · AT THE TABLE</span><h3>A small guide to enjoying Korean food with confidence.</h3><p>Know a few dish names, ask about ingredients and make the meal your own.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div>
-            </a>
+          <article class="story-card" data-category="culture" data-article-id="kimjang" data-keywords="Kimjang 김장 kimchi UNESCO seasonal winter sharing culture">
+            <a class="story-card-link" href="guides/kimjang.html"><span class="card-image-wrap"><img src="../assets/food-editorial.jpg" alt="AI-generated illustration inspired by Korean food culture; not a documentary record of Kimjang." loading="lazy"><span class="card-number">03</span></span><div class="card-content"><span class="card-category">CULTURE · KIMJANG</span><h3>Kimjang: the seasonal practice of making and sharing kimchi.</h3><p>UNESCO’s description, including differences across regions and families.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="kimjang" aria-pressed="false">Save guide</button></div>
           </article>
-          <article class="story-card" data-category="travel" data-article-id="travel-plan" data-keywords="South Korea Seoul travel itinerary planning map Korean name transport transit opening hours reservations insurance trip">
-            <a class="story-card-link" href="#stories" data-open-article="travel-plan">
-              <span class="card-image-wrap"><img src="../assets/travel-editorial.jpg" alt="A quiet Seoul lane with traditional Korean rooflines in the morning light" loading="lazy"><span class="card-number">04</span></span>
-              <div class="card-content"><span class="card-category">TRAVEL · SEOUL</span><h3>Your first Seoul trip: leave a little room in the itinerary.</h3><p>Balance neighborhoods, travel time and rest, and verify the details before you go.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div>
-            </a>
+          <article class="story-card" data-category="beauty" data-article-id="kbeauty-labels" data-keywords="K-Beauty Korean cosmetics product label ingredients expiry MFDS toner essence ampoule serum sunscreen">
+            <a class="story-card-link" href="guides/kbeauty-labels.html"><span class="card-image-wrap"><img src="../assets/beauty-editorial.jpg" alt="AI-generated editorial illustration of cosmetics; not a documentary image of a real product." loading="lazy"><span class="card-number">04</span></span><div class="card-content"><span class="card-category">BEAUTY · LABEL READING</span><h3>How to read Korean cosmetics labels.</h3><p>A shopper’s checklist, not a product ranking or efficacy recommendation.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="kbeauty-labels" aria-pressed="false">Save guide</button></div>
+          </article>
+          <article class="story-card" data-category="travel" data-article-id="seoul-neighborhoods" data-keywords="Seoul travel neighbourhood Myeongdong Hongdae Seongsu Insadong Gwangjang Market 명동 홍대 성수 인사동">
+            <a class="story-card-link" href="guides/seoul-neighborhoods.html"><span class="card-image-wrap"><img src="../assets/travel-editorial.jpg" alt="AI-generated illustration inspired by walking in Seoul; not a documentary view of a named place." loading="lazy"><span class="card-number">05</span></span><div class="card-content"><span class="card-category">TRAVEL · SEOUL AREAS</span><h3>Choosing a Seoul neighbourhood by interest.</h3><p>A starting point for planning—not a ranking of the “best” areas.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="seoul-neighborhoods" aria-pressed="false">Save guide</button></div>
+          </article>
+          <article class="story-card" data-category="culture" data-article-id="korean-holidays" data-keywords="Korean holidays Seollal 설날 Chuseok 추석 Hangeul Day 2026 public holiday">
+            <a class="story-card-link" href="guides/korean-holidays.html"><span class="card-image-wrap"><img src="../assets/hero-seoul.jpg" alt="AI-generated editorial illustration inspired by travel in Korea; not a documentary image of a real place." loading="lazy"><span class="card-number">06</span></span><div class="card-content"><span class="card-category">CULTURE · HOLIDAYS</span><h3>Seollal, Chuseok and Korea’s holiday calendar.</h3><p>Traditional context, 2026 dates and what to check before a trip.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="korean-holidays" aria-pressed="false">Save guide</button></div>
+          </article>
+          <article class="story-card" data-category="travel" data-article-id="tax-refund" data-keywords="Korea tax refund duty-free VAT shopping tax return eligibility">
+            <a class="story-card-link" href="guides/tax-refund.html"><span class="card-image-wrap"><img src="../assets/beauty-editorial.jpg" alt="AI-generated illustration inspired by shopping; not a documentary image of a real shop or product." loading="lazy"><span class="card-number">07</span></span><div class="card-content"><span class="card-category">TRAVEL · TAX REFUND</span><h3>Duty-free or tax refund? Know the difference.</h3><p>A dated summary of Korea’s tourism guidance and shopping checks.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="tax-refund" aria-pressed="false">Save guide</button></div>
+          </article>
+          <article class="story-card" data-category="travel" data-article-id="korea-arrival" data-keywords="Korea entry K-ETA e-Arrival Card visa Japanese passport travel arrival">
+            <a class="story-card-link" href="guides/korea-arrival.html"><span class="card-image-wrap"><img src="../assets/hero-seoul.jpg" alt="AI-generated editorial illustration inspired by a Korea trip; not a documentary image of a real place." loading="lazy"><span class="card-number">08</span></span><div class="card-content"><span class="card-category">TRAVEL · ENTRY CHECK</span><h3>K-ETA and the e-Arrival Card are different.</h3><p>A dated 2026 note for short-stay visitors with a Japanese ordinary passport.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="korea-arrival" aria-pressed="false">Save guide</button></div>
+          </article>
+          <article class="story-card" data-category="travel" data-article-id="climate-card" data-keywords="Seoul transport Climate Card climate pass subway bus fare">
+            <a class="story-card-link" href="guides/climate-card.html"><span class="card-image-wrap"><img src="../assets/travel-editorial.jpg" alt="AI-generated illustration inspired by travel in Seoul; not a documentary image of a transport facility." loading="lazy"><span class="card-number">09</span></span><div class="card-content"><span class="card-category">TRAVEL · TRANSPORT</span><h3>Climate Card short passes and service areas.</h3><p>What visitors should check about routes, exclusions and current rules.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="climate-card" aria-pressed="false">Save guide</button></div>
           </article>
         </div>
-        <div class="empty-state" id="emptyState" hidden>
-          <strong id="emptyTitle">No stories found.</strong>
-          <span id="emptyDescription">Try another search term or choose a different topic.</span><br>
-          <button type="button" id="resetFilters">Reset search and filters</button>
-        </div>
+        <div class="empty-state" id="emptyState" hidden><strong id="emptyTitle">No guides found.</strong><span id="emptyDescription">Try another keyword or category.</span><br><button type="button" id="resetFilters">Clear search and filters</button></div>
       </div>
     </section>
 
     <section class="promise-section" id="about" aria-labelledby="promiseTitle">
-      <div class="container promise-grid">
-        <div class="promise-side">
-          <p class="section-kicker">OUR EDITORIAL PROMISE</p>
-          <p>Careful choices start with clear information.</p>
-        </div>
-        <div class="promise-main">
-          <h2 id="promiseTitle">Curiosity deserves<br>context.</h2>
-          <p>SEOUL NOTE is an editorial guide for people who want to enjoy Korea and understand the choices along the way. We aim to be useful without turning trends into promises or uncertain numbers into rankings they are not.</p>
-          <div class="promise-points">
-            <div class="promise-point"><span>01</span><span>We do not promise medical outcomes or rank clinics.</span></div>
-            <div class="promise-point"><span>02</span><span>We name our sources, dates and the limits of the data.</span></div>
-            <div class="promise-point"><span>03</span><span>We direct readers to current official information for changing rules and details.</span></div>
-            <div class="promise-point"><span>04</span><span>Any advertising or partnership, if present, will be clearly identified.</span></div>
-          </div>
-        </div>
-      </div>
+      <div class="container promise-grid"><div class="promise-side"><p class="section-kicker">OUR EDITORIAL PROMISE</p><p>Information readers can trace—and revisit when it changes.</p></div><div class="promise-main"><h2 id="promiseTitle">More than trends:<br>context you can check.</h2><p>SEOUL NOTE is a Japanese- and English-language guide to Korean culture and practical travel information. We avoid treating Korea as one uniform story, distinguish facts from interpretation and help readers trace claims to their original sources.</p><div class="promise-points"><div class="promise-point"><span>01</span><span>We show sources, review dates and the relevant place or time period.</span></div><div class="promise-point"><span>02</span><span>We do not merge searches, reviews and guide selections into one “popularity” score.</span></div><div class="promise-point"><span>03</span><span>This draft contains no affiliate links or paid placements. Any future advertising or partnership will be clearly disclosed.</span></div></div><p class="editorial-context-note">Illustrations are AI-generated editorial images—not documentary evidence of real people, venues, dishes, products or places. If you spot an error or outdated detail, contact the operator through the public contact route provided at launch.</p></div></div>
     </section>
 
     <section class="official-section" id="official" aria-labelledby="officialTitle">
-      <div class="container">
-        <div class="official-heading">
-          <div>
-            <p class="section-kicker">CHECK THE ORIGINAL SOURCE</p>
-            <h2 id="officialTitle">For changing details,<br>go to the official source.</h2>
-          </div>
-          <p>Entry requirements, travel advice, service details and medical information can change. Check current official guidance before you book, travel or make a health decision.</p>
-        </div>
+      <div class="container"><div class="official-heading"><div><p class="section-kicker">CHECK THE ORIGINAL SOURCE</p><h2 id="officialTitle">For details that change,<br>go back to the official guide.</h2></div><p>Rules, dates, routes and opening information can change. Do not rely on a summary alone; open the original source before you travel or shop. Links are provided for verification.</p></div>
         <div class="official-grid">
-          <a class="official-card" href="https://www.medicalkorea.or.kr/en/index" target="_blank" rel="noopener noreferrer">
-            <span class="official-source">MEDICAL KOREA / KHIDI</span>
-            <h3>Official information on Korea’s medical services</h3>
-            <p>Medical Korea, operated by the Korea Health Industry Development Institute, provides official information for people exploring medical services in Korea.</p>
-            <span class="official-card-link">Visit the English portal <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></span>
-          </a>
-          <a class="official-card" href="https://english.visitkorea.or.kr/svc/main/index.do" target="_blank" rel="noopener noreferrer">
-            <span class="official-source">VISITKOREA · KTO</span>
-            <h3>South Korea travel information</h3>
-            <p>The Korea Tourism Organization’s English-language site has official travel inspiration and practical destination information.</p>
-            <span class="official-card-link">Visit the official site <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></span>
-          </a>
-          <a class="official-card" href="https://www.gov.uk/foreign-travel-advice/south-korea" target="_blank" rel="noopener noreferrer">
-            <span class="official-source">UK FCDO · TRAVEL ADVICE</span>
-            <h3>South Korea travel advice</h3>
-            <p>The UK government’s current travel advice is a useful reference for UK travelers. Entry and safety guidance can differ by nationality, so check your own government’s advice too.</p>
-            <span class="official-card-link">Read the travel advice <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></span>
-          </a>
-        </div>
-        <p class="official-disclaimer">Links are provided to help you verify information. They do not constitute an endorsement of any institution, clinic or provider, or a guarantee of a particular outcome.</p>
+          <a class="official-card" href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=229195" target="_blank" rel="noopener noreferrer"><span class="official-source">KOREA TOURISM ORGANIZATION</span><h3>About Korean food</h3><p>An official introduction to Korean meal formats, banchan and namul. Published July 2025.</p><span class="official-card-link">Open the source ↗</span></a>
+          <a class="official-card" href="https://ich.unesco.org/en/RL/kimjang-making-and-sharing-kimchi-in-the-republic-of-korea-00881" target="_blank" rel="noopener noreferrer"><span class="official-source">UNESCO · INTANGIBLE HERITAGE</span><h3>Kimjang inscription</h3><p>UNESCO’s description of making and sharing kimchi, including regional differences; inscribed in 2013.</p><span class="official-card-link">Open UNESCO ↗</span></a>
+          <a class="official-card" href="https://www.korean.go.kr/eng_hangeul/origin/001.html" target="_blank" rel="noopener noreferrer"><span class="official-source">NATIONAL INSTITUTE OF KOREAN LANGUAGE</span><h3>Hangeul and Korean-language resources</h3><p>Official background, spelling guidance and links for learners.</p><span class="official-card-link">Open language resources ↗</span></a>
+          <a class="official-card" href="https://english.visitseoul.net/realtime-seoul" target="_blank" rel="noopener noreferrer"><span class="official-source">SEOUL TOURISM ORGANIZATION</span><h3>Seoul Live Tourism Guide</h3><p>Official area information to check during your visit.</p><span class="official-card-link">Open Visit Seoul ↗</span></a>
+          <a class="official-card" href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140038" target="_blank" rel="noopener noreferrer"><span class="official-source">KTO · PUBLIC HOLIDAYS</span><h3>Korea’s holiday calendar</h3><p>The 2026 calendar is year-specific. Check the latest dates for your travel year.</p><span class="official-card-link">Open holiday information ↗</span></a>
+          <a class="official-card" href="https://www.mfds.go.kr/wpge/m_645/de050601l0024.do" target="_blank" rel="noopener noreferrer"><span class="official-source">KOREA MFDS · COSMETICS</span><h3>Official cosmetics label information</h3><p>A Korean-language regulatory source; our shopper note is not a complete legal checklist.</p><span class="official-card-link">Open MFDS ↗</span></a>
+          <a class="official-card" href="https://www.e-arrivalcard.go.kr/portal/main/index.do?locale=EN" target="_blank" rel="noopener noreferrer"><span class="official-source">KOREA IMMIGRATION · ENTRY</span><h3>Official e-Arrival Card portal</h3><p>Use the official Navigator to check whether you need to submit a declaration.</p><span class="official-card-link">Open the official portal ↗</span></a>
+          <a class="official-card" href="https://news.seoul.go.kr/traffic/archives/510651" target="_blank" rel="noopener noreferrer"><span class="official-source">SEOUL METROPOLITAN GOVERNMENT · KOREAN</span><h3>Climate Card short-term pass coverage</h3><p>Updated 1 October 2026: visitor-pass prices, covered area and use conditions.</p><span class="official-card-link">Open Seoul’s guide ↗</span></a>
+          <a class="official-card" href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=489&amp;vcontsId=248765" target="_blank" rel="noopener noreferrer"><span class="official-source">KTO · TAX REFUND</span><h3>Tax refunds for visitors</h3><p>Recheck dated eligibility rules and amounts on the official page before purchase.</p><span class="official-card-link">Check the refund guide ↗</span></a>
+        </div><p class="official-disclaimer">Links help readers check original information. They are not endorsements or guarantees of the linked organizations or services. The source language is identified on each guide.</p>
       </div>
     </section>
 
     <section class="travel-section" id="travel" aria-labelledby="travelTitle">
       <div class="container">
         <div class="travel-card">
-          <div class="travel-image"><img src="../assets/travel-editorial.jpg" alt="A quiet Seoul lane lined with traditional Korean houses in the morning light" loading="lazy"></div>
+          <div class="travel-image"><img src="../assets/travel-editorial.jpg" alt="AI-generated illustration of a Seoul-inspired traditional-roofed lane; not a verified location" loading="lazy"></div>
           <div class="travel-copy">
             <p class="section-kicker">BEFORE YOU GO · TRAVEL NOTE</p>
             <h2 id="travelTitle">Prepare for the trip<br>you actually want.</h2>
-            <p>Bring the essentials together: entry rules, reservations, connectivity, insurance and any dietary needs. Your checklist is saved in this browser only.</p>
-            <button class="button button-primary" type="button" data-open-checklist>Open the trip checklist
+            <p>Check entry steps and a Seoul subway fare estimate before you go, then use the emergency numbers and tourism-interpretation contacts below while in Korea.</p>
+            <a class="button button-primary" href="#planner">Build a day-by-day plan
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
-            </button>
+            </a>
+            <button class="button button-light" type="button" data-open-checklist>Open the trip checklist</button>
+            <a class="button button-light" href="#travelHelp">On-trip help numbers</a>
           </div>
         </div>
+        <div class="travel-practical-grid">
+          <article class="travel-practical-card" aria-labelledby="entryQuickTitle">
+            <span class="travel-practical-kicker">BEFORE YOU FLY · JAPANESE ORDINARY PASSPORTS · CHECKED 11 OCT 2026</span>
+            <h3 id="entryQuickTitle">K-ETA exemption and the entry declaration are separate checks.</h3>
+            <ol class="entry-steps">
+              <li><strong>1 · K-ETA:</strong> When checked, VISITKOREA listed Japan in the temporary exemption through 31 December 2026. This does not decide visa status or permitted stay.</li>
+              <li><strong>2 · e-Arrival Card:</strong> A K-ETA-exempt traveler may still need an entry declaration. Use the official Navigator for your passport and current documents; valid K-ETA holders and certain other groups are exempt.</li>
+              <li><strong>3 · If subject:</strong> Submit the free form from three days before arrival (Korean time). Have passport, flight and accommodation details ready.</li>
+            </ol>
+            <p class="travel-practical-note">Recheck official rules before departure, especially for travel after the temporary K-ETA exemption date. Visa and stay conditions are a separate check.</p>
+            <div class="travel-practical-links"><a href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140769" target="_blank" rel="noopener noreferrer">VISITKOREA · visa and travel requirements</a><a href="https://www.e-arrivalcard.go.kr/portal/guide/navigator.do" target="_blank" rel="noopener noreferrer">e-Arrival Card · declaration Navigator</a><a href="https://www.e-arrivalcard.go.kr/portal/main/index.do?locale=EN" target="_blank" rel="noopener noreferrer">Official e-Arrival Card portal</a><a href="https://www.visa.go.kr/" target="_blank" rel="noopener noreferrer">Korea Visa Portal</a></div>
+          </article>
+          <article class="travel-practical-card" aria-labelledby="passEstimatorTitle">
+            <span class="travel-practical-kicker">SEOUL SUBWAY · ROUGH FARE COMPARISON</span>
+            <h3 id="passEstimatorTitle">Climate Card or pay-as-you-go: which might fit?</h3>
+            <p>Choose pass duration and the number of separate subway journeys to compare the pass with Seoul City’s adult stored-value-card base fare.</p>
+            <div class="pass-estimator-fields">
+              <label class="pass-estimator-field" for="climatePassDays"><span>Climate Card short-term pass</span><select id="climatePassDays"><option value="1">1 day · KRW 5,000</option><option value="2">2 days · KRW 8,000</option><option value="3" selected>3 days · KRW 10,000</option><option value="5">5 days · KRW 15,000</option><option value="7">7 days · KRW 20,000</option></select></label>
+              <label class="pass-estimator-field" for="subwayJourneyCount"><span>Separate subway journeys during that period</span><input id="subwayJourneyCount" type="number" inputmode="numeric" min="0" max="100" step="1" value="8" aria-describedby="passEstimatorNote"></label>
+              <label class="pass-card-fee"><input id="includeClimateCardFee" type="checkbox" checked><span>Buying a new physical Climate Card (adds the official KRW 3,000 card price)</span></label>
+            </div>
+            <p class="pass-estimate" id="passEstimate" role="status" aria-live="polite"></p>
+            <p class="pass-estimator-note" id="passEstimatorNote">Estimate basis: Seoul City’s adult stored-value subway base fare is KRW 1,550 (effective 28 June 2025). Pass prices and coverage were checked against Seoul City’s short-term-pass notice updated 1 October 2026. Coverage is Seoul-area subways and Seoul-licensed city/village buses; Sinbundang, GTX, out-of-area subways, regional/airport buses and buses licensed elsewhere are excluded. You may exit at Incheon T1/T2 after boarding within the covered area, but you cannot board there with this pass. Validity runs from the first service (4 a.m.) on the start date to the last service on the final date (usually around 4 a.m. the next day); no advance loading. This estimate omits distance surcharges and buses.</p>
+            <div class="travel-practical-links"><a href="https://english.seoul.go.kr/policy/transportation/modes-of-transport/subway/" target="_blank" rel="noopener noreferrer">Seoul City · subway fares</a><a href="https://news.seoul.go.kr/traffic/archives/510651" target="_blank" rel="noopener noreferrer">Seoul City · short-term pass coverage and prices (Korean; updated 1 Oct 2026)</a><a href="https://news.seoul.go.kr/traffic/archives/519012" target="_blank" rel="noopener noreferrer">Seoul City · short-term pass coverage FAQ from 1 Oct (Korean)</a><a href="https://english.seoul.go.kr/smg-steps-up-outreach-ahead-of-climate-pass-launch-on-september-1-encouraging-early-card-conversion/" target="_blank" rel="noopener noreferrer">Seoul City · Climate Pass transition notice (English; Aug 2026)</a><a href="https://www.airportrailroad.com/train/normal/fare" target="_blank" rel="noopener noreferrer">AREX · exact airport station-pair fare</a></div>
+          </article>
+        </div>
+        <aside class="travel-help-panel" id="travelHelp" aria-labelledby="travelHelpTitle">
+          <div class="travel-help-emergency">
+            <span class="travel-help-kicker">ON-TRIP QUICK HELP · VERIFIED 11 OCT 2026</span>
+            <h3 id="travelHelpTitle">The right number for the situation—and one tap to call.</h3>
+            <p>For an immediate threat to life or property, call <strong>112 (police)</strong> or <strong>119 (fire and ambulance)</strong>. Tap a number below to call from your phone.</p>
+            <div class="travel-help-numbers" role="group" aria-label="Emergency phone numbers in Korea">
+              <a class="travel-help-number" href="tel:112"><strong>112</strong><span>Police · emergency</span></a>
+              <a class="travel-help-number" href="tel:119"><strong>119</strong><span>Fire / ambulance · emergency</span></a>
+            </div>
+          </div>
+          <div class="travel-help-tourism">
+            <span class="travel-help-label">NON-EMERGENCY TOURISM INFORMATION &amp; INTERPRETATION</span>
+            <h4>1330 Korea Travel Helpline</h4>
+            <p class="travel-help-route">In Korea: <a class="travel-help-phone-link" href="tel:1330" aria-label="Call the Korea Travel Helpline on 1330 from within Korea">1330</a><br>Outside Korea: <a class="travel-help-phone-link" href="tel:+8221330" aria-label="Call the Korea Travel Helpline from outside Korea at plus 82 2 1330">+82-2-1330</a></p>
+            <p>For tourism information, interpretation support and travel-related complaints. VISITKOREA also provides a <a href="https://japanese.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=454&amp;vcontsId=140643" target="_blank" rel="noopener noreferrer">Japanese-language 1330 guide</a> with call and chat information. <strong>1330 is not an emergency, fire or ambulance number.</strong></p>
+            <p class="travel-help-footnote"><a class="travel-help-phone-link" href="https://english.visitkorea.or.kr/svc/faq/faqMainView.do?menuSn=404&amp;pstSn=94" target="_blank" rel="noopener noreferrer">Open VISITKOREA’s emergency and 1330 FAQ</a>. Carrier, data or roaming charges may apply depending on how you connect.</p>
+          </div>
+          <div class="travel-help-guidance">
+            <span class="travel-help-label">IF KOREAN IS DIFFICULT ON 112 / 119</span>
+            <p>VISITKOREA advises saying “English please” or “Interpreter please” when the call connects. Its guide describes interpreter assistance, but does not guarantee a particular language or a connection in every case. If you can, identify your location using a nearby building or your phone’s GPS.</p>
+            <p class="travel-help-korean"><span lang="ko">일본어 통역을 부탁드립니다.</span><span>“Please connect me with a Japanese interpreter.” (Reference wording to show.)</span></p>
+            <p class="travel-help-footnote">If speaking is difficult, the KTO guide also points to the multilingual “Baro Emergency Reporting” app and lists Japanese among its languages. Check current app availability and device compatibility before travel; do not treat an app as a replacement for emergency calls.</p>
+          </div>
+          <div class="travel-help-sources">
+            <p><strong>Official sources · checked 11 October 2026.</strong> Recheck contact details, language options and service information with official pages just before travel.</p>
+            <div class="travel-help-source-links">
+              <a href="https://english.visitkorea.or.kr/svc/faq/faqMainView.do?menuSn=404&amp;pstSn=94" target="_blank" rel="noopener noreferrer">VISITKOREA · emergency and 1330 helpline FAQ (English)</a>
+              <a href="https://www.gov.kr/portal/service/serviceInfo/B55101100019" target="_blank" rel="noopener noreferrer">Government24 · 1330 purpose and domestic / overseas numbers (Korean; updated 27 Jul 2026)</a>
+              <a href="https://japanese.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=454&amp;vcontsId=140643" target="_blank" rel="noopener noreferrer">VISITKOREA · 1330 call and chat guide (Japanese)</a>
+              <a href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=248145" target="_blank" rel="noopener noreferrer">VISITKOREA · interpreter guidance and safety apps (English; 2 Oct 2025)</a>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <a class="brand" href="#top">
-            <span class="brand-symbol" aria-hidden="true">S</span><span class="brand-name">SEOUL NOTE</span>
-          </a>
-          <p>A considered guide to Korean beauty, food and travel—made for readers who want to explore with care.</p>
-        </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#beauty-ranking">Beauty</a>
-          <a href="#feature">Aesthetic care</a>
-          <a href="#food-data">Food</a>
-          <a href="#travel">Trip checklist</a>
-          <a href="#about">Editorial promise</a>
-          <button type="button" data-open-article="medical-notice">About our medical content</button>
-          <a href="/" lang="ja">日本語版</a>
-        </nav>
-      </div>
-      <div class="footer-medical-note">SEOUL NOTE provides general editorial information only. It does not offer medical advice, diagnosis or treatment; recommend or endorse a specific provider; or arrange appointments. If you are considering aesthetic treatment, ask a qualified medical professional for advice based on your individual circumstances. Prices, regulations, provider details and travel requirements may change. Check the latest information with official authorities and the relevant provider before you travel or make a decision.</div>
-      <div class="footer-bottom"><span>© SEOUL NOTE</span><span>Explore Korea, your own way.</span></div>
-    </div>
+    <div class="container"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-symbol" aria-hidden="true">S</span><span class="brand-name">SEOUL NOTE <small>A GUIDE TO KOREA</small></span></a><p>A bilingual guide to Korean culture, language, food and travel, with sources readers can check.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="#stories" data-jump-filter="culture">Culture</a><a href="#stories" data-jump-filter="language">Korean</a><a href="#stories" data-jump-filter="food">Food culture</a><a href="#stories" data-jump-filter="beauty">Beauty</a><a href="#planner">Trip planner</a><a href="#travel">Travel checklist</a><a href="#travelHelp">Emergency and visitor help</a><a href="#about">Editorial standards</a><a href="/en/contact.html">Contact</a></nav></div><div class="footer-editorial-note">SEOUL NOTE is a general guide to Korean culture and travel. It is not a live venue, transit or booking service. Check current official information on the date you travel or use a service. This draft contains no affiliate links or paid placements; any future advertising or partnership will be clearly identified and separated from editorial content. Contact details for corrections and source updates are on the contact page. Operator disclosures required by law and privacy and terms information for the actual hosting setup will be finalized before publication.</div><div class="footer-bottom"><span>© SEOUL NOTE</span><span>Understand Korea. Enjoy it your way.</span></div></div>
   </footer>
 
-  <dialog class="modal" id="articleDialog" aria-labelledby="dialogTitle" aria-describedby="dialogLead">
-    <div class="modal-top">
-      <span class="modal-top-label" id="dialogLabel">SEOUL NOTE · JOURNAL</span>
-      <button class="icon-button modal-close" id="closeArticle" type="button" aria-label="Close story">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 6 12 12M18 6 6 18"></path></svg>
-      </button>
-    </div>
-    <article class="modal-article">
-      <h2 id="dialogTitle"></h2>
-      <p class="modal-lead" id="dialogLead"></p>
-      <div class="article-body" id="dialogBody"></div>
-      <div class="modal-actions">
-        <p>This guide is for general information only. For medical decisions, speak with a qualified professional who can assess your individual circumstances.</p>
-        <button class="save-article" id="saveArticle" type="button" aria-pressed="false">
-          <svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.5 4.5h11v16l-5.5-3.7-5.5 3.7z"></path></svg>
-          <span id="saveArticleLabel">Save this story</span>
-        </button>
-      </div>
-    </article>
-  </dialog>
+  
 
   <dialog class="modal" id="checklistDialog" aria-labelledby="checklistTitle">
     <div class="modal-top">
@@ -1307,259 +1468,565 @@
       <div class="check-progress"><span>Trip-prep progress</span><span id="checkProgressText">0 / 7</span></div>
       <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
       <div class="checklist-items" id="checklistItems">
-        <label class="check-item"><input type="checkbox" data-check="passport"><span>I checked passport validity and entry requirements with an official source for my nationality.</span></label>
+        <label class="check-item"><input type="checkbox" data-check="passport"><span>I checked passport validity, visa/K-ETA status and e-Arrival Card requirements with current official sources.</span></label>
         <label class="check-item"><input type="checkbox" data-check="booking"><span>I confirmed accommodation, transport, reservations and cancellation terms.</span></label>
         <label class="check-item"><input type="checkbox" data-check="connectivity"><span>I planned mobile connectivity, charging and emergency contacts.</span></label>
+        <label class="check-item"><input type="checkbox" data-check="emergency"><span>I saved 112 (police) and 119 (fire/ambulance) for emergencies, and 1330 for non-emergency tourism information and interpretation.</span></label>
         <label class="check-item"><input type="checkbox" data-check="food"><span>I wrote down any allergies or dietary needs in a way I can explain clearly.</span></label>
         <label class="check-item"><input type="checkbox" data-check="insurance"><span>I reviewed my travel-insurance coverage and exclusions.</span></label>
-        <label class="check-item"><input type="checkbox" data-check="medical"><span>If I am considering treatment, I discussed the clinician, aftercare and follow-up plan.</span></label>
-        <label class="check-item"><input type="checkbox" data-check="time"><span>I left realistic time for getting around, meals and rest.</span></label>
+                <label class="check-item"><input type="checkbox" data-check="time"><span>I left realistic time for getting around, meals and rest.</span></label>
       </div>
-      <div class="checklist-bottom"><small>Saved in this browser only. This is not a booking, submission or medical assessment.</small><button class="reset-checks" type="button" id="resetChecks">Clear checked items</button></div>
+      <div class="checklist-bottom"><small>Saved in this browser only. This is a planning aid, not a booking or submission.</small><button class="reset-checks" type="button" id="resetChecks">Clear checked items</button></div>
     </div>
   </dialog>
 
   <script>
     (() => {
-      const articles = {
-        "medical-checklist": {
-          category: "AESTHETIC MEDICINE · CONSULTATION",
-          title: "Before a cosmetic procedure in Korea: seven questions to ask",
-          lead: "If you are considering treatment while traveling, take time to understand the plan before you commit. These questions can help you have a clearer conversation with the medical team; they are not a substitute for an individual consultation.",
-          body: `
-            <p class="article-mini-label">BEFORE YOU DECIDE</p>
-            <h3>01 · Who will examine and treat me?</h3>
-            <p>Ask for the name and role of the person who will assess you and the person who will perform each part of the procedure. If their roles differ, ask who is responsible for each step and how to verify the relevant qualifications through an appropriate official body.</p>
-            <h3>02 · Why is this option suitable for me?</h3>
-            <p>Ask what the proposed treatment is intended to address, what it cannot do, and whether there are alternatives—including waiting or choosing no procedure. A consultation should leave space for questions, not pressure you into an immediate decision.</p>
-            <h3>03 · What risks and complications should I understand?</h3>
-            <p>Ask about risks that apply to your own health and the specific procedure, what warning signs require attention, and how complications are handled. Ask for explanations in a language you understand, and take time to review consent forms before signing.</p>
-            <h3>04 · What is the full, itemized cost?</h3>
-            <p>Clarify what is included and what may cost extra—for example, tests, anesthesia, medication, follow-up visits, translation or aftercare. Ask about deposits, cancellation terms, refunds and the currency and payment method.</p>
-            <h3>05 · Who will interpret and coordinate my care?</h3>
-            <p>If you need language support, ask who provides it, whether they are present during the medical explanation, and how your questions will be relayed. Do not rely on a sales conversation as your only explanation of medical risks or consent.</p>
-            <h3>06 · What is the aftercare and follow-up plan?</h3>
-            <p>Ask what follow-up is planned, how to contact the care team, how you can obtain copies of your records and instructions, and who will respond if a concern arises after you leave Korea. Get the contact route in writing.</p>
-            <h3>07 · How could treatment affect my travel home?</h3>
-            <p>Ask the treating clinician whether your procedure affects when or how you can travel, and what signs or follow-up needs could change your plans. Do not assume that a short stay is enough; build the medical team’s advice into your itinerary.</p>
-            <div class="article-callout"><strong>A useful rule:</strong> If an answer is unclear, ask again or pause. Do not let a discount, a countdown or someone else’s result make the decision for you.</div>
-            <p class="article-disclaimer">This is general educational information, not medical advice or a clinic recommendation. Only a qualified professional who has assessed you can advise on your individual care.</p>
-          `
-        },
-        "beauty-labels": {
-          category: "BEAUTY · SHOPPING",
-          title: "Choosing Korean skincare: what to check beyond the buzz",
-          lead: "A popular product can be worth exploring, but a ranking or high review count cannot tell you whether it suits your skin or needs. A few careful checks make shopping more informed.",
-          body: `
-            <p class="article-mini-label">A MORE INFORMED BEAUTY ROUTINE</p>
-            <h3>Start with the exact product name.</h3>
-            <p>Product names can look similar across a range. Match the Korean name, size and version on the package with the official brand or retailer listing. In this guide, English names are editorial translations; the Korean text is included to help with exact searches.</p>
-            <h3>Read the ingredients and directions.</h3>
-            <p>Check the full ingredient list, directions, warnings and product size on the actual packaging. If you have a known allergy or sensitivity, do not rely on a shortened translation or a review summary. Ask a pharmacist or healthcare professional if you are unsure.</p>
-            <h3>Keep ratings in perspective.</h3>
-            <p>A score and a review count describe what a platform displays; neither is a sales total, proof of effectiveness or a personal recommendation. Review dates, product versions and promotional bundles can also differ.</p>
-            <h3>Buy from a source you can verify.</h3>
-            <p>Check who is selling the product, whether the listing matches the brand’s official information, and the return policy. Keep receipts if you may need to follow up after returning home.</p>
-            <div class="article-callout"><strong>Take your time:</strong> Introduce products in line with their directions, and stop using a product if you develop a concerning reaction. Seek professional advice when needed.</div>
-            <p>SEOUL NOTE does not test or endorse the products in the ranking snapshot. Always check current packaging and the seller’s terms before purchase.</p>
-          `
-        },
-        "food-guide": {
-          category: "FOOD · AT THE TABLE",
-          title: "A small guide to enjoying Korean food with confidence",
-          lead: "Knowing a few dish names—and how to ask about ingredients—can make a first meal easier. Recipes, spice levels and side dishes vary from one restaurant to another, so ask about the dish in front of you.",
-          body: `
-            <p class="article-mini-label">A FEW WORDS FOR THE TABLE</p>
-            <h3>Bibimbap · 비빔밥</h3>
-            <p>Bibimbap is a rice dish served with vegetables and toppings, often mixed together before eating. Ingredients and sauces vary, so ask whether it contains anything you avoid.</p>
-            <h3>Samgyetang · 삼계탕</h3>
-            <p>Samgyetang is a ginseng chicken soup, usually served hot. Recipes differ, and the dish may contain rice, herbs or other additions; check with the restaurant if you have dietary requirements.</p>
-            <h3>Tteokbokki · 떡볶이</h3>
-            <p>Tteokbokki is a dish of chewy rice cakes usually served in a seasoned sauce. Many versions are spicy, but ingredients and heat vary. Ask about the spice level and what is in the sauce.</p>
-            <h3>Banchan · 반찬</h3>
-            <p>Banchan are small side dishes served with a meal. The selection can vary by restaurant and may include fermented, seafood-based or spicy dishes. Check before eating if you have an allergy or dietary restriction.</p>
-            <div class="article-callout"><strong>Useful phrase:</strong> <span lang="ko">저는 [ingredient] 알레르기가 있어요. 이 음식에 들어가나요?</span><br><span lang="en">“I’m allergic to [ingredient]. Is it in this?”</span></div>
-            <p>If you have a serious allergy, show the ingredient written clearly in Korean and ask about cross-contact as well as ingredients. Do not rely on a translation alone when your health is at stake.</p>
-          `
-        },
-        "travel-plan": {
-          category: "TRAVEL · SEOUL",
-          title: "Your first Seoul trip: leave a little room in the itinerary",
-          lead: "A satisfying city day is not a race to collect landmarks. A little planning around neighborhoods, opening times and travel between stops can make the day feel easier—and leave space for the unexpected.",
-          body: `
-            <p class="article-mini-label">PLAN AROUND THE DAY, NOT JUST THE PIN</p>
-            <h3>Group nearby stops.</h3>
-            <p>Choose one main area for each part of the day rather than zigzagging across the city. Check the route and journey time in a current map or transit app, and leave a buffer for transfers, queues and finding the entrance.</p>
-            <h3>Verify the details close to your visit.</h3>
-            <p>Opening days, last entry, reservations and service notices can change. Confirm them with the venue’s own current information before you travel there. If a place has several branches, match the neighborhood and Korean name.</p>
-            <h3>Keep local search terms handy.</h3>
-            <p>Save the Korean name and address for places you plan to visit. If an English spelling brings up several results—or none—copy the Hangul from an official listing and check the exact branch before setting off.</p>
-            <h3>Build in time for yourself.</h3>
-            <p>Allow time to eat, rest and adjust your plans. Keep essentials such as accommodation details, a way to contact your insurer and any health-related information accessible while you are out.</p>
-            <div class="article-callout"><strong>Before departure:</strong> Check entry rules for your passport, travel advice from your own government, insurance coverage and any medical follow-up you may need. These details are personal and can change.</div>
-            <p>The foot-traffic figures on this site are estimates from a published study, not live crowd levels or a quality ranking. Use current local information when deciding where and when to go.</p>
-          `
-        },
-        "medical-notice": {
-          category: "SEOUL NOTE · MEDICAL INFORMATION",
-          title: "How to read our aesthetic-medicine content",
-          lead: "We cover questions that may help you prepare, not which clinic to choose or which treatment to have.",
-          body: `
-            <p>SEOUL NOTE is not a healthcare provider, medical broker or appointment service. Our editorial pages do not diagnose, recommend treatment, assess individual risk or endorse a clinic or clinician.</p>
-            <p>Medical advertising, social posts and patient stories cannot establish what is safe or suitable for you. Ask a qualified professional for an individual assessment, clarify who will provide your care, and verify current credentials and service details through the relevant official channels.</p>
-            <p>When treatment is considered during travel, ask specifically about timing, aftercare, follow-up and what to do if a concern arises after you return home. Do not make a decision based only on this website.</p>
-            <p>Where this site includes product ratings, travel statistics or food-search charts, they retain the source’s stated metric and limitations. They are not medical evidence or endorsements.</p>
-          `
-        }
-      };
+      const language = document.documentElement.lang || "ja";
+      const isEnglish = language.startsWith("en");
+      const cards = Array.from(document.querySelectorAll(".story-card"));
+      const filters = Array.from(document.querySelectorAll(".filter-button"));
+      const searchInput = document.getElementById("articleSearch");
+      const resultMessage = document.getElementById("resultsMessage");
+      const emptyState = document.getElementById("emptyState");
+      const emptyTitle = document.getElementById("emptyTitle");
+      const emptyDescription = document.getElementById("emptyDescription");
+      const savedToggle = document.getElementById("savedToggle");
+      const savedCount = document.getElementById("savedCount");
+      const savedKey = "seoul-note-saved-articles";
+      const checklistKey = "seoul-note-trip-checklist";
+      const checklistDialog = document.getElementById("checklistDialog");
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
+      let activeFilter = "all";
+      let onlySaved = false;
+      let savedIds = new Set();
+      let lastTrigger = null;
 
-      const savedKey = 'seoul-note-en-saved-v1';
-      const checklistKey = 'seoul-note-en-checklist-v1';
-      const safeRead = (key, fallback) => { try { const value = localStorage.getItem(key); return value ? JSON.parse(value) : fallback; } catch (_) { return fallback; } };
-      const safeWrite = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) {} };
-      let saved = safeRead(savedKey, []);
-      if (!Array.isArray(saved)) saved = [];
-      let activeFilter = 'all';
-      const storyCards = [...document.querySelectorAll('.story-card')];
-      const filterButtons = [...document.querySelectorAll('.filter-button')];
-      const searchInput = document.getElementById('articleSearch');
-      const resultsMessage = document.getElementById('resultsMessage');
-      const emptyState = document.getElementById('emptyState');
-      const savedToggle = document.getElementById('savedToggle');
-      const savedCount = document.getElementById('savedCount');
-      const articleDialog = document.getElementById('articleDialog');
-      const checklistDialog = document.getElementById('checklistDialog');
-      let currentArticle = null;
-      let savedOnly = false;
-
-      const updateSavedUI = () => {
-        savedCount.textContent = String(saved.length);
-        savedToggle.setAttribute('aria-pressed', String(savedOnly));
-        const isSaved = currentArticle && saved.includes(currentArticle);
-        document.getElementById('saveArticle').setAttribute('aria-pressed', String(Boolean(isSaved)));
-        document.getElementById('saveArticleLabel').textContent = isSaved ? 'Saved — remove from saved stories' : 'Save this story';
-      };
-
-      const applyFilters = () => {
-        const query = searchInput.value.trim().toLowerCase();
-        let shown = 0;
-        storyCards.forEach(card => {
-          const categoryMatch = activeFilter === 'all' || card.dataset.category === activeFilter;
-          const textMatch = !query || `${card.dataset.keywords} ${card.textContent}`.toLowerCase().includes(query);
-          const savedMatch = !savedOnly || saved.includes(card.dataset.articleId);
-          const visible = categoryMatch && textMatch && savedMatch;
-          card.hidden = !visible;
-          if (visible) shown += 1;
+      try { savedIds = new Set(JSON.parse(localStorage.getItem(savedKey) || "[]")); } catch (_) { savedIds = new Set(); }
+      function updateSaveButtons() {
+        document.querySelectorAll("[data-save-card]").forEach((button) => {
+          const id = button.dataset.saveCard;
+          const saved = savedIds.has(id);
+          button.setAttribute("aria-pressed", String(saved));
+          button.textContent = saved ? (isEnglish ? "Saved · remove" : "保存済み · 解除") : (isEnglish ? "Save guide" : "この記事を保存");
         });
-        emptyState.hidden = shown > 0;
-        resultsMessage.textContent = `${shown} ${shown === 1 ? 'story' : 'stories'} shown${savedOnly ? ' · saved only' : ''}`;
-      };
-
-      filterButtons.forEach(button => button.addEventListener('click', () => {
-        activeFilter = button.dataset.filter;
-        filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        if (savedCount) savedCount.textContent = String(savedIds.size);
+      }
+      function persistSaved() {
+        try { localStorage.setItem(savedKey, JSON.stringify(Array.from(savedIds))); } catch (_) { /* Storage may be disabled. */ }
+        updateSaveButtons();
+      }
+      function setFilter(category) {
+        activeFilter = category;
+        filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === category)));
+        applyFilters();
+      }
+      function applyFilters() {
+        if (!searchInput || !resultMessage || !emptyState) return;
+        const locale = isEnglish ? "en" : "ja";
+        const query = (searchInput.value || "").trim().toLocaleLowerCase(locale);
+        let visible = 0;
+        cards.forEach((card) => {
+          const categoryMatch = activeFilter === "all" || card.dataset.category === activeFilter;
+          const savedMatch = !onlySaved || savedIds.has(card.dataset.articleId);
+          const searchable = (card.textContent + " " + (card.dataset.keywords || "")).toLocaleLowerCase(locale);
+          const show = categoryMatch && savedMatch && (!query || searchable.includes(query));
+          card.hidden = !show;
+          if (show) visible += 1;
+        });
+        emptyState.hidden = visible > 0;
+        if (visible > 0) resultMessage.textContent = isEnglish ? `Showing ${visible} guide${visible === 1 ? "" : "s"}` : `${visible}件のガイドを表示中`;
+        else {
+          resultMessage.textContent = isEnglish ? "No matching guides" : "該当するガイドはありません";
+          if (onlySaved && savedIds.size === 0) {
+            emptyTitle.textContent = isEnglish ? "No saved guides yet." : "保存した記事はまだありません。";
+            emptyDescription.textContent = isEnglish ? "Use “Save guide” on a card to keep it here in this browser." : "記事カードの「この記事を保存」を押すと、このブラウザーに保存されます。";
+          } else {
+            emptyTitle.textContent = isEnglish ? "No matches." : "見つかりませんでした。";
+            emptyDescription.textContent = isEnglish ? "Try another keyword or category." : "検索語を変えるか、カテゴリーを選び直してください。";
+          }
+        }
+        if (savedToggle) savedToggle.setAttribute("aria-pressed", String(onlySaved));
+      }
+      filters.forEach((button) => button.addEventListener("click", () => { onlySaved = false; setFilter(button.dataset.filter); }));
+      document.querySelectorAll("[data-jump-filter]").forEach((link) => link.addEventListener("click", () => {
+        const category = link.dataset.jumpFilter;
+        if (filters.some((button) => button.dataset.filter === category)) { onlySaved = false; setFilter(category); }
+        const stories = document.getElementById("stories");
+        if (stories) stories.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (mainNav && menuToggle) { mainNav.classList.remove("is-open"); menuToggle.setAttribute("aria-expanded", "false"); }
+      }));
+      document.querySelectorAll("[data-save-card]").forEach((button) => button.addEventListener("click", () => {
+        const id = button.dataset.saveCard;
+        if (savedIds.has(id)) savedIds.delete(id); else savedIds.add(id);
+        persistSaved();
         applyFilters();
       }));
-      searchInput.addEventListener('input', applyFilters);
-      document.getElementById('resetFilters').addEventListener('click', () => {
-        activeFilter = 'all';
-        savedOnly = false;
-        searchInput.value = '';
-        filterButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === 'all')));
-        updateSavedUI();
+      if (searchInput) searchInput.addEventListener("input", applyFilters);
+      const resetFilters = document.getElementById("resetFilters");
+      if (resetFilters) resetFilters.addEventListener("click", () => {
+        if (searchInput) searchInput.value = "";
+        onlySaved = false; setFilter("all"); if (searchInput) searchInput.focus();
+      });
+      if (savedToggle) savedToggle.addEventListener("click", () => {
+        onlySaved = !onlySaved; activeFilter = "all";
+        filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === "all")));
+        if (searchInput) searchInput.value = "";
         applyFilters();
+        const stories = document.getElementById("stories"); if (stories) stories.scrollIntoView({ behavior: "smooth", block: "start" });
       });
-
-      document.querySelectorAll('[data-jump-filter]').forEach(control => control.addEventListener('click', event => {
-        const filter = control.dataset.jumpFilter;
-        activeFilter = filter;
-        filterButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === filter)));
-        savedOnly = false;
-        updateSavedUI();
-        applyFilters();
-        if (control.tagName === 'A') event.preventDefault();
-        document.getElementById('stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        closeMenu();
-      }));
-
-      document.getElementById('searchToggle').addEventListener('click', () => {
-        document.getElementById('stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        window.setTimeout(() => searchInput.focus(), 350);
+      const searchToggle = document.getElementById("searchToggle");
+      if (searchToggle) searchToggle.addEventListener("click", () => {
+        const stories = document.getElementById("stories"); if (stories) stories.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.setTimeout(() => { if (searchInput) searchInput.focus(); }, 350);
       });
-      savedToggle.addEventListener('click', () => {
-        savedOnly = !savedOnly;
-        if (savedOnly) activeFilter = 'all';
-        filterButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === activeFilter)));
-        updateSavedUI();
-        applyFilters();
-        document.getElementById('stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (menuToggle && mainNav) menuToggle.addEventListener("click", () => {
+        const open = !mainNav.classList.contains("is-open"); mainNav.classList.toggle("is-open", open);
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute("aria-label", open ? (isEnglish ? "Close menu" : "メニューを閉じる") : (isEnglish ? "Open menu" : "メニューを開く"));
       });
-
-      const openArticle = id => {
-        const article = articles[id];
-        if (!article) return;
-        currentArticle = id;
-        document.getElementById('dialogLabel').textContent = `SEOUL NOTE · ${article.category}`;
-        document.getElementById('dialogTitle').textContent = article.title;
-        document.getElementById('dialogLead').textContent = article.lead;
-        document.getElementById('dialogBody').innerHTML = article.body;
-        updateSavedUI();
-        if (!articleDialog.open) articleDialog.showModal();
-      };
-      document.querySelectorAll('[data-open-article]').forEach(control => control.addEventListener('click', event => {
-        event.preventDefault();
-        openArticle(control.dataset.openArticle);
-        closeMenu();
-      }));
-      document.getElementById('closeArticle').addEventListener('click', () => articleDialog.close());
-      document.getElementById('saveArticle').addEventListener('click', () => {
-        if (!currentArticle) return;
-        saved = saved.includes(currentArticle) ? saved.filter(id => id !== currentArticle) : [...saved, currentArticle];
-        safeWrite(savedKey, saved);
-        updateSavedUI();
-        applyFilters();
+      document.addEventListener("click", (event) => {
+        if (mainNav && menuToggle && !mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
+          mainNav.classList.remove("is-open"); menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", isEnglish ? "Open menu" : "メニューを開く");
+        }
       });
-      articleDialog.addEventListener('click', event => { if (event.target === articleDialog) articleDialog.close(); });
-
-      const menuToggle = document.getElementById('menuToggle');
-      const mainNav = document.getElementById('mainNav');
-      const closeMenu = () => {
-        mainNav.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Open menu');
-      };
-      menuToggle.addEventListener('click', () => {
-        const open = menuToggle.getAttribute('aria-expanded') !== 'true';
-        menuToggle.setAttribute('aria-expanded', String(open));
-        menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        mainNav.classList.toggle('is-open', open);
-      });
-      mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
-      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
-
-      const checklistInputs = [...document.querySelectorAll('[data-check]')];
-      const updateChecklist = () => {
-        const checked = checklistInputs.filter(input => input.checked).length;
-        document.getElementById('checkProgressText').textContent = `${checked} / ${checklistInputs.length}`;
-        document.getElementById('progressBar').style.width = `${(checked / checklistInputs.length) * 100}%`;
-        safeWrite(checklistKey, checklistInputs.filter(input => input.checked).map(input => input.dataset.check));
-      };
-      const savedChecks = safeRead(checklistKey, []);
-      checklistInputs.forEach(input => {
-        input.checked = Array.isArray(savedChecks) && savedChecks.includes(input.dataset.check);
-        input.addEventListener('change', updateChecklist);
-      });
-      updateChecklist();
-      document.querySelectorAll('[data-open-checklist]').forEach(button => button.addEventListener('click', () => checklistDialog.showModal()));
-      document.getElementById('closeChecklist').addEventListener('click', () => checklistDialog.close());
-      document.getElementById('resetChecks').addEventListener('click', () => {
-        checklistInputs.forEach(input => { input.checked = false; });
+      function openChecklist(trigger) {
+        if (!checklistDialog) return;
+        lastTrigger = trigger || document.activeElement; checklistDialog.showModal();
+        const closeButton = document.getElementById("closeChecklist"); if (closeButton) closeButton.focus();
         updateChecklist();
-      });
-      checklistDialog.addEventListener('click', event => { if (event.target === checklistDialog) checklistDialog.close(); });
+      }
+      document.querySelectorAll("[data-open-checklist]").forEach((button) => button.addEventListener("click", () => openChecklist(button)));
+      const closeChecklist = document.getElementById("closeChecklist");
+      if (closeChecklist) closeChecklist.addEventListener("click", () => checklistDialog.close());
+      if (checklistDialog) {
+        checklistDialog.addEventListener("click", (event) => { if (event.target === checklistDialog) checklistDialog.close(); });
+        checklistDialog.addEventListener("close", () => { if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus(); });
+      }
+      function getChecks() { try { return JSON.parse(localStorage.getItem(checklistKey) || "{}"); } catch (_) { return {}; } }
+      function updateChecklist() {
+        const inputs = Array.from(document.querySelectorAll("[data-check]")); const saved = getChecks(); let count = 0;
+        inputs.forEach((input) => { input.checked = Boolean(saved[input.dataset.check]); if (input.checked) count += 1; });
+        const progress = document.getElementById("checkProgressText"); const bar = document.getElementById("progressBar");
+        if (progress) progress.textContent = `${count} / ${inputs.length}`;
+        if (bar) bar.style.width = `${inputs.length ? (count / inputs.length) * 100 : 0}%`;
+      }
+      document.querySelectorAll("[data-check]").forEach((input) => input.addEventListener("change", () => {
+        const saved = getChecks(); saved[input.dataset.check] = input.checked;
+        try { localStorage.setItem(checklistKey, JSON.stringify(saved)); } catch (_) { /* Storage may be disabled. */ }
+        updateChecklist();
+      }));
+      const resetChecks = document.getElementById("resetChecks");
+      if (resetChecks) resetChecks.addEventListener("click", () => { try { localStorage.removeItem(checklistKey); } catch (_) {} updateChecklist(); });
+      updateSaveButtons(); updateChecklist(); applyFilters();
+    })();
+  </script>
+<script>
+    (() => {
+      const form = document.getElementById('plannerForm');
+      if (!form) return;
+      const daysSelect = document.getElementById('plannerDays');
+      const result = document.getElementById('plannerResult');
+      const dayOutput = document.getElementById('plannerDaysOutput');
+      const ideaText = document.getElementById('plannerIdeaText');
+      const suggestionBox = document.getElementById('plannerSuggestions');
+      const checksBox = document.getElementById('plannerChecks');
+      const sourcesBox = document.getElementById('plannerSources');
+      const status = document.getElementById('plannerStatus');
+      let generated = false;
 
-      updateSavedUI();
-      applyFilters();
+      const themes = {
+        shopping: { label: 'Beauty and shopping', areas: ['myeongdong', 'seongsu'] },
+        food: { label: 'Food and markets', areas: ['gwangjang'] },
+        culture: { label: 'Culture, history and language', areas: ['insadong'] },
+        creative: { label: 'Neighbourhood walks and cafés', areas: ['seongsu', 'hongdae'] },
+        walks: { label: 'Parks and slower walks', areas: ['seongsu'] }
+      };
+      const areas = {
+        myeongdong: { label: 'Myeong-dong · 명동', mapQuery: '명동', note: 'Use Visit Seoul’s area guide as a starting point, then check the exact shop branch and its current hours.', href: 'https://english.visitseoul.net/realtime-seoul/view/%EB%AA%85%EB%8F%99%20%EA%B4%80%EA%B4%91%ED%8A%B9%EA%B5%AC?areaId=A06', source: 'Visit Seoul Live Tourism Guide · area information' },
+        seongsu: { label: 'Seongsu and Seoul Forest · 성수·서울숲', mapQuery: '성수동 서울숲', note: 'The live guide lists Seongsu Café Street and Seoul Forest separately. Check current event and venue details.', href: 'https://english.visitseoul.net/realtime-seoul', source: 'Visit Seoul Live Tourism Guide' },
+        hongdae: { label: 'Hongdae · 홍대', mapQuery: '홍대', note: 'Use the official area guide as a starting point; check events, business hours and your return trip on the day.', href: 'https://english.visitseoul.net/realtime-seoul/view/%ED%99%8D%EB%8C%80%20%EA%B4%80%EA%B4%91%ED%8A%B9%EA%B5%AC?areaId=A11', source: 'Visit Seoul Live Tourism Guide · area information' },
+        insadong: { label: 'Insadong · 인사동', mapQuery: '인사동', note: 'Exhibitions, craft venues and shops have their own hours. Pick a specific stop and check its official information.', href: 'https://english.visitseoul.net/realtime-seoul/view/%EC%9D%B8%EC%82%AC%EB%8F%99?areaId=A04', source: 'Visit Seoul Live Tourism Guide · area information' },
+        gwangjang: { label: 'Gwangjang Market · 광장시장', mapQuery: '광장시장', note: 'Market stalls may keep different hours. Check the market and individual businesses for your visit date.', href: 'https://english.visitseoul.net/tours/Seouls-Traditional-Markets/ENN010417', source: 'Visit Seoul · traditional market overview' },
+        custom: { label: 'Choose your own area', note: 'Check the location and current details for the place you entered.' }
+      };
+      const sourceCatalog = {
+        areas: { label: 'Visit Seoul · Seoul Live Tourism Guide', href: 'https://english.visitseoul.net/realtime-seoul' },
+        culture: { label: 'Korea Tourism Organization · 2026 public-holiday calendar', href: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140038' },
+        insadong: { label: 'Visit Seoul · Insadong area guide', href: 'https://english.visitseoul.net/realtime-seoul/view/%EC%9D%B8%EC%82%AC%EB%8F%99?areaId=A04' },
+        gwangjang: { label: 'Visit Seoul · traditional market overview', href: 'https://english.visitseoul.net/tours/Seouls-Traditional-Markets/ENN010417' },
+        tax: { label: 'KTO · Tax Refund guide (published October 2025)', href: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=489&vcontsId=248765' },
+        transit: { label: 'Seoul Metropolitan Government · public transport', href: 'https://english.seoul.go.kr/service/movement/public-transportation/' },
+        climate: { label: 'Seoul Metropolitan Government · Climate Card short-term pass area, prices and validity (Korean; updated 1 Oct 2026)', href: 'https://news.seoul.go.kr/traffic/archives/510651' },
+        climateCoverage: { label: 'Seoul Metropolitan Government · short-term pass coverage FAQ (Korean; updated 1 Oct 2026)', href: 'https://news.seoul.go.kr/traffic/archives/519012' },
+        airport: { label: 'Seoul Metropolitan Government · getting to Seoul from Incheon Airport', href: 'https://english.seoul.go.kr/service/entry/getting-to-seoul-from-incheon-airport/' },
+        maps: { label: 'KTO · essential travel apps (28 May 2026)', href: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=1590034' },
+        
+        food: { label: 'KTO · About Korean Food (25 July 2025)', href: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=229195' },
+        holidays: { label: 'KTO · traditional Korean holidays (2026)', href: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=1566965' },
+        hangul: { label: 'National Institute of the Korean Language · Hangeul', href: 'https://www.korean.go.kr/eng_hangeul/origin/001.html' }
+      };
+      const text = {
+        day: 'Day', focus: 'Theme for this day', area: 'Area focus (optional)', areaPlaceholder: 'Choose one or leave undecided', customArea: 'Choose your own area or place (no private address or personal details)', customPlaceholder: 'e.g. 서울역, Dongdaemun History & Culture Park Station',
+        mapGroup: 'External map search links', mapLabel: 'Search this area on a map service (opens in a new tab)', mapNaverPrefix: 'Search NAVER Map for “', mapNaverSuffix: '” ↗', mapKakaoPrefix: 'Search KakaoMap for “', mapKakaoSuffix: '” ↗', mapOpenSuffix: '(opens in a new tab)',
+        morning: 'Morning', afternoon: 'Afternoon', evening: 'Evening', slotPlaceholder: 'Add a place or activity, then verify current details with an official source.',
+        blankArea: 'Choose an area only if it fits your plan; leaving it undecided is fine.',
+        customNote: 'This is an area you entered. Check the location and current information.',
+        ideaNone: 'No themes selected yet. Choose an area for each day yourself, or leave the fields blank.',
+        ideasPrefix: 'These broad area prompts start from official tourism information. Display order is not a ranking. Check current venue information.',
+        checkHours: 'Check the exact branch, current hours, booking method and cancellation terms.',
+        checkTransit: 'Check the latest route, fare, pass coverage, transfers and last service with the transport operator.',
+        checkRest: 'Leave time for travel, meals, breaks and the return trip. This outline does not calculate routes.',
+        checkFood: 'For allergies or dietary needs, ask the venue about ingredients, broth, sauces and cross-contact. A translated phrase cannot guarantee safety.',
+        checkShopping: 'Check current Tax Refund rules, participating shops and departure steps before you buy.',
+        checkCulture: 'Check official dates, opening hours, event details and admission conditions.',
+        status: 'Your outline is ready. It stays on this page until you download or print it.',
+        titleSuffix: 'day trip outline', focusDefault: 'Choose a theme', saveError: 'Could not start the download. Please use the print option.'
+      };
+
+      function selectedThemes() {
+        return [...form.querySelectorAll('[data-planner-interest]:checked')].map(input => input.dataset.plannerInterest);
+      }
+      function uniqueAreas(themeIds) {
+        return [...new Set(themeIds.flatMap(id => themes[id] ? themes[id].areas : []))];
+      }
+      function collectDraft() {
+        return [...dayOutput.querySelectorAll('.planner-day-card')].map(card => {
+          const areaSelect = card.querySelector('[data-plan-area]');
+          const customInput = card.querySelector('[data-plan-custom]');
+          const slots = {};
+          card.querySelectorAll('[data-plan-slot]').forEach(input => { slots[input.dataset.planSlot] = input.value; });
+          return {
+            focus: card.querySelector('[data-plan-focus]').value,
+            area: areaSelect.value,
+            auto: areaSelect.dataset.auto === 'true',
+            custom: customInput ? customInput.value : '',
+            slots
+          };
+        });
+      }
+      function collectChecks() {
+        const values = {};
+        checksBox.querySelectorAll('[data-plan-check]').forEach(input => { values[input.dataset.planCheck] = input.checked; });
+        return values;
+      }
+      function appendLink(parent, item, className) {
+        const a = document.createElement('a');
+        a.href = item.href;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.textContent = item.label;
+        if (className) a.className = className;
+        parent.appendChild(a);
+      }
+      function renderSuggestions(themeIds) {
+        const ids = uniqueAreas(themeIds);
+        suggestionBox.replaceChildren();
+        if (!ids.length) {
+          suggestionBox.appendChild(Object.assign(document.createElement('span'), { className: 'planner-empty-ideas', textContent: text.ideaNone }));
+          ideaText.textContent = text.ideasPrefix;
+          return;
+        }
+        ideaText.textContent = text.ideasPrefix;
+        ids.forEach(id => {
+          const area = areas[id];
+          const link = document.createElement('a');
+          link.className = 'planner-area-chip';
+          link.href = area.href;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.appendChild(document.createTextNode(area.label));
+          const small = document.createElement('small');
+          small.textContent = 'Official context ↗';
+          link.appendChild(small);
+          suggestionBox.appendChild(link);
+        });
+      }
+      function activeThemes() {
+        const ids = selectedThemes();
+        dayOutput.querySelectorAll('[data-plan-focus]').forEach(select => { if (select.value && !ids.includes(select.value)) ids.push(select.value); });
+        return ids;
+      }
+      function renderSupport(themeIds, previousChecks) {
+        const seenChecks = previousChecks || collectChecks();
+        const checks = [
+          ['hours', text.checkHours], ['transit', text.checkTransit], ['rest', text.checkRest]
+        ];
+        if (themeIds.includes('food')) checks.push(['food', text.checkFood]);
+        if (themeIds.includes('shopping')) checks.push(['shopping', text.checkShopping]);
+        if (themeIds.includes('culture')) checks.push(['culture', text.checkCulture]);
+        checksBox.replaceChildren();
+        checks.forEach(([key, label]) => {
+          const row = document.createElement('label');
+          row.className = 'planner-check-option';
+          const input = document.createElement('input');
+          input.type = 'checkbox';
+          input.dataset.planCheck = key;
+          input.checked = Boolean(seenChecks[key]);
+          const span = document.createElement('span');
+          span.textContent = label;
+          row.append(input, span);
+          checksBox.appendChild(row);
+        });
+        const sources = ['areas', 'transit', 'climate', 'climateCoverage', 'airport', 'maps'];
+        if (themeIds.includes('shopping')) sources.push('tax');
+        if (themeIds.includes('food')) sources.push('food', 'gwangjang');
+        if (themeIds.includes('culture')) sources.push('culture', 'holidays', 'hangul', 'insadong');
+        sourcesBox.replaceChildren();
+        [...new Set(sources)].forEach(id => appendLink(sourcesBox, sourceCatalog[id]));
+      }
+      function areaOptions(select) {
+        const blank = document.createElement('option');
+        blank.value = '';
+        blank.textContent = text.areaPlaceholder;
+        select.appendChild(blank);
+        ['myeongdong', 'seongsu', 'hongdae', 'insadong', 'gwangjang', 'custom'].forEach(id => {
+          const option = document.createElement('option');
+          option.value = id;
+          option.textContent = areas[id].label;
+          select.appendChild(option);
+        });
+      }
+      function makeDayCard(index, draft, themesForPlan) {
+        const card = document.createElement('article');
+        card.className = 'planner-day-card';
+        card.setAttribute('aria-labelledby', 'plannerDayHeading' + (index + 1));
+        const heading = document.createElement('h4');
+        heading.id = 'plannerDayHeading' + (index + 1);
+        heading.textContent = text.day + ' ' + (index + 1);
+        card.appendChild(heading);
+        const top = document.createElement('div');
+        top.className = 'planner-day-top';
+        const focusLabel = document.createElement('label');
+        focusLabel.className = 'planner-day-field';
+        focusLabel.htmlFor = 'plannerFocus' + (index + 1);
+        focusLabel.appendChild(Object.assign(document.createElement('span'), { textContent: text.focus }));
+        const focusSelect = document.createElement('select');
+        focusSelect.id = 'plannerFocus' + (index + 1);
+        focusSelect.dataset.planFocus = 'true';
+        const emptyFocus = document.createElement('option');
+        emptyFocus.value = '';
+        emptyFocus.textContent = text.focusDefault;
+        focusSelect.appendChild(emptyFocus);
+        Object.entries(themes).forEach(([id, theme]) => {
+          const option = document.createElement('option');
+          option.value = id;
+          option.textContent = theme.label;
+          focusSelect.appendChild(option);
+        });
+        const focusValue = draft && draft.focus !== undefined ? draft.focus : (themesForPlan.length ? themesForPlan[index % themesForPlan.length] : '');
+        focusSelect.value = focusValue;
+        focusLabel.appendChild(focusSelect);
+        const areaLabel = document.createElement('label');
+        areaLabel.className = 'planner-day-field';
+        areaLabel.htmlFor = 'plannerArea' + (index + 1);
+        areaLabel.appendChild(Object.assign(document.createElement('span'), { textContent: text.area }));
+        const areaSelect = document.createElement('select');
+        areaSelect.id = 'plannerArea' + (index + 1);
+        areaSelect.dataset.planArea = 'true';
+        areaOptions(areaSelect);
+        const initialSuggestions = themes[focusValue] ? themes[focusValue].areas : [];
+        const initialArea = draft ? (draft.auto ? (initialSuggestions[0] || '') : draft.area) : (initialSuggestions[0] || '');
+        areaSelect.value = initialArea;
+        areaSelect.dataset.auto = draft ? String(draft.auto) : String(Boolean(initialArea));
+        areaLabel.appendChild(areaSelect);
+        top.append(focusLabel, areaLabel);
+        card.appendChild(top);
+        const note = document.createElement('p');
+        note.className = 'planner-day-note';
+        card.appendChild(note);
+        const customWrap = document.createElement('label');
+        customWrap.className = 'planner-day-field planner-custom-area';
+        customWrap.htmlFor = 'plannerCustom' + (index + 1);
+        customWrap.appendChild(Object.assign(document.createElement('span'), { textContent: text.customArea }));
+        const customInput = document.createElement('input');
+        customInput.type = 'text';
+        customInput.id = 'plannerCustom' + (index + 1);
+        customInput.dataset.planCustom = 'true';
+        customInput.maxLength = 80;
+        customInput.autocomplete = 'off';
+        customInput.placeholder = text.customPlaceholder;
+        customInput.value = draft ? draft.custom : '';
+        customWrap.appendChild(customInput);
+        card.appendChild(customWrap);
+        const mapActions = document.createElement('div');
+        mapActions.className = 'planner-map-actions';
+        mapActions.hidden = true;
+        mapActions.setAttribute('role', 'group');
+        mapActions.setAttribute('aria-label', text.mapGroup);
+        const mapActionsLabel = document.createElement('span');
+        mapActionsLabel.className = 'planner-map-actions-label';
+        mapActionsLabel.textContent = text.mapLabel;
+        const naverMapLink = document.createElement('a');
+        naverMapLink.target = '_blank';
+        naverMapLink.rel = 'noopener noreferrer';
+        const kakaoMapLink = document.createElement('a');
+        kakaoMapLink.target = '_blank';
+        kakaoMapLink.rel = 'noopener noreferrer';
+        mapActions.append(mapActionsLabel, naverMapLink, kakaoMapLink);
+        card.appendChild(mapActions);
+        const setMapLinkText = (link, prefix, query, suffix, isKorean) => {
+          link.replaceChildren(document.createTextNode(prefix));
+          const term = document.createElement('span');
+          if (isKorean) term.lang = 'ko';
+          term.textContent = query;
+          const externalNote = document.createElement('span');
+          externalNote.className = 'sr-only';
+          externalNote.textContent = text.mapOpenSuffix;
+          link.append(term, document.createTextNode(suffix), externalNote);
+        };
+        const updateMapLinks = () => {
+          const rawQuery = areaSelect.value === 'custom' ? customInput.value : ((areas[areaSelect.value] && areas[areaSelect.value].mapQuery) || '');
+          const query = rawQuery.trim().replace(/\s+/g, ' ');
+          mapActions.hidden = !query;
+          if (!query) return;
+          const encodedQuery = encodeURIComponent(query);
+          const isKorean = areaSelect.value !== 'custom' || (/^[\s\u1100-\u11ff\u3130-\u318f\uac00-\ud7af0-9.,'’()\-/]+$/.test(query) && /[\uac00-\ud7af]/.test(query));
+          naverMapLink.href = 'https://map.naver.com/p/search/' + encodedQuery;
+          setMapLinkText(naverMapLink, text.mapNaverPrefix, query, text.mapNaverSuffix, isKorean);
+          kakaoMapLink.href = 'https://map.kakao.com/link/search/' + encodedQuery;
+          setMapLinkText(kakaoMapLink, text.mapKakaoPrefix, query, text.mapKakaoSuffix, isKorean);
+        };
+        const timeGrid = document.createElement('div');
+        timeGrid.className = 'planner-time-grid';
+        [['morning', text.morning], ['afternoon', text.afternoon], ['evening', text.evening]].forEach(([key, label]) => {
+          const field = document.createElement('label');
+          field.className = 'planner-time-field';
+          field.htmlFor = 'planner' + key + (index + 1);
+          field.appendChild(Object.assign(document.createElement('span'), { textContent: label }));
+          const area = document.createElement('textarea');
+          area.id = 'planner' + key + (index + 1);
+          area.dataset.planSlot = key;
+          area.rows = 2;
+          area.maxLength = 240;
+          area.placeholder = text.slotPlaceholder;
+          area.value = draft && draft.slots ? (draft.slots[key] || '') : '';
+          field.appendChild(area);
+          timeGrid.appendChild(field);
+        });
+        card.appendChild(timeGrid);
+        const updateNote = () => {
+          const focus = themes[focusSelect.value];
+          const area = areas[areaSelect.value];
+          customWrap.hidden = areaSelect.value !== 'custom';
+          if (areaSelect.value === 'custom') note.textContent = areas.custom.note;
+          else if (area) note.textContent = area.note;
+          else note.textContent = text.blankArea;
+          updateMapLinks();
+        };
+        customInput.addEventListener('input', updateMapLinks);
+        focusSelect.addEventListener('change', () => {
+          if (areaSelect.dataset.auto === 'true') {
+            const ids = themes[focusSelect.value] ? themes[focusSelect.value].areas : [];
+            areaSelect.value = ids[0] || '';
+            areaSelect.dataset.auto = String(Boolean(areaSelect.value));
+          }
+          updateNote();
+          renderSuggestions(activeThemes());
+          renderSupport(activeThemes());
+        });
+        areaSelect.addEventListener('change', () => { areaSelect.dataset.auto = 'false'; updateNote(); });
+        updateNote();
+        return card;
+      }
+      function renderPlan() {
+        const oldDays = collectDraft();
+        const oldChecks = collectChecks();
+        const count = Number(daysSelect.value) || 1;
+        const selected = selectedThemes();
+        dayOutput.replaceChildren();
+        for (let i = 0; i < count; i += 1) dayOutput.appendChild(makeDayCard(i, oldDays[i], selected));
+        result.hidden = false;
+        document.getElementById('plannerResultTitle').textContent = count + text.titleSuffix;
+        renderSuggestions(activeThemes());
+        renderSupport(activeThemes(), oldChecks);
+        status.textContent = text.status;
+        generated = true;
+      }
+      form.addEventListener('submit', event => { event.preventDefault(); renderPlan(); });
+      form.addEventListener('change', () => { if (generated) renderPlan(); });
+      document.getElementById('downloadPlan').addEventListener('click', () => {
+        const lines = ['SEOUL NOTE — MY SEOUL PLAN', 'Editable planning outline; not a live route or business directory.', 'Days: ' + daysSelect.value, 'Themes: ' + (selectedThemes().map(id => themes[id].label).join(', ') || 'None selected'), ''];
+        dayOutput.querySelectorAll('.planner-day-card').forEach((card, index) => {
+          const focus = card.querySelector('[data-plan-focus]');
+          const area = card.querySelector('[data-plan-area]');
+          const custom = card.querySelector('[data-plan-custom]');
+          const areaName = area.value === 'custom' ? (custom.value.trim() || 'My own area') : (areas[area.value] ? areas[area.value].label : 'Not chosen');
+          lines.push('DAY ' + (index + 1));
+          lines.push('Focus: ' + (themes[focus.value] ? themes[focus.value].label : 'Not chosen'));
+          lines.push('Area anchor: ' + areaName);
+          const mapActions = card.querySelector('.planner-map-actions');
+          if (mapActions && !mapActions.hidden) mapActions.querySelectorAll('a').forEach(a => { lines.push('Map search: ' + a.textContent + ' — ' + a.href); });
+          card.querySelectorAll('[data-plan-slot]').forEach(input => { lines.push(input.dataset.planSlot + ': ' + (input.value.trim() || '—')); });
+          lines.push('');
+        });
+        lines.push('CHECK BEFORE YOU GO');
+        checksBox.querySelectorAll('[data-plan-check]').forEach(input => { lines.push((input.checked ? '[x] ' : '[ ] ') + input.parentElement.innerText.trim()); });
+        lines.push('', 'OFFICIAL SOURCES');
+        sourcesBox.querySelectorAll('a').forEach(a => { lines.push(a.textContent + ' — ' + a.href); });
+        lines.push('', 'Privacy: the draft was not sent to a SEOUL NOTE server. If you clicked a map link, its search term was shared with the selected map service. Confirm changing details with current official sources.');
+        try {
+          const blob = new Blob(['\ufeff' + lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'seoul-note-trip-plan.txt';
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+        } catch (_) { status.textContent = text.saveError; }
+      });
+      document.getElementById('printPlan').addEventListener('click', () => {
+        document.body.classList.add('plan-print-mode');
+        const cleanup = () => document.body.classList.remove('plan-print-mode');
+        window.addEventListener('afterprint', cleanup, { once: true });
+        window.print();
+        setTimeout(cleanup, 30000);
+      });
+      document.getElementById('clearPlan').addEventListener('click', () => {
+        form.reset();
+        daysSelect.value = '3';
+        dayOutput.replaceChildren();
+        suggestionBox.replaceChildren();
+        checksBox.replaceChildren();
+        sourcesBox.replaceChildren();
+        result.hidden = true;
+        generated = false;
+        status.textContent = 'Draft cleared. Start again whenever you are ready.';
+      });
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const passSelect = document.getElementById('climatePassDays');
+      const journeysInput = document.getElementById('subwayJourneyCount');
+      const cardFeeInput = document.getElementById('includeClimateCardFee');
+      const estimate = document.getElementById('passEstimate');
+      if (!passSelect || !journeysInput || !cardFeeInput || !estimate) return;
+      const passPrices = { 1: 5000, 2: 8000, 3: 10000, 5: 15000, 7: 20000 };
+      const formatWon = value => 'KRW ' + Math.round(value).toLocaleString('en-US');
+      const updateEstimate = () => {
+        const days = Number(passSelect.value) || 1;
+        const journeys = Math.max(0, Math.min(100, Number.parseInt(journeysInput.value, 10) || 0));
+        const payAsYouGo = journeys * 1550;
+        const cardPrice = cardFeeInput.checked ? 3000 : 0;
+        const climateTotal = (passPrices[days] || passPrices[1]) + cardPrice;
+        const passLabel = formatWon(passPrices[days] || passPrices[1]) + (cardPrice ? ' + ' + formatWon(cardPrice) + ' new physical card' : ' (card purchase not added)');
+        const gap = Math.abs(payAsYouGo - climateTotal);
+        let comparison;
+        if (payAsYouGo > climateTotal) comparison = 'The Climate Card is about ' + formatWon(gap) + ' lower on this fare-only estimate, if every journey is covered.';
+        else if (payAsYouGo < climateTotal) comparison = 'Pay-as-you-go is about ' + formatWon(gap) + ' lower on this fare-only estimate.';
+        else comparison = 'The two estimates are approximately equal before route and transfer details.';
+        estimate.textContent = journeys + ' separate subway journeys × KRW 1,550 = ' + formatWon(payAsYouGo) + '. Climate Card: ' + passLabel + ' = ' + formatWon(climateTotal) + '. ' + comparison;
+      };
+      passSelect.addEventListener('change', updateEstimate);
+      journeysInput.addEventListener('input', updateEstimate);
+      cardFeeInput.addEventListener('change', updateEstimate);
+      updateEstimate();
     })();
   </script>
 </body>

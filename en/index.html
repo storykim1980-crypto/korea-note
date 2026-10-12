@@ -1303,6 +1303,27 @@ html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3 {line-break:strict;}
  .compact-footer .footer-separator {display:none;}
  .compact-footer .footer-copy {margin-top:10px;}
 }
+
+/* Mobile navigation: bounded scrolling panel and sticky-header-safe targets. */
+:root {--sticky-header-height:76px;--nav-available:60vh;}
+main [id] {scroll-margin-top:calc(var(--sticky-header-height) + 16px);}
+@media(max-width:1500px){
+ .main-nav {max-height:var(--nav-available);overflow-y:auto;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;justify-content:flex-start;padding-bottom:max(16px,env(safe-area-inset-bottom));box-sizing:border-box;}
+ .main-nav a {flex-shrink:0;min-height:44px;white-space:normal;overflow-wrap:break-word;}
+}
+
+/* Keep all header touch targets inside narrow Android/iOS visual viewports. */
+@media(max-width:760px){
+ .nav-shell {gap:8px;min-width:0;}
+ .nav-shell .brand {gap:6px;min-width:0;}
+ .nav-shell .brand-symbol {width:28px;height:28px;flex:0 0 28px;font-size:16px;}
+ .nav-shell .brand-name {font-size:16px;letter-spacing:.04em;white-space:nowrap;}
+ .nav-shell .brand-name small {display:none;}
+ .nav-actions {flex:0 0 auto;gap:0;}
+ .nav-actions .icon-button {flex:0 0 44px;width:44px;min-width:44px;height:44px;min-height:44px;padding:0;}
+ .nav-actions .saved-label {display:none;}
+ .nav-actions .saved-count {font-size:14px;}
+}
 </style>
 </head>
 <body>
@@ -1824,12 +1845,13 @@ html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3 {line-break:strict;}
         if (savedToggle) savedToggle.setAttribute("aria-pressed", String(onlySaved));
       }
       filters.forEach((button) => button.addEventListener("click", () => { onlySaved = false; setFilter(button.dataset.filter); }));
-      document.querySelectorAll("[data-jump-filter]").forEach((link) => link.addEventListener("click", () => {
+      document.querySelectorAll("[data-jump-filter]").forEach((link) => link.addEventListener("click", (event) => {
+        event.preventDefault();
         const category = link.dataset.jumpFilter;
         if (filters.some((button) => button.dataset.filter === category)) { onlySaved = false; setFilter(category); }
         const stories = document.getElementById("stories");
-        if (stories) stories.scrollIntoView({ behavior: "smooth", block: "start" });
-        if (mainNav && menuToggle) { mainNav.classList.remove("is-open"); menuToggle.setAttribute("aria-expanded", "false"); }
+        if (stories) navigateToSection(stories);
+        setMenuOpen(false);
       }));
       document.querySelectorAll("[data-save-card]").forEach((button) => button.addEventListener("click", () => {
         const id = button.dataset.saveCard;
@@ -1848,36 +1870,83 @@ html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3 {line-break:strict;}
         filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === "all")));
         if (searchInput) searchInput.value = "";
         applyFilters();
-        const stories = document.getElementById("stories"); if (stories) stories.scrollIntoView({ behavior: "smooth", block: "start" });
+        const stories = document.getElementById("stories"); if (stories) navigateToSection(stories);
       });
       const searchToggle = document.getElementById("searchToggle");
       if (searchToggle) searchToggle.addEventListener("click", () => {
-        const stories = document.getElementById("stories"); if (stories) stories.scrollIntoView({ behavior: "smooth", block: "start" });
+        const stories = document.getElementById("stories"); if (stories) navigateToSection(stories);
         window.setTimeout(() => { if (searchInput) searchInput.focus(); }, 350);
       });
-      if (menuToggle && mainNav) menuToggle.addEventListener("click", () => {
-        const open = !mainNav.classList.contains("is-open"); mainNav.classList.toggle("is-open", open);
+      // One state transition for every closing path, including non-filter links.
+      const stickyHeader = document.querySelector(".site-header");
+      function updateNavGeometry() {
+        if (!stickyHeader) return;
+        const rect = stickyHeader.getBoundingClientRect();
+        const viewport = window.visualViewport;
+        const bottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+        document.documentElement.style.setProperty("--sticky-header-height", rect.height + "px");
+        document.documentElement.style.setProperty("--nav-available", Math.max(0, bottom - rect.bottom - 8) + "px");
+      }
+      function setMenuOpen(open, restoreFocus = false) {
+        if (!mainNav || !menuToggle) return;
+        updateNavGeometry();
+        mainNav.classList.toggle("is-open", open);
         menuToggle.setAttribute("aria-expanded", String(open));
         menuToggle.setAttribute("aria-label", open ? (isEnglish ? "Close menu" : "メニューを閉じる") : (isEnglish ? "Open menu" : "メニューを開く"));
         if (open) {
-          const firstLink = mainNav.querySelector("a[href]");
-          if (firstLink) firstLink.focus();
+          mainNav.scrollTop = 0;
+          const first = mainNav.querySelector("a[href]");
+          if (first) first.focus({ preventScroll: true });
+        } else if (restoreFocus) menuToggle.focus({ preventScroll: true });
+      }
+      function navigateToSection(target, focusTarget = true) {
+        setMenuOpen(false);
+        if (!target) return;
+        updateNavGeometry();
+        // Avoid a long smooth-scroll animation racing with mobile focus/toolbar changes.
+        if (focusTarget) {
+          const heading = target.querySelector("h1,h2,h3") || target;
+          if (!heading.hasAttribute("tabindex")) heading.setAttribute("tabindex", "-1");
+          heading.focus({ preventScroll: true });
+        }
+        const top = Math.max(0, window.scrollY + target.getBoundingClientRect().top - (stickyHeader ? stickyHeader.getBoundingClientRect().height : 0) - 16);
+        window.scrollTo({ top, behavior: "instant" });
+      }
+      updateNavGeometry();
+      if (window.ResizeObserver && stickyHeader) new ResizeObserver(updateNavGeometry).observe(stickyHeader);
+      let lastLayoutWidth = window.innerWidth;
+      window.addEventListener("resize", () => {
+        if (window.innerWidth !== lastLayoutWidth) setMenuOpen(false);
+        lastLayoutWidth = window.innerWidth;
+        updateNavGeometry();
+      });
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", updateNavGeometry);
+        window.visualViewport.addEventListener("scroll", updateNavGeometry);
+      }
+      window.addEventListener("scroll", updateNavGeometry, { passive: true });
+      if (menuToggle && mainNav) menuToggle.addEventListener("click", () => setMenuOpen(!mainNav.classList.contains("is-open")));
+      if (mainNav) mainNav.addEventListener("click", event => {
+        const link = event.target.closest("a[href]");
+        if (!link) return;
+        setMenuOpen(false);
+        if (link.hasAttribute("data-jump-filter")) return; // handled by its filter handler
+        const href = link.getAttribute("href");
+        if (href && href.startsWith("#")) {
+          const target = document.getElementById(href.slice(1));
+          if (target) { event.preventDefault(); navigateToSection(target); }
         }
       });
-      document.addEventListener("click", (event) => {
-        if (mainNav && menuToggle && !mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
-          mainNav.classList.remove("is-open"); menuToggle.setAttribute("aria-expanded", "false");
-          menuToggle.setAttribute("aria-label", isEnglish ? "Open menu" : "メニューを開く");
+      document.addEventListener("click", event => {
+        if (mainNav && menuToggle && !mainNav.contains(event.target) && !menuToggle.contains(event.target)) setMenuOpen(false);
+      });
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && mainNav && mainNav.classList.contains("is-open")) {
+          event.preventDefault(); setMenuOpen(false, true);
         }
       });
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && mainNav && menuToggle && mainNav.classList.contains("is-open")) {
-          event.preventDefault();
-          mainNav.classList.remove("is-open"); menuToggle.setAttribute("aria-expanded", "false");
-          menuToggle.setAttribute("aria-label", isEnglish ? "Open menu" : "メニューを開く");
-          menuToggle.focus();
-        }
-      });
+      window.addEventListener("pagehide", () => setMenuOpen(false));
+      window.addEventListener("pageshow", () => { setMenuOpen(false); updateNavGeometry(); });
       function openChecklist(trigger) {
         if (!checklistDialog) return;
         lastTrigger = trigger || document.activeElement; checklistDialog.showModal();

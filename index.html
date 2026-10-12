@@ -1358,6 +1358,30 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
  .home-detail-content {padding:0 0 12px;}
  .home-detail-content .promise-section {padding:22px 14px;}
 }
+
+.saved-sharing {margin:12px 0;font-size:15px;line-height:1.75;}
+.saved-sharing summary {cursor:pointer;min-height:44px;padding:10px 0;}
+.saved-sharing button {font:inherit;min-height:44px;padding:8px 12px;border:1px solid var(--line);background:var(--white);color:var(--ink);}
+.saved-sharing label {display:block;} .saved-sharing [hidden] {display:none!important;}
+.saved-sharing input {display:block;width:100%;min-height:44px;font-size:16px;margin:8px 0;}
+.planner-days-field input[type="date"] {min-height:44px;min-width:0;max-width:100%;width:100%;font:inherit;font-size:16px;padding:8px;border:1px solid var(--line);background:var(--white);color:var(--ink);box-sizing:border-box;}
+.planner-related {padding-top:10px;}
+.planner-related a {display:inline-block;min-height:44px;padding:8px 0;font-size:17px;}
+
+/* Print only the planner flow: hidden homepage blocks must not create blank pages. */
+.planner-print-value {display:none;}
+@media print {
+ body.plan-print-mode > :not(main),
+ body.plan-print-mode main > :not(.home-more),
+ body.plan-print-mode .home-more > .container > :not(#panel-planner),
+ body.plan-print-mode #panel-planner > summary {display:none!important;}
+ body.plan-print-mode .home-more, body.plan-print-mode #panel-planner,
+ body.plan-print-mode .home-detail-content {display:block!important;position:static!important;margin:0!important;padding:0!important;border:0!important;}
+ body.plan-print-mode #planner {position:static!important;inset:auto!important;margin:0!important;padding:0!important;}
+ body.plan-print-mode #planner textarea {display:none!important;}
+ body.plan-print-mode #planner .planner-print-value {display:block!important;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12pt;line-height:1.5;margin:8px 0;}
+ body.plan-print-mode #planner .container {max-width:none;width:100%;}
+}
 </style>
 </head>
 <body>
@@ -1409,8 +1433,6 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         </div>
         <div class="hero-visual">
           <img src="assets/hero-seoul.jpg" alt="AI生成イラスト：ソウル風の街を歩く日本人旅行者。実在の人物・場所を記録した写真ではありません。" fetchpriority="high">
-          <div class="hero-sticker"><span>01</span> 文化も、実用も。</div>
-          <div class="photo-caption"><span>SEOUL, AT YOUR OWN PACE</span></div>
         </div>
       </div>
       <div class="container hero-bottom">
@@ -1429,7 +1451,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       <div class="container">
         <div class="section-heading"><div><p class="section-kicker">THE JOURNAL / SOURCE-LINKED GUIDES</p><h2 class="section-title" id="storiesTitle">韓国を知る、9つのガイド。</h2></div><p class="section-intro">食文化、ハングル、コスメ表示、祝日、街歩き、旅行手続き。確認できる出典と情報の限界を添えた独立記事です。</p></div>
         <div class="story-tools"><div class="filter-list" role="group" aria-label="記事のカテゴリー"><button class="filter-button" type="button" data-filter="all" aria-pressed="true">すべて</button><button class="filter-button" type="button" data-filter="culture" aria-pressed="false">文化</button><button class="filter-button" type="button" data-filter="language" aria-pressed="false">韓国語</button><button class="filter-button" type="button" data-filter="food" aria-pressed="false">食文化</button><button class="filter-button" type="button" data-filter="beauty" aria-pressed="false">ビューティー</button><button class="filter-button" type="button" data-filter="travel" aria-pressed="false">旅の実用</button></div><label class="search-box"><span class="sr-only">記事をキーワードで検索</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="articleSearch" type="search" placeholder="キーワードで記事を探す" autocomplete="off"></label></div>
-        <p class="results-line" id="resultsMessage" aria-live="polite">9件のガイドを表示中</p>
+        <details class="saved-sharing"><summary>保存したガイド・共有について</summary><p>保存記事とチェック項目は、このブラウザー内に保存されます。サイトデータを消すと失われます。共有URLには記事IDだけを含み、旅程の入力内容は含めません。検索対象はこのページの9件のガイドカードで、記事全文ではありません。</p><button type="button" id="shareSaved">保存記事の共有リンクを作る</button><button type="button" id="importShared" hidden>共有された記事をこの端末に保存</button><label id="shareLinkLabel" hidden>共有リンク（選択してコピー）<input id="shareLink" type="text" readonly></label><p id="shareStatus" role="status" aria-live="polite"></p></details><p class="results-line" id="resultsMessage" aria-live="polite">9件のガイドを表示中</p>
         <div class="story-grid" id="storyGrid">
           <article class="story-card" data-category="language" data-article-id="hangul-signs" data-keywords="ハングル 韓国語 文字 駅 看板 表示 入り口 出口 トイレ Hangeul Hangul Korean alphabet">
             <a class="story-card-link" href="guides/hangul-signs.html"><span class="card-image-wrap"><img src="assets/guide-hangeul-signs.jpg" alt="AI生成イラスト：地下鉄の案内表示を見上げる日本人旅行者。特定の実在駅ではありません。" loading="lazy"><span class="card-number">01</span></span><div class="card-content"><span class="card-category">LANGUAGE · HANGEUL</span><h3>ハングルの基本と、街で見かける韓国語。</h3><p>역・입구・출구など、旅行中に見かける案内表示の入門。</p><span class="card-arrow">ガイドを読む <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="hangul-signs" aria-pressed="false">この記事を保存</button></div>
@@ -1460,7 +1482,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
           </article>
         </div>
         <div class="empty-state" id="emptyState" hidden><strong id="emptyTitle">見つかりませんでした。</strong><span id="emptyDescription">検索語を変えるか、カテゴリーを選び直してください。</span><br><button type="button" id="resetFilters">検索と絞り込みをリセット</button></div>
-      <div class="home-quick-actions"><a href="#planner">旅程をつくる</a><button class="button button-light" type="button" data-open-checklist>旅の準備チェックを開く</button><a href="#travelHelp">緊急・観光相談の連絡先</a></div><p class="home-directory-note">料金・入国条件・運行情報は、利用前に公式情報をご確認ください。</p></div>
+      <div class="home-quick-actions"><a href="guides/departure-checklist.html">出発前の確認ガイド</a><a href="#planner">旅程をつくる</a><button class="button button-light" type="button" data-open-checklist>旅の準備チェックを開く</button><a href="#travelHelp">緊急・観光相談の連絡先</a></div><p class="home-directory-note">料金・入国条件・運行情報は、利用前に公式情報をご確認ください。</p></div>
     </section>
 
     
@@ -1513,7 +1535,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         <div class="planner-shell">
           <form class="planner-form" id="plannerForm">
             <div class="planner-input-grid">
-              <label class="planner-days-field" for="plannerDays">
+<label class="planner-days-field" for="plannerStartDate">開始日（任意）<input type="date" id="plannerStartDate" min="2020-01-01" max="2100-12-31"></label>              <label class="planner-days-field" for="plannerDays">
                 <span>ソウルに滞在する日数</span>
                 <select id="plannerDays" name="days">
                   <option value="1">1日</option><option value="2">2日</option><option value="3" selected>3日</option><option value="4">4日</option><option value="5">5日</option><option value="6">6日</option><option value="7">7日</option>
@@ -1532,7 +1554,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
             </div>
             <div class="planner-actions">
               <button class="button button-primary" type="submit" id="buildPlan">旅程の下書きをつくる</button>
-              <a class="button button-light" href="#travel">旅の準備チェックを開く</a>
+              <a class="button button-light" href="#travel">渡航準備・交通・相談窓口を見る</a>
             </div>
           </form>
           <p class="planner-privacy">下書きはこのページ内だけで扱い、SEOUL NOTEのサーバーには送信せず、ページを離れると消えます。地図リンクを押したときだけ、選択したエリア名や入力した場所名が外部の地図サービスへ送られます。住所・連絡先などの個人情報、パスポート番号や決済情報は入力しないでください。残す場合はダウンロードまたは印刷してください。</p>
@@ -1770,7 +1792,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       </div>
     </section><section class="promise-section" id="about" aria-labelledby="promiseTitle">
       <div class="container promise-grid"><div class="promise-side"><p class="section-kicker">OUR EDITORIAL PROMISE</p><p>出典をたどれ、更新にも気づける情報を。</p></div><div class="promise-main"><h2 id="promiseTitle">流行を追うだけでなく、 背景まで伝える。</h2><p>SEOUL NOTEは、韓国文化や旅行の実用情報を日本語・英語で紹介する編集ガイドです。韓国文化を一枚岩として描かず、事実・解釈・時点の違いを分け、読者が元の案内を確認できるようにします。</p><div class="promise-points"><div class="promise-point"><span>01</span><span>出典、確認日、地域・期間などの範囲を示します。</span></div><div class="promise-point"><span>02</span><span>検索数・レビュー・専門ガイド選定を同じ「人気」指標にまとめません。</span></div><div class="promise-point"><span>03</span><span>現在、アフィリエイトリンクや有料掲載はありません。将来広告・提携を導入する場合は明示します。</span></div></div><p class="editorial-context-note">記事内のイラストはAI生成の編集用イメージで、実在の人物・店舗・料理・商品・場所を記録した証拠写真ではありません。情報の誤りや古い案内に気づいた場合は、運営者が公開する問い合わせ窓口からお知らせください。</p></div></div>
-    </section></div></details></div></section></main>
+    <p class="editorial-context-note">公的機関や一次資料を優先し、出典の言語と対象範囲を示します。文章の編集日と事実の確認日は区別します。AI生成画像は内容のイメージで、訪問記録や実在店舗・商品の証拠ではありません。訂正の際はお問い合わせページから、該当URLと確認できる出典をお知らせください。</p></section></div></details></div></section></main>
 
   <footer class="site-footer compact-footer"><div class="container"><nav class="footer-bar" aria-label="フッターナビゲーション"><a href="#top">ホーム</a><a href="#stories">ガイド一覧</a><a href="#stories" data-jump-filter="culture">韓国文化</a><a href="#food-data">食文化</a><a href="#planner">旅の準備</a><span class="footer-separator" aria-hidden="true"></span><a href="#about">編集方針</a><a href="contact.html">お問い合わせ</a><a href="en/index.html" lang="en">English</a></nav><p class="footer-copy">© 2026 SEOUL NOTE</p></div></footer>
 
@@ -1823,6 +1845,9 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       let activeFilter = "all";
       let onlySaved = false;
       let savedIds = new Set();
+      const validGuideIds = new Set(cards.map(card => card.dataset.articleId));
+      const requestedGuides = (new URLSearchParams(location.search).get('guides') || '').slice(0,2000).split(',').filter(id=>validGuideIds.has(id));
+      let sharedView = requestedGuides.length ? new Set(requestedGuides) : null;
       let lastTrigger = null;
 
       try { savedIds = new Set(JSON.parse(localStorage.getItem(savedKey) || "[]")); } catch (_) { savedIds = new Set(); }
@@ -1836,10 +1861,17 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         if (savedCount) savedCount.textContent = String(savedIds.size);
       }
       function persistSaved() {
-        try { localStorage.setItem(savedKey, JSON.stringify(Array.from(savedIds))); } catch (_) { /* Storage may be disabled. */ }
-        updateSaveButtons();
+        let stored = true;
+        try { localStorage.setItem(savedKey, JSON.stringify(Array.from(savedIds))); } catch (_) {
+          stored = false;
+          const note = document.getElementById('shareStatus');
+          note.textContent = isEnglish ? 'Browser storage is blocked. These saves will be lost when you leave.' : 'ブラウザーの保存機能が無効です。ページを離れると保存内容は失われます。';
+          document.querySelector('.saved-sharing').open = true;
+        }
+        updateSaveButtons(); return stored;
       }
       function setFilter(category) {
+        sharedView = null;
         activeFilter = category;
         filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === category)));
         applyFilters();
@@ -1847,13 +1879,14 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       function applyFilters() {
         if (!searchInput || !resultMessage || !emptyState) return;
         const locale = isEnglish ? "en" : "ja";
-        const query = (searchInput.value || "").trim().toLocaleLowerCase(locale);
+        const query = (searchInput.value || "").normalize("NFKC").trim().toLocaleLowerCase(locale);
+        const queryTerms = query.split(/\s+/).filter(Boolean);
         let visible = 0;
         cards.forEach((card) => {
           const categoryMatch = activeFilter === "all" || card.dataset.category === activeFilter;
-          const savedMatch = !onlySaved || savedIds.has(card.dataset.articleId);
-          const searchable = (card.textContent + " " + (card.dataset.keywords || "")).toLocaleLowerCase(locale);
-          const show = categoryMatch && savedMatch && (!query || searchable.includes(query));
+          const savedMatch = sharedView ? sharedView.has(card.dataset.articleId) : (!onlySaved || savedIds.has(card.dataset.articleId));
+          const searchable = (card.textContent + " " + (card.dataset.keywords || "")).normalize("NFKC").toLocaleLowerCase(locale);
+          const show = categoryMatch && savedMatch && queryTerms.every(term => searchable.includes(term));
           card.hidden = !show;
           if (show) visible += 1;
         });
@@ -1893,7 +1926,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         onlySaved = false; setFilter("all"); if (searchInput) searchInput.focus();
       });
       if (savedToggle) savedToggle.addEventListener("click", () => {
-        onlySaved = !onlySaved; activeFilter = "all";
+        sharedView = null; onlySaved = !onlySaved; activeFilter = "all";
         filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === "all")));
         if (searchInput) searchInput.value = "";
         applyFilters();
@@ -2016,6 +2049,27 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       }));
       const resetChecks = document.getElementById("resetChecks");
       if (resetChecks) resetChecks.addEventListener("click", () => { try { localStorage.removeItem(checklistKey); } catch (_) {} updateChecklist(); });
+      const shareStatus = document.getElementById('shareStatus');
+      const shareInput = document.getElementById('shareLink');
+      document.getElementById('shareSaved').addEventListener('click', () => {
+        const ids = [...savedIds].filter(id=>validGuideIds.has(id));
+        if (!ids.length) { shareStatus.textContent = isEnglish ? 'Save at least one guide first.' : '先に記事を保存してください。'; return; }
+        const url = new URL(location.href);
+        url.search = ''; url.searchParams.set('guides', ids.join(',')); url.hash = 'stories';
+        shareInput.value = url.href;
+        document.getElementById('shareLinkLabel').hidden = false;
+        shareInput.focus(); shareInput.select();
+        shareStatus.textContent = location.protocol === 'file:' ? (isEnglish ? 'Local preview link: this file URL will not work on another device. Create the link on your published site.' : 'ローカルファイルのURLは別の端末では使えません。公開サイトでリンクを作成してください。') : (isEnglish ? 'Copy this selected link. Recipients can view the list without overwriting their saved guides.' : '選択されたリンクをコピーしてください。相手の保存記事を上書きせずに一覧を表示します。');
+      });
+      document.getElementById('importShared').addEventListener('click', () => {
+        requestedGuides.forEach(id=>savedIds.add(id)); const stored = persistSaved(); applyFilters();
+        if (stored) shareStatus.textContent = isEnglish ? 'Shared guides added to this browser.' : '共有記事をこのブラウザーに追加しました。';
+      });
+      if (sharedView) {
+        document.querySelector('.saved-sharing').open = true;
+        document.getElementById('importShared').hidden = false;
+        shareStatus.textContent = isEnglish ? 'Viewing a shared list. Nothing has been added to your saved guides.' : '共有一覧を表示しています。まだ端末の保存記事には追加されていません。';
+      }
       updateSaveButtons(); updateChecklist(); applyFilters();
     })();
   </script>
@@ -2032,6 +2086,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       const sourcesBox = document.getElementById('plannerSources');
       const status = document.getElementById('plannerStatus');
       let generated = false;
+      const startDateInput = document.getElementById('plannerStartDate');
 
       const themes = {
         shopping: { label: 'コスメ・ショッピング', areas: ['myeongdong', 'seongsu'] },
@@ -2155,7 +2210,13 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       }
       function makeDayCard(index, draft, themesForPlan) {
         const card = document.createElement('article'); card.className = 'planner-day-card'; card.setAttribute('aria-labelledby', 'plannerDayHeading' + (index + 1));
-        const heading = document.createElement('h4'); heading.id = 'plannerDayHeading' + (index + 1); heading.textContent = text.day + ' ' + (index + 1); card.appendChild(heading);
+        const heading = document.createElement('h4'); heading.id = 'plannerDayHeading' + (index + 1); heading.textContent = text.day + ' ' + (index + 1);
+        const enteredDate = startDateInput.value;
+        if (/^\d{4}-\d{2}-\d{2}$/.test(enteredDate)) {
+          const day = new Date(enteredDate + 'T12:00:00Z'); day.setUTCDate(day.getUTCDate() + index);
+          if (!Number.isNaN(day.getTime())) heading.textContent += ' · ' + day.toISOString().slice(0,10);
+        }
+        card.appendChild(heading);
         const top = document.createElement('div'); top.className = 'planner-day-top';
         const focusLabel = document.createElement('label'); focusLabel.className = 'planner-day-field'; focusLabel.htmlFor = 'plannerFocus' + (index + 1);
         focusLabel.appendChild(Object.assign(document.createElement('span'), { textContent: text.focus }));
@@ -2211,12 +2272,17 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
           field.appendChild(area); timeGrid.appendChild(field);
         });
         card.appendChild(timeGrid);
+        const guideLinks = document.createElement('div'); guideLinks.className = 'planner-related'; card.appendChild(guideLinks);
         const updateNote = () => {
           const focus = themes[focusSelect.value]; const area = areas[areaSelect.value];
           customWrap.hidden = areaSelect.value !== 'custom';
           if (areaSelect.value === 'custom') note.textContent = areas.custom.note;
           else if (area) note.textContent = area.note;
           else note.textContent = text.blankArea;
+          guideLinks.replaceChildren();
+          const reading = {"shopping": ["kbeauty-labels", "コスメ表示"], "food": ["korean-meal-culture", "食文化"], "culture": ["korean-holidays", "祝日・文化"], "creative": ["seoul-neighborhoods", "ソウルのエリア"], "walks": ["climate-card", "交通の対象範囲"]};
+          const chosen = reading[focusSelect.value] || ['departure-checklist', "出発前の確認ガイド"];
+          const related = document.createElement('a'); related.href = 'guides/' + chosen[0] + '.html'; related.textContent = chosen[1] + ' →'; guideLinks.appendChild(related);
           updateMapLinks();
         };
         customInput.addEventListener('input', updateMapLinks);
@@ -2241,7 +2307,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         dayOutput.querySelectorAll('.planner-day-card').forEach((card, index) => {
           const focus = card.querySelector('[data-plan-focus]'); const area = card.querySelector('[data-plan-area]'); const custom = card.querySelector('[data-plan-custom]');
           const areaName = area.value === 'custom' ? (custom.value.trim() || '自分で選んだエリア') : (areas[area.value] ? areas[area.value].label : '未定');
-          lines.push('DAY ' + (index + 1)); lines.push('テーマ: ' + (themes[focus.value] ? themes[focus.value].label : '未定')); lines.push('エリア: ' + areaName);
+          lines.push(card.querySelector('h4').textContent); lines.push('テーマ: ' + (themes[focus.value] ? themes[focus.value].label : '未定')); lines.push('エリア: ' + areaName);
           const mapActions = card.querySelector('.planner-map-actions');
           if (mapActions && !mapActions.hidden) mapActions.querySelectorAll('a').forEach(a => { lines.push('地図検索: ' + a.textContent + ' — ' + a.href); });
           card.querySelectorAll('[data-plan-slot]').forEach(input => { lines.push(input.dataset.planSlot + ': ' + (input.value.trim() || '—')); }); lines.push('');
@@ -2256,6 +2322,13 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         } catch (_) { status.textContent = text.saveError; }
       });
       document.getElementById('printPlan').addEventListener('click', () => {
+        dayOutput.querySelectorAll('[data-plan-slot]').forEach(field => {
+          let printed = field.nextElementSibling;
+          if (!printed || !printed.classList.contains('planner-print-value')) {
+            printed = document.createElement('p'); printed.className = 'planner-print-value'; field.after(printed);
+          }
+          printed.textContent = field.value || '—';
+        });
         document.body.classList.add('plan-print-mode'); const cleanup = () => document.body.classList.remove('plan-print-mode');
         window.addEventListener('afterprint', cleanup, { once: true }); window.print(); setTimeout(cleanup, 30000);
       });

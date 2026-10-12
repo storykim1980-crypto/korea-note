@@ -1376,6 +1376,30 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
  .home-detail-content {padding:0 0 12px;}
  .home-detail-content .promise-section {padding:22px 14px;}
 }
+
+.saved-sharing {margin:12px 0;font-size:15px;line-height:1.75;}
+.saved-sharing summary {cursor:pointer;min-height:44px;padding:10px 0;}
+.saved-sharing button {font:inherit;min-height:44px;padding:8px 12px;border:1px solid var(--line);background:var(--white);color:var(--ink);}
+.saved-sharing label {display:block;} .saved-sharing [hidden] {display:none!important;}
+.saved-sharing input {display:block;width:100%;min-height:44px;font-size:16px;margin:8px 0;}
+.planner-days-field input[type="date"] {min-height:44px;min-width:0;max-width:100%;width:100%;font:inherit;font-size:16px;padding:8px;border:1px solid var(--line);background:var(--white);color:var(--ink);box-sizing:border-box;}
+.planner-related {padding-top:10px;}
+.planner-related a {display:inline-block;min-height:44px;padding:8px 0;font-size:17px;}
+
+/* Print only the planner flow: hidden homepage blocks must not create blank pages. */
+.planner-print-value {display:none;}
+@media print {
+ body.plan-print-mode > :not(main),
+ body.plan-print-mode main > :not(.home-more),
+ body.plan-print-mode .home-more > .container > :not(#panel-planner),
+ body.plan-print-mode #panel-planner > summary {display:none!important;}
+ body.plan-print-mode .home-more, body.plan-print-mode #panel-planner,
+ body.plan-print-mode .home-detail-content {display:block!important;position:static!important;margin:0!important;padding:0!important;border:0!important;}
+ body.plan-print-mode #planner {position:static!important;inset:auto!important;margin:0!important;padding:0!important;}
+ body.plan-print-mode #planner textarea {display:none!important;}
+ body.plan-print-mode #planner .planner-print-value {display:block!important;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12pt;line-height:1.5;margin:8px 0;}
+ body.plan-print-mode #planner .container {max-width:none;width:100%;}
+}
 </style>
 </head>
 <body>
@@ -1427,13 +1451,11 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         </div>
         <div class="hero-visual">
           <img src="../assets/hero-seoul.jpg" alt="AI-generated illustration of a Japanese traveler walking through a Seoul-inspired street; no real person or place is depicted." fetchpriority="high">
-          <div class="hero-sticker"><span>01</span> A little context goes a long way.</div>
-          <div class="photo-caption"><span>SEOUL, AT YOUR OWN PACE</span></div>
         </div>
       </div>
       <div class="container hero-bottom">
         <p>Good information leaves room for your own point of view.</p>
-        <a class="text-link" href="#feature">Start with the aesthetic-care guide
+        <a class="text-link" href="#feature">Start with Korean culture
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
         </a>
       </div>
@@ -1447,7 +1469,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       <div class="container">
         <div class="section-heading"><div><p class="section-kicker">THE JOURNAL / SOURCE-LINKED GUIDES</p><h2 class="section-title" id="storiesTitle">Nine guides to understanding Korea.</h2></div><p class="section-intro">Food culture, Hangeul, cosmetics labels, holidays, neighbourhoods and travel basics—with sources and clear limits on what each guide can tell you.</p></div>
         <div class="story-tools"><div class="filter-list" role="group" aria-label="Guide categories"><button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-button" type="button" data-filter="culture" aria-pressed="false">Culture</button><button class="filter-button" type="button" data-filter="language" aria-pressed="false">Korean</button><button class="filter-button" type="button" data-filter="food" aria-pressed="false">Food</button><button class="filter-button" type="button" data-filter="beauty" aria-pressed="false">Beauty</button><button class="filter-button" type="button" data-filter="travel" aria-pressed="false">Travel</button></div><label class="search-box"><span class="sr-only">Search guides by keyword</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="articleSearch" type="search" placeholder="Search by keyword" autocomplete="off"></label></div>
-        <p class="results-line" id="resultsMessage" aria-live="polite">Showing 9 guides</p>
+        <details class="saved-sharing"><summary>Saved guides · sharing & storage</summary><p>Saved guides and checklist ticks stay in this browser only; clearing site data removes them. A shared URL contains guide IDs only, not your trip draft. Search covers the nine guide cards on this page, not the full articles.</p><button type="button" id="shareSaved">Create saved-guide link</button><button type="button" id="importShared" hidden>Save shared guides here</button><label id="shareLinkLabel" hidden>Share link (select to copy)<input id="shareLink" type="text" readonly></label><p id="shareStatus" role="status" aria-live="polite"></p></details><p class="results-line" id="resultsMessage" aria-live="polite">Showing 9 guides</p>
         <div class="story-grid" id="storyGrid">
           <article class="story-card" data-category="language" data-article-id="hangul-signs" data-keywords="Hangeul Hangul Korean alphabet station sign entrance exit restroom language 역 입구 출구 화장실">
             <a class="story-card-link" href="guides/hangul-signs.html"><span class="card-image-wrap"><img src="../assets/guide-hangeul-signs.jpg" alt="AI-generated illustration of a Japanese traveler looking for wayfinding cues in a subway concourse; not a real station." loading="lazy"><span class="card-number">01</span></span><div class="card-content"><span class="card-category">LANGUAGE · HANGEUL</span><h3>Hangeul basics and useful Korean signs.</h3><p>Start with words such as 역, 입구 and 출구 that appear around town.</p><span class="card-arrow">Read the guide <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button class="story-save-button" type="button" data-save-card="hangul-signs" aria-pressed="false">Save guide</button></div>
@@ -1478,7 +1500,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
           </article>
         </div>
         <div class="empty-state" id="emptyState" hidden><strong id="emptyTitle">No guides found.</strong><span id="emptyDescription">Try another keyword or category.</span><br><button type="button" id="resetFilters">Clear search and filters</button></div>
-      <div class="home-quick-actions"><a href="#planner">Build a trip outline</a><button class="button button-light" type="button" data-open-checklist>Open the trip checklist</button><a href="#travelHelp">Emergency & visitor help</a></div><p class="home-directory-note">Recheck official prices, entry rules and transport information before use.</p></div>
+      <div class="home-quick-actions"><a href="guides/departure-checklist.html">Before-you-fly guide</a><a href="#planner">Build a trip outline</a><button class="button button-light" type="button" data-open-checklist>Open the trip checklist</button><a href="#travelHelp">Emergency & visitor help</a></div><p class="home-directory-note">Recheck official prices, entry rules and transport information before use.</p></div>
     </section>
 
     
@@ -1532,7 +1554,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         <div class="planner-shell">
           <form class="planner-form" id="plannerForm">
             <div class="planner-input-grid">
-              <label class="planner-days-field" for="plannerDays">
+<label class="planner-days-field" for="plannerStartDate">Start date (optional)<input type="date" id="plannerStartDate" min="2020-01-01" max="2100-12-31"></label>              <label class="planner-days-field" for="plannerDays">
                 <span>How many days in Seoul?</span>
                 <select id="plannerDays" name="days">
                   <option value="1">1 day</option><option value="2">2 days</option><option value="3" selected>3 days</option><option value="4">4 days</option><option value="5">5 days</option><option value="6">6 days</option><option value="7">7 days</option>
@@ -1551,7 +1573,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
             </div>
             <div class="planner-actions">
               <button class="button button-primary" type="submit" id="buildPlan">Build my outline</button>
-              <a class="button button-light" href="#travel">Open the trip checklist</a>
+              <a class="button button-light" href="#travel">Entry, transport &amp; visitor help</a>
             </div>
           </form>
           <p class="planner-privacy">Your draft stays on this page, is not sent to SEOUL NOTE and disappears when you leave. A map link sends the selected area or place name to the external map service only when you click it. Avoid entering private addresses, contact details, passport numbers or payment information. Download or print the draft if you want to keep it.</p>
@@ -1789,7 +1811,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       </div>
     </section><section class="promise-section" id="about" aria-labelledby="promiseTitle">
       <div class="container promise-grid"><div class="promise-side"><p class="section-kicker">OUR EDITORIAL PROMISE</p><p>Information readers can trace—and revisit when it changes.</p></div><div class="promise-main"><h2 id="promiseTitle">More than trends: context you can check.</h2><p>SEOUL NOTE is a Japanese- and English-language guide to Korean culture and practical travel information. We avoid treating Korea as one uniform story, distinguish facts from interpretation and help readers trace claims to their original sources.</p><div class="promise-points"><div class="promise-point"><span>01</span><span>We show sources, review dates and the relevant place or time period.</span></div><div class="promise-point"><span>02</span><span>We do not merge searches, reviews and guide selections into one “popularity” score.</span></div><div class="promise-point"><span>03</span><span>This draft contains no affiliate links or paid placements. Any future advertising or partnership will be clearly disclosed.</span></div></div><p class="editorial-context-note">Illustrations are AI-generated editorial images—not documentary evidence of real people, venues, dishes, products or places. If you spot an error or outdated detail, contact the operator through the public contact route provided at launch.</p></div></div>
-    </section></div></details></div></section></main>
+    <p class="editorial-context-note">We prioritize public authorities and original guidance, record the source language and scope, and separate an editorial revision from a fact-check date. AI-generated images illustrate themes; they are not evidence of visits, venues or products. Send corrections through our contact page with the page URL and a source we can check.</p></section></div></details></div></section></main>
 
   <footer class="site-footer compact-footer"><div class="container"><nav class="footer-bar" aria-label="Footer navigation"><a href="#top">Home</a><a href="#stories">All guides</a><a href="#stories" data-jump-filter="culture">Culture</a><a href="#food-data">Food culture</a><a href="#planner">Plan your trip</a><span class="footer-separator" aria-hidden="true"></span><a href="#about">Editorial standards</a><a href="contact.html">Contact</a><a href="../index.html" lang="ja">日本語</a></nav><p class="footer-copy">© 2026 SEOUL NOTE</p></div></footer>
 
@@ -1842,6 +1864,9 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       let activeFilter = "all";
       let onlySaved = false;
       let savedIds = new Set();
+      const validGuideIds = new Set(cards.map(card => card.dataset.articleId));
+      const requestedGuides = (new URLSearchParams(location.search).get('guides') || '').slice(0,2000).split(',').filter(id=>validGuideIds.has(id));
+      let sharedView = requestedGuides.length ? new Set(requestedGuides) : null;
       let lastTrigger = null;
 
       try { savedIds = new Set(JSON.parse(localStorage.getItem(savedKey) || "[]")); } catch (_) { savedIds = new Set(); }
@@ -1855,10 +1880,17 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         if (savedCount) savedCount.textContent = String(savedIds.size);
       }
       function persistSaved() {
-        try { localStorage.setItem(savedKey, JSON.stringify(Array.from(savedIds))); } catch (_) { /* Storage may be disabled. */ }
-        updateSaveButtons();
+        let stored = true;
+        try { localStorage.setItem(savedKey, JSON.stringify(Array.from(savedIds))); } catch (_) {
+          stored = false;
+          const note = document.getElementById('shareStatus');
+          note.textContent = isEnglish ? 'Browser storage is blocked. These saves will be lost when you leave.' : 'ブラウザーの保存機能が無効です。ページを離れると保存内容は失われます。';
+          document.querySelector('.saved-sharing').open = true;
+        }
+        updateSaveButtons(); return stored;
       }
       function setFilter(category) {
+        sharedView = null;
         activeFilter = category;
         filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === category)));
         applyFilters();
@@ -1866,13 +1898,14 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       function applyFilters() {
         if (!searchInput || !resultMessage || !emptyState) return;
         const locale = isEnglish ? "en" : "ja";
-        const query = (searchInput.value || "").trim().toLocaleLowerCase(locale);
+        const query = (searchInput.value || "").normalize("NFKC").trim().toLocaleLowerCase(locale);
+        const queryTerms = query.split(/\s+/).filter(Boolean);
         let visible = 0;
         cards.forEach((card) => {
           const categoryMatch = activeFilter === "all" || card.dataset.category === activeFilter;
-          const savedMatch = !onlySaved || savedIds.has(card.dataset.articleId);
-          const searchable = (card.textContent + " " + (card.dataset.keywords || "")).toLocaleLowerCase(locale);
-          const show = categoryMatch && savedMatch && (!query || searchable.includes(query));
+          const savedMatch = sharedView ? sharedView.has(card.dataset.articleId) : (!onlySaved || savedIds.has(card.dataset.articleId));
+          const searchable = (card.textContent + " " + (card.dataset.keywords || "")).normalize("NFKC").toLocaleLowerCase(locale);
+          const show = categoryMatch && savedMatch && queryTerms.every(term => searchable.includes(term));
           card.hidden = !show;
           if (show) visible += 1;
         });
@@ -1912,7 +1945,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         onlySaved = false; setFilter("all"); if (searchInput) searchInput.focus();
       });
       if (savedToggle) savedToggle.addEventListener("click", () => {
-        onlySaved = !onlySaved; activeFilter = "all";
+        sharedView = null; onlySaved = !onlySaved; activeFilter = "all";
         filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === "all")));
         if (searchInput) searchInput.value = "";
         applyFilters();
@@ -2035,6 +2068,27 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       }));
       const resetChecks = document.getElementById("resetChecks");
       if (resetChecks) resetChecks.addEventListener("click", () => { try { localStorage.removeItem(checklistKey); } catch (_) {} updateChecklist(); });
+      const shareStatus = document.getElementById('shareStatus');
+      const shareInput = document.getElementById('shareLink');
+      document.getElementById('shareSaved').addEventListener('click', () => {
+        const ids = [...savedIds].filter(id=>validGuideIds.has(id));
+        if (!ids.length) { shareStatus.textContent = isEnglish ? 'Save at least one guide first.' : '先に記事を保存してください。'; return; }
+        const url = new URL(location.href);
+        url.search = ''; url.searchParams.set('guides', ids.join(',')); url.hash = 'stories';
+        shareInput.value = url.href;
+        document.getElementById('shareLinkLabel').hidden = false;
+        shareInput.focus(); shareInput.select();
+        shareStatus.textContent = location.protocol === 'file:' ? (isEnglish ? 'Local preview link: this file URL will not work on another device. Create the link on your published site.' : 'ローカルファイルのURLは別の端末では使えません。公開サイトでリンクを作成してください。') : (isEnglish ? 'Copy this selected link. Recipients can view the list without overwriting their saved guides.' : '選択されたリンクをコピーしてください。相手の保存記事を上書きせずに一覧を表示します。');
+      });
+      document.getElementById('importShared').addEventListener('click', () => {
+        requestedGuides.forEach(id=>savedIds.add(id)); const stored = persistSaved(); applyFilters();
+        if (stored) shareStatus.textContent = isEnglish ? 'Shared guides added to this browser.' : '共有記事をこのブラウザーに追加しました。';
+      });
+      if (sharedView) {
+        document.querySelector('.saved-sharing').open = true;
+        document.getElementById('importShared').hidden = false;
+        shareStatus.textContent = isEnglish ? 'Viewing a shared list. Nothing has been added to your saved guides.' : '共有一覧を表示しています。まだ端末の保存記事には追加されていません。';
+      }
       updateSaveButtons(); updateChecklist(); applyFilters();
     })();
   </script>
@@ -2051,6 +2105,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       const sourcesBox = document.getElementById('plannerSources');
       const status = document.getElementById('plannerStatus');
       let generated = false;
+      const startDateInput = document.getElementById('plannerStartDate');
 
       const themes = {
         shopping: { label: 'Beauty and shopping', areas: ['myeongdong', 'seongsu'] },
@@ -2211,6 +2266,11 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         const heading = document.createElement('h4');
         heading.id = 'plannerDayHeading' + (index + 1);
         heading.textContent = text.day + ' ' + (index + 1);
+        const enteredDate = startDateInput.value;
+        if (/^\d{4}-\d{2}-\d{2}$/.test(enteredDate)) {
+          const day = new Date(enteredDate + 'T12:00:00Z'); day.setUTCDate(day.getUTCDate() + index);
+          if (!Number.isNaN(day.getTime())) heading.textContent += ' · ' + day.toISOString().slice(0,10);
+        }
         card.appendChild(heading);
         const top = document.createElement('div');
         top.className = 'planner-day-top';
@@ -2322,6 +2382,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
           timeGrid.appendChild(field);
         });
         card.appendChild(timeGrid);
+        const guideLinks = document.createElement('div'); guideLinks.className = 'planner-related'; card.appendChild(guideLinks);
         const updateNote = () => {
           const focus = themes[focusSelect.value];
           const area = areas[areaSelect.value];
@@ -2329,6 +2390,10 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
           if (areaSelect.value === 'custom') note.textContent = areas.custom.note;
           else if (area) note.textContent = area.note;
           else note.textContent = text.blankArea;
+          guideLinks.replaceChildren();
+          const reading = {"shopping": ["kbeauty-labels", "Cosmetics labels"], "food": ["korean-meal-culture", "Food culture"], "culture": ["korean-holidays", "Holidays & culture"], "creative": ["seoul-neighborhoods", "Seoul areas"], "walks": ["climate-card", "Transport coverage"]};
+          const chosen = reading[focusSelect.value] || ['departure-checklist', "Before-you-fly guide"];
+          const related = document.createElement('a'); related.href = 'guides/' + chosen[0] + '.html'; related.textContent = chosen[1] + ' →'; guideLinks.appendChild(related);
           updateMapLinks();
         };
         customInput.addEventListener('input', updateMapLinks);
@@ -2369,7 +2434,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
           const area = card.querySelector('[data-plan-area]');
           const custom = card.querySelector('[data-plan-custom]');
           const areaName = area.value === 'custom' ? (custom.value.trim() || 'My own area') : (areas[area.value] ? areas[area.value].label : 'Not chosen');
-          lines.push('DAY ' + (index + 1));
+          lines.push(card.querySelector('h4').textContent);
           lines.push('Focus: ' + (themes[focus.value] ? themes[focus.value].label : 'Not chosen'));
           lines.push('Area anchor: ' + areaName);
           const mapActions = card.querySelector('.planner-map-actions');
@@ -2395,6 +2460,13 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         } catch (_) { status.textContent = text.saveError; }
       });
       document.getElementById('printPlan').addEventListener('click', () => {
+        dayOutput.querySelectorAll('[data-plan-slot]').forEach(field => {
+          let printed = field.nextElementSibling;
+          if (!printed || !printed.classList.contains('planner-print-value')) {
+            printed = document.createElement('p'); printed.className = 'planner-print-value'; field.after(printed);
+          }
+          printed.textContent = field.value || '—';
+        });
         document.body.classList.add('plan-print-mode');
         const cleanup = () => document.body.classList.remove('plan-print-mode');
         window.addEventListener('afterprint', cleanup, { once: true });

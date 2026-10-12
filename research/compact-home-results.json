@@ -1,0 +1,183 @@
+{
+  "results": [
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 320,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 390,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 844,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/en/",
+      "width": 320,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/en/",
+      "width": 390,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/en/",
+      "width": 844,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 320,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 390,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 844,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/en/",
+      "width": 320,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/en/",
+      "width": 390,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/en/",
+      "width": 844,
+      "panels": 8,
+      "planner": true,
+      "deepLink": true
+    }
+  ],
+  "expandedAxe": [
+    {
+      "route": "/",
+      "panel": "panel-planner",
+      "violations": []
+    },
+    {
+      "route": "/",
+      "panel": "panel-travel",
+      "violations": []
+    },
+    {
+      "route": "/",
+      "panel": "panel-food-data",
+      "violations": []
+    },
+    {
+      "route": "/",
+      "panel": "panel-beauty-ranking",
+      "violations": []
+    },
+    {
+      "route": "/",
+      "panel": "panel-travel-data",
+      "violations": []
+    },
+    {
+      "route": "/",
+      "panel": "panel-feature",
+      "violations": []
+    },
+    {
+      "route": "/",
+      "panel": "panel-official",
+      "violations": []
+    },
+    {
+      "route": "/",
+      "panel": "panel-about",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "panel": "panel-planner",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "panel": "panel-travel",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "panel": "panel-food-data",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "panel": "panel-beauty-ranking",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "panel": "panel-travel-data",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "panel": "panel-feature",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "panel": "panel-official",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "panel": "panel-about",
+      "violations": []
+    }
+  ],
+  "failures": []
+}

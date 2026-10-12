@@ -1,5 +1,39 @@
 # SEOUL NOTE — owner deployment handoff
 
+## LATEST: compact homepage — 12 October 2026
+
+Both homepages now prioritize the hero, nine searchable/filterable guides, three quick actions and eight optional reference panels. Mobile guide cards use small side thumbnails rather than tall full-width pictures. Source scope and culture-reading notes were moved into About; all underlying information, images and tools remain present. No new factual claims were introduced. Existing article routes and relative language links remain intact.
+
+Details panels: trip planner; entry/transport/urgent help; food culture; cosmetics labels; Seoul/airport context; Hangeul/culture; official sources; About/editorial standards. Main-menu, quick-action, footer and direct hash links open the relevant folded ancestors before moving to the section, preserving the mobile-menu repair. Native details can also be opened with JavaScript disabled.
+
+Initial closed-state height measured at 390px: Japanese 28,896→5,232px (81.9% shorter), English 32,159→5,867px (81.8% shorter). At 1440px: 14,156→4,191px and 14,954→4,257px. These are initial rendered heights, not a claim that opened content is shorter or an LCP benchmark.
+
+Final QA: 132 route/width combinations pass; 28 base Axe states plus 16 individually expanded-panel Axe states have zero violations; core interactions pass. Dedicated Chromium/WebKit tests pass 12 locale/viewport states, all eight panels, planner generation and direct urgent-help hashes, plus native no-JS disclosure checks. Previous mobile-menu tests again pass 44 states/440 actions. No physical-device certification or deployment. See research/qa_compact_home.cjs, compact-home-results.json and home-length-comparison.json.
+
+
+## LATEST RELEASE: mobile menu repair — 12 October 2026
+
+All navigation links now close the mobile panel before moving to a sticky-header-safe destination. The panel is viewport-bounded and independently scrollable. Narrow-header touch overlap, Escape/outside closing, focus, rotation and visual-viewport resizing are covered. Final Chromium/WebKit touch simulation: 44 states / 440 checks pass; 132 layout combinations, 28 Axe states and core interactions also pass. Extracted-file language navigation was clicked successfully in both engines. See research/mobile-menu-fix-2026-10-12.md and research/mobile-navigation-results.json. No actual Galaxy S26, Samsung Internet, iPhone or Safari-device testing was performed; do not describe these simulations as physical-device verification. No deployment performed.
+
+
+## Current tourist hero and compact footer — 12 October 2026
+
+The hero now depicts a fictional Japanese tourist in her thirties wearing a relaxed blue overshirt, white T-shirt and jeans, carrying a small map and camera rather than office attire. Both editions share the image; on-photo AI labels remain absent, while alt text and the existing editorial disclosure retain the illustrative context. Desktop/mobile crops were reviewed.
+
+Reference inspected: https://japan-onsen-stay.com/ko/ . Its HTML footer uses a compact menu/utility link row and a copyright line. SEOUL NOTE adopts that structural approach, not its affiliate, advertising, operator or cookie terms. Home footers now have eight working links (home, all guides, culture, food, planning, editorial standards, contact, other language) followed by © 2026 SEOUL NOTE. Long repetitive service/disclaimer text and the unfinished prepublication legal-policy sentence were removed from the public footer. Editorial principles and AI disclosure remain in #about; time-sensitive source caveats remain with the relevant content. Required privacy/operator disclosures still need appropriate review before launch; no unapproved policy links or operator details were invented.
+
+Final checks after replacement: static QA passed (254 internal links, 119 external-link instances); 132 layout combinations passed; 28 Axe states had no violations; core interaction smoke passed. The new footer Japanese→English→Japanese links were clicked successfully under HTTP and extracted-file viewing. Public bundle remains 38 files. No deployment.
+
+
+## Latest hero and portable-link fix — 12 October 2026
+
+The shared hero image is replaced with a fictional Japanese woman in her thirties in contemporary understated travel styling. Japanese/English on-photo AI labels were removed at the owner's request; descriptive alt text and the editorial AI-image disclosure remain. Mobile framing is now square with the decorative sticker hidden so it cannot cover the subject's face.
+
+Reproduced download bug: the Japanese home language link `/en/` resolves to `file:///en/` when opening an extracted index.html. Changed navigational root-relative links to explicit relative HTML paths (en/index.html and ../index.html); contact, favicon and other relevant links are portable too. Canonical/hreflang public URLs stay unchanged. 404 home URLs remain root-relative because a server error page may render at any request depth.
+
+Final checks: Japanese→English→Japanese and a guide language alternate passed at 320/390/1440px in root HTTP, nested-directory HTTP and extracted-file modes (nine scenarios). English-home local link destinations checked in each. Script/results: research/qa_language_links.cjs and research/language-link-results.json. Nested test requires serving /home/user on port 4180; root test serves the public bundle on 4173. Static QA, 132 route/viewport checks, 28 Axe states (zero violations) and core interactions passed after the final crop change. Mobile/desktop hero crops visually reviewed. Workspace single-file preview is sandboxed and is not a full multi-page browsing test; use the local live preview or extract the complete ZIP. No production deployment.
+
+
 ## CURRENT: balanced native typography — 12 October 2026
 
 This entry supersedes all earlier font/size/bundle notes in this document. HIS reference content was fetched, but direct Chromium/CSS inspection returned 403; its exact font is NOT verified. Japanese now uses Arial for Latin with Meiryo/Hiragino native Japanese fallbacks (device-dependent), not self-hosted Noto Sans JP. The 4.2MB WOFF2 and license assets were removed; the public bundle is 38 files again. Home/guide body is 18px desktop and 17.5px mobile, card copy 17px and card titles 22/21px. Balanced headings and strict Japanese line-breaking replace unnecessary forced heading breaks.

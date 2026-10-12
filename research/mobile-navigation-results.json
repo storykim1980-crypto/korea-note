@@ -1,0 +1,360 @@
+{
+  "limitations": "Chromium/WebKit touch simulations with generic viewport sizes; no physical Galaxy S26, Samsung Internet or iPhone device tested.",
+  "states": 44,
+  "actions": 440,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 480,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 480,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "height": 800,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "height": 800,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 384,
+      "height": 832,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 384,
+      "height": 832,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 393,
+      "height": 852,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 393,
+      "height": 852,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 402,
+      "height": 874,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 402,
+      "height": 874,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 412,
+      "height": 915,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 412,
+      "height": 915,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 430,
+      "height": 932,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 430,
+      "height": 932,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 440,
+      "height": 956,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 440,
+      "height": 956,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 844,
+      "height": 390,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 844,
+      "height": 390,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 915,
+      "height": 412,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 915,
+      "height": 412,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "height": 480,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "height": 480,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 360,
+      "height": 800,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 360,
+      "height": 800,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 384,
+      "height": 832,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 384,
+      "height": 832,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 393,
+      "height": 852,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 393,
+      "height": 852,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 402,
+      "height": 874,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 402,
+      "height": 874,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 412,
+      "height": 915,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 412,
+      "height": 915,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 430,
+      "height": 932,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 430,
+      "height": 932,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 440,
+      "height": 956,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 440,
+      "height": 956,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 844,
+      "height": 390,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 844,
+      "height": 390,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 915,
+      "height": 412,
+      "route": "/",
+      "actions": 10,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 915,
+      "height": 412,
+      "route": "/en/",
+      "actions": 10,
+      "passed": true
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,67 @@
+{
+  "results": [
+    {
+      "mode": "http",
+      "width": 320,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    },
+    {
+      "mode": "http",
+      "width": 390,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    },
+    {
+      "mode": "http",
+      "width": 1440,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    },
+    {
+      "mode": "subdirectory",
+      "width": 320,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    },
+    {
+      "mode": "subdirectory",
+      "width": 390,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    },
+    {
+      "mode": "subdirectory",
+      "width": 1440,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    },
+    {
+      "mode": "file",
+      "width": 320,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    },
+    {
+      "mode": "file",
+      "width": 390,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    },
+    {
+      "mode": "file",
+      "width": 1440,
+      "englishLocalTargets": 21,
+      "roundTrip": true,
+      "guideAlternate": true
+    }
+  ]
+}

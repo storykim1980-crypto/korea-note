@@ -1,0 +1,30 @@
+[
+  {
+    "route": "/",
+    "width": 390,
+    "height": 5232,
+    "before": 28896,
+    "reductionPercent": 81.9
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "height": 4191,
+    "before": 14156,
+    "reductionPercent": 70.4
+  },
+  {
+    "route": "/en/",
+    "width": 390,
+    "height": 5867,
+    "before": 32159,
+    "reductionPercent": 81.8
+  },
+  {
+    "route": "/en/",
+    "width": 1440,
+    "height": 4257,
+    "before": 14954,
+    "reductionPercent": 71.5
+  }
+]

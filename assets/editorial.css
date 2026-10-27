@@ -1,0 +1,263 @@
+/* Warm Editorial Seoul Note — adapted from the owner's DESIGN.md / code.html. */
+@font-face{font-family:Note Serif;src:url('fonts/NotoSerifJP-site.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Note Sans;src:url('fonts/PlusJakartaSans-site.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+:root,html[lang="ja"],html[lang="en"]{--paper:#fdfbf7;--paper-2:#f5f2eb;--paper2:#f5f2eb;--paper-3:#e8e4dc;--white:#fffefa;--ink:#303131;--ink-soft:#51534e;--soft:#51534e;--muted:#696961;--muted-light:#73766d;--line:#e8e4dc;--terra:#994126;--terra-light:#f3d7cc;--olive:#778674;--olive-dark:#536251;--serif:"Note Serif","Yu Mincho",Georgia,serif;--sans:"Note Sans",Arial,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;--container:1240px;--shadow:0 8px 30px rgba(31,32,34,.04)}
+body{background:var(--paper);color:var(--ink)}
+html[lang] h1,html[lang] h2,html[lang] h3,.brand-name{font-family:var(--serif);font-weight:400}
+html[lang] body,html[lang] button,html[lang] input,html[lang] select,html[lang] textarea{font-family:var(--sans)}
+button,input,select,textarea{accent-color:var(--terra)}
+.design-edition .container{width:min(1240px,calc(100% - 96px))}
+.design-edition .site-header{background:rgba(253,251,247,.97);border-bottom:1px solid var(--line);box-shadow:none}
+.design-edition .nav-shell{min-height:80px;gap:24px}
+.design-edition .brand-symbol{background:var(--terra);color:white;border:0;border-radius:2px;transform:none;width:28px;height:32px;font-size:23px}
+.design-edition .brand-name{font-size:19px;letter-spacing:.09em;gap:8px}
+.design-edition .brand-name small{font-size:12px}
+.design-edition .nav-actions{gap:6px}
+.design-edition .main-nav a{font-size:13px;font-weight:400}
+.design-edition .hero{padding:58px 0 52px}
+.design-edition .hero-grid{grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.design-edition .hero-copy{padding:0}
+.design-edition .eyebrow{display:inline-flex;width:fit-content;padding:5px 10px;border:1px solid #ecdad2;background:#faf1ee;border-radius:3px;font-size:11px;letter-spacing:.13em}
+.design-edition .eyebrow .dot{width:4px;height:4px}
+.design-edition .hero h1{font-family:var(--serif);font-size:46px;line-height:1.43;letter-spacing:.055em;font-weight:400;margin:20px 0}
+.design-edition .hero h1 em{color:var(--terra);font-style:normal}
+.design-edition .hero-lede{font-size:15px;line-height:1.95;max-width:520px}
+.design-edition .hero-actions{margin-top:25px;gap:12px}
+.design-edition .button{border-radius:4px;padding:12px 20px;min-height:46px;font-size:14px;box-shadow:none}
+.design-edition .button-primary{background:var(--terra);color:#fff}
+.design-edition .button-primary:hover{background:#7d321d}
+.design-edition .button-light{background:var(--paper-2);border:1px solid var(--line)}
+.design-edition .hero-meta{max-width:none;margin-top:32px;padding-top:18px;display:flex;flex-wrap:wrap;gap:12px;font-size:10px;line-height:1.7;letter-spacing:.08em}
+.design-edition .hero-meta span{font-size:10px}
+.design-edition .hero-visual{aspect-ratio:1.12;min-height:0;height:auto;padding:14px;background:var(--paper-2);border:1px solid var(--line);border-radius:6px;box-shadow:none;transform:none;overflow:hidden}
+.design-edition .hero-visual::after,.design-edition .hero-visual::before{display:none}
+.design-edition .hero-visual>img{height:100%;width:100%;object-fit:cover;object-position:53% center!important;border-radius:2px}
+.design-edition .hero-bottom{display:none}
+html .design-edition .stories-section{padding:48px 0 36px;background:var(--paper-2);border-block:1px solid var(--line)}
+.design-edition .section-heading{gap:24px;margin-bottom:24px;align-items:end}
+.design-edition .section-kicker{font-size:11px;letter-spacing:.14em;font-weight:400;color:var(--terra);margin-bottom:10px}
+.design-edition .section-title{font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.55}
+.design-edition .section-intro{font-size:14px;line-height:1.9;max-width:560px}
+.design-edition .story-tools{margin:12px 0 8px;gap:16px;align-items:center}
+.design-edition .filter-list{gap:6px;flex-wrap:wrap}
+.design-edition .filter-button{border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:12px;min-height:44px;padding:8px 15px}
+.design-edition .filter-button[aria-pressed=true]{background:var(--terra);color:white;border-color:var(--terra)}
+.design-edition .search-box{border:1px solid var(--line);background:var(--paper);border-radius:4px;min-height:44px}
+.design-edition .search-box input{font-size:14px}
+.design-edition .saved-sharing{font-size:13px;line-height:1.8;margin:5px 0;max-width:800px}
+.design-edition .saved-sharing summary{font-size:12px;padding:10px 0}
+.design-edition .results-line{font-size:12px;margin:10px 0 20px;color:var(--muted)}
+.design-edition .story-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.design-edition .story-card{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:none;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.design-edition .story-card:hover{transform:translateY(-3px);border-color:#b9a699;box-shadow:none}
+.design-edition .story-card-link{display:flex;flex-direction:column;gap:0;padding:20px 20px 0;flex:1}
+.design-edition .editorial-card-index{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:15px;min-height:33px}
+.design-edition .card-number{position:static;display:block;background:none;color:var(--muted);padding:0;font-family:var(--serif);font-size:19px;line-height:1;width:auto;height:auto;flex-shrink:0}
+.design-edition .card-category{font-size:9px!important;font-weight:400;letter-spacing:.1em;color:var(--terra);margin:0;text-align:right;line-height:1.6}
+.design-edition .card-image-wrap{width:100%;height:auto;aspect-ratio:1.85;border-radius:2px;flex-shrink:0;overflow:hidden;margin-bottom:17px}
+.design-edition .card-image-wrap img{width:100%;height:100%;object-fit:cover;filter:saturate(.83)}
+.design-edition .card-content{padding:0;display:flex;flex-direction:column;flex:1;min-height:165px}
+html .design-edition .card-content h3{font-family:var(--serif);font-size:19px;font-weight:400;line-height:1.65;margin:0 0 9px;letter-spacing:.025em}
+html .design-edition .card-content p{font-size:13px;line-height:1.9;color:var(--muted);margin:0 0 18px}
+.design-edition .card-arrow{margin-top:auto;padding:12px 0;font-size:12px;color:var(--terra);border-top:1px solid var(--line)}
+.design-edition .story-card-actions{padding:0 20px 10px;display:flex;justify-content:flex-end}
+.design-edition .story-save-button{min-height:44px;font-size:11px;color:var(--muted)}
+.design-edition .story-save-button[aria-pressed=true]{color:var(--terra);background:#faf1ee}
+.design-edition .home-quick-actions{margin-top:24px;gap:12px}
+.design-edition .home-quick-actions a,.design-edition .home-quick-actions button{font-size:13px;border-radius:4px;background:var(--paper)}
+.design-edition .home-more{padding:40px 0 0;background:var(--paper)}
+.design-edition .home-more>.container{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.design-edition .home-detail{grid-column:1/-1;border-color:var(--line);background:transparent;margin:0;min-width:0}
+.design-edition .home-detail-content{padding:0;border-color:var(--line)}
+.design-edition .home-detail>summary{padding:22px 0}
+.design-edition .home-detail-title{font-size:18px;font-family:var(--serif);font-weight:400}
+.design-edition .home-detail-hint{font-size:13px}
+.design-edition .home-detail-content .container{width:100%;max-width:none}
+.design-edition .home-detail-content>section{padding:36px 0}
+.design-edition .food-dish-panel{padding:0;border:0;background:transparent}
+.design-edition .food-dish-head{display:block;padding:14px 0}
+.design-edition .food-dish-head h3{font-size:18px}
+.design-edition .food-dish-head p{font-size:13px}
+.design-edition .food-dish-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.design-edition .food-dish-card{padding:15px;background:var(--paper-2);border:1px solid var(--line);border-radius:3px}
+.design-edition .food-dish-korean{font-size:18px;color:var(--olive-dark)}
+.design-edition .food-dish-card h4{font-size:13px;margin:5px 0;font-weight:400}
+.design-edition .food-dish-card p{font-size:13px;line-height:1.8;margin:0}
+.design-edition .food-phrase-panel{background:#faf1ee;padding:18px;border:1px solid #efdfd8;border-radius:4px;margin-top:18px}
+.design-edition .food-phrase-panel p,.design-edition .food-dish-footnote{font-size:12px;line-height:1.85}
+.design-edition .food-phrase-grid{grid-template-columns:1fr;gap:10px}
+.design-edition .food-phrase{display:flex;flex-wrap:wrap;justify-content:space-between;gap:5px;padding:6px 0}
+.design-edition .food-phrase strong,.design-edition .food-phrase span{font-size:13px}
+.design-edition .food-source-links a,.design-edition .ranking-source-link,.design-edition .travel-source-links a{font-size:12px;line-height:1.7;display:inline-block;min-height:44px;padding-block:10px}
+.design-edition .ranking-method{background:#e8ede6;padding:18px;border:1px solid #d7dfd3;margin-top:18px;border-radius:4px}
+.design-edition .ranking-method p{font-size:13px;line-height:1.85}
+.design-edition .editorial-small-details{border-top:1px solid var(--line);margin:14px 0;font-size:13px;line-height:1.8}
+.design-edition .editorial-small-details>summary{cursor:pointer;min-height:44px;padding:12px 0;color:var(--muted);font-size:13px}
+.design-edition .editorial-planner-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;align-items:start}
+.design-edition .planner-heading,.design-edition .planner-result{grid-column:1/-1}
+.design-edition .planner-heading{display:block;margin:0}
+.design-edition .planner-heading .section-intro{max-width:800px;margin-top:14px}
+.design-edition .planner-shell{padding:24px;background:var(--paper);border:1px solid var(--line);border-radius:4px;min-width:0}
+.design-edition .planner-input-grid{grid-template-columns:1fr 1fr;gap:20px}
+.design-edition .planner-interest-set{grid-column:1/-1}
+.design-edition .planner-interest-grid{grid-template-columns:1fr;gap:8px}
+.design-edition .planner-interest-option{padding:9px 0;border:0;background:none;border-radius:0;font-size:14px}
+.design-edition .planner-days-field,.design-edition .planner-interest-set legend{font-size:14px}
+.design-edition .planner-days-field select{font-size:16px}
+.design-edition .planner-actions{display:flex;flex-direction:column;align-items:stretch;margin-top:22px}
+.design-edition .planner-actions .button{justify-content:center}
+.design-edition .planner-privacy,.design-edition .planner-status{font-size:12px;line-height:1.8}
+.design-edition .arrival-guide{padding:20px;margin:0 0 18px;background:var(--white);border:1px solid var(--line);border-radius:4px}
+.design-edition .arrival-guide-head{display:block;margin-bottom:14px}
+.design-edition .arrival-guide-head h3{font-size:21px}
+.design-edition .arrival-guide-head p{font-size:13px;line-height:1.8;margin-top:10px}
+.design-edition .arrival-kicker{font-size:10px}
+.design-edition .arrival-option-grid{grid-template-columns:1fr 1fr;gap:10px}
+.design-edition .arrival-option{padding:14px;background:var(--paper-2);border:1px solid var(--line)}
+.design-edition .arrival-option h4{font-size:15px}
+.design-edition .arrival-option p,.design-edition .arrival-option li{font-size:12px;line-height:1.8}
+.design-edition .arrival-option a{font-size:12px}
+.design-edition .arrival-guide-note{font-size:12px}
+.design-edition .travel-practical-card{padding:20px;border:1px solid var(--line);border-radius:4px;background:var(--white)}
+.design-edition .travel-practical-card h3{font-size:21px}
+.design-edition .travel-practical-card p,.design-edition .pass-estimator-note{font-size:13px;line-height:1.8}
+.design-edition .pass-options{grid-template-columns:repeat(3,minmax(0,1fr))}
+.design-edition .promise-grid{display:block}
+.design-edition .promise-side{text-align:center}
+.design-edition .promise-side>p:not(.section-kicker){display:none}
+.design-edition .promise-main>h2{font-size:32px;text-align:center;max-width:600px;margin:0 auto 20px;line-height:1.65}
+.design-edition .promise-main>p{max-width:760px;margin:0 auto 22px;text-align:center;font-size:14px;line-height:1.9}
+.design-edition .promise-points{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:28px 0}
+.design-edition .promise-point{background:var(--paper-2);padding:22px;border:1px solid var(--line);display:flex;align-items:flex-start;font-size:13px;line-height:1.9}
+.design-edition .promise-point>span:first-child{color:var(--terra);font-family:var(--serif);font-size:18px}
+.design-edition .editorial-context-note{font-size:13px;line-height:1.9;max-width:760px;margin:16px auto}
+.design-edition .official-section{background:var(--paper-2);border:1px solid var(--line);border-radius:4px;padding:28px!important}
+.design-edition .official-heading{display:block}
+.design-edition .official-heading h2{font-size:24px}
+.design-edition .official-heading>p{font-size:13px;line-height:1.8;max-width:800px}
+.design-edition .official-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.design-edition .official-card{padding:15px;background:var(--paper);border:1px solid var(--line);border-radius:2px}
+.design-edition .official-card h3{font-family:var(--sans);font-size:14px;font-weight:400;line-height:1.7}
+.design-edition .official-card p{font-size:12px;line-height:1.8}
+.design-edition .official-source,.design-edition .official-card-link{font-size:10px;line-height:1.8}
+.design-edition .compact-footer{margin-top:40px;padding:30px 0 20px}
+.design-edition .compact-footer .footer-bar a{font-size:13px}
+.design-edition .compact-footer .footer-copy{font-size:11px}
+@media(min-width:1000px){
+ .design-edition #panel-food-data,.design-edition #panel-beauty-ranking{grid-column:auto;border-top:0}
+ .design-edition details[data-editorial-open][open]>summary{display:none}
+ .design-edition details[data-editorial-open][open]>.home-detail-content{border-top:0}
+ .design-edition #food-data .section-heading,.design-edition #beauty-ranking .section-heading{display:block}
+ .design-edition #food-data .section-intro,.design-edition #beauty-ranking .section-intro{margin-top:16px}
+ .design-edition #panel-planner{margin-top:32px;padding-top:10px}
+ .design-edition #panel-about{border-top:0;padding-top:26px}
+}
+@media(min-width:1200px){
+ .design-edition .main-nav{display:flex!important;position:static;flex-direction:row;max-height:none;overflow:visible;padding:0;background:none;border:0;box-shadow:none;gap:20px;flex:1;justify-content:flex-end}
+ .design-edition .menu-toggle{display:none!important}
+ .design-edition .nav-actions{flex-shrink:0}
+}
+@media(max-width:1199px){
+ .design-edition .main-nav a{font-size:16px}
+ .design-edition .hero-grid{gap:32px}
+ .design-edition .hero h1{font-size:40px}
+ .design-edition .container{width:calc(100% - 48px)}
+}
+@media(max-width:999px){
+ .design-edition .home-more>.container{display:block}
+ .design-edition .hero-grid{grid-template-columns:1fr 1fr}
+ .design-edition .hero h1{font-size:34px}
+ .design-edition .story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .design-edition .editorial-planner-grid{grid-template-columns:1fr}
+ .design-edition .planner-result,.design-edition .planner-heading{grid-column:auto}
+ .design-edition .official-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .design-edition .container{width:calc(100% - 40px)}
+ .design-edition .nav-shell{min-height:66px;gap:8px}
+ .design-edition .brand-name{font-size:15px;letter-spacing:.06em}
+ .design-edition .brand-symbol{width:23px;height:27px;font-size:19px}
+ .design-edition .brand-name small{display:none}
+ .design-edition .nav-actions{gap:0}
+ .design-edition .hero{padding:30px 0}
+ .design-edition .hero-grid{grid-template-columns:1fr;gap:26px}
+ .design-edition .hero h1{font-size:35px;line-height:1.5;margin:18px 0}
+ .design-edition .hero-lede{font-size:15px;line-height:1.9}
+ .design-edition .hero-actions{gap:8px}
+ .design-edition .button{font-size:13px;padding:11px 13px}
+ .design-edition .hero-meta{display:none}
+ .design-edition .hero-visual{aspect-ratio:1.45;padding:9px}
+ html .design-edition .stories-section{padding:30px 0}
+ .design-edition .section-heading{display:block}
+ .design-edition .section-title{font-size:26px}
+ .design-edition .section-intro{font-size:14px;margin-top:12px}
+ .design-edition .story-tools{flex-direction:column;align-items:stretch}
+ .design-edition .filter-button{padding:7px 11px;font-size:12px}
+ .design-edition .search-box{width:100%;max-width:none}
+ .design-edition .story-grid{grid-template-columns:1fr;gap:20px}
+ .design-edition .story-card-link{padding:18px 18px 0}
+ .design-edition .card-image-wrap{aspect-ratio:1.9;margin-bottom:17px}
+ .design-edition .card-category{font-size:10px!important}
+ .design-edition .card-content{min-height:0}
+ html .design-edition .card-content h3{font-size:21px;line-height:1.6}
+ html .design-edition .card-content p{font-size:15px;line-height:1.8}
+ .design-edition .card-arrow{font-size:14px}
+ .design-edition .story-save-button{font-size:13px}
+ .design-edition .home-detail-content>section{padding:24px 0}
+ .design-edition .home-detail-content .container{width:100%}
+ .design-edition .home-detail-title{font-size:18px}
+ .design-edition .food-dish-card p,.design-edition .food-phrase-panel p,.design-edition .ranking-method p{font-size:14px}
+ .design-edition .food-dish-card{padding:12px}
+ .design-edition .arrival-option-grid{grid-template-columns:1fr}
+ .design-edition .arrival-option p,.design-edition .arrival-option li,.design-edition .arrival-option a{font-size:14px}
+ .design-edition .planner-shell,.design-edition .arrival-guide,.design-edition .travel-practical-card{padding:16px}
+ .design-edition .planner-input-grid{grid-template-columns:1fr}
+ .design-edition .planner-days-field,.design-edition .planner-interest-option{font-size:15px}
+ .design-edition .planner-interest-set{grid-column:auto}
+ .design-edition .promise-main>h2{font-size:27px}
+ .design-edition .promise-points{grid-template-columns:1fr;gap:12px}
+ .design-edition .promise-point{font-size:14px;padding:18px}
+ .design-edition .official-grid{grid-template-columns:1fr}
+ .design-edition .official-section{padding:18px!important}
+ .design-edition .official-card p{font-size:14px}
+ .design-edition .official-card h3{font-size:16px}
+ .design-edition .official-source,.design-edition .official-card-link{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+@media print{
+ .design-edition .home-more>.container,.design-edition .editorial-planner-grid{display:block!important}
+ body.plan-print-mode .editorial-travel-rail{display:none!important}
+ body.plan-print-mode .planner-shell{padding:0;border:0}
+ body.plan-print-mode .planner-shell>.editorial-small-details,body.plan-print-mode .planner-status{display:none!important}
+ body.plan-print-mode #plannerResult{display:block!important}
+}
+/* Quiet paper spreads, rather than the previous dark editorial banner. */
+.design-edition .promise-section{background:var(--paper);color:var(--ink);overflow:visible}
+.design-edition .promise-section::before,.design-edition .promise-section::after{display:none}
+.design-edition .promise-main>p,.design-edition .promise-point,.design-edition .promise-point>span:last-child,.design-edition .promise-section>.editorial-context-note{color:var(--muted)}
+.design-edition .promise-point>span:last-child{font-family:var(--sans);font-size:13px}
+.design-edition .promise-side .section-kicker{color:var(--terra)}
+.design-edition .food-data-section,.design-edition .ranking-section{background:transparent}
+.design-edition .pass-estimator-note{font-size:13px!important;line-height:1.85!important}
+.design-edition .arrival-option small,.design-edition .arrival-note,.design-edition .arrival-lookup,.design-edition .arrival-links a{font-size:13px;line-height:1.8}
+.design-edition .arrival-option .editorial-small-details{margin:10px 0 0}
+.design-edition .arrival-option .editorial-small-details summary{font-size:12px;padding:9px 0}
+.design-edition .travel-practical-kicker,.design-edition .arrival-option-label{font-size:10px;letter-spacing:.08em}
+.design-edition .pass-estimator-field{font-size:13px}
+.design-edition .pass-estimator-field select,.design-edition .pass-estimator-field input{font-size:16px}
+.design-edition .editorial-calculator-limit{font-size:12px!important;color:var(--muted);line-height:1.8}
+.design-edition .editorial-travel-rail .travel-practical-links a{display:block;font-size:13px;line-height:1.8;padding:10px 0}
+@media(max-width:380px){
+ .design-edition .nav-shell{gap:6px}
+ .design-edition .brand{gap:7px;min-width:0}
+ .design-edition .brand-name{font-size:13.5px;letter-spacing:.035em}
+ .design-edition .brand-symbol{width:20px;height:26px;flex-shrink:0}
+}
+.design-edition .editorial-help-strip{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;background:#e8ede6;border:1px solid #d7dfd3;border-radius:4px;padding:24px;margin:8px 0 30px}
+.design-edition .editorial-help-strip h2{font-size:22px;line-height:1.65;margin:0 0 10px}
+.design-edition .editorial-help-strip p:not(.section-kicker){font-size:13px;margin:0;color:var(--ink-soft)}
+.design-edition .editorial-help-links{display:flex;flex-wrap:wrap;gap:8px}
+.design-edition .editorial-help-links a{font-size:12px;padding:10px 13px;min-height:44px;background:var(--paper);border:1px solid var(--line);border-radius:3px;display:flex;align-items:center;gap:8px}
+.design-edition .editorial-help-links a:last-child{background:transparent;border:0;color:var(--olive-dark)}
+.design-edition .editorial-help-links strong{font-size:17px;color:var(--terra)}
+@media(max-width:700px){.design-edition .editorial-help-strip{grid-template-columns:1fr;padding:18px;margin-top:20px}.design-edition .editorial-help-strip h2{font-size:21px}.design-edition .editorial-help-links a{font-size:13px}}

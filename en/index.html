@@ -16,14 +16,14 @@
 <meta content="SEOUL NOTE | A source-led guide to Korean culture and travel" property="og:title"/>
 <meta content="SEOUL NOTE is a source-linked guide to Korean culture, language, food, beauty and practical travel information in Japanese and English." property="og:description"/>
 <meta content="https://seoul-note.com/en/" property="og:url"/>
-<meta content="https://seoul-note.com/assets/hero-seoul.jpg" property="og:image"/>
+<meta content="https://seoul-note.com/assets/hero-refined-traveler.jpg" property="og:image"/>
 <meta content="AI-generated illustrative artwork inspired by travel in Korea; not a documentary photograph of a real place." property="og:image:alt"/>
-<meta content="1408" property="og:image:width"/>
-<meta content="768" property="og:image:height"/>
+<meta content="1264" property="og:image:width"/>
+<meta content="848" property="og:image:height"/>
 <meta content="en_US" property="og:locale"/>
 <meta content="SEOUL NOTE | A source-led guide to Korean culture and travel" name="twitter:title"/>
 <meta content="SEOUL NOTE is a source-linked guide to Korean culture, language, food, beauty and practical travel information in Japanese and English." name="twitter:description"/>
-<meta content="https://seoul-note.com/assets/hero-seoul.jpg" name="twitter:image"/>
+<meta content="https://seoul-note.com/assets/hero-refined-traveler.jpg" name="twitter:image"/>
 <meta content="AI-generated illustrative artwork inspired by travel in Korea; not a documentary photograph of a real place." name="twitter:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <title>SEOUL NOTE | A source-led guide to Korean culture and travel</title>
@@ -119,10 +119,6 @@
       color: var(--ink); background: transparent; cursor: pointer; transition: .2s ease;
     }
     .icon-button:hover { border-color: var(--line); background: rgba(255,255,255,.55); }
-    .saved-button { width: auto; padding: 0 10px; border-radius: 24px; font-size: 17.1px; }
-    .saved-button .saved-count { min-width: 18px; height: 18px; padding-inline: 4px; display: grid; place-items: center; border-radius: 50%; background: var(--paper-2); font-size: 16.5px; }
-    .saved-button[aria-pressed="true"] { color: white; background: var(--olive-dark); border-color: var(--olive-dark); }
-    .saved-button[aria-pressed="true"] .saved-count { color: var(--ink); background: var(--paper); }
     .menu-toggle { display: none; }
     .icon-button svg, .button svg, .text-link svg, .search-box svg, .card-arrow svg, .category-arrow svg { width: 16px; height: 16px; flex: 0 0 auto; }
 
@@ -448,8 +444,6 @@
       .main-nav a:last-child { border-bottom: 0; }
       .main-nav a::after { display: none; }
       .menu-toggle { display: inline-flex; }
-      .saved-button { min-width: 40px; width: 40px; padding: 0; }
-      .saved-button .saved-label { display: none; }
       .hero { padding-top: 28px; }
       .hero-grid { grid-template-columns: 1fr; gap: 22px; }
       .hero-copy { padding: 27px 0 10px; }
@@ -691,8 +685,6 @@
       .main-nav a:last-child { border-bottom: 0; }
       .main-nav a::after { display: none; }
       .menu-toggle { display: inline-flex; }
-      .saved-button { min-width: 40px; width: 40px; padding: 0; }
-      .saved-button .saved-label { display: none; }
       .hero-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
       .hero-copy { padding: 24px 0 0; }
       .hero h1 { font-size: clamp(50px,7vw,66px); }
@@ -741,7 +733,6 @@
       .brand-name small { display: none; }
       .nav-actions { gap: 0; }
       .nav-actions .icon-button { min-width: 35px; min-height: 35px; }
-      .saved-button { min-width: 35px; width: 35px; }
       .travel-destination-row { grid-template-columns: 24px minmax(0,1fr) 72px 52px; gap: 5px; }
       .travel-place-yoy { min-width: 52px; }
     }
@@ -772,8 +763,6 @@
       html[lang="en"] .main-nav a:last-child { border-bottom: 0; }
       html[lang="en"] .main-nav a::after { display: none; }
       html[lang="en"] .menu-toggle { display: inline-flex; }
-      html[lang="en"] .saved-button { min-width: 40px; width: 40px; padding: 0; }
-      html[lang="en"] .saved-button .saved-label { display: none; }
     }
     @media (max-width: 760px) {
       html[lang="en"] .story-tools { min-width: 0; }
@@ -1021,10 +1010,10 @@
     .story-card { display: flex; flex-direction: column; }
     .story-card-link { height: auto; flex: 1 1 auto; cursor: pointer; }
     .story-card-link:focus-visible { outline: 2px solid var(--terra); outline-offset: -3px; }
-    .story-card-actions { display: flex; justify-content: flex-end; padding: 0 16px 14px; }
-    .story-save-button { min-height: 32px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 18px; color: var(--ink-soft); background: transparent; font-size: 16.5px; cursor: pointer; }
-    .story-save-button:hover { border-color: var(--terra); color: var(--ink); background: var(--paper); }
-    .story-save-button[aria-pressed="true"] { border-color: var(--olive-dark); color: white; background: var(--olive-dark); }
+
+
+
+
     .footer-editorial-note { padding: 20px 0 19px; color: rgba(255,255,255,.62); font-size: 16.5px; line-height: 1.9; }
     .note-arrow { width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; color: var(--ink); background: transparent; }
     .note-arrow:hover { border-color: var(--terra); background: var(--white); }
@@ -1053,7 +1042,7 @@
     .footer-main { padding-bottom: 30px; }
     .hero-meta { margin-top: 34px; }
     .card-content { padding: 18px 18px 17px; }
-    .filter-button, .story-save-button, .planner-tool-button { min-height: 42px; }
+    .filter-button, .planner-tool-button { min-height: 42px; }
     .search-box { min-height: 46px; }
     .search-box input { font-size: 17.1px; }
     .planner-days-field select, .planner-day-card select, .planner-day-card input[type="text"] { min-height: 46px; font-size: 17.1px; }
@@ -1152,8 +1141,6 @@
       .main-nav a::after { display: none; }
       .main-nav a.language-switch { margin-left: 0; padding-left: 0; border-left: 0; }
       .menu-toggle { display: inline-flex; }
-      .saved-button { min-width: 42px; width: 42px; padding: 0; }
-      .saved-button .saved-label { display: none; }
     }
     /* Small-screen finishing pass: keep hero labels tidy and the English headline intact. */
     @media (max-width: 520px) {
@@ -1220,8 +1207,8 @@ html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3, html[lang="ja"] h4 {
 .card-content { padding: 22px 22px 16px; }
 html .card-content h3 { font-size: 24.0px; line-height: 1.5; }
 .card-category { letter-spacing: .05em; line-height: 1.5; }
-.story-card-actions { padding: 0 22px 18px; }
-.story-save-button { min-height: 44px; }
+
+
 .food-dish-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
 .area-guide-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
 .food-dish-card, .area-guide-card { padding: 22px; }
@@ -1236,7 +1223,7 @@ html .section-intro { max-width: 36em; }
 @media(max-width:760px) {
  .filter-list { flex-wrap: wrap; overflow: visible; }
  .card-content { padding: 19px 18px 14px; }
- .story-card-actions { padding: 0 18px 16px; }
+
  .area-guide-grid { grid-template-columns: 1fr; }
 }
 @media(max-width:600px) {
@@ -1322,8 +1309,6 @@ main [id] {scroll-margin-top:calc(var(--sticky-header-height) + 16px);}
  .nav-shell .brand-name small {display:none;}
  .nav-actions {flex:0 0 auto;gap:0;}
  .nav-actions .icon-button {flex:0 0 44px;width:44px;min-width:44px;height:44px;min-height:44px;padding:0;}
- .nav-actions .saved-label {display:none;}
- .nav-actions .saved-count {font-size:14px;}
 }
 
 /* Short homepage: compact guide directory, optional detailed reference panels. */
@@ -1365,8 +1350,8 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
  .card-category {font-size:13px!important;line-height:1.45;letter-spacing:.02em;margin-bottom:5px;}
  html .card-content p {font-size:16px;line-height:1.7;margin:7px 0;}
  .card-arrow {padding-top:3px;font-size:15px;}
- .story-card-actions {padding:8px 14px 12px;}
- .story-save-button {font-size:15px;min-height:44px;}
+
+
  .home-quick-actions {gap:8px;}
  .home-quick-actions a,.home-quick-actions button {flex:1 1 140px;text-align:center;}
  .home-more {padding:22px 0 32px;}
@@ -1378,11 +1363,6 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
  .home-detail-content .promise-section {padding:22px 14px;}
 }
 
-.saved-sharing {margin:12px 0;font-size:15px;line-height:1.75;}
-.saved-sharing summary {cursor:pointer;min-height:44px;padding:10px 0;}
-.saved-sharing button {font:inherit;min-height:44px;padding:8px 12px;border:1px solid var(--line);background:var(--white);color:var(--ink);}
-.saved-sharing label {display:block;} .saved-sharing [hidden] {display:none!important;}
-.saved-sharing input {display:block;width:100%;min-height:44px;font-size:16px;margin:8px 0;}
 .planner-days-field input[type="date"] {min-height:44px;min-width:0;max-width:100%;width:100%;font:inherit;font-size:16px;padding:8px;border:1px solid var(--line);background:var(--white);color:var(--ink);box-sizing:border-box;}
 .planner-related {padding-top:10px;}
 .planner-related a {display:inline-block;min-height:44px;padding:8px 0;font-size:17px;}
@@ -1424,10 +1404,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
 <button aria-label="Search stories" class="icon-button" id="searchToggle" type="button">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg>
 </button>
-<button aria-pressed="false" class="icon-button saved-button" id="savedToggle" type="button">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.7-5.5 3.7z"></path></svg>
-<span class="saved-label">Saved</span><span class="saved-count" id="savedCount">0</span>
-</button>
+
 <button aria-controls="mainNav" aria-expanded="false" aria-label="Open menu" class="icon-button menu-toggle" id="menuToggle" type="button">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 8h16M4 16h16"></path></svg>
 </button>
@@ -1438,7 +1415,6 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
 <section aria-labelledby="heroTitle" class="hero" id="top">
 <div class="container hero-grid">
 <div class="hero-copy">
-<div class="eyebrow"><span aria-hidden="true" class="dot"></span><span>KOREA, AT YOUR OWN PACE</span></div>
 <h1 id="heroTitle">Understand Korea.<br/><em>Enjoy it your way.</em></h1>
 <p class="hero-lede">Explore Korean culture, language, food, beauty and practical travel information through clear, source-linked guides for an international audience.</p>
 <div class="hero-actions">
@@ -1450,7 +1426,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
 <div class="hero-meta"><span>CULTURE · LANGUAGE · FOOD · BEAUTY · TRAVEL</span><span>An editorial guide to Korea</span></div>
 </div>
 <div class="hero-visual">
-<img alt="Editorial illustration: a traveler exploring a hanok-style lane. Not a documentary photograph." fetchpriority="high" height="768" src="../assets/hero-seoul.jpg" width="1408"/>
+<img alt="Editorial AI illustration: a traveler in an ivory knit top and jeans exploring a hanok-style street. Not a documentary photograph of a real person or location." fetchpriority="high" height="848" src="../assets/hero-refined-traveler.jpg" width="1264"/>
 </div>
 </div>
 <div class="container hero-bottom">
@@ -1464,34 +1440,34 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
 <div class="container">
 <div class="section-heading"><div><p class="section-kicker">THE JOURNAL / SOURCE-LINKED GUIDES</p><h2 class="section-title" id="storiesTitle">Nine guides to understanding Korea.</h2></div><p class="section-intro">Food culture, Hangeul, cosmetics labels, holidays, neighbourhoods and travel basics—with sources and clear limits on what each guide can tell you.</p></div>
 <div class="story-tools"><div aria-label="Guide categories" class="filter-list" role="group"><button aria-pressed="true" class="filter-button" data-filter="all" type="button">All</button><button aria-pressed="false" class="filter-button" data-filter="culture" type="button">Culture</button><button aria-pressed="false" class="filter-button" data-filter="language" type="button">Korean</button><button aria-pressed="false" class="filter-button" data-filter="food" type="button">Food</button><button aria-pressed="false" class="filter-button" data-filter="beauty" type="button">Beauty</button><button aria-pressed="false" class="filter-button" data-filter="travel" type="button">Travel</button></div><label class="search-box"><span class="sr-only">Search guides by keyword</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input autocomplete="off" id="articleSearch" placeholder="Search by keyword" type="search"/></label></div>
-<details class="saved-sharing"><summary>Saved guides · sharing &amp; storage</summary><p>Saved guides and checklist ticks stay in this browser only; clearing site data removes them. A shared URL contains guide IDs only, not your trip draft. Search covers the nine guide cards on this page, not the full articles.</p><button id="shareSaved" type="button">Create saved-guide link</button><button hidden="" id="importShared" type="button">Save shared guides here</button><label hidden="" id="shareLinkLabel">Share link (select to copy)<input id="shareLink" readonly="" type="text"/></label><p aria-live="polite" id="shareStatus" role="status"></p></details><p aria-live="polite" class="results-line" id="resultsMessage">Showing 9 guides</p>
+<p aria-live="polite" class="results-line" id="resultsMessage">Showing 9 guides</p>
 <div class="story-grid" id="storyGrid">
-<article class="story-card" data-article-id="hangul-signs" data-category="language" data-keywords="Hangeul Hangul Korean alphabet station sign entrance exit restroom language 역 입구 출구 화장실">
-<a class="story-card-link" href="guides/hangul-signs.html"><div class="editorial-card-index"><span class="card-number">01</span><span class="card-category">LANGUAGE · HANGEUL</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese traveler looking for wayfinding cues in a subway concourse; not a real station." height="768" loading="lazy" src="../assets/guide-hangeul-signs.jpg" width="1376"/></span><div class="card-content"><h3>Hangeul basics and useful Korean signs.</h3><p>Start with words such as 역, 입구 and 출구 that appear around town.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="hangul-signs" type="button">Save guide</button></div>
+<article class="story-card" data-category="language" data-keywords="Hangeul Hangul Korean alphabet station sign entrance exit restroom language 역 입구 출구 화장실">
+<a class="story-card-link" href="guides/hangul-signs.html"><div class="editorial-card-index"><span class="card-number">01</span><span class="card-category">LANGUAGE · HANGEUL</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese traveler looking for wayfinding cues in a subway concourse; not a real station." height="768" loading="lazy" src="../assets/guide-hangeul-signs.jpg" width="1376"/></span><div class="card-content"><h3>Hangeul basics and useful Korean signs.</h3><p>Start with words such as 역, 입구 and 출구 that appear around town.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
-<article class="story-card" data-article-id="korean-meal-culture" data-category="food" data-keywords="Korean food culture table banchan 반찬 namul 나물 ssam 쌈 allergy">
-<a class="story-card-link" href="guides/korean-meal-culture.html"><div class="editorial-card-index"><span class="card-number">02</span><span class="card-category">FOOD · TABLE CULTURE</span></div><span class="card-image-wrap"><img alt="Editorial illustration: a Korean-style table with side dishes. Not a documentary photograph." height="768" loading="lazy" src="../assets/guide-korean-meal-culture.jpg" width="1408"/></span><div class="card-content"><h3>A guide to banchan, namul and ssam.</h3><p>Common food terms, explained without treating one meal format as universal.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="korean-meal-culture" type="button">Save guide</button></div>
+<article class="story-card" data-category="food" data-keywords="Korean food culture table banchan 반찬 namul 나물 ssam 쌈 allergy">
+<a class="story-card-link" href="guides/korean-meal-culture.html"><div class="editorial-card-index"><span class="card-number">02</span><span class="card-category">FOOD · TABLE CULTURE</span></div><span class="card-image-wrap"><img alt="Editorial illustration: a Korean-style table with side dishes. Not a documentary photograph." height="768" loading="lazy" src="../assets/guide-korean-meal-culture.jpg" width="1408"/></span><div class="card-content"><h3>A guide to banchan, namul and ssam.</h3><p>Common food terms, explained without treating one meal format as universal.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
-<article class="story-card" data-article-id="kimjang" data-category="culture" data-keywords="Kimjang 김장 kimchi UNESCO seasonal winter sharing culture">
-<a class="story-card-link" href="guides/kimjang.html"><div class="editorial-card-index"><span class="card-number">03</span><span class="card-category">CULTURE · KIMJANG</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese visitor observing Kimjang preparation; not a real family or event." height="768" loading="lazy" src="../assets/guide-kimjang.jpg" width="1376"/></span><div class="card-content"><h3>Kimjang: the seasonal practice of making and sharing kimchi.</h3><p>UNESCO’s description, including differences across regions and families.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="kimjang" type="button">Save guide</button></div>
+<article class="story-card" data-category="culture" data-keywords="Kimjang 김장 kimchi UNESCO seasonal winter sharing culture">
+<a class="story-card-link" href="guides/kimjang.html"><div class="editorial-card-index"><span class="card-number">03</span><span class="card-category">CULTURE · KIMJANG</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese visitor observing Kimjang preparation; not a real family or event." height="768" loading="lazy" src="../assets/guide-kimjang.jpg" width="1376"/></span><div class="card-content"><h3>Kimjang: the seasonal practice of making and sharing kimchi.</h3><p>UNESCO’s description, including differences across regions and families.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
-<article class="story-card" data-article-id="kbeauty-labels" data-category="beauty" data-keywords="K-Beauty Korean cosmetics product label ingredients expiry MFDS toner essence ampoule serum sunscreen">
-<a class="story-card-link" href="guides/kbeauty-labels.html"><div class="editorial-card-index"><span class="card-number">04</span><span class="card-category">BEAUTY · LABEL READING</span></div><span class="card-image-wrap"><img alt="Editorial illustration: skincare containers on a shelf. Not a documentary photograph." height="768" loading="lazy" src="../assets/guide-kbeauty-labels.jpg" width="1408"/></span><div class="card-content"><h3>How to read Korean cosmetics labels.</h3><p>A shopper’s checklist, not a product ranking or efficacy recommendation.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="kbeauty-labels" type="button">Save guide</button></div>
+<article class="story-card" data-category="beauty" data-keywords="K-Beauty Korean cosmetics product label ingredients expiry MFDS toner essence ampoule serum sunscreen">
+<a class="story-card-link" href="guides/kbeauty-labels.html"><div class="editorial-card-index"><span class="card-number">04</span><span class="card-category">BEAUTY · LABEL READING</span></div><span class="card-image-wrap"><img alt="Editorial illustration: skincare containers on a shelf. Not a documentary photograph." height="768" loading="lazy" src="../assets/guide-kbeauty-labels.jpg" width="1408"/></span><div class="card-content"><h3>How to read Korean cosmetics labels.</h3><p>A shopper’s checklist, not a product ranking or efficacy recommendation.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
-<article class="story-card" data-article-id="seoul-neighborhoods" data-category="travel" data-keywords="Seoul travel neighbourhood Myeongdong Hongdae Seongsu Insadong Gwangjang Market 명동 홍대 성수 인사동">
-<a class="story-card-link" href="guides/seoul-neighborhoods.html"><div class="editorial-card-index"><span class="card-number">05</span><span class="card-category">TRAVEL · SEOUL AREAS</span></div><span class="card-image-wrap"><img alt="Editorial illustration: a traveler in a Seoul-style café. Not a documentary photograph." height="768" loading="lazy" src="../assets/guide-seoul-neighborhoods.jpg" width="1408"/></span><div class="card-content"><h3>Choosing a Seoul neighbourhood by interest.</h3><p>A starting point for planning—not a ranking of the “best” areas.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="seoul-neighborhoods" type="button">Save guide</button></div>
+<article class="story-card" data-category="travel" data-keywords="Seoul travel neighbourhood Myeongdong Hongdae Seongsu Insadong Gwangjang Market 명동 홍대 성수 인사동">
+<a class="story-card-link" href="guides/seoul-neighborhoods.html"><div class="editorial-card-index"><span class="card-number">05</span><span class="card-category">TRAVEL · SEOUL AREAS</span></div><span class="card-image-wrap"><img alt="Editorial illustration: a traveler in a Seoul-style café. Not a documentary photograph." height="768" loading="lazy" src="../assets/guide-seoul-neighborhoods.jpg" width="1408"/></span><div class="card-content"><h3>Choosing a Seoul neighbourhood by interest.</h3><p>A starting point for planning—not a ranking of the “best” areas.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
-<article class="story-card" data-article-id="korean-holidays" data-category="culture" data-keywords="Korean holidays Seollal 설날 Chuseok 추석 Hangeul Day 2026 public holiday">
-<a class="story-card-link" href="guides/korean-holidays.html"><div class="editorial-card-index"><span class="card-number">06</span><span class="card-category">CULTURE · HOLIDAYS</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a traveler planning around Korean holidays; the calendar is not factual date guidance." height="768" loading="lazy" src="../assets/guide-korean-holidays.jpg" width="1376"/></span><div class="card-content"><h3>Seollal, Chuseok and Korea’s holiday calendar.</h3><p>Traditional context, 2026 dates and what to check before a trip.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="korean-holidays" type="button">Save guide</button></div>
+<article class="story-card" data-category="culture" data-keywords="Korean holidays Seollal 설날 Chuseok 추석 Hangeul Day 2026 public holiday">
+<a class="story-card-link" href="guides/korean-holidays.html"><div class="editorial-card-index"><span class="card-number">06</span><span class="card-category">CULTURE · HOLIDAYS</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a traveler planning around Korean holidays; the calendar is not factual date guidance." height="768" loading="lazy" src="../assets/guide-korean-holidays.jpg" width="1376"/></span><div class="card-content"><h3>Seollal, Chuseok and Korea’s holiday calendar.</h3><p>Traditional context, 2026 dates and what to check before a trip.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
-<article class="story-card" data-article-id="tax-refund" data-category="travel" data-keywords="Korea tax refund duty-free VAT shopping tax return eligibility">
-<a class="story-card-link" href="guides/tax-refund.html"><div class="editorial-card-index"><span class="card-number">07</span><span class="card-category">TRAVEL · TAX REFUND</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese traveler checking a shopping receipt in Korea; no real store or transaction is depicted." height="768" loading="lazy" src="../assets/guide-tax-refund.jpg" width="1376"/></span><div class="card-content"><h3>Duty-free or tax refund? Know the difference.</h3><p>A dated summary of Korea’s tourism guidance and shopping checks.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="tax-refund" type="button">Save guide</button></div>
+<article class="story-card" data-category="travel" data-keywords="Korea tax refund duty-free VAT shopping tax return eligibility">
+<a class="story-card-link" href="guides/tax-refund.html"><div class="editorial-card-index"><span class="card-number">07</span><span class="card-category">TRAVEL · TAX REFUND</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese traveler checking a shopping receipt in Korea; no real store or transaction is depicted." height="768" loading="lazy" src="../assets/guide-tax-refund.jpg" width="1376"/></span><div class="card-content"><h3>Duty-free or tax refund? Know the difference.</h3><p>A dated summary of Korea’s tourism guidance and shopping checks.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
-<article class="story-card" data-article-id="korea-arrival" data-category="travel" data-keywords="Korea entry K-ETA e-Arrival Card visa Japanese passport travel arrival">
-<a class="story-card-link" href="guides/korea-arrival.html"><div class="editorial-card-index"><span class="card-number">08</span><span class="card-category">TRAVEL · ENTRY CHECK</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese traveler checking a phone after arriving at an airport; not an actual airport or entry process." height="768" loading="lazy" src="../assets/guide-korea-arrival.jpg" width="1376"/></span><div class="card-content"><h3>K-ETA and the e-Arrival Card are different.</h3><p>A dated 2026 note for short-stay visitors with a Japanese ordinary passport.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="korea-arrival" type="button">Save guide</button></div>
+<article class="story-card" data-category="travel" data-keywords="Korea entry K-ETA e-Arrival Card visa Japanese passport travel arrival">
+<a class="story-card-link" href="guides/korea-arrival.html"><div class="editorial-card-index"><span class="card-number">08</span><span class="card-category">TRAVEL · ENTRY CHECK</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese traveler checking a phone after arriving at an airport; not an actual airport or entry process." height="768" loading="lazy" src="../assets/guide-korea-arrival.jpg" width="1376"/></span><div class="card-content"><h3>K-ETA and the e-Arrival Card are different.</h3><p>A dated 2026 note for short-stay visitors with a Japanese ordinary passport.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
-<article class="story-card" data-article-id="climate-card" data-category="travel" data-keywords="Seoul transport Climate Card climate pass subway bus fare">
-<a class="story-card-link" href="guides/climate-card.html"><div class="editorial-card-index"><span class="card-number">09</span><span class="card-category">TRAVEL · TRANSPORT</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese traveler tapping a generic transit card at a station gate; not a real card or station." height="768" loading="lazy" src="../assets/guide-climate-card.jpg" width="1376"/></span><div class="card-content"><h3>Climate Card short passes and service areas.</h3><p>What visitors should check about routes, exclusions and current rules.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a><div class="story-card-actions"><button aria-pressed="false" class="story-save-button" data-save-card="climate-card" type="button">Save guide</button></div>
+<article class="story-card" data-category="travel" data-keywords="Seoul transport Climate Card climate pass subway bus fare">
+<a class="story-card-link" href="guides/climate-card.html"><div class="editorial-card-index"><span class="card-number">09</span><span class="card-category">TRAVEL · TRANSPORT</span></div><span class="card-image-wrap"><img alt="AI-generated illustration of a Japanese traveler tapping a generic transit card at a station gate; not a real card or station." height="768" loading="lazy" src="../assets/guide-climate-card.jpg" width="1376"/></span><div class="card-content"><h3>Climate Card short passes and service areas.</h3><p>What visitors should check about routes, exclusions and current rules.</p><span class="card-arrow">Read the guide <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></div></a>
 </article>
 </div>
 <div class="empty-state" hidden="" id="emptyState"><strong id="emptyTitle">No guides found.</strong><span id="emptyDescription">Try another keyword or category.</span><br/><button id="resetFilters" type="button">Clear search and filters</button></div>
@@ -1601,7 +1577,7 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
 <label class="pass-card-fee"><input checked="" id="includeClimateCardFee" type="checkbox"/><span>Buying a new physical Climate Card (adds the official KRW 3,000 card price)</span></label>
 </div>
 <p aria-live="polite" class="pass-estimate" id="passEstimate" role="status"></p><p class="editorial-calculator-limit">Estimate only: excludes distance supplements, transfers and out-of-area journeys. Check the coverage notes before buying.</p>
-<details class="editorial-small-details"><summary>Coverage, calculation limits &amp; sources</summary><p class="pass-estimator-note" id="passEstimatorNote">Estimate basis: Seoul City’s adult stored-value subway base fare is KRW 1,550 (effective 28 June 2025). Pass prices and coverage were checked against Seoul City’s short-term-pass notice updated 1 October 2026. Coverage is Seoul-area subways and Seoul-licensed city/village buses; Sinbundang, GTX, out-of-area subways, regional/airport buses and buses licensed elsewhere are excluded. You may exit at Incheon T1/T2 after boarding within the covered area, but you cannot board there with this pass. Validity runs from the first service (4 a.m.) on the start date to the last service on the final date (usually around 4 a.m. the next day); no advance loading. This estimate omits distance surcharges and buses.</p><div class="travel-practical-links"><a href="https://english.seoul.go.kr/policy/transportation/modes-of-transport/subway/" rel="noopener noreferrer" target="_blank">Seoul City · subway fares (English; adult card base fare updated 28 June 2025)</a><a href="https://news.seoul.go.kr/traffic/archives/510651" rel="noopener noreferrer" target="_blank">Seoul City · short-term pass coverage and prices (Korean; updated 1 Oct 2026)</a><a href="https://news.seoul.go.kr/traffic/archives/519012" rel="noopener noreferrer" target="_blank">Seoul City · short-term pass coverage FAQ from 1 Oct (Korean)</a><a href="https://english.seoul.go.kr/smg-steps-up-outreach-ahead-of-climate-pass-launch-on-september-1-encouraging-early-card-conversion/" rel="noopener noreferrer" target="_blank">Seoul City · Climate Pass transition notice (English; Aug 2026)</a><a href="https://www.airportrailroad.com/train/normal/fare" rel="noopener noreferrer" target="_blank">AREX · exact airport station-pair fare (Korean)</a></div></details></article></div><section aria-labelledby="plannerResultTitle" class="planner-result" hidden="" id="plannerResult">
+<details class="editorial-small-details"><summary>Coverage, calculation limits &amp; sources</summary><p class="pass-estimator-note" id="passEstimatorNote">Estimate basis: Seoul City’s adult stored-value subway base fare is KRW 1,550 (effective 28 June 2025). Pass prices and coverage were checked against Seoul City’s short-term-pass notice (page revised 12 October; coverage effective from 1 October), rechecked on 27 October 2026. Coverage is Seoul-area subways and Seoul-licensed city/village buses; Sinbundang, GTX, out-of-area subways, regional/airport buses and buses licensed elsewhere are excluded. You may exit at Incheon T1/T2 after boarding within the covered area, but you cannot board there with this pass. Validity runs from the first service (4 a.m.) on the start date to the last service on the final date (usually around 4 a.m. the next day); no advance loading. This estimate omits distance surcharges and buses.</p><div class="travel-practical-links"><a href="https://english.seoul.go.kr/policy/transportation/modes-of-transport/subway/" rel="noopener noreferrer" target="_blank">Seoul City · subway fares (English; adult card base fare updated 28 June 2025)</a><a href="https://news.seoul.go.kr/traffic/archives/510651" rel="noopener noreferrer" target="_blank">Seoul City · short-term pass coverage and prices (Korean; page revised 12 Oct, coverage from 1 Oct 2026)</a><a href="https://news.seoul.go.kr/traffic/archives/519012" rel="noopener noreferrer" target="_blank">Seoul City · short-term pass coverage FAQ from 1 Oct (Korean)</a><a href="https://english.seoul.go.kr/smg-steps-up-outreach-ahead-of-climate-pass-launch-on-september-1-encouraging-early-card-conversion/" rel="noopener noreferrer" target="_blank">Seoul City · Climate Pass transition notice (English; Aug 2026)</a><a href="https://www.airportrailroad.com/train/normal/fare" rel="noopener noreferrer" target="_blank">AREX · exact airport station-pair fare (Korean)</a></div></details></article></div><section aria-labelledby="plannerResultTitle" class="planner-result" hidden="" id="plannerResult">
 <div class="planner-result-head">
 <div>
 <span class="planner-result-kicker">YOUR EDITABLE TRIP SHEET</span>
@@ -1645,12 +1621,12 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
 <span class="travel-practical-kicker">BEFORE YOU FLY · JAPANESE ORDINARY PASSPORTS · CHECKED 11 OCT 2026</span>
 <h3 id="entryQuickTitle">K-ETA exemption and the entry declaration are separate checks.</h3>
 <ol class="entry-steps">
-<li><strong>1 · K-ETA:</strong> The K-ETA notice of 23 December 2025 extends the temporary exemption for countries and regions already covered through 31 December 2026. VISITKOREA’s country information (page dated 3 April 2023) includes Japan; confirm your passport’s current eligibility on the official K-ETA site before travel. This does not waive visa or permitted-stay requirements.</li>
-<li><strong>2 · e-Arrival Card:</strong> A K-ETA-exempt traveler may still need an entry declaration. Use the official Navigator for your passport and current documents; valid K-ETA holders and certain other groups are exempt.</li>
+<li><strong>1 · K-ETA:</strong> The K-ETA notice of 23 December 2025 extends the temporary exemption for countries and regions already covered through 31 December 2026. VISITKOREA’s country information (page last updated 18 September 2026) includes Japan; confirm your passport’s current eligibility on the official K-ETA site before travel. This does not waive visa or permitted-stay requirements.</li>
+<li><strong>2 · e-Arrival Card:</strong> A K-ETA-exempt traveler may still need an entry declaration. Use the official Navigator for your passport and current documents; valid K-ETA holders and certain other groups are generally exempt. However, a K-ETA holder entering with a visa must submit the declaration.</li>
 <li><strong>3 · If subject:</strong> Submit the free form from three days before arrival (Korean time). Have passport, flight and accommodation details ready.</li>
 </ol>
 <p class="travel-practical-note">Recheck official rules before departure, especially for travel after the temporary K-ETA exemption date. Visa and stay conditions are a separate check.</p>
-<div class="travel-practical-links"><a href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140769" rel="noopener noreferrer" target="_blank">VISITKOREA · Visa &amp; Travel Requirements (English; page dated 3 Apr 2023—verify current rules on official portals)</a><a href="https://www.k-eta.go.kr/portal/board/viewboarddetail.do?bbsSn=299707&amp;locale=EN" rel="noopener noreferrer" target="_blank">K-ETA official · temporary-exemption extension notice (English; 23 Dec 2025)</a><a href="https://www.e-arrivalcard.go.kr/portal/guide/navigator.do?locale=EN" rel="noopener noreferrer" target="_blank">e-Arrival Card · declaration Navigator (English)</a><a href="https://www.e-arrivalcard.go.kr/portal/main/index.do?locale=EN" rel="noopener noreferrer" target="_blank">Official e-Arrival Card portal (English)</a><a href="https://www.visa.go.kr/openPage.do?LANG_TYPE=EN&amp;MENU_ID=10101" rel="noopener noreferrer" target="_blank">Korea Visa Portal (English)</a></div>
+<div class="travel-practical-links"><a href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140769" rel="noopener noreferrer" target="_blank">VISITKOREA · Visa &amp; Travel Requirements (English; last updated 18 Sep 2026; recheck current rules on official portals)</a><a href="https://www.k-eta.go.kr/portal/board/viewboarddetail.do?bbsSn=299707&amp;locale=EN" rel="noopener noreferrer" target="_blank">K-ETA official · temporary-exemption extension notice (English; 23 Dec 2025)</a><a href="https://www.e-arrivalcard.go.kr/portal/guide/navigator.do?locale=EN" rel="noopener noreferrer" target="_blank">e-Arrival Card · declaration Navigator (English)</a><a href="https://www.e-arrivalcard.go.kr/portal/main/index.do?locale=EN" rel="noopener noreferrer" target="_blank">Official e-Arrival Card portal (English)</a><a href="https://www.visa.go.kr/openPage.do?LANG_TYPE=EN&amp;MENU_ID=10101" rel="noopener noreferrer" target="_blank">Korea Visa Portal (English)</a></div>
 </article>
 </div>
 <aside aria-labelledby="travelHelpTitle" class="travel-help-panel" id="travelHelp">
@@ -1789,19 +1765,19 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
 <div class="checklist-content">
 <p class="section-kicker">A LITTLE PREPARATION, MORE ROOM TO ENJOY</p>
 <h2 id="checklistTitle">A checklist for the days before you go.</h2>
-<p class="checklist-intro">Check entry requirements and anything affecting your health with the relevant official source before departure. Your ticks are stored in this browser only.</p>
+<p class="checklist-intro">Check entry requirements and anything affecting your health with the relevant official source before departure. Your checkmarks reset when you reload or leave this page.</p>
 <div class="check-progress"><span>Trip-prep progress</span><span id="checkProgressText">0 / 7</span></div>
 <div aria-hidden="true" class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
 <div class="checklist-items" id="checklistItems">
-<label class="check-item"><input data-check="passport" type="checkbox"/><span>I checked passport validity, visa/K-ETA status and e-Arrival Card requirements with current official sources.</span></label>
-<label class="check-item"><input data-check="booking" type="checkbox"/><span>I confirmed accommodation, transport, reservations and cancellation terms.</span></label>
-<label class="check-item"><input data-check="connectivity" type="checkbox"/><span>I planned mobile connectivity, charging and emergency contacts.</span></label>
-<label class="check-item"><input data-check="emergency" type="checkbox"/><span>I saved 112 (police) and 119 (fire/ambulance) for emergencies, and 1330 for non-emergency tourism information and interpretation.</span></label>
-<label class="check-item"><input data-check="food" type="checkbox"/><span>I wrote down any allergies or dietary needs in a way I can explain clearly.</span></label>
-<label class="check-item"><input data-check="insurance" type="checkbox"/><span>I reviewed my travel-insurance coverage and exclusions.</span></label>
-<label class="check-item"><input data-check="time" type="checkbox"/><span>I left realistic time for getting around, meals and rest.</span></label>
+<label class="check-item"><input autocomplete="off" data-check="passport" type="checkbox"/><span>I checked passport validity, visa/K-ETA status and e-Arrival Card requirements with current official sources.</span></label>
+<label class="check-item"><input autocomplete="off" data-check="booking" type="checkbox"/><span>I confirmed accommodation, transport, reservations and cancellation terms.</span></label>
+<label class="check-item"><input autocomplete="off" data-check="connectivity" type="checkbox"/><span>I planned mobile connectivity, charging and emergency contacts.</span></label>
+<label class="check-item"><input autocomplete="off" data-check="emergency" type="checkbox"/><span>I saved 112 (police) and 119 (fire/ambulance) for emergencies, and 1330 for non-emergency tourism information and interpretation.</span></label>
+<label class="check-item"><input autocomplete="off" data-check="food" type="checkbox"/><span>I wrote down any allergies or dietary needs in a way I can explain clearly.</span></label>
+<label class="check-item"><input autocomplete="off" data-check="insurance" type="checkbox"/><span>I reviewed my travel-insurance coverage and exclusions.</span></label>
+<label class="check-item"><input autocomplete="off" data-check="time" type="checkbox"/><span>I left realistic time for getting around, meals and rest.</span></label>
 </div>
-<div class="checklist-bottom"><small>Saved in this browser only. This is a planning aid, not a booking or submission.</small><button class="reset-checks" id="resetChecks" type="button">Clear checked items</button></div>
+<div class="checklist-bottom"><small>Checkmarks apply only to this page and reset when you reload or leave. Nothing is saved to browser storage.</small><button class="reset-checks" id="resetChecks" type="button">Clear checked items</button></div>
 </div>
 </dialog>
 <script>
@@ -1815,102 +1791,51 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       const emptyState = document.getElementById("emptyState");
       const emptyTitle = document.getElementById("emptyTitle");
       const emptyDescription = document.getElementById("emptyDescription");
-      const savedToggle = document.getElementById("savedToggle");
-      const savedCount = document.getElementById("savedCount");
-      const savedKey = "seoul-note-saved-articles";
-      const checklistKey = "seoul-note-trip-checklist";
       const checklistDialog = document.getElementById("checklistDialog");
       const menuToggle = document.getElementById("menuToggle");
       const mainNav = document.getElementById("mainNav");
       let activeFilter = "all";
-      let onlySaved = false;
-      let savedIds = new Set();
-      const validGuideIds = new Set(cards.map(card => card.dataset.articleId));
-      const requestedGuides = (new URLSearchParams(location.search).get('guides') || '').slice(0,2000).split(',').filter(id=>validGuideIds.has(id));
-      let sharedView = requestedGuides.length ? new Set(requestedGuides) : null;
       let lastTrigger = null;
-
-      try { savedIds = new Set(JSON.parse(localStorage.getItem(savedKey) || "[]")); } catch (_) { savedIds = new Set(); }
-      function updateSaveButtons() {
-        document.querySelectorAll("[data-save-card]").forEach((button) => {
-          const id = button.dataset.saveCard;
-          const saved = savedIds.has(id);
-          button.setAttribute("aria-pressed", String(saved));
-          button.textContent = saved ? (isEnglish ? "Saved · remove" : "保存済み · 解除") : (isEnglish ? "Save guide" : "この記事を保存");
-        });
-        if (savedCount) savedCount.textContent = String(savedIds.size);
-      }
-      function persistSaved() {
-        let stored = true;
-        try { localStorage.setItem(savedKey, JSON.stringify(Array.from(savedIds))); } catch (_) {
-          stored = false;
-          const note = document.getElementById('shareStatus');
-          note.textContent = isEnglish ? 'Browser storage is blocked. These saves will be lost when you leave.' : 'ブラウザーの保存機能が無効です。ページを離れると保存内容は失われます。';
-          document.querySelector('.saved-sharing').open = true;
-        }
-        updateSaveButtons(); return stored;
-      }
+      // Removal only: retire this site's old persisted data; never write new records.
+      try {
+        localStorage.removeItem('seoul-note-saved-articles');
+        localStorage.removeItem('seoul-note-trip-checklist');
+      } catch (_) { /* The site also works when storage is blocked. */ }
       function setFilter(category) {
-        sharedView = null;
         activeFilter = category;
-        filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === category)));
+        filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
         applyFilters();
       }
       function applyFilters() {
         if (!searchInput || !resultMessage || !emptyState) return;
-        const locale = isEnglish ? "en" : "ja";
-        const query = (searchInput.value || "").normalize("NFKC").trim().toLocaleLowerCase(locale);
-        const queryTerms = query.split(/\s+/).filter(Boolean);
+        const locale = isEnglish ? 'en' : 'ja';
+        const terms = searchInput.value.normalize('NFKC').trim().toLocaleLowerCase(locale).split(/\s+/).filter(Boolean);
         let visible = 0;
-        cards.forEach((card) => {
-          const categoryMatch = activeFilter === "all" || card.dataset.category === activeFilter;
-          const savedMatch = sharedView ? sharedView.has(card.dataset.articleId) : (!onlySaved || savedIds.has(card.dataset.articleId));
-          const searchable = (card.textContent + " " + (card.dataset.keywords || "")).normalize("NFKC").toLocaleLowerCase(locale);
-          const show = categoryMatch && savedMatch && queryTerms.every(term => searchable.includes(term));
+        cards.forEach(card => {
+          const searchable = (card.textContent + ' ' + (card.dataset.keywords || '')).normalize('NFKC').toLocaleLowerCase(locale);
+          const show = (activeFilter === 'all' || card.dataset.category === activeFilter) && terms.every(term => searchable.includes(term));
           card.hidden = !show;
-          if (show) visible += 1;
+          if (show) visible++;
         });
         emptyState.hidden = visible > 0;
-        if (visible > 0) resultMessage.textContent = isEnglish ? `Showing ${visible} guide${visible === 1 ? "" : "s"}` : `${visible}件のガイドを表示中`;
-        else {
-          resultMessage.textContent = isEnglish ? "No matching guides" : "該当するガイドはありません";
-          if (onlySaved && savedIds.size === 0) {
-            emptyTitle.textContent = isEnglish ? "No saved guides yet." : "保存した記事はまだありません。";
-            emptyDescription.textContent = isEnglish ? "Use “Save guide” on a card to keep it here in this browser." : "記事カードの「この記事を保存」を押すと、このブラウザーに保存されます。";
-          } else {
-            emptyTitle.textContent = isEnglish ? "No matches." : "見つかりませんでした。";
-            emptyDescription.textContent = isEnglish ? "Try another keyword or category." : "検索語を変えるか、カテゴリーを選び直してください。";
-          }
-        }
-        if (savedToggle) savedToggle.setAttribute("aria-pressed", String(onlySaved));
+        resultMessage.textContent = visible ? (isEnglish ? `Showing ${visible} guide${visible === 1 ? '' : 's'}` : `${visible}件のガイドを表示中`) : (isEnglish ? 'No matching guides' : '該当するガイドはありません');
+        emptyTitle.textContent = isEnglish ? 'No matches.' : '見つかりませんでした。';
+        emptyDescription.textContent = isEnglish ? 'Try another keyword or category.' : '検索語を変えるか、カテゴリーを選び直してください。';
       }
-      filters.forEach((button) => button.addEventListener("click", () => { onlySaved = false; setFilter(button.dataset.filter); }));
-      document.querySelectorAll("[data-jump-filter]").forEach((link) => link.addEventListener("click", (event) => {
+      filters.forEach(button => button.addEventListener('click', () => setFilter(button.dataset.filter)));
+      document.querySelectorAll('[data-jump-filter]').forEach(link => link.addEventListener('click', event => {
         event.preventDefault();
-        const category = link.dataset.jumpFilter;
-        if (filters.some((button) => button.dataset.filter === category)) { onlySaved = false; setFilter(category); }
-        const stories = document.getElementById("stories");
-        if (stories) navigateToSection(stories);
+        if (filters.some(button => button.dataset.filter === link.dataset.jumpFilter)) setFilter(link.dataset.jumpFilter);
+        const target = document.getElementById('stories');
+        if (target) navigateToSection(target);
         setMenuOpen(false);
       }));
-      document.querySelectorAll("[data-save-card]").forEach((button) => button.addEventListener("click", () => {
-        const id = button.dataset.saveCard;
-        if (savedIds.has(id)) savedIds.delete(id); else savedIds.add(id);
-        persistSaved();
-        applyFilters();
-      }));
-      if (searchInput) searchInput.addEventListener("input", applyFilters);
-      const resetFilters = document.getElementById("resetFilters");
-      if (resetFilters) resetFilters.addEventListener("click", () => {
-        if (searchInput) searchInput.value = "";
-        onlySaved = false; setFilter("all"); if (searchInput) searchInput.focus();
-      });
-      if (savedToggle) savedToggle.addEventListener("click", () => {
-        sharedView = null; onlySaved = !onlySaved; activeFilter = "all";
-        filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.filter === "all")));
-        if (searchInput) searchInput.value = "";
-        applyFilters();
-        const stories = document.getElementById("stories"); if (stories) navigateToSection(stories);
+      if (searchInput) searchInput.addEventListener('input', applyFilters);
+      const resetFilters = document.getElementById('resetFilters');
+      if (resetFilters) resetFilters.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        setFilter('all');
+        if (searchInput) searchInput.focus();
       });
       const searchToggle = document.getElementById("searchToggle");
       if (searchToggle) searchToggle.addEventListener("click", () => {
@@ -2014,43 +1939,18 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         checklistDialog.addEventListener("click", (event) => { if (event.target === checklistDialog) checklistDialog.close(); });
         checklistDialog.addEventListener("close", () => { if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus(); });
       }
-      function getChecks() { try { return JSON.parse(localStorage.getItem(checklistKey) || "{}"); } catch (_) { return {}; } }
+      const checks = Array.from(document.querySelectorAll('[data-check]'));
       function updateChecklist() {
-        const inputs = Array.from(document.querySelectorAll("[data-check]")); const saved = getChecks(); let count = 0;
-        inputs.forEach((input) => { input.checked = Boolean(saved[input.dataset.check]); if (input.checked) count += 1; });
-        const progress = document.getElementById("checkProgressText"); const bar = document.getElementById("progressBar");
-        if (progress) progress.textContent = `${count} / ${inputs.length}`;
-        if (bar) bar.style.width = `${inputs.length ? (count / inputs.length) * 100 : 0}%`;
+        const count = checks.filter(input => input.checked).length;
+        const progress = document.getElementById('checkProgressText');
+        const bar = document.getElementById('progressBar');
+        if (progress) progress.textContent = `${count} / ${checks.length}`;
+        if (bar) bar.style.width = `${checks.length ? count / checks.length * 100 : 0}%`;
       }
-      document.querySelectorAll("[data-check]").forEach((input) => input.addEventListener("change", () => {
-        const saved = getChecks(); saved[input.dataset.check] = input.checked;
-        try { localStorage.setItem(checklistKey, JSON.stringify(saved)); } catch (_) { /* Storage may be disabled. */ }
-        updateChecklist();
-      }));
-      const resetChecks = document.getElementById("resetChecks");
-      if (resetChecks) resetChecks.addEventListener("click", () => { try { localStorage.removeItem(checklistKey); } catch (_) {} updateChecklist(); });
-      const shareStatus = document.getElementById('shareStatus');
-      const shareInput = document.getElementById('shareLink');
-      document.getElementById('shareSaved').addEventListener('click', () => {
-        const ids = [...savedIds].filter(id=>validGuideIds.has(id));
-        if (!ids.length) { shareStatus.textContent = isEnglish ? 'Save at least one guide first.' : '先に記事を保存してください。'; return; }
-        const url = new URL(location.href);
-        url.search = ''; url.searchParams.set('guides', ids.join(',')); url.hash = 'stories';
-        shareInput.value = url.href;
-        document.getElementById('shareLinkLabel').hidden = false;
-        shareInput.focus(); shareInput.select();
-        shareStatus.textContent = location.protocol === 'file:' ? (isEnglish ? 'Local preview link: this file URL will not work on another device. Create the link on your published site.' : 'ローカルファイルのURLは別の端末では使えません。公開サイトでリンクを作成してください。') : (isEnglish ? 'Copy this selected link. Recipients can view the list without overwriting their saved guides.' : '選択されたリンクをコピーしてください。相手の保存記事を上書きせずに一覧を表示します。');
-      });
-      document.getElementById('importShared').addEventListener('click', () => {
-        requestedGuides.forEach(id=>savedIds.add(id)); const stored = persistSaved(); applyFilters();
-        if (stored) shareStatus.textContent = isEnglish ? 'Shared guides added to this browser.' : '共有記事をこのブラウザーに追加しました。';
-      });
-      if (sharedView) {
-        document.querySelector('.saved-sharing').open = true;
-        document.getElementById('importShared').hidden = false;
-        shareStatus.textContent = isEnglish ? 'Viewing a shared list. Nothing has been added to your saved guides.' : '共有一覧を表示しています。まだ端末の保存記事には追加されていません。';
-      }
-      updateSaveButtons(); updateChecklist(); applyFilters();
+      checks.forEach(input => { input.checked = false; input.addEventListener('change', updateChecklist); });
+      const resetChecks = document.getElementById('resetChecks');
+      if (resetChecks) resetChecks.addEventListener('click', () => { checks.forEach(input => input.checked = false); updateChecklist(); });
+      updateChecklist(); applyFilters();
     })();
   </script>
 <script>
@@ -2090,8 +1990,8 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
         gwangjang: { label: 'Visit Seoul · traditional-market background (English; published 2015, edited August 2023)', href: 'https://english.visitseoul.net/tours/Seouls-Traditional-Markets/ENN010417' },
         tax: { label: 'KTO · Tax Refund guide (published October 2025)', href: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=489&vcontsId=248765' },
         transit: { label: 'Seoul Metropolitan Government · public transport', href: 'https://english.seoul.go.kr/service/movement/public-transportation/' },
-        climate: { label: 'Seoul Metropolitan Government · Climate Card short-term pass area, prices and validity (Korean; updated 1 Oct 2026)', href: 'https://news.seoul.go.kr/traffic/archives/510651' },
-        climateCoverage: { label: 'Seoul Metropolitan Government · short-term pass coverage FAQ (Korean; updated 1 Oct 2026)', href: 'https://news.seoul.go.kr/traffic/archives/519012' },
+        climate: { label: 'Seoul Metropolitan Government · Climate Card short-term pass area, prices and validity (Korean; page revised 12 Oct, coverage from 1 Oct 2026)', href: 'https://news.seoul.go.kr/traffic/archives/510651' },
+        climateCoverage: { label: 'Seoul Metropolitan Government · short-term pass coverage FAQ (Korean; page revised 12 Oct, coverage from 1 Oct 2026)', href: 'https://news.seoul.go.kr/traffic/archives/519012' },
         airport: { label: 'Seoul Metropolitan Government · airport transport overview (English; fares may be outdated)', href: 'https://english.seoul.go.kr/service/entry/getting-to-seoul-from-incheon-airport/' },
         maps: { label: 'KTO · essential travel apps (28 May 2026)', href: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=1590034' },
         
@@ -2458,7 +2358,12 @@ html .stories-section {padding-top:32px;padding-bottom:24px;}
       const formatWon = value => 'KRW ' + Math.round(value).toLocaleString('en-US');
       const updateEstimate = () => {
         const days = Number(passSelect.value) || 1;
-        const journeys = Math.max(0, Math.min(100, Number.parseInt(journeysInput.value, 10) || 0));
+        const rawJourneys = journeysInput.value.trim();
+        const journeys = Number(rawJourneys);
+        if (!rawJourneys || !Number.isInteger(journeys) || journeys < 0 || journeys > 100) {
+          journeysInput.setAttribute('aria-invalid', 'true'); estimate.textContent = 'Enter a whole number of separate journeys from 0 to 100.'; return;
+        }
+        journeysInput.removeAttribute('aria-invalid');
         const payAsYouGo = journeys * 1550;
         const cardPrice = cardFeeInput.checked ? 3000 : 0;
         const climateTotal = (passPrices[days] || passPrices[1]) + cardPrice;

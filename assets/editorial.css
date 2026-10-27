@@ -44,8 +44,6 @@ html .design-edition .stories-section{padding:48px 0 36px;background:var(--paper
 .design-edition .filter-button[aria-pressed=true]{background:var(--terra);color:white;border-color:var(--terra)}
 .design-edition .search-box{border:1px solid var(--line);background:var(--paper);border-radius:4px;min-height:44px}
 .design-edition .search-box input{font-size:14px}
-.design-edition .saved-sharing{font-size:13px;line-height:1.8;margin:5px 0;max-width:800px}
-.design-edition .saved-sharing summary{font-size:12px;padding:10px 0}
 .design-edition .results-line{font-size:12px;margin:10px 0 20px;color:var(--muted)}
 .design-edition .story-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
 .design-edition .story-card{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:none;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
@@ -60,9 +58,6 @@ html .design-edition .stories-section{padding:48px 0 36px;background:var(--paper
 html .design-edition .card-content h3{font-family:var(--serif);font-size:19px;font-weight:400;line-height:1.65;margin:0 0 9px;letter-spacing:.025em}
 html .design-edition .card-content p{font-size:13px;line-height:1.9;color:var(--muted);margin:0 0 18px}
 .design-edition .card-arrow{margin-top:auto;padding:12px 0;font-size:12px;color:var(--terra);border-top:1px solid var(--line)}
-.design-edition .story-card-actions{padding:0 20px 10px;display:flex;justify-content:flex-end}
-.design-edition .story-save-button{min-height:44px;font-size:11px;color:var(--muted)}
-.design-edition .story-save-button[aria-pressed=true]{color:var(--terra);background:#faf1ee}
 .design-edition .home-quick-actions{margin-top:24px;gap:12px}
 .design-edition .home-quick-actions a,.design-edition .home-quick-actions button{font-size:13px;border-radius:4px;background:var(--paper)}
 .design-edition .home-more{padding:40px 0 0;background:var(--paper)}
@@ -202,7 +197,6 @@ html .design-edition .card-content p{font-size:13px;line-height:1.9;color:var(--
  html .design-edition .card-content h3{font-size:21px;line-height:1.6}
  html .design-edition .card-content p{font-size:15px;line-height:1.8}
  .design-edition .card-arrow{font-size:14px}
- .design-edition .story-save-button{font-size:13px}
  .design-edition .home-detail-content>section{padding:24px 0}
  .design-edition .home-detail-content .container{width:100%}
  .design-edition .home-detail-title{font-size:18px}
